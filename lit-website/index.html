@@ -19,10 +19,11 @@
             foreground: '#f8f8f2',
             'muted-foreground': '#c8ccd8',
           },
-          fontFamily: {
-            sans: ['Gilroy', 'Inter', 'sans-serif'],         /* Body text & H2, H3 */
-            hero: ['UnisonPro', 'sans-serif'],               /* CHỈ dùng cho H1 */
-            accent: ['Jeko', 'sans-serif'],                  /* Dùng cho Badge, Trust Bar */
+        fontFamily: {
+            sans: ['GilroySemiBold', 'Inter', 'sans-serif'],   /* Body text */
+            hero: ['UnisonPro', 'sans-serif'],                /* H1 (Bold) */
+            heading: ['UnisonPro-LightRound', 'sans-serif'],  /* H2, H3 (Light Round) */
+            accent: ['Jeko', 'sans-serif'],                   /* Badge, Trust Bar */
           }
         }
       }
@@ -37,6 +38,18 @@
       font-family: 'UnisonPro';
       src: url("./fonts/UnisonPro-Bold.woff2") format("woff2");
       font-weight: 700;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'UnisonPro-LightRound';
+      src: url("./fonts/UnisonPro-LightRound.woff2") format("woff2");
+      font-weight: 300;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'GilroySemiBold';
+      src: url("./fonts/SVN-GilroySemiBold.woff2") format("woff2");
+      font-weight: 600;
       font-style: normal;
     }
 
