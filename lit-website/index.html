@@ -415,7 +415,7 @@
     </div>
   </section>
 
-             <!-- WHO ARE WE - GALLERY -->
+   <!-- WHO ARE WE - GALLERY -->
   <section class="py-20 md:py-32 relative">
     
     <!-- Section Header -->
@@ -492,35 +492,62 @@
     </div>
   </section>
     
-  <!-- MEET THE COACH -->
-  <section id="coach" class="py-20 md:py-32 bg-secondary/30 relative">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-6xl mx-auto">
-        <div class="text-center mb-16">
-          <div class="mb-4 inline-block bg-primary/20 text-primary border border-primary/50 px-4 py-1 text-sm rounded-full font-accent">MEET THE COACH</div>
-          <h2 class="text-4xl sm:text-5xl md:text-6xl text-white mb-6 tracking-wide">LEARN FROM THE <span class="block text-gradient">BEST</span></h2>
-        </div>
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div class="order-2 lg:order-1">
-            <h3 class="text-3xl text-white mb-4 font-semibold">Coach Zinger</h3>
-            <p class="text-muted-foreground text-lg mb-6">20+ years at international schools. Now coaching at District 7, HCMC — same quality, accessible to all families.</p>
-            <div class="grid grid-cols-2 gap-4 mb-6">
-              <div class="bg-card/50 border border-border rounded-xl p-4 text-center"><p class="text-3xl text-gradient font-bold font-hero">10+</p><p class="text-muted-foreground text-sm">Years Experience</p></div>
-              <div class="bg-card/50 border border-border rounded-xl p-4 text-center"><p class="text-3xl text-gradient font-bold font-hero">500+</p><p class="text-muted-foreground text-sm">Athletes Trained</p></div>
-            </div>
-            <div class="space-y-4">
-              <div class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i><p class="text-muted-foreground">Coached U7-U15 players at 3 international schools in HCMC</p></div>
-              <div class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i><p class="text-muted-foreground">Bilingual: English & Vietnamese support for kids and parents</p></div>
-              <div class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i><p class="text-muted-foreground">Focus: fundamentals first, game tactics second. Build foundation first.</p></div>
-              <div class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i><p class="text-muted-foreground">Max 8 kids per class = real feedback, real corrections, real progress</p></div>
+        <!-- MEET THE COACH -->
+  <section id="coach" class="py-20 md:py-32 relative">
+    
+    <!-- Section Header -->
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center">
+      <div class="mb-4 inline-block bg-primary/20 text-primary border border-primary/50 px-4 py-1 text-sm rounded-full font-accent">MEET THE COACH</div>
+      <h2 style="font-family: 'UnisonPro-LightRound', sans-serif;" class="text-4xl sm:text-5xl text-white mb-6 leading-tight tracking-wide">COACH <span class="text-gradient">ZINGER</span></h2>    
+    </div>
+
+    <!-- Khung thống nhất cho cả Ảnh và Content (Giống format WHO ARE WE) -->
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-card border border-border premium-shadow rounded-2xl overflow-hidden">
+        <div class="flex flex-col lg:flex-row">
+          
+          <!-- Ảnh bên trái (Chiếm 1/2 độ rộng trên Desktop) -->
+          <div class="w-full lg:w-1/2 relative overflow-hidden group">
+            <div class="aspect-[3/4] lg:aspect-auto lg:h-full">
+              <img src="https://z-cdn-media.chatglm.cn/files/6922d3e8-08b2-41ad-86b1-215cc8171d37.png?auth_key=1878735359-75699a0e686a4e1782b8e4f3325ccb7a-0-3cdeb827e699cca34ac0ae1565bd89a4" alt="Coach Zinger" class="w-full h-full object-top object-cover group-hover:scale-105 transition-transform duration-700" />
             </div>
           </div>
-          <div class="order-1 lg:order-2">
-            <div class="bg-card border border-border premium-shadow rounded-2xl p-2">
-              <div class="aspect-[3/4] rounded-2xl overflow-hidden">
-                <img src="https://z-cdn-media.chatglm.cn/files/6922d3e8-08b2-41ad-86b1-215cc8171d37.png?auth_key=1878735359-75699a0e686a4e1782b8e4f3325ccb7a-0-3cdeb827e699cca34ac0ae1565bd89a4" alt="Coach Zinger" class="w-full h-full object-top object-cover" />
+
+          <!-- Content bên phải (Chiếm 1/2 độ rộng, có đường kẻ ngăn cách với ảnh) -->
+          <div class="w-full lg:w-1/2 p-8 md:p-10 lg:p-12 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-border">
+            
+            <!-- Stats (Giữ nguyên mục 10+ Years / 500+ Athletes) -->
+            <div class="grid grid-cols-2 gap-4 mb-8">
+              <div class="bg-secondary/50 border border-border rounded-xl p-4 text-center">
+                <p class="text-3xl text-gradient font-bold font-hero">10+</p>
+                <p class="text-muted-foreground text-sm mt-1">Years Experience</p>
+              </div>
+              <div class="bg-secondary/50 border border-border rounded-xl p-4 text-center">
+                <p class="text-3xl text-gradient font-bold font-hero">500+</p>
+                <p class="text-muted-foreground text-sm mt-1">Athletes Trained</p>
               </div>
             </div>
+
+            <!-- Nội dung text (Căn lề trái) -->
+            <div class="text-left">
+              <p class="text-muted-foreground text-lg mb-6">
+                I’ve spent more than 15 years working with student-athletes in international schools across Asia as a teacher, coach, and Athletics Director. LIT Elite Basketball was built on that experience — not on hype, but on what young athletes actually need to grow: purposeful coaching, high standards, and an environment that both challenges and supports them.
+              </p>
+              
+              <p class="text-white text-lg mb-6 font-medium">
+                Every session I lead is grounded in real work with young athletes. <strong class="text-white">Nothing is random.</strong> Every rep has intention. Every drill is designed to transfer to the game.
+              </p>
+              
+              <p class="text-muted-foreground text-lg mb-8">
+                At LIT Elite, I’m not just focused on building better players. I’m committed to helping young athletes develop confidence, discipline, leadership, and resilience on and off the court.
+              </p>
+
+              <!-- Slogan kết section (Căn giữa, màu hồng) -->
+              <p class="text-primary text-lg md:text-xl font-bold font-accent uppercase tracking-wide text-center">
+                MORE THAN BASKETBALL. MORE THAN TRAINING. REAL DEVELOPMENT.
+              </p>
+            </div>
+
           </div>
         </div>
       </div>
