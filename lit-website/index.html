@@ -415,22 +415,24 @@
     </div>
   </section>
 
-     <!-- WHO ARE WE - GALLERY -->
+        <!-- WHO ARE WE - GALLERY -->
   <section class="py-20 md:py-32 relative">
     
     <!-- Section Header -->
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center">
       <div class="mb-4 inline-block bg-primary/20 text-primary border border-primary/50 px-4 py-1 text-sm rounded-full font-accent">WHO ARE WE</div>
-<h2 class="text-4xl sm:text-5xl text-white mb-6 leading-tight tracking-wide">WHAT IS<span class="block text-gradient">LIT ELITE BASKETBALL</span></h2>    </div>
+      <h2 class="text-4xl sm:text-5xl text-white mb-6 leading-tight tracking-wide">WHAT IS<span class="block text-gradient">LIT ELITE BASKETBALL</span></h2>    
+    </div>
 
-    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-card border border-border premium-shadow rounded-2xl overflow-hidden">
-        
-        <!-- 1 Large & 5 Small Horizontal Gallery -->
-        <div class="flex flex-col md:flex-row gap-2 md:gap-4 p-2 md:p-4 h-auto md:h-[550px]">
+    <!-- Đổi sang max-w-7xl để section ngang ra và lớn hơn -->
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Khung Gallery (Tách riêng để ảnh to và nổi bật) -->
+      <div class="bg-card border border-border premium-shadow rounded-2xl overflow-hidden mb-10 md:mb-16">
+        <div class="flex flex-col md:flex-row gap-2 md:gap-3 p-2 md:p-3 h-auto md:h-[600px]">
           
           <!-- 1 Ảnh lớn bên trái có Text nằm trên ảnh -->
-          <div class="w-full md:w-1/2 h-64 md:h-full relative overflow-hidden group rounded-xl lg:rounded-2xl">
+          <div class="w-full md:w-1/2 h-72 md:h-full relative overflow-hidden group rounded-xl lg:rounded-2xl">
             <img src="https://z-cdn-media.chatglm.cn/files/1768a9da-0751-4323-a0c1-aa7d8c8f8533.png?auth_key=1878735359-c9e238fe546b4693a588d8ce956e1dd9-0-c1bac810834caa1bb574110a19b525eb" alt="LIT Elite Team" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             
             <!-- Overlay nền tối để chữ nổi bật -->
@@ -442,8 +444,8 @@
             </div>
           </div>
 
-          <!-- 5 Ảnh nhỏ bên phải -->
-          <div class="w-full md:w-1/2 h-auto md:h-full grid grid-cols-2 gap-2 md:gap-4">
+          <!-- 4 Ảnh nhỏ bên phải (Giữ nguyên cấu trúc của bạn) -->
+          <div class="w-full md:w-1/2 h-auto md:h-full grid grid-cols-2 gap-2 md:gap-3">
             <div class="relative aspect-square md:aspect-auto overflow-hidden group rounded-xl lg:rounded-2xl">
               <img src="https://z-cdn-media.chatglm.cn/files/e90e40c1-4419-437f-963c-ad862ed8e7f7.png?auth_key=1878735359-3012cbe4a29545fc9044ed54b5551d6b-0-5b7549e81727d14aa69b296997e9ee7b" alt="Gallery 2" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
             </div>
@@ -458,35 +460,34 @@
             </div>
           </div>
         </div>
-
-        <!-- Content Area (Left Aligned) -->
-        <div class="p-8 md:p-12 border-t border-border">
-          <div class="max-w-3xl mx-auto text-left">
-            
-            <p class="text-muted-foreground text-lg mb-6">
-              LIT Elite Basketball is an international youth basketball academy based in Ho Chi Minh City, Vietnam, built to help U7, U9, U11, and U15 athletes develop real skill, confidence, discipline, leadership, and resilience through purposeful, high-standard coaching.
-            </p>
-            
-            <!-- "Nothing is random" màu trắng, phần còn lại màu hồng -->
-            <p class="text-primary text-lg mb-6">
-              <strong class="text-white">Nothing is random.</strong> Every drill has a purpose. Every rep is designed to transfer to the game.
-            </p>
-            
-            <p class="text-muted-foreground text-lg mb-8">
-              Through limited-enrollment training led by an experienced international coach, LIT Elite gives each athlete focused attention, meaningful development, and an environment where they are challenged, supported, and known. More than an academy, LIT Elite is a community committed to developing skilled, coachable, and confident young athletes on and off the court.
-            </p>
-
-            <!-- Chữ hồng, căn giữa để kết section -->
-            <p class="text-primary text-lg md:text-xl font-bold font-accent uppercase tracking-wide text-center">
-              WE DON’T BELIEVE IN RANDOM REPS. WE BELIEVE IN PURPOSEFUL DEVELOPMENT.
-            </p>
-
-          </div>
-        </div>
       </div>
+
+      <!-- Content Area (Thả tự do không bị gò bó trong khung ảnh, giữ nguyên format chữ) -->
+      <div class="max-w-3xl mx-auto text-left px-4 md:px-0">
+        
+        <p class="text-muted-foreground text-lg mb-6">
+          LIT Elite Basketball is an international youth basketball academy based in Ho Chi Minh City, Vietnam, built to help U7, U9, U11, and U15 athletes develop real skill, confidence, discipline, leadership, and resilience through purposeful, high-standard coaching.
+        </p>
+        
+        <!-- "Nothing is random" màu trắng, phần còn lại màu hồng -->
+        <p class="text-primary text-lg mb-6">
+          <strong class="text-white">Nothing is random.</strong> Every drill has a purpose. Every rep is designed to transfer to the game.
+        </p>
+        
+        <p class="text-muted-foreground text-lg mb-8">
+          Through limited-enrollment training led by an experienced international coach, LIT Elite gives each athlete focused attention, meaningful development, and an environment where they are challenged, supported, and known. More than an academy, LIT Elite is a community committed to developing skilled, coachable, and confident young athletes on and off the court.
+        </p>
+
+        <!-- Chữ hồng, căn giữa để kết section -->
+        <p class="text-primary text-lg md:text-xl font-bold font-accent uppercase tracking-wide text-center">
+          WE DON’T BELIEVE IN RANDOM REPS. WE BELIEVE IN PURPOSEFUL DEVELOPMENT.
+        </p>
+
+      </div>
+      
     </div>
   </section>
-
+    
   <!-- MEET THE COACH -->
   <section id="coach" class="py-20 md:py-32 bg-secondary/30 relative">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
