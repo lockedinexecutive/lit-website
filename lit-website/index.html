@@ -415,7 +415,7 @@
     </div>
   </section>
 
-      <!-- WHO ARE WE - GALLERY -->
+            <!-- WHO ARE WE - GALLERY -->
   <section class="py-20 md:py-32 relative">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 mb-12">
       <div class="text-center max-w-3xl mx-auto">
@@ -425,51 +425,60 @@
     <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="bg-card border border-border premium-shadow rounded-2xl overflow-hidden">
         
-        <!-- Mosaic Grid with Text Overlay -->
-        <div class="grid grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 p-2 md:p-4">
+        <!-- 1 Large & 5 Small Horizontal Gallery -->
+        <div class="flex flex-col md:flex-row gap-2 md:gap-4 p-2 md:p-4 h-auto md:h-[550px]">
           
-          <!-- Bức ảnh lớn 2x2 có Text nằm trên ảnh -->
-          <div class="relative col-span-1 lg:col-span-2 row-span-1 lg:row-span-2 aspect-square lg:aspect-auto overflow-hidden group rounded-xl lg:rounded-2xl">
+          <!-- 1 Ảnh lớn bên trái -->
+          <div class="w-full md:w-1/2 h-64 md:h-full relative overflow-hidden group rounded-xl lg:rounded-2xl">
             <img src="https://z-cdn-media.chatglm.cn/files/1768a9da-0751-4323-a0c1-aa7d8c8f8533.png?auth_key=1878735359-c9e238fe546b4693a588d8ce956e1dd9-0-c1bac810834caa1bb574110a19b525eb" alt="LIT Elite Team" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent lg:bg-gradient-to-r lg:from-black/90 lg:via-black/60 lg:to-transparent z-10"></div>
-            
-            <!-- Text nằm trên ảnh -->
-            <div class="absolute inset-0 z-20 flex flex-col justify-end p-6 md:p-10">
-              <h2 class="font-heading text-3xl md:text-5xl text-white mb-4 tracking-wide">WE BUILD <span class="text-gradient">ATHLETES FOR LIFE</span></h2>
-            </div>
           </div>
 
-          <!-- 5 Bức ảnh nhỏ 1x1 -->
-          <div class="relative aspect-square overflow-hidden group rounded-xl lg:rounded-2xl"><img src="https://z-cdn-media.chatglm.cn/files/e90e40c1-4419-437f-963c-ad862ed8e7f7.png?auth_key=1878735359-3012cbe4a29545fc9044ed54b5551d6b-0-5b7549e81727d14aa69b296997e9ee7b" alt="Gallery 2" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" /></div>
-          <div class="relative aspect-square overflow-hidden group rounded-xl lg:rounded-2xl"><img src="https://z-cdn-media.chatglm.cn/files/ebd7a1c8-8b3f-40cd-b52c-6260dc2cc03e.png?auth_key=1878735359-960690f48cd249d3b63aafa4cc97657d-0-0d2f245d5621a1244fbc75179d62b69f" alt="Gallery 3" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" /></div>
-          <div class="relative aspect-square overflow-hidden group rounded-xl lg:rounded-2xl"><img src="https://z-cdn-media.chatglm.cn/files/e0d1fbb7-4a9b-4112-9a3d-8973cd47abc8.png?auth_key=1878735359-727ea96a11c64db38818490971558dc5-0-7a5e4ec9f7450788f1eb1a5aae2b57c0" alt="Gallery 4" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" /></div>
-          <div class="relative aspect-square overflow-hidden group rounded-xl lg:rounded-2xl"><img src="https://z-cdn-media.chatglm.cn/files/df139ace-834f-4ea9-8319-e50e0e612cc7.png?auth_key=1878735359-b749211d77e94cc5be7c7bc400ec6d2e-0-8af83db7137d55df2801c9228e75a286" alt="Gallery 5" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" /></div>
-          <div class="relative aspect-square overflow-hidden group rounded-xl lg:rounded-2xl"><img src="https://z-cdn-media.chatglm.cn/files/1d004809-d3a7-4b4d-b5d1-a716e275db11.png?auth_key=1878735359-265ba4effaf74f59a7c97e1cda8cc85a-0-c62e25d4e59aab449ed8f9b02a08ddc7" alt="Gallery 6" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" /></div>
+          <!-- 5 Ảnh nhỏ bên phải -->
+          <div class="w-full md:w-1/2 h-auto md:h-full grid grid-cols-2 gap-2 md:gap-4">
+            <div class="relative aspect-square md:aspect-auto overflow-hidden group rounded-xl lg:rounded-2xl">
+              <img src="https://z-cdn-media.chatglm.cn/files/e90e40c1-4419-437f-963c-ad862ed8e7f7.png?auth_key=1878735359-3012cbe4a29545fc9044ed54b5551d6b-0-5b7549e81727d14aa69b296997e9ee7b" alt="Gallery 2" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="relative aspect-square md:aspect-auto overflow-hidden group rounded-xl lg:rounded-2xl">
+              <img src="https://z-cdn-media.chatglm.cn/files/ebd7a1c8-8b3f-40cd-b52c-6260dc2cc03e.png?auth_key=1878735359-960690f48cd249d3b63aafa4cc97657d-0-0d2f245d5621a1244fbc75179d62b69f" alt="Gallery 3" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="relative aspect-square md:aspect-auto overflow-hidden group rounded-xl lg:rounded-2xl">
+              <img src="https://z-cdn-media.chatglm.cn/files/e0d1fbb7-4a9b-4112-9a3d-8973cd47abc8.png?auth_key=1878735359-727ea96a11c64db38818490971558dc5-0-7a5e4ec9f7450788f1eb1a5aae2b57c0" alt="Gallery 4" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="relative aspect-square md:aspect-auto overflow-hidden group rounded-xl lg:rounded-2xl">
+              <img src="https://z-cdn-media.chatglm.cn/files/df139ace-834f-4ea9-8319-e50e0e612cc7.png?auth_key=1878735359-b749211d77e94cc5be7c7bc400ec6d2e-0-8af83db7137d55df2801c9228e75a286" alt="Gallery 5" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <!-- Ảnh thứ 5 kéo dài full chiều ngang bên dưới -->
+            <div class="relative aspect-video md:aspect-auto md:col-span-2 overflow-hidden group rounded-xl lg:rounded-2xl">
+              <img src="https://z-cdn-media.chatglm.cn/files/1d004809-d3a7-4b4d-b5d1-a716e275db11.png?auth_key=1878735359-265ba4effaf74f59a7c97e1cda8cc85a-0-c62e25d4e59aab449ed8f9b02a08ddc7" alt="Gallery 6" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+            </div>
+          </div>
         </div>
 
-        <!-- New Content Area -->
+        <!-- Content Area (Left Aligned) -->
         <div class="p-8 md:p-12 border-t border-border">
-          <div class="max-w-3xl mx-auto text-center">
+          <div class="max-w-3xl mx-auto text-left">
             
-            <h3 class="text-2xl md:text-3xl text-white mb-6 font-heading tracking-wide">WHAT IS LIT ELITE BASKETBALL?</h3>
+            <!-- Dùng Font Jeko và căn lề trái -->
+            <h2 style="font-family: 'Jeko', sans-serif;" class="text-3xl md:text-5xl text-white mb-4 tracking-wide">WE BUILD <span class="text-gradient">ATHLETES FOR LIFE</span></h2>
+            <h3 style="font-family: 'Jeko', sans-serif;" class="text-2xl md:text-3xl text-white mb-6 tracking-wide">WHAT IS LIT ELITE BASKETBALL?</h3>
             
             <p class="text-muted-foreground text-lg mb-6">
               LIT Elite Basketball is an international youth basketball academy based in Ho Chi Minh City, Vietnam, built to help U7, U9, U11, and U15 athletes develop real skill, confidence, discipline, leadership, and resilience through purposeful, high-standard coaching.
             </p>
             
-            <p class="text-white text-lg mb-6">
-              <strong className="text-primary">Nothing is random.</strong> Every drill has a purpose. Every rep is designed to transfer to the game.
+            <!-- "Nothing is random" màu trắng, phần còn lại màu hồng -->
+            <p class="text-primary text-lg mb-6">
+              <strong class="text-white">Nothing is random.</strong> Every drill has a purpose. Every rep is designed to transfer to the game.
             </p>
             
             <p class="text-muted-foreground text-lg mb-8">
               Through limited-enrollment training led by an experienced international coach, LIT Elite gives each athlete focused attention, meaningful development, and an environment where they are challenged, supported, and known. More than an academy, LIT Elite is a community committed to developing skilled, coachable, and confident young athletes on and off the court.
             </p>
 
-            <div class="p-6 bg-primary/10 border-l-4 border-primary rounded-r-xl text-left">
-              <p class="text-white text-lg md:text-xl font-bold font-accent uppercase tracking-wide">
-                WE DON’T BELIEVE IN RANDOM REPS. WE BELIEVE IN PURPOSEFUL DEVELOPMENT.
-              </p>
-            </div>
+            <!-- Chữ hồng, căn giữa để kết section -->
+            <p class="text-primary text-lg md:text-xl font-bold font-accent uppercase tracking-wide text-center">
+              WE DON’T BELIEVE IN RANDOM REPS. WE BELIEVE IN PURPOSEFUL DEVELOPMENT.
+            </p>
 
           </div>
         </div>
