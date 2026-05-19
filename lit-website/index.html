@@ -113,12 +113,11 @@
 </head>
 <body class="font-sans">
 
-    <!-- NAVIGATION (Đã thu nhỏ và thêm hiệu ứng ẩn khi cuộn) -->
-  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 h-16">
+      <!-- NAVIGATION (Static - Nằm trên cùng, không đè lên Hero) -->
+  <nav id="navbar" class="w-full z-50 bg-white transition-all duration-300 h-16">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-full">
       <div class="flex items-center justify-between h-full">
         <div class="flex items-center cursor-pointer" onclick="scrollToSection('hero')">
-          <!-- Thu nhỏ Logo -->
           <img src="https://z-cdn-media.chatglm.cn/files/e2f8cfe7-1e43-4b1a-88d6-4350b231bf71.png?auth_key=1878815395-dd6897666469472db12bff51e2f3b468-0-464542c0236a8db563b1c263fb523343" alt="LIT Elite Basketball Academy" class="h-10 md:h-12 w-auto" />
         </div>
         <div class="hidden md:flex items-center gap-6">
@@ -144,7 +143,7 @@
     </div>
   </nav>
 
-    <!-- HERO SECTION (Đã thay ảnh mới) -->
+      <!-- HERO SECTION (Bắt đầu ngay dưới Header, không bị cut) -->
   <section id="hero" class="relative min-h-screen flex items-center justify-center court-lines overflow-hidden">
     <div class="absolute inset-0 z-0">
       <!-- Ảnh Hero mới -->
@@ -152,7 +151,7 @@
       <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-background"></div>
       <div class="absolute inset-0 bg-gradient-to-r from-black/20 via-black/20 to-black/30"></div>
     </div>
-    <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-16">
+    <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-20">
       <div class="max-w-5xl mx-auto text-center">
         <div class="mb-6 inline-block bg-primary/20 text-primary border border-primary/50 px-4 py-2 text-sm font-medium rounded-full animate-pulse font-accent">Book Your Trial</div>
         <h1 class="font-hero text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-wide text-white mb-12 leading-none font-bold drop-shadow-2xl">
@@ -778,40 +777,9 @@
     </div>
   </section>
 
-  <!-- SCRIPTS -->
+    <!-- SCRIPTS -->
   <script>
     lucide.createIcons();
-
-    const navbar = document.getElementById('navbar');
-    let lastScrollTop = 0;
-    const delta = 5;
-    const navbarHeight = navbar.offsetHeight;
-
-    window.addEventListener('scroll', () => {
-      let st = window.scrollY || document.documentElement.scrollTop;
-
-      // Thêm nền trắng nếu lướt xuống
-      if (st > 50) {
-        navbar.classList.add('bg-white/95', 'backdrop-blur-md', 'border-b', 'border-pink-200', 'shadow-sm');
-      } else {
-        navbar.classList.remove('bg-white/95', 'backdrop-blur-md', 'border-b', 'border-pink-200', 'shadow-sm');
-      }
-
-      // Ẩn menu khi cuộn xuống, hiện khi cuộn lên
-      if (Math.abs(lastScrollTop - st) <= delta) return;
-
-      if (st > lastScrollTop && st > navbarHeight) {
-        // Cuộn Xuống
-        navbar.style.top = `-${navbarHeight + 20}px`;
-      } else {
-        // Cuộn Lên
-        if (st + window.innerHeight < document.documentElement.scrollHeight) {
-          navbar.style.top = '0';
-        }
-      }
-
-      lastScrollTop = st;
-    });
 
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
