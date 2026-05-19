@@ -387,19 +387,18 @@
     </div>
   </section>
 
-  <!-- SUCCESS STORY -->
+    <!-- SUCCESS STORY -->
   <section class="relative overflow-hidden py-20 md:py-28">
     <div class="absolute inset-0 bg-gradient-to-r from-primary/5 via-pink-500/5 to-primary/5"></div>
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
         
-        <!-- Cột bên trái: Chữ (Giới hạn max-w-xl để không bị kéo dài ngang) -->
+        <!-- Cột bên trái: Chữ (Giữ nguyên cấu trúc gọn gàng) -->
         <div class="max-w-xl">
           <div class="mb-6 inline-block bg-primary/20 text-primary border border-primary/50 px-4 py-2 text-sm font-medium rounded-full font-accent">TESTIMONIALS</div>
           <h2 class="text-4xl sm:text-5xl text-white mb-8 leading-tight tracking-wide">REAL RESULTS, <span class="block text-gradient">REAL FAMILIES</span></h2>
           
           <div class="space-y-0">
-
             <!-- Block 1 -->
             <div class="flex items-start gap-4 py-5 border-b border-border/50">
               <div class="w-12 h-12 rounded-xl overflow-hidden border-2 border-primary/50 shrink-0">
@@ -435,7 +434,6 @@
                 <p class="text-primary text-xs font-bold font-accent uppercase tracking-wider mt-2">David L. • Parent of U15 Athlete</p>
               </div>
             </div>
-
           </div>
 
           <!-- Khu vực Stats -->
@@ -451,12 +449,29 @@
           </div>
         </div>
 
-        <!-- Cột bên phải: Ảnh (Thu gọn lại trong khung viền, tỷ lệ 3/4) -->
+        <!-- Cột bên phải: Mosaic Gallery (1 lớn + 4 nhỏ, không viền) -->
         <div class="relative flex justify-center lg:justify-end">
-          <div class="bg-card border border-border premium-shadow rounded-2xl p-2 w-full max-w-md">
-            <div class="aspect-[3/4] rounded-xl overflow-hidden relative group">
-              <img src="https://z-cdn-media.chatglm.cn/files/77f765e8-e65b-44db-b261-8cf726855de0.png?auth_key=1878735359-7ec8f47edd684fbda74b4f2d2c39badc-0-2d88f8e54035164683affcadd246ae48" alt="Real Results" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+          <div class="grid grid-cols-3 gap-3 w-full max-w-xl">
+            
+            <!-- Ảnh lớn Jan (Chiếm 2 cột, 2 hàng) -->
+            <div class="col-span-2 row-span-2 rounded-2xl overflow-hidden group">
+              <img src="https://z-cdn-media.chatglm.cn/files/77f765e8-e65b-44db-b261-8cf726855de0.png?auth_key=1878735359-7ec8f47edd684fbda74b4f2d2c39badc-0-2d88f8e54035164683affcadd246ae48" alt="Jan T." class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
             </div>
+
+            <!-- 4 ảnh nhỏ VĐV (Tỷ lệ dọc 3/4) -->
+            <div class="rounded-2xl overflow-hidden group aspect-[3/4]">
+              <img src="https://z-cdn-media.chatglm.cn/files/02c1ba42-821a-48e1-ac47-75bdf7a80e06.png?auth_key=1879175248-7c0405c042f04fb6b808da251cf26e57-0-9c34d80b26c445b94f4ead4a114f81fd" alt="LIT Elite Athlete" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="rounded-2xl overflow-hidden group aspect-[3/4]">
+              <img src="https://z-cdn-media.chatglm.cn/files/abaecf62-d312-49a5-91f5-b88f86cf7439.png?auth_key=1879175248-43d349cc944d47a0b1b37e2d97c9932d-0-2c2de6d86db7a5b0d8b579cf59d896f2" alt="LIT Elite Athlete" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="rounded-2xl overflow-hidden group aspect-[3/4]">
+              <img src="https://z-cdn-media.chatglm.cn/files/858cab9b-8d59-44f9-9374-4a9b6dbeecec.png?auth_key=1879175248-2040edcd63f54a6d8155b86f004c67fc-0-b19b0fb44ec7f0a8da2861b8d4e9694f" alt="LIT Elite Athlete" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="rounded-2xl overflow-hidden group aspect-[3/4]">
+              <img src="https://z-cdn-media.chatglm.cn/files/387343be-4257-428f-9cc8-0535f1f00eb8.png?auth_key=1879175248-7b91020716df449eb3ef1e1c8f8a3384-0-4747478789b9cb24468df47e980943a3" alt="LIT Elite Athlete" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+            </div>
+
           </div>
         </div>
 
