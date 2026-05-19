@@ -113,46 +113,46 @@
 </head>
 <body class="font-sans">
 
-  <!-- NAVIGATION -->
-  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
+    <!-- NAVIGATION (Đã thu nhỏ và thêm hiệu ứng ẩn khi cuộn) -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 h-16">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-full">
+      <div class="flex items-center justify-between h-full">
         <div class="flex items-center cursor-pointer" onclick="scrollToSection('hero')">
-          <img src="https://z-cdn-media.chatglm.cn/files/e2f8cfe7-1e43-4b1a-88d6-4350b231bf71.png?auth_key=1878815395-dd6897666469472db12bff51e2f3b468-0-464542c0236a8db563b1c263fb523343" alt="LIT Elite Basketball Academy" class="h-16 w-auto md:h-20" />
+          <!-- Thu nhỏ Logo -->
+          <img src="https://z-cdn-media.chatglm.cn/files/e2f8cfe7-1e43-4b1a-88d6-4350b231bf71.png?auth_key=1878815395-dd6897666469472db12bff51e2f3b468-0-464542c0236a8db563b1c263fb523343" alt="LIT Elite Basketball Academy" class="h-10 md:h-12 w-auto" />
         </div>
-        <div class="hidden md:flex items-center gap-8">
+        <div class="hidden md:flex items-center gap-6">
           <button onclick="scrollToSection('programs')" class="text-sm font-semibold text-primary hover:text-pink-600 transition-colors">Programs</button>
           <button onclick="scrollToSection('why-lit')" class="text-sm font-semibold text-primary hover:text-pink-600 transition-colors">Why LIT</button>
           <button onclick="scrollToSection('coach')" class="text-sm font-semibold text-primary hover:text-pink-600 transition-colors">Your Coach</button>
           <button onclick="scrollToSection('spotlight')" class="text-sm font-semibold text-primary hover:text-pink-600 transition-colors">Athletes</button>
           <button onclick="scrollToSection('contact')" class="text-sm font-semibold text-primary hover:text-pink-600 transition-colors">Contact</button>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-8dRtgUIGk9wQNt4Nkty_d9X3usP6svYwCuH7x1PAh15Pzw/viewform?usp=send_form" target="_blank" class="bg-gradient-to-r from-primary to-pink-500 hover:from-pink-500 hover:to-primary text-white font-bold px-6 py-2 rounded-md transition-all">Apply Now</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-8dRtgUIGk9wQNt4Nkty_d9X3usP6svYwCuH7x1PAh15Pzw/viewform?usp=send_form" target="_blank" class="bg-gradient-to-r from-primary to-pink-500 hover:from-pink-500 hover:to-primary text-white font-bold px-5 py-2 rounded-md text-sm transition-all">Apply Now</a>
         </div>
-        <button id="menu-btn" class="md:hidden text-primary"><i data-lucide="menu" class="w-6 h-6"></i></button>
+        <button id="menu-btn" class="md:hidden text-primary"><i data-lucide="menu" class="w-5 h-5"></i></button>
       </div>
     </div>
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-pink-200">
-      <div class="container mx-auto px-4 py-4 flex flex-col gap-3">
-        <button onclick="scrollToSection('programs')" class="text-left py-2 text-primary font-semibold">Programs</button>
-        <button onclick="scrollToSection('why-lit')" class="text-left py-2 text-primary font-semibold">Why LIT</button>
-        <button onclick="scrollToSection('coach')" class="text-left py-2 text-primary font-semibold">Your Coach</button>
-        <button onclick="scrollToSection('spotlight')" class="text-left py-2 text-primary font-semibold">Athletes</button>
-        <button onclick="scrollToSection('contact')" class="text-left py-2 text-primary font-semibold">Contact</button>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-8dRtgUIGk9wQNt4Nkty_d9X3usP6svYwCuH7x1PAh15Pzw/viewform?usp=send_form" target="_blank" class="block text-center mt-2 bg-gradient-to-r from-primary to-pink-500 text-white font-bold py-3 rounded-md">Apply Now</a>
+      <div class="container mx-auto px-4 py-3 flex flex-col gap-2">
+        <button onclick="scrollToSection('programs')" class="text-left py-2 text-primary font-semibold text-sm">Programs</button>
+        <button onclick="scrollToSection('why-lit')" class="text-left py-2 text-primary font-semibold text-sm">Why LIT</button>
+        <button onclick="scrollToSection('coach')" class="text-left py-2 text-primary font-semibold text-sm">Your Coach</button>
+        <button onclick="scrollToSection('spotlight')" class="text-left py-2 text-primary font-semibold text-sm">Athletes</button>
+        <button onclick="scrollToSection('contact')" class="text-left py-2 text-primary font-semibold text-sm">Contact</button>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-8dRtgUIGk9wQNt4Nkty_d9X3usP6svYwCuH7x1PAh15Pzw/viewform?usp=send_form" target="_blank" class="block text-center mt-1 bg-gradient-to-r from-primary to-pink-500 text-white font-bold py-2 rounded-md text-sm">Apply Now</a>
       </div>
     </div>
   </nav>
 
-   <!-- HERO SECTION -->
+    <!-- HERO SECTION (Đã thay ảnh mới) -->
   <section id="hero" class="relative min-h-screen flex items-center justify-center court-lines overflow-hidden">
     <div class="absolute inset-0 z-0">
-      <!-- Thay bằng ảnh ghép mới -->
-      <img src="https://z-cdn-media.chatglm.cn/files/d6f11041-0c80-4945-ab71-47f09a11b8b8.png?auth_key=1879181893-cd8ee3fa725041858d6b0601c8026926-0-8a6090687758f03290b965e454d532f3" alt="LIT Elite Team" class="w-full h-full object-cover" />
-      <!-- Giảm độ đậm overlay (black/40 và black/20) để ảnh thoát ra sáng hơn -->
+      <!-- Ảnh Hero mới -->
+      <img src="https://z-cdn-media.chatglm.cn/files/dc0f5bb5-8720-480d-8165-ce96d02a2f62.png?auth_key=1879193698-10b08a60a77c4ae4b3f8498b2387ab3c-0-3edd1c9893575a14df7a63658c25157a" alt="LIT Elite Team" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-background"></div>
       <div class="absolute inset-0 bg-gradient-to-r from-black/20 via-black/20 to-black/30"></div>
     </div>
-    <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+    <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-16">
       <div class="max-w-5xl mx-auto text-center">
         <div class="mb-6 inline-block bg-primary/20 text-primary border border-primary/50 px-4 py-2 text-sm font-medium rounded-full animate-pulse font-accent">Book Your Trial</div>
         <h1 class="font-hero text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-wide text-white mb-12 leading-none font-bold drop-shadow-2xl">
@@ -171,7 +171,7 @@
           <div class="flex items-start gap-4">
             <div class="w-2 h-2 bg-primary rounded-full mt-2"></div>
             <div>
-              <p class="text-white/90 text-sm italic leading-relaxed">"At LIT Elite Basketball, we’re building more than players — we’re building confident, disciplined, resilient young people. The best way to know if we’re the right fit for you is to step into the gym and experience it for yourself."</p>
+              <p class="text-white/90 text-sm italic leading-relaxed">"At LIT Elite Basketball, we’re building more than players — we’re building confident, disciplined, resilient young people. The best way to know if we’re the right fit for your child is to step into the gym and experience it for yourself."</p>
               <p class="text-primary/80 text-xs mt-2 font-bold font-accent">— Coach Zinger</p>
             </div>
           </div>
@@ -781,28 +781,54 @@
   <!-- SCRIPTS -->
   <script>
     lucide.createIcons();
+
+    const navbar = document.getElementById('navbar');
+    let lastScrollTop = 0;
+    const delta = 5;
+    const navbarHeight = navbar.offsetHeight;
+
     window.addEventListener('scroll', () => {
-      const navbar = document.getElementById('navbar');
-      if (window.scrollY > 50) {
+      let st = window.scrollY || document.documentElement.scrollTop;
+
+      // Thêm nền trắng nếu lướt xuống
+      if (st > 50) {
         navbar.classList.add('bg-white/95', 'backdrop-blur-md', 'border-b', 'border-pink-200', 'shadow-sm');
       } else {
         navbar.classList.remove('bg-white/95', 'backdrop-blur-md', 'border-b', 'border-pink-200', 'shadow-sm');
       }
+
+      // Ẩn menu khi cuộn xuống, hiện khi cuộn lên
+      if (Math.abs(lastScrollTop - st) <= delta) return;
+
+      if (st > lastScrollTop && st > navbarHeight) {
+        // Cuộn Xuống
+        navbar.style.top = `-${navbarHeight + 20}px`;
+      } else {
+        // Cuộn Lên
+        if (st + window.innerHeight < document.documentElement.scrollHeight) {
+          navbar.style.top = '0';
+        }
+      }
+
+      lastScrollTop = st;
     });
+
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     let isMenuOpen = false;
+    
     menuBtn.addEventListener('click', () => {
       isMenuOpen = !isMenuOpen;
       if (isMenuOpen) {
         mobileMenu.classList.remove('hidden');
-        menuBtn.innerHTML = '<i data-lucide="x" class="w-6 h-6"></i>';
+        menuBtn.innerHTML = '<i data-lucide="x" class="w-5 h-5"></i>';
       } else {
         mobileMenu.classList.add('hidden');
-        menuBtn.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
+        menuBtn.innerHTML = '<i data-lucide="menu" class="w-5 h-5"></i>';
       }
       lucide.createIcons();
     });
+
     function scrollToSection(id) {
       const element = document.getElementById(id);
       if (element) {
@@ -810,11 +836,9 @@
         if (isMenuOpen) {
           isMenuOpen = false;
           mobileMenu.classList.add('hidden');
-          menuBtn.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
+          menuBtn.innerHTML = '<i data-lucide="menu" class="w-5 h-5"></i>';
           lucide.createIcons();
         }
       }
     }
   </script>
-</body>
-</html>
