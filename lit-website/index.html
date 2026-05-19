@@ -143,22 +143,23 @@
     </div>
   </nav>
 
-      <!-- HERO SECTION (Bắt đầu ngay dưới Header, không bị cut) -->
-  <section id="hero" class="relative min-h-screen flex items-center justify-center court-lines overflow-hidden">
+        <!-- HERO SECTION (Chữ đẩy xuống góc dưới, giải phóng khuôn mặt Coach) -->
+  <section id="hero" class="relative min-h-screen flex items-end justify-center court-lines overflow-hidden">
     <div class="absolute inset-0 z-0">
       <!-- Ảnh Hero mới -->
       <img src="https://z-cdn-media.chatglm.cn/files/dc0f5bb5-8720-480d-8165-ce96d02a2f62.png?auth_key=1879193698-10b08a60a77c4ae4b3f8498b2387ab3c-0-3edd1c9893575a14df7a63658c25157a" alt="LIT Elite Team" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-background"></div>
-      <div class="absolute inset-0 bg-gradient-to-r from-black/20 via-black/20 to-black/30"></div>
+      <!-- Đổi chiều Gradient: Trong ở giữa (để thấy Coach), Tối ở dưới (để đọc chữ) -->
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/90"></div>
     </div>
-    <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-      <div class="max-w-5xl mx-auto text-center">
+    
+    <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pb-24 md:pb-32 w-full">
+      <div class="max-w-3xl mx-auto text-center">
         <div class="mb-6 inline-block bg-primary/20 text-primary border border-primary/50 px-4 py-2 text-sm font-medium rounded-full animate-pulse font-accent">Book Your Trial</div>
-        <h1 class="font-hero text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-wide text-white mb-12 leading-none font-bold drop-shadow-2xl">
+        <h1 class="font-hero text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-wide text-white mb-8 leading-none font-bold drop-shadow-2xl">
           MORE THAN
           <span class="block text-gradient">BASKETBALL</span>
         </h1>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-8dRtgUIGk9wQNt4Nkty_d9X3usP6svYwCuH7x1PAh15Pzw/viewform?usp=send_form" target="_blank" class="bg-gradient-to-r from-primary to-pink-500 hover:from-pink-500 hover:to-primary text-white text-lg px-8 py-6 rounded-full glow-pink group inline-flex items-center font-bold transition-all">
             Apply Now <i data-lucide="arrow-right" class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
           </a>
@@ -166,18 +167,22 @@
             View Programs
           </button>
         </div>
-        <div class="mt-8 p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl max-w-2xl mx-auto">
+        
+        <!-- Khối Quote thu gọn lại để không vướng ảnh -->
+        <div class="p-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl max-w-2xl mx-auto">
           <div class="flex items-start gap-4">
-            <div class="w-2 h-2 bg-primary rounded-full mt-2"></div>
-            <div>
-              <p class="text-white/90 text-sm italic leading-relaxed">"At LIT Elite Basketball, we’re building more than players — we’re building confident, disciplined, resilient young people. The best way to know if we’re the right fit for your child is to step into the gym and experience it for yourself."</p>
+            <div class="w-2 h-2 bg-primary rounded-full mt-2 shrink-0"></div>
+            <div class="text-left">
+              <p class="text-white/90 text-sm italic leading-relaxed">"At LIT Elite Basketball, we’re building more than players — we’re building confident, disciplined, resilient young people."</p>
               <p class="text-primary/80 text-xs mt-2 font-bold font-accent">— Coach Zinger</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+
+    <!-- Mũi tên cuộn xuống -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-20">
       <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
         <div class="w-1 h-2 bg-primary rounded-full"></div>
       </div>
