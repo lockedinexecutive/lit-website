@@ -143,35 +143,36 @@
     </div>
   </nav>
 
-             <!-- HERO SECTION (Đã cập nhật ảnh mới) -->
-  <section id="hero" class="relative min-h-screen flex items-end justify-center court-lines overflow-hidden">
+  <!-- HERO SECTION (Không cắt ảnh, không cắt chữ) -->
+  <section id="hero" class="relative min-h-screen flex items-end justify-center court-lines overflow-hidden bg-background">
     <div class="absolute inset-0 z-0">
-      <!-- Ảnh Hero mới -->
-      <img src="https://z-cdn-media.chatglm.cn/files/17f3b61c-0096-48c5-aefd-a30e13e79827.png?auth_key=1879242783-3d857d70c8c9468e8c14bd45ffc3fdd0-0-b9dc476fe4aa4de04da647de842b5936" alt="LIT Elite Team" class="w-full h-full object-cover" />
-      <!-- Tăng mạnh độ tối ở nửa dưới để text hoàn toàn dễ đọc -->
-      <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-black/95"></div>
+      <!-- Đổi sang object-contain và object-center để ảnh hiển thị trọn vẹn, không bị cắt -->
+      <img src="https://z-cdn-media.chatglm.cn/files/17f3b61c-0096-48c5-aefd-a30e13e79827.png?auth_key=1879242783-3d857d70c8c9468e8c14bd45ffc3fdd0-0-b9dc476fe4aa4de04da647de842b5936" alt="LIT Elite Team" class="w-full h-full object-contain object-center" />
+      <!-- Gradient tối ở nửa dưới để chữ dễ đọc -->
+      <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-background via-background/90 to-transparent pointer-events-none"></div>
     </div>
     
     <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pb-24 md:pb-32 w-full">
-      <div class="max-w-3xl mx-auto text-center">
+      <!-- Nới rộng max-w-4xl thay vì 3xl để chữ không bị ép chặt -->
+      <div class="max-w-4xl mx-auto text-center">
         
-        <!-- 1. Badge mới: Màu hồng -->
+        <!-- Badge màu hồng -->
         <div class="mb-6 inline-block bg-primary/10 backdrop-blur-sm text-primary border border-primary/30 px-4 py-2 text-sm font-medium rounded-full font-accent">
           LIT Elite Basketball · District 7, HCMC
         </div>
 
-        <!-- 2. Headline chính -->
-        <h1 class="font-hero text-4xl sm:text-5xl md:text-7xl lg:text-8xl tracking-wide text-white mb-6 leading-none font-bold drop-shadow-2xl">
+        <!-- Giảm size chữ lg:text-7xl, bỏ tracking-wide để chống tràn chữ -->
+        <h1 class="font-hero text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-none font-bold drop-shadow-2xl">
           MORE THAN
           <span class="block text-gradient">BASKETBALL</span>
         </h1>
 
-        <!-- 3. Subheadline -->
+        <!-- Subheadline -->
         <p class="text-white/90 text-lg md:text-xl max-w-2xl mx-auto mb-10 drop-shadow-md">
           Elite basketball training for young athletes — built to develop skill, confidence, discipline, and game IQ.
         </p>
 
-        <!-- 4. CTA Buttons -->
+        <!-- CTA Buttons -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-8dRtgUIGk9wQNt4Nkty_d9X3usP6svYwCuH7x1PAh15Pzw/viewform?usp=send_form" target="_blank" class="bg-gradient-to-r from-primary to-pink-500 hover:from-pink-500 hover:to-primary text-white text-lg px-8 py-6 rounded-full glow-pink group inline-flex items-center font-bold transition-all">
             Book a Trial Session <i data-lucide="arrow-right" class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
@@ -181,7 +182,7 @@
           </button>
         </div>
 
-        <!-- 5. Trust Bar -->
+        <!-- Trust Bar -->
         <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-white/70 text-sm font-accent uppercase tracking-wider">
           <span>Led by Coach Zinger</span>
           <span class="hidden sm:inline text-primary">·</span>
