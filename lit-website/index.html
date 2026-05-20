@@ -143,17 +143,20 @@
     </div>
   </nav>
 
-  <!-- HERO SECTION (Không cắt ảnh, không cắt chữ) -->
+    <!-- HERO SECTION (Hiệu ứng Blend/Vignette để ảnh hòa vào nền) -->
   <section id="hero" class="relative min-h-screen flex items-end justify-center court-lines overflow-hidden bg-background">
     <div class="absolute inset-0 z-0">
-      <!-- Đổi sang object-contain và object-center để ảnh hiển thị trọn vẹn, không bị cắt -->
-      <img src="https://z-cdn-media.chatglm.cn/files/17f3b61c-0096-48c5-aefd-a30e13e79827.png?auth_key=1879242783-3d857d70c8c9468e8c14bd45ffc3fdd0-0-b9dc476fe4aa4de04da647de842b5936" alt="LIT Elite Team" class="w-full h-full object-contain object-center" />
-      <!-- Gradient tối ở nửa dưới để chữ dễ đọc -->
-      <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-background via-background/90 to-transparent pointer-events-none"></div>
+      <!-- 1. Dùng object-cover + object-center để ảnh lấp đầy, tập trung vào Coach ở giữa -->
+      <img src="https://z-cdn-media.chatglm.cn/files/17f3b61c-0096-48c5-aefd-a30e13e79827.png?auth_key=1879242783-3d857d70c8c9468e8c14bd45ffc3fdd0-0-b9dc476fe4aa4de04da647de842b5936" alt="LIT Elite Team" class="w-full h-full object-cover object-center" />
+      
+      <!-- 2. OVERLAY BLEND (Vignette): Tan viền ảnh vào nền #121220 -->
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse at center, transparent 0%, transparent 40%, #121220 100%);"></div>
+      
+      <!-- 3. Gradient dưới đáy để chữ dễ đọc -->
+      <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
     </div>
     
     <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pb-24 md:pb-32 w-full">
-      <!-- Nới rộng max-w-4xl thay vì 3xl để chữ không bị ép chặt -->
       <div class="max-w-4xl mx-auto text-center">
         
         <!-- Badge màu hồng -->
@@ -161,7 +164,7 @@
           LIT Elite Basketball · District 7, HCMC
         </div>
 
-        <!-- Giảm size chữ lg:text-7xl, bỏ tracking-wide để chống tràn chữ -->
+        <!-- Headline -->
         <h1 class="font-hero text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-none font-bold drop-shadow-2xl">
           MORE THAN
           <span class="block text-gradient">BASKETBALL</span>
