@@ -143,19 +143,23 @@
     </div>
   </nav>
 
-    <!-- HERO SECTION (Hiệu ứng Blend/Vignette để ảnh hòa vào nền) -->
+      <!-- HERO SECTION (Không cắt ảnh + Không viền đóng khung) -->
   <section id="hero" class="relative min-h-screen flex items-end justify-center court-lines overflow-hidden bg-background">
-    <div class="absolute inset-0 z-0">
-      <!-- 1. Dùng object-cover + object-center để ảnh lấp đầy, tập trung vào Coach ở giữa -->
-      <img src="https://z-cdn-media.chatglm.cn/files/17f3b61c-0096-48c5-aefd-a30e13e79827.png?auth_key=1879242783-3d857d70c8c9468e8c14bd45ffc3fdd0-0-b9dc476fe4aa4de04da647de842b5936" alt="LIT Elite Team" class="w-full h-full object-cover object-center" />
-      
-      <!-- 2. OVERLAY BLEND (Vignette): Tan viền ảnh vào nền #121220 -->
-      <div class="absolute inset-0" style="background: radial-gradient(ellipse at center, transparent 0%, transparent 40%, #121220 100%);"></div>
-      
-      <!-- 3. Gradient dưới đáy để chữ dễ đọc -->
-      <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
-    </div>
     
+    <!-- Lớp 1: Nền Blur (Lấy chính màu sắc của ảnh làm nền lan tỏa, xóa bỏ viền cắt) -->
+    <div class="absolute inset-0 z-0 overflow-hidden">
+      <img src="https://z-cdn-media.chatglm.cn/files/17f3b61c-0096-48c5-aefd-a30e13e79827.png?auth_key=1879242783-3d857d70c8c9468e8c14bd45ffc3fdd0-0-b9dc476fe4aa4de04da647de842b5936" alt="" class="w-full h-full object-cover scale-110 blur-[100px] opacity-40" />
+      <div class="absolute inset-0 bg-background/60"></div>
+    </div>
+
+    <!-- Lớp 2: Ảnh chính (Object-Contain để không cắt mất ai, giới hạn chiều cao để nhường chỗ cho chữ) -->
+    <div class="absolute inset-x-0 top-0 z-[1] flex justify-center pt-4 md:pt-8">
+      <img src="https://z-cdn-media.chatglm.cn/files/17f3b61c-0096-48c5-aefd-a30e13e79827.png?auth_key=1879242783-3d857d70c8c9468e8c14bd45ffc3fdd0-0-b9dc476fe4aa4de04da647de842b5936" alt="LIT Elite Team" class="w-full max-w-5xl h-auto max-h-[60vh] object-contain drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]" />
+    </div>
+
+    <!-- Lớp 3: Gradient phía dưới (Chống lấn chữ, tạo vùng tối sạch để đọc text) -->
+    <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-background via-background/95 to-transparent z-[2] pointer-events-none"></div>
+
     <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pb-24 md:pb-32 w-full">
       <div class="max-w-4xl mx-auto text-center">
         
