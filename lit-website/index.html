@@ -104,7 +104,6 @@
     }
     html { scroll-behavior: smooth; }
 
-    /* Custom Scrollbar for Gallery */
     .gallery-scroll::-webkit-scrollbar { height: 8px; }
     .gallery-scroll::-webkit-scrollbar-track { background: #2a2a3d; border-radius: 10px; }
     .gallery-scroll::-webkit-scrollbar-thumb { background: #ec4899; border-radius: 10px; }
@@ -113,8 +112,8 @@
 </head>
 <body class="font-sans">
 
-      <!-- NAVIGATION (Static - Nằm trên cùng, không đè lên Hero) -->
-  <nav id="navbar" class="w-full z-50 bg-white transition-all duration-300 h-16">
+  <!-- NAVIGATION -->
+  <nav id="navbar" class="w-full z-50 bg-white transition-all duration-300 h-16 sticky top-0">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-full">
       <div class="flex items-center justify-between h-full">
         <div class="flex items-center cursor-pointer" onclick="scrollToSection('hero')">
@@ -143,61 +142,50 @@
     </div>
   </nav>
 
- <!-- HERO CINEMATIC -->
-<section class="relative min-h-screen flex flex-col bg-background">
-  
-  <!-- KHỐI 1: Ảnh chiếm 60% trên cùng -->
-  <div class="relative w-full h-[55vh] md:h-[65vh] overflow-hidden">
-    <!-- Ảnh composite mới (1920x1080) -->
-    <img src="https://z-cdn-media.chatglm.cn/files/05455be0-80d0-4b22-822a-b505f408de6a.png?auth_key=1879262064-4c487ce0df7f4e588b5064a28fdc1d28-0-750c14f78e64b65fc87bcaf982c5efd6" alt="LIT Elite Basketball Team — Coaches and Athletes" class="w-full h-full object-cover object-top" />
-    
-    <!-- Gradient Blend -->
-    <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
-  </div>
+  <!-- HERO CINEMATIC -->
+  <section id="hero" class="relative min-h-screen flex flex-col bg-background z-[1]">
+    <div class="relative w-full h-[55vh] md:h-[65vh] overflow-hidden">
+      <img src="https://z-cdn-media.chatglm.cn/files/05455be0-80d0-4b22-822a-b505f408de6a.png?auth_key=1879262064-4c487ce0df7f4e588b5064a28fdc1d28-0-750c14f78e64b65fc87bcaf982c5efd6" alt="LIT Elite Basketball Team" class="w-full h-full object-contain object-center" />
+      <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+    </div>
 
-  <!-- KHỐI 2: Chữ & CTA -->
-  <div class="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-16 lg:px-24 -mt-10 md:-mt-20">
-    <div class="max-w-3xl mx-auto w-full text-center">
-      
-      <!-- Điểm nhấn Neon -->
-      <div class="w-16 h-1 bg-primary mx-auto mb-8"></div>
-
-      <!-- Badge -->
-      <div class="mb-4 inline-block bg-primary/10 text-primary border border-primary/30 px-4 py-2 text-sm font-medium rounded-full font-accent">
-        LIT Elite Basketball · U7–U15 · District 7, HCMC
-      </div>
-
-      <!-- Headline -->
-      <h1 class="font-hero text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-4 leading-none font-bold uppercase">
-        More Than<br/>
-        <span class="text-primary">Basketball</span>
-      </h1>
-
-      <!-- Subheadline -->
-      <p class="text-white text-lg md:text-xl max-w-xl mx-auto mb-10">
-        Elite basketball training for U7, U9, U11, and U15 athletes — built to develop skill, confidence, discipline, and game IQ.
-      </p>
-
-      <!-- CTAs -->
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-8dRtgUIGk9wQNt4Nkty_d9X3usP6svYwCuH7x1PAh15Pzw/viewform?usp=send_form" target="_blank" class="bg-primary hover:bg-pink-600 text-white text-lg px-8 py-5 rounded-full glow-pink group inline-flex items-center font-bold transition-all">
-          Book a Trial Session <i data-lucide="arrow-right" class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
-        </a>
-        <button onclick="scrollToSection('programs')" class="text-white hover:text-primary text-base font-medium transition-colors flex items-center gap-2 py-4">
-          View Programs <i data-lucide="chevron-down" class="w-4 h-4"></i>
-        </button>
-      </div>
-
+    <div class="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-16 lg:px-24 -mt-10 md:-mt-20">
+      <div class="max-w-4xl mx-auto w-full text-center">
+        <div class="w-16 h-1 bg-primary mx-auto mb-8"></div>
+        <div class="mb-4 inline-block bg-primary/10 text-primary border border-primary/30 px-4 py-2 text-sm font-medium rounded-full font-accent">
+          LIT Elite Basketball · U7–U15 · District 7, HCMC
+        </div>
+        <h1 class="font-hero text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-4 leading-none font-bold uppercase">
+          More Than<br/><span class="text-primary">Basketball</span>
+        </h1>
+        <p class="text-white text-lg md:text-xl max-w-xl mx-auto mb-10">
+          Elite basketball training for U7, U9, U11, and U15 athletes — built to develop skill, confidence, discipline, and game IQ.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-8dRtgUIGk9wQNt4Nkty_d9X3usP6svYwCuH7x1PAh15Pzw/viewform?usp=send_form" target="_blank" class="bg-primary hover:bg-pink-600 text-white text-lg px-8 py-5 rounded-full glow-pink group inline-flex items-center font-bold transition-all">
+            Book a Trial Session <i data-lucide="arrow-right" class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+          </a>
+          <button onclick="scrollToSection('programs')" class="text-white hover:text-primary text-base font-medium transition-colors flex items-center gap-2 py-4">
+            View Programs <i data-lucide="chevron-down" class="w-4 h-4"></i>
+          </button>
+        </div>
+        <div class="flex flex-wrap justify-center gap-x-4 md:gap-x-6 gap-y-2 text-white text-[10px] sm:text-xs font-accent uppercase tracking-wider md:tracking-wide border-t border-white/10 pt-6">
+          <span>Led by Coach Zinger</span>
+          <span class="text-primary">·</span>
+          <span>U7–U15 Pathway</span>
+          <span class="text-primary">·</span>
+          <span>Small-Group Coaching</span>
+          <span class="text-primary">·</span>
+          <span>Confidence Through Sport</span>
+        </div>
       </div>
     </div>
-  </section> <!-- Kết thúc Hero Section -->
+  </section> 
 
-  <!-- BRAND DIVIDER MARQUEE (Đã thu nhỏ, làm divider mượt mà) -->
-  <section class="py-3 md:py-5 bg-secondary border-y border-border overflow-hidden">
+  <!-- BRAND DIVIDER MARQUEE -->
+  <section class="py-3 md:py-5 bg-secondary border-y border-border overflow-hidden z-[1] relative">
     <div class="relative">
       <div class="flex animate-marquee whitespace-nowrap items-center">
-        
-        <!-- Group 1 -->
         <div class="flex items-center px-4 md:px-6">
           <span class="text-xl md:text-3xl lg:text-4xl font-black text-primary uppercase tracking-wider font-accent">DO EXTRA</span>
           <span class="text-primary/30 mx-3 md:mx-5 text-base md:text-2xl">•</span>
@@ -206,8 +194,6 @@
           <span class="text-xl md:text-3xl lg:text-4xl font-black text-primary uppercase tracking-wider font-accent">EVERY DAY</span>
           <span class="text-primary/30 mx-3 md:mx-5 text-base md:text-2xl">•</span>
         </div>
-        
-        <!-- Group 2 -->
         <div class="flex items-center px-4 md:px-6">
           <span class="text-xl md:text-3xl lg:text-4xl font-black text-primary uppercase tracking-wider font-accent">DO EXTRA</span>
           <span class="text-primary/30 mx-3 md:mx-5 text-base md:text-2xl">•</span>
@@ -216,8 +202,6 @@
           <span class="text-xl md:text-3xl lg:text-4xl font-black text-primary uppercase tracking-wider font-accent">EVERY DAY</span>
           <span class="text-primary/30 mx-3 md:mx-5 text-base md:text-2xl">•</span>
         </div>
-
-        <!-- Group 3 -->
         <div class="flex items-center px-4 md:px-6">
           <span class="text-xl md:text-3xl lg:text-4xl font-black text-primary uppercase tracking-wider font-accent">DO EXTRA</span>
           <span class="text-primary/30 mx-3 md:mx-5 text-base md:text-2xl">•</span>
@@ -226,13 +210,12 @@
           <span class="text-xl md:text-3xl lg:text-4xl font-black text-primary uppercase tracking-wider font-accent">EVERY DAY</span>
           <span class="text-primary/30 mx-3 md:mx-5 text-base md:text-2xl">•</span>
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- WHY LIT -->
-  <section id="why-lit" class="py-20 md:py-32 relative">
+  <section id="why-lit" class="py-20 md:py-32 relative z-[1]">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <div class="mb-4 inline-block bg-primary/20 text-primary border border-primary/50 px-4 py-1 text-sm rounded-full font-accent">WHY US?</div>
@@ -251,28 +234,28 @@
           <div class="bg-card/50 border border-border hover:border-primary/50 transition-all duration-300 rounded-2xl p-6">
             <div class="flex items-start gap-4 mb-3">
               <div class="w-10 h-10 bg-gradient-to-br from-primary/20 to-pink-500/20 rounded-lg flex items-center justify-center shrink-0"><i data-lucide="users" class="w-5 h-5 text-primary"></i></div>
-              <div><h3 class="text-xl text-white mb-1">Basketball Made Fun</h3><p class="text-primary font-semibold font-accent">NON-NEGOTIABLE</p></div>
+              <div><h3 class="text-xl text-white mb-1">Basketball Made Fun</h3><p class="text-primary font-semibold font-accent text-xs">NON-NEGOTIABLE</p></div>
             </div>
             <p class="text-white text-sm">Fun does not mean easy. Fun means enagaging. Competitive fun. Challenging fun. Meaningful fun.</p>
           </div>
           <div class="bg-card/50 border border-border hover:border-primary/50 transition-all duration-300 rounded-2xl p-6">
             <div class="flex items-start gap-4 mb-3">
               <div class="w-10 h-10 bg-gradient-to-br from-primary/20 to-pink-500/20 rounded-lg flex items-center justify-center shrink-0"><i data-lucide="star" class="w-5 h-5 text-primary"></i></div>
-              <div><h3 class="text-xl text-white mb-1">Elite Practice Environment</h3><p class="text-primary font-semibold font-accent">EFFORT & ATTITUDE</p></div>
+              <div><h3 class="text-xl text-white mb-1">Elite Practice Environment</h3><p class="text-primary font-semibold font-accent text-xs">EFFORT & ATTITUDE</p></div>
             </div>
             <p class="text-white text-sm">Players are safe to try, fail, and grow every session. We celebrate decisions over outcomes!</p>
           </div>
           <div class="bg-card/50 border border-border hover:border-primary/50 transition-all duration-300 rounded-2xl p-6">
             <div class="flex items-start gap-4 mb-3">
               <div class="w-10 h-10 bg-gradient-to-br from-primary/20 to-pink-500/20 rounded-lg flex items-center justify-center shrink-0"><i data-lucide="target" class="w-5 h-5 text-primary"></i></div>
-              <div><h3 class="text-xl text-white mb-1">Purposeful Practice</h3><p class="text-primary font-semibold font-accent">ACTIVE LEARNING</p></div>
+              <div><h3 class="text-xl text-white mb-1">Purposeful Practice</h3><p class="text-primary font-semibold font-accent text-xs">ACTIVE LEARNING</p></div>
             </div>
             <p class="text-white text-sm">Nothing is random. Every rep has purpose—every drill transfers to the game.</p>
           </div>
           <div class="bg-card/50 border border-border hover:border-primary/50 transition-all duration-300 rounded-2xl p-6">
             <div class="flex items-start gap-4 mb-3">
               <div class="w-10 h-10 bg-gradient-to-br from-primary/20 to-pink-500/20 rounded-lg flex items-center justify-center shrink-0"><i data-lucide="trophy" class="w-5 h-5 text-primary"></i></div>
-              <div><h3 class="text-xl text-white mb-1">Constraint Led Approach (CLA)</h3><p class="text-primary font-semibold font-accent">PLAYER-CENTRED</p></div>
+              <div><h3 class="text-xl text-white mb-1">Constraint Led Approach (CLA)</h3><p class="text-primary font-semibold font-accent text-xs">PLAYER-CENTRED</p></div>
             </div>
             <p class="text-white text-sm">Game-based coaching method to develop smarter, more adaptable, and more creative players.</p>
           </div>
@@ -282,10 +265,9 @@
   </section>
 
   <!-- PROGRAMS SECTION -->
-  <section id="programs" class="py-20 md:py-32 bg-secondary/30 relative">
+  <section id="programs" class="py-20 md:py-32 bg-secondary/30 relative z-[1]">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Section Header -->
       <div class="text-center mb-16">
         <div class="mb-4 inline-block bg-primary/20 text-primary border border-primary/50 px-4 py-1 text-sm rounded-full font-accent">OUR PROGRAMS</div>
         <h2 class="text-4xl sm:text-5xl md:text-6xl text-white mb-6 tracking-wide">DEVELOPMENT <span class="block text-gradient">FOR EVERY AGE</span></h2>
@@ -293,9 +275,7 @@
         <p class="text-white text-lg max-w-2xl mx-auto">Weekday and weekend slots available in District 7.</p>
       </div>
       
-      <!-- 4 PROGRAM CARDS -->
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        
         <!-- U7 CARD -->
         <div class="bg-card border border-border hover:border-primary/50 transition-all duration-300 rounded-2xl overflow-hidden group">
           <div class="h-2 bg-gradient-to-r from-pink-500 to-rose-500"></div>
@@ -395,24 +375,16 @@
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-8dRtgUIGk9wQNt4Nkty_d9X3usP6svYwCuH7x1PAh15Pzw/viewform?usp=send_form" target="_blank" class="w-full bg-gradient-to-r from-primary to-pink-500 hover:from-pink-500 hover:to-primary text-white py-2 rounded-md inline-flex items-center justify-center font-bold transition-all">Apply for U15</a>
           </div>
         </div>
-
       </div>
 
-      <!-- PRICING TABLE (Nằm dưới 4 Cards) -->
+      <!-- PRICING TABLE -->
       <div class="mt-16 md:mt-20 max-w-4xl mx-auto">
         <div class="bg-card border border-border rounded-2xl overflow-hidden relative">
-          
-          <!-- Thanh gradient trên cùng -->
           <div class="h-1.5 bg-gradient-to-r from-primary via-pink-500 to-purple-500"></div>
-          
           <div class="p-6 md:p-10">
-            <!-- Tiêu đề -->
             <h3 class="text-2xl md:text-3xl font-hero font-bold text-white mb-8 text-center uppercase tracking-wide">Program Fee</h3>
             
-            <!-- Bảng giá chính -->
             <div class="grid md:grid-cols-2 gap-6 mb-8">
-              
-              <!-- Gói U7 / U9 / U11 -->
               <div class="bg-background/50 border border-border rounded-xl p-6 text-center flex flex-col justify-center hover:border-primary/30 transition-colors">
                 <p class="text-primary font-accent text-xs uppercase tracking-widest mb-3">Ages U7 / U9 / U11</p>
                 <p class="text-4xl md:text-5xl font-bold text-primary mb-2">
@@ -420,8 +392,6 @@
                 </p>
                 <p class="text-muted-foreground text-sm">12 Sessions · 60 Mins Each</p>
               </div>
-
-              <!-- Gói U13 / U15 -->
               <div class="bg-background/50 border border-border rounded-xl p-6 text-center flex flex-col justify-center hover:border-primary/30 transition-colors">
                 <p class="text-primary font-accent text-xs uppercase tracking-widest mb-3">Ages U13 / U15</p>
                 <p class="text-4xl md:text-5xl font-bold text-primary mb-2">
@@ -429,20 +399,16 @@
                 </p>
                 <p class="text-muted-foreground text-sm">15 Sessions · 90 Mins Each</p>
               </div>
-
             </div>
 
-            <!-- Trial Session -->
             <div class="bg-secondary/40 border border-dashed border-primary/40 rounded-xl p-4 mb-10 text-center">
               <p class="text-white font-semibold text-base">
                 Trial Session: <span class="text-primary font-bold text-lg">380,000 VND</span>
               </p>
             </div>
 
-            <!-- Đường phân cách -->
             <div class="border-t border-border mb-10"></div>
 
-            <!-- Fee Includes -->
             <div class="mb-10">
               <h4 class="text-lg font-bold text-white mb-6 text-center uppercase tracking-wider font-accent">Fee Includes</h4>
               <div class="grid sm:grid-cols-2 gap-x-8 gap-y-4 max-w-2xl mx-auto">
@@ -465,31 +431,30 @@
               </div>
             </div>
 
-            <!-- CTA: Start With a Trial -->
             <div class="text-center">
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSc-8dRtgUIGk9wQNt4Nkty_d9X3usP6svYwCuH7x1PAh15Pzw/viewform?usp=send_form" target="_blank" class="bg-primary hover:bg-pink-600 text-white text-lg px-8 py-4 rounded-full glow-pink group inline-flex items-center font-bold transition-all">
                 Start With a Trial <i data-lucide="arrow-right" class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+              </a>
+              <p class="text-muted-foreground text-xs mt-4 font-accent uppercase tracking-wider">No long-term commitment required</p>
             </div>
-
           </div>
         </div>
       </div>
 
     </div>
   </section>
-    <!-- SUCCESS STORY -->
-  <section class="relative overflow-hidden py-20 md:py-28">
-    <div class="absolute inset-0 bg-gradient-to-r from-primary/5 via-pink-500/5 to-primary/5"></div>
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+
+  <!-- SUCCESS STORY -->
+  <section class="relative overflow-hidden py-20 md:py-28 z-[1]">
+    <div class="absolute inset-0 bg-gradient-to-r from-primary/5 via-pink-500/5 to-primary/5 z-0"></div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
         
-        <!-- Cột bên trái: Chữ (Giữ nguyên cấu trúc gọn gàng) -->
         <div class="max-w-xl">
           <div class="mb-6 inline-block bg-primary/20 text-primary border border-primary/50 px-4 py-2 text-sm font-medium rounded-full font-accent">TESTIMONIALS</div>
           <h2 class="text-4xl sm:text-5xl text-white mb-8 leading-tight tracking-wide">REAL RESULTS, <span class="block text-gradient">REAL FAMILIES</span></h2>
           
           <div class="space-y-0">
-            <!-- Block 1 -->
             <div class="flex items-start gap-4 py-5 border-b border-border/50">
               <div class="w-12 h-12 rounded-xl overflow-hidden border-2 border-primary/50 shrink-0">
                 <img src="https://z-cdn-media.chatglm.cn/files/77f765e8-e65b-44db-b261-8cf726855de0.png?auth_key=1878735359-7ec8f47edd684fbda74b4f2d2c39badc-0-2d88f8e54035164683affcadd246ae48" alt="Jan T." class="w-full h-full object-cover object-top" />
@@ -501,7 +466,6 @@
               </div>
             </div>
 
-            <!-- Block 2 -->
             <div class="flex items-start gap-4 py-5 border-b border-border/50">
               <div class="w-12 h-12 rounded-xl overflow-hidden border-2 border-border shrink-0 bg-card flex items-center justify-center">
                 <i data-lucide="user" class="w-6 h-6 text-primary/40"></i>
@@ -513,7 +477,6 @@
               </div>
             </div>
 
-            <!-- Block 3 -->
             <div class="flex items-start gap-4 py-5">
               <div class="w-12 h-12 rounded-xl overflow-hidden border-2 border-border shrink-0 bg-card flex items-center justify-center">
                 <i data-lucide="user" class="w-6 h-6 text-primary/40"></i>
@@ -526,7 +489,6 @@
             </div>
           </div>
 
-          <!-- Khu vực Stats -->
           <div class="flex flex-col sm:flex-row gap-6 mt-8 pt-6 border-t border-border">
             <div class="flex items-center gap-3">
               <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center"><i data-lucide="award" class="w-6 h-6 text-primary"></i></div>
@@ -539,16 +501,18 @@
           </div>
         </div>
 
-        <!-- Cột bên phải: Mosaic Gallery (1 lớn + 4 nhỏ, không viền) -->
+        <!-- Mosaic Gallery 10 Athletes -->
         <div class="relative flex justify-center lg:justify-end">
-          <div class="grid grid-cols-3 gap-3 w-full max-w-xl">
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full max-w-xl">
             
-            <!-- Ảnh lớn Jan (Chiếm 2 cột, 2 hàng) -->
             <div class="col-span-2 row-span-2 rounded-2xl overflow-hidden group">
               <img src="https://z-cdn-media.chatglm.cn/files/77f765e8-e65b-44db-b261-8cf726855de0.png?auth_key=1878735359-7ec8f47edd684fbda74b4f2d2c39badc-0-2d88f8e54035164683affcadd246ae48" alt="Jan T." class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
             </div>
 
-            <!-- 4 ảnh nhỏ VĐV (Tỷ lệ dọc 3/4) -->
+            <div class="col-span-2 row-span-2 rounded-2xl overflow-hidden group">
+              <img src="https://z-cdn-media.chatglm.cn/files/618d0715-ed34-4cce-a585-f25f1d96aef5.png?auth_key=1879266121-01cdc44a244447abb61004fcee8c8ec0-0-4f84b22ea304a3e4d6fed26af4f147d8" alt="LIT Elite Athlete" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+            </div>
+
             <div class="rounded-2xl overflow-hidden group aspect-[3/4]">
               <img src="https://z-cdn-media.chatglm.cn/files/02c1ba42-821a-48e1-ac47-75bdf7a80e06.png?auth_key=1879175248-7c0405c042f04fb6b808da251cf26e57-0-9c34d80b26c445b94f4ead4a114f81fd" alt="LIT Elite Athlete" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
             </div>
@@ -561,6 +525,18 @@
             <div class="rounded-2xl overflow-hidden group aspect-[3/4]">
               <img src="https://z-cdn-media.chatglm.cn/files/387343be-4257-428f-9cc8-0535f1f00eb8.png?auth_key=1879175248-7b91020716df449eb3ef1e1c8f8a3384-0-4747478789b9cb24468df47e980943a3" alt="LIT Elite Athlete" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
             </div>
+            <div class="rounded-2xl overflow-hidden group aspect-[3/4]">
+              <img src="https://z-cdn-media.chatglm.cn/files/58f9a8f1-9b17-45fa-adf9-44b6930915e4.png?auth_key=1879266121-5512671e26f14c93bb514567c919b9d8-0-89f0807b83c7a62f9de8f8bb0a0764aa" alt="LIT Elite Athlete" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="rounded-2xl overflow-hidden group aspect-[3/4]">
+              <img src="https://z-cdn-media.chatglm.cn/files/e850d5ad-8b79-4b32-bb4c-3ac8525a0f6f.png?auth_key=1879266121-dd282909a7404d289a585a25ca35839f-0-b95b9b4c0a2f8a1cc7767d7ae9bc36a0" alt="LIT Elite Athlete" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="rounded-2xl overflow-hidden group aspect-[3/4]">
+              <img src="https://z-cdn-media.chatglm.cn/files/235d6ea5-bc27-4b32-ae67-993430d4e1e8.png?auth_key=1879266121-c5096eb1a4b94728a27a5d7c67959adf-0-524bd29f4719b64ec60938472fb0a271" alt="LIT Elite Athlete" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="rounded-2xl overflow-hidden group aspect-[3/4]">
+              <img src="https://z-cdn-media.chatglm.cn/files/0ba240c1-62ac-4fef-bb68-0ce0de7ea30d.png?auth_key=1879266121-aa9e6095f8a248d280945f2fdbd7bd50-0-3c728e64340b32ca3033c4603ef25422" alt="LIT Elite Athlete" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+            </div>
 
           </div>
         </div>
@@ -569,8 +545,8 @@
     </div>
   </section>
 
-   <!-- WHO ARE WE - GALLERY -->
-  <section class="py-20 md:py-32 relative">
+  <!-- WHO ARE WE -->
+  <section class="py-20 md:py-32 relative z-[1]">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center">
       <div class="mb-4 inline-block bg-primary/20 text-primary border border-primary/50 px-4 py-1 text-sm rounded-full font-accent">WHO ARE WE</div>
       <h2 class="text-4xl sm:text-5xl md:text-6xl text-white mb-6 tracking-wide">WHAT IS <span class="block text-gradient">LIT ELITE BASKETBALL</span></h2>    
@@ -620,7 +596,7 @@
   </section>
     
   <!-- MEET THE COACH -->
-  <section id="coach" class="py-20 md:py-32 relative">
+  <section id="coach" class="py-20 md:py-32 relative z-[1]">
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-0">
         <div class="w-full lg:w-1/2 py-8 md:py-12 lg:py-0 lg:pr-16 flex flex-col justify-center">
@@ -662,7 +638,7 @@
   </section>
 
   <!-- TRAINING ENVIRONMENT -->
-  <section class="py-20 md:py-32 relative">
+  <section class="py-20 md:py-32 relative z-[1]">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <div class="mb-4 inline-block bg-primary/20 text-primary border border-primary/50 px-4 py-1 text-sm rounded-full font-accent">TRAINING ENVIRONMENT</div>
@@ -705,17 +681,15 @@
   </section>
 
   <!-- WIDE COURT DIVIDER -->
-  <section class="relative overflow-hidden">
+  <section class="relative overflow-hidden z-[1]">
     <div class="aspect-[21/9]">
       <img src="https://images.unsplash.com/photo-1534113414509-0eec2bfb493f?q=80&w=2000&auto=format&fit=crop" alt="Wide Court" class="w-full h-full object-top object-cover" />
     </div>
     <div class="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent"></div>
   </section>
 
-  <!-- ========================================== -->
-  <!-- ATHLETE SPOTLIGHT & COURT GALLERY -->
-  <!-- ========================================== -->
-  <section id="spotlight" class="py-20 md:py-32 bg-secondary/30 relative">
+  <!-- ATHLETE SPOTLIGHT -->
+  <section id="spotlight" class="py-20 md:py-32 bg-secondary/30 relative z-[1]">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <div class="mb-4 inline-block bg-primary/20 text-primary border border-primary/50 px-4 py-1 text-sm rounded-full font-accent">ATHLETE SPOTLIGHT</div>
@@ -723,7 +697,6 @@
         <p class="text-white text-lg max-w-2xl mx-auto">Celebrating effort, attitude, and growth. Every month, we recognize a player who embodies the LIT Elite values on and off the court.</p>
       </div>
 
-      <!-- Main Spotlight Card -->
       <div class="max-w-5xl mx-auto bg-card border border-border hover:border-primary/30 transition-all duration-300 rounded-2xl overflow-hidden premium-shadow mb-16">
         <div class="grid md:grid-cols-2 gap-0">
           <div class="relative aspect-square md:aspect-auto overflow-hidden group">
@@ -760,52 +733,44 @@
         </div>
       </div>
 
-      <!-- Court Gallery -->
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-8">
             <h3 class="text-2xl md:text-3xl text-white tracking-wide">LIFE ON THE <span class="text-gradient">COURT</span></h3>
             <p class="text-white text-sm mt-2 font-accent uppercase tracking-wider">Follow our journey • Updated regularly</p>
         </div>
 
-        <!-- Đã thay 4 ảnh thực tế vào đây -->
         <div class="flex gap-4 overflow-x-auto gallery-scroll pb-4 snap-x snap-mandatory">
-          
           <div class="flex-shrink-0 w-72 md:w-96 snap-start relative group rounded-2xl overflow-hidden aspect-[4/3]">
             <img src="https://z-cdn-media.chatglm.cn/files/1763238d-49a6-4940-b183-2f566133a905.JPG?auth_key=1879160977-e291eb3bdbe04edda220ae670e7689b9-0-da2431dac3e51639d73a57f8b414437c" alt="Girls Fast Break" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
               <p class="text-white font-bold text-sm font-accent">FAST BREAK DRILL</p>
             </div>
           </div>
-
           <div class="flex-shrink-0 w-72 md:w-96 snap-start relative group rounded-2xl overflow-hidden aspect-[4/3]">
             <img src="https://z-cdn-media.chatglm.cn/files/12358887-2cb1-47de-ab4c-c80646708b15.JPG?auth_key=1879160977-e534e5af07c740ffadc0fe3039bf7135-0-bd15325ad13fbd0ac2fdf5546f10611e" alt="Group Training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
               <p class="text-white font-bold text-sm font-accent">GROUP TRAINING</p>
             </div>
           </div>
-
           <div class="flex-shrink-0 w-72 md:w-96 snap-start relative group rounded-2xl overflow-hidden aspect-[4/3]">
             <img src="https://z-cdn-media.chatglm.cn/files/83ba50e2-d9cc-487f-8ef2-e9f193760382.JPG?auth_key=1879160977-9c5e12fb9abe42109d1b3d90cc32322c-0-ad4437d3397e72d062ec8ea02df89a8e" alt="Competitive Scrimmage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
               <p class="text-white font-bold text-sm font-accent">COMPETITIVE SCRIMMAGE</p>
             </div>
           </div>
-
           <div class="flex-shrink-0 w-72 md:w-96 snap-start relative group rounded-2xl overflow-hidden aspect-[4/3]">
             <img src="https://z-cdn-media.chatglm.cn/files/b01c0018-0ebc-4e87-b495-38e8a2ce2d66.JPG?auth_key=1879160977-3aabf54a67514c1fab6e295c74e95337-0-6bf49eea0436c70296cf249352dbb70b" alt="Shooting Practice" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
               <p class="text-white font-bold text-sm font-accent">SHOOTING PRACTICE</p>
             </div>
           </div>
-
         </div>
       </div>
-
     </div>
   </section>
 
   <!-- LIMITED SPOTS CTA -->
-  <section class="py-20 md:py-32 relative overflow-hidden">
+  <section class="py-20 md:py-32 relative overflow-hidden z-[1]">
     <div class="absolute inset-0 z-0">
       <img src="https://images.unsplash.com/photo-1515703407324-5f753afd8be8?q=80&w=2000&auto=format&fit=crop" alt="Basketball CTA" class="w-full h-full object-cover" />
       <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black/80"></div>
@@ -830,7 +795,7 @@
   </section>
 
   <!-- FOOTER -->
-  <section id="contact" class="py-20 bg-secondary/30 relative">
+  <section id="contact" class="py-20 bg-secondary/30 relative z-[1]">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-4xl mx-auto bg-card border border-border rounded-2xl p-12">
         <div class="text-center mb-12">
@@ -866,7 +831,7 @@
     </div>
   </section>
 
-    <!-- SCRIPTS -->
+  <!-- SCRIPTS -->
   <script>
     lucide.createIcons();
 
@@ -899,3 +864,5 @@
       }
     }
   </script>
+</body>
+</html>
