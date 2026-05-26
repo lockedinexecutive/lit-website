@@ -540,37 +540,93 @@
 
     </div>
   </section>
-  <!-- 8. OUR ATHLETES / ATHLETE SPOTLIGHT -->
-  <section id="spotlight" class="py-20 md:py-32 bg-secondary/30 relative z-[1]">
+  <!-- 8. OUR ATHLETES -->
+  <section id="athletes" class="py-20 md:py-32 bg-secondary/30 relative z-[1]">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
         <div class="mb-4 inline-block bg-primary/20 text-primary border border-primary/50 px-4 py-1 text-sm rounded-full font-accent">OUR ATHLETES</div>
-        <h2 class="text-4xl sm:text-5xl md:text-6xl text-white mb-6 tracking-wide">ATHLETE <span class="block text-gradient">SPOTLIGHT</span></h2>
-        <p class="text-white text-lg max-w-2xl mx-auto">Celebrating effort, attitude, and growth. Every month, we recognize a player who embodies the LIT Elite values on and off the court.</p>
+        <h2 class="text-4xl sm:text-5xl md:text-6xl text-white mb-6 tracking-wide">OUR <span class="text-gradient">ATHLETES</span></h2>
+        <p class="text-white text-xl md:text-2xl font-medium mb-4">The young athletes bringing the LIT standard to life.</p>
+        <p class="text-white/70 text-lg leading-relaxed">Every athlete has a different journey. At LIT Elite, we celebrate the players who show up, work hard, learn through mistakes, and keep building confidence one session at a time.</p>
       </div>
-      <div class="max-w-5xl mx-auto bg-card border border-border hover:border-primary/30 transition-all duration-300 rounded-2xl overflow-hidden premium-shadow mb-16">
-        <div class="grid md:grid-cols-2 gap-0">
-          <div class="relative aspect-square md:aspect-auto overflow-hidden group"><img src="https://z-cdn-media.chatglm.cn/files/77f765e8-e65b-44db-b261-8cf726855de0.png?auth_key=1878735359-7ec8f47edd684fbda74b4f2d2c39badc-0-2d88f8e54035164683affcadd246ae48" alt="Athlete of the Month" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" /><div class="absolute top-4 left-4 bg-gradient-to-r from-primary to-pink-500 text-white px-4 py-2 text-sm font-bold rounded-full font-accent flex items-center gap-2 z-10"><i data-lucide="award" class="w-4 h-4"></i> FEATURED</div></div>
-          <div class="p-8 md:p-10 flex flex-col justify-center">
-            <h3 class="text-3xl md:text-4xl text-white mb-2 font-hero tracking-wide">MIA NGUYEN</h3>
-            <p class="text-primary font-bold font-accent uppercase tracking-wider mb-6">U11 ATHLETE • SEASON 2</p>
-            <div class="bg-background/50 border-l-4 border-primary p-4 rounded-r-lg mb-6"><p class="text-white text-base italic leading-relaxed">"Mia has shown incredible resilience and focus this month. She leads by example, encourages her teammates, and never takes a rep off. Her improvement in decision-making has been outstanding."</p><p class="text-primary text-sm mt-2 font-bold font-accent">— COACH ZINGER</p></div>
-            <div class="grid grid-cols-3 gap-3">
-              <div class="bg-secondary/80 rounded-xl p-3 text-center border border-border"><i data-lucide="flame" class="w-5 h-5 text-primary mx-auto mb-1"></i><p class="text-white text-sm font-bold">Effort</p><p class="text-primary text-xs font-accent">100%</p></div>
-              <div class="bg-secondary/80 rounded-xl p-3 text-center border border-border"><i data-lucide="trending-up" class="w-5 h-5 text-primary mx-auto mb-1"></i><p class="text-white text-sm font-bold">Growth</p><p class="text-primary text-xs font-accent">TOP 3</p></div>
-              <div class="bg-secondary/80 rounded-xl p-3 text-center border border-border"><i data-lucide="check-circle" class="w-5 h-5 text-primary mx-auto mb-1"></i><p class="text-white text-sm font-bold">Attendance</p><p class="text-primary text-xs font-accent">PERFECT</p></div>
-            </div>
+
+      <!-- Athlete Profile Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
+        
+        <!-- Athlete Card 1 -->
+        <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden premium-shadow cursor-pointer">
+          <img src="https://z-cdn-media.chatglm.cn/files/cce816a4-d6a6-4a4c-9db0-2e57d10547d6.png?auth_key=1879783501-27cd315f9b464583b57aab5e9f8e07b3-0-14fa5dbf281f92a375ccb9e87a8a94a4" alt="LIT Elite Basketball U15 athlete holding basketball in team uniform" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-5 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+            <p class="text-white font-bold text-sm md:text-base">U15 Athlete</p>
+            <p class="text-primary font-accent text-xs tracking-wider uppercase mt-1">Growth Mindset</p>
           </div>
         </div>
-      </div>
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-8"><h3 class="text-2xl md:text-3xl text-white tracking-wide">LIFE ON THE <span class="text-gradient">COURT</span></h3><p class="text-white text-sm mt-2 font-accent uppercase tracking-wider">Follow Our Journey • Updated Regularly</p></div>
-        <div class="flex gap-4 overflow-x-auto gallery-scroll pb-4 snap-x snap-mandatory">
-          <div class="flex-shrink-0 w-72 md:w-96 snap-start relative group rounded-2xl overflow-hidden aspect-[4/3]"><img src="https://z-cdn-media.chatglm.cn/files/1763238d-49a6-4940-b183-2f566133a905.JPG?auth_key=1879160977-e291eb3bdbe04edda220ae670e7689b9-0-da2431dac3e51639d73a57f8b414437c" alt="Girls Fast Break" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /><div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4"><p class="text-white font-bold text-sm font-accent">FAST BREAK DRILL</p></div></div>
-          <div class="flex-shrink-0 w-72 md:w-96 snap-start relative group rounded-2xl overflow-hidden aspect-[4/3]"><img src="https://z-cdn-media.chatglm.cn/files/12358887-2cb1-47de-ab4c-c80646708b15.JPG?auth_key=1879160977-e534e5af07c740ffadc0fe3039bf7135-0-bd15325ad13fbd0ac2fdf5546f10611e" alt="Group Training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /><div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4"><p class="text-white font-bold text-sm font-accent">GROUP TRAINING</p></div></div>
-          <div class="flex-shrink-0 w-72 md:w-96 snap-start relative group rounded-2xl overflow-hidden aspect-[4/3]"><img src="https://z-cdn-media.chatglm.cn/files/83ba50e2-d9cc-487f-8ef2-e9f193760382.JPG?auth_key=1879160977-9c5e12fb9abe42109d1b3d90cc32322c-0-ad4437d3397e72d062ec8ea02df89a8e" alt="Competitive Scrimmage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /><div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4"><p class="text-white font-bold text-sm font-accent">COMPETITIVE SCRIMMAGE</p></div></div>
-          <div class="flex-shrink-0 w-72 md:w-96 snap-start relative group rounded-2xl overflow-hidden aspect-[4/3]"><img src="https://z-cdn-media.chatglm.cn/files/b01c0018-0ebc-4e87-b495-38e8a2ce2d66.JPG?auth_key=1879160977-3aabf54a67514c1fab6e295c74e95337-0-6bf49eea0436c70296cf249352dbb70b" alt="Shooting Practice" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /><div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4"><p class="text-white font-bold text-sm font-accent">SHOOTING PRACTICE</p></div></div>
+
+        <!-- Athlete Card 2 -->
+        <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden premium-shadow cursor-pointer">
+          <img src="https://z-cdn-media.chatglm.cn/files/0970242b-ee0e-4025-88fd-243cdf4efe3d.png?auth_key=1879783501-87b1181312ad430483d239a926eb6ada-0-188b8045c2ddc20f149930ff62321f7e" alt="Youth basketball athlete in LIT Elite Basketball uniform pointing up" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-5 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+            <p class="text-white font-bold text-sm md:text-base">LIT Elite Athlete</p>
+            <p class="text-primary font-accent text-xs tracking-wider uppercase mt-1">Confidence Builder</p>
+          </div>
         </div>
+
+        <!-- Athlete Card 3 -->
+        <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden premium-shadow cursor-pointer">
+          <img src="https://z-cdn-media.chatglm.cn/files/c1b75fd6-991d-4e95-9e1a-991bcf76e7ea.png?auth_key=1879783501-5d3fa4d9d8c145cfbb93c5f9ff2bbd92-0-dd94409a0f8a41e1b48684f02610d81e" alt="LIT Elite Basketball athlete profile portrait in pink and black uniform" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-5 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+            <p class="text-white font-bold text-sm md:text-base">U11 Athlete</p>
+            <p class="text-primary font-accent text-xs tracking-wider uppercase mt-1">Purposeful Player</p>
+          </div>
+        </div>
+
+        <!-- Athlete Card 4 -->
+        <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden premium-shadow cursor-pointer">
+          <img src="https://z-cdn-media.chatglm.cn/files/55edd56f-d131-456a-a9a9-c45abd95a107.png?auth_key=1879783501-8ef564874a384f828ddbca7edeace9e4-0-326f9bf236faa9720276bccd6979d2d7" alt="U15 athlete representing LIT Elite Basketball in Ho Chi Minh City" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-5 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+            <p class="text-white font-bold text-sm md:text-base">U15 Athlete</p>
+            <p class="text-primary font-accent text-xs tracking-wider uppercase mt-1">Leads by Example</p>
+          </div>
+        </div>
+
+        <!-- Athlete Card 5 -->
+        <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden premium-shadow cursor-pointer">
+          <img src="https://z-cdn-media.chatglm.cn/files/109a18cb-2440-41ac-a41f-dbe4659eccbb.png?auth_key=1879783501-1a386ba2c381463a824e1058b115fd8f-0-05f9f1b8c5135eac9e779ef251788514" alt="Youth basketball players training together at LIT Elite Basketball" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-5 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+            <p class="text-white font-bold text-sm md:text-base">U15 Girls Team</p>
+            <p class="text-primary font-accent text-xs tracking-wider uppercase mt-1">Team First</p>
+          </div>
+        </div>
+
+        <!-- Athlete Card 6 -->
+        <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden premium-shadow cursor-pointer">
+          <img src="https://z-cdn-media.chatglm.cn/files/4c0cb421-1ce4-4054-948d-e14c31f14d10.png?auth_key=1879783501-ab156754977f483eb719308edfa58023-0-08d30d117a94574c584606f99854e955" alt="Young athlete shooting basketball during LIT Elite training" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-5 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+            <p class="text-white font-bold text-sm md:text-base">U13 Athlete</p>
+            <p class="text-primary font-accent text-xs tracking-wider uppercase mt-1">Trains With Purpose</p>
+          </div>
+        </div>
+
+        <!-- Athlete Card 7 -->
+        <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden premium-shadow cursor-pointer">
+          <img src="https://z-cdn-media.chatglm.cn/files/17deedd6-54cc-45c9-a0f9-26aa30477ff4.png?auth_key=1879783501-75f8a146b2f74275aed2eafaec3379b6-0-76080e04717e713c9ab6f176a815eb31" alt="LIT Elite Basketball U11 athlete smiling with basketball" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-5 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+            <p class="text-white font-bold text-sm md:text-base">U11 Athlete</p>
+            <p class="text-primary font-accent text-xs tracking-wider uppercase mt-1">Learns Through Mistakes</p>
+          </div>
+        </div>
+
+        <!-- Athlete Card 8 -->
+        <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden premium-shadow cursor-pointer">
+          <img src="https://z-cdn-media.chatglm.cn/files/08584e74-ad9e-4d12-9e14-0f92a057d078.png?auth_key=1879783501-071ff3600c764911ba286d3ebcea83af-0-cd36688b5227778e281ff0ceed0443c0" alt="U9 athlete representing LIT Elite Basketball in team uniform" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-5 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+            <p class="text-white font-bold text-sm md:text-base">U9 Athlete</p>
+            <p class="text-primary font-accent text-xs tracking-wider uppercase mt-1">Keeps Growing</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
