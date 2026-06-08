@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LIT Elite Basketball Academy — Purposeful Youth Basketball Training in Ho Chi Minh City</title>
+  <meta name="description" content="LIT Elite Basketball provides purposeful basketball training for U7–U15 athletes in Ho Chi Minh City. Build real skill, confidence, and character with Coach Zinger." />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#ec4899',
+            secondary: '#1e1e2e',
+            card: '#2a2a3d',
+            border: '#3f3f5a',
+            background: '#121220',
+            foreground: '#f8f8f2',
+            'muted-foreground': '#c8ccd8',
+          },
+          fontFamily: {
+            sans: ['Gilroy', 'Inter', 'sans-serif'],
+            hero: ['UnisonPro', 'sans-serif'],
+            heading: ['UTMNokia', 'sans-serif'],
+            accent: ['Jeko', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    @font-face { font-family: 'UnisonPro'; src: url("./fonts/UnisonPro-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; }
+    @font-face { font-family: 'UnisonPro-LightRound'; src: url("./fonts/UnisonPro-LightRound.woff2") format("woff2"); font-weight: 300; font-style: normal; }
+    @font-face { font-family: 'Gilroy'; src: url("./fonts/SVN-Gilroy.woff2") format("woff2"); font-weight: 400; font-style: normal; }
+    @font-face { font-family: 'Gilroy'; src: url("./fonts/SVN-GilroySemiBold.woff2") format("woff2"); font-weight: 600; font-style: normal; }
+    @font-face { font-family: 'Gilroy'; src: url("./fonts/SVN-GilroyBold.woff2") format("woff2"); font-weight: 700; font-style: normal; }
+    @font-face { font-family: 'Gilroy'; src: url("./fonts/SVN-GilroyItalic.woff2") format("woff2"); font-weight: 400; font-style: italic; }
+    @font-face { font-family: 'Jeko'; src: url("./fonts/SVN-Jeko-Light.woff2") format("woff2"); font-weight: 300; font-style: normal; }
+    @font-face { font-family: 'Jeko'; src: url("./fonts/SVN-Jeko-Black.woff2") format("woff2"); font-weight: 900; font-style: normal; }
+    @font-face { font-family: 'UTMNokia'; src: url("./fonts/UTM Nokia.woff2") format("woff2"); font-weight: 400; font-style: normal; }
+
+    /* ═══ TYPOGRAPHY SYSTEM ═══
+       font-hero    = UnisonPro Bold        → H1 main headline only
+       font-heading = UnisonPro-LightRound  → H2 section headlines
+       font-accent  = Jeko                  → H3 sub-headlines, labels, badges, buttons, tracking text
+       font-sans    = Gilroy                → Body text, paragraphs, descriptions
+    */
+    body { background-color: #121220; color: #f8f8f2; font-family: 'Gilroy', 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
+    p, .text-muted-foreground { line-height: 1.8; }
+    .text-gradient { background: linear-gradient(to right, #ec4899, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .premium-shadow { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
+    .glow-pink { box-shadow: 0 0 40px rgba(255, 64, 129, 0.3); }
+    html { scroll-behavior: smooth; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary { list-style: none; }
+
+    /* Glass Cards */
+    .glass-card { background: rgba(42, 42, 61, 0.75); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(63, 63, 90, 0.5); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6); }
+    .glass-card-dark { background: rgba(18, 18, 32, 0.80); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border: 1px solid rgba(63, 63, 90, 0.5); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6); }
+    .inner-card { background: rgba(42, 42, 61, 0.6); border: 1px solid rgba(63, 63, 90, 0.4); transition: all 0.3s; }
+    .inner-card:hover { border-color: rgba(236, 72, 153, 0.4); }
+
+    /* Package highlight border cards */
+    .package-card { background: rgba(18, 18, 32, 0.7); border: 2px solid rgba(236, 72, 153, 0.35); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); transition: all 0.3s; position: relative; overflow: hidden; }
+    .package-card:hover { border-color: rgba(236, 72, 153, 0.7); box-shadow: 0 0 40px -10px rgba(236, 72, 153, 0.2); }
+    .package-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+    .package-fundamental::before { background: linear-gradient(to right, #ec4899, #f472b6); }
+    .package-advanced::before { background: linear-gradient(to right, #a855f7, #ec4899); }
+
+    /* Fading Background */
+    @keyframes imageFade {
+      0% { opacity: 0; } 10% { opacity: 1; } 30% { opacity: 1; } 40% { opacity: 0; } 100% { opacity: 0; }
+    }
+    .fade-bg-img { animation: imageFade 24s infinite; opacity: 0; position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: blur(6px) brightness(0.35); mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent); -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent); }
+    .fade-bg-img:nth-child(1) { animation-delay: 0s; }
+    .fade-bg-img:nth-child(2) { animation-delay: 8s; }
+    .fade-bg-img:nth-child(3) { animation-delay: 16s; }
+
+    @keyframes cinematicZoom { 0% { transform: scale(1); } 100% { transform: scale(1.08); } }
+    .cinematic-img { animation: cinematicZoom 20s ease-in-out infinite alternate; }
+
+    .section-badge { display: inline-block; background: rgba(236, 72, 153, 0.15); color: #ec4899; border: 1px solid rgba(236, 72, 153, 0.4); padding: 6px 16px; font-size: 13px; border-radius: 9999px; font-family: 'Jeko', sans-serif; letter-spacing: 0.05em; }
+    .section-header { text-align: center; max-width: 48rem; margin-left: auto; margin-right: auto; }
+  </style>
+</head>
+<body class="font-sans">
+
+  <!-- NAVIGATION -->
+  <nav id="navbar" class="w-full z-50 bg-white/95 backdrop-blur-md transition-all duration-300 h-16 sticky top-0">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-full">
+      <div class="flex items-center justify-between h-full">
+        <div class="flex items-center cursor-pointer" onclick="scrollToSection('hero')">
+          <img src="https://z-cdn-media.chatglm.cn/files/e2f8cfe7-1e43-4b1a-88d6-4350b231bf71.png?auth_key=1878815395-dd6897666469472db12bff51e2f3b468-0-464542c0236a8db563b1c263fb523343" alt="LIT Elite Basketball Academy" class="h-10 md:h-12 w-auto" />
+        </div>
+        <div class="hidden md:flex items-center gap-6">
+          <button onclick="scrollToSection('programs')" class="text-sm font-semibold text-primary hover:text-pink-600 transition-colors font-sans">Programs</button>
+          <button onclick="scrollToSection('about')" class="text-sm font-semibold text-primary hover:text-pink-600 transition-colors font-sans">About</button>
+          <button onclick="scrollToSection('why-lit')" class="text-sm font-semibold text-primary hover:text-pink-600 transition-colors font-sans">Why LIT</button>
+          <button onclick="scrollToSection('coach')" class="text-sm font-semibold text-primary hover:text-pink-600 transition-colors font-sans">Coach</button>
+          <button onclick="scrollToSection('faq')" class="text-sm font-semibold text-primary hover:text-pink-600 transition-colors font-sans">FAQ</button>
+          <a href="https://www.instagram.com/lockedinsaigon/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-primary hover:text-pink-600 transition-colors flex items-center gap-1 font-sans">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            Instagram
+          </a>
+          <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20learn%20more%20about%20the%20basketball%20program%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-primary to-pink-500 hover:from-pink-500 hover:to-primary text-white font-bold px-5 py-2 rounded-md text-sm transition-all font-accent">Book a Trial</a>
+        </div>
+        <button id="menu-btn" class="md:hidden text-primary"><i data-lucide="menu" class="w-5 h-5"></i></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-pink-200">
+      <div class="container mx-auto px-4 py-3 flex flex-col gap-2">
+        <button onclick="scrollToSection('programs')" class="text-left py-2 text-primary font-semibold text-sm font-sans">Programs</button>
+        <button onclick="scrollToSection('about')" class="text-left py-2 text-primary font-semibold text-sm font-sans">About</button>
+        <button onclick="scrollToSection('why-lit')" class="text-left py-2 text-primary font-semibold text-sm font-sans">Why LIT</button>
+        <button onclick="scrollToSection('coach')" class="text-left py-2 text-primary font-semibold text-sm font-sans">Coach</button>
+        <button onclick="scrollToSection('faq')" class="text-left py-2 text-primary font-semibold text-sm font-sans">FAQ</button>
+        <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20learn%20more%20about%20the%20basketball%20program%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="block text-center mt-1 bg-gradient-to-r from-primary to-pink-500 text-white font-bold py-2 rounded-md text-sm font-accent">Book a Trial</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- 🎬 HERO -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section id="hero" class="relative min-h-screen flex flex-col bg-background">
+    <div class="relative w-full h-[75vh] md:h-[85vh] overflow-hidden">
+      <img src="https://z-cdn-media.chatglm.cn/files/05455be0-80d0-4b22-822a-b505f408de6a.png?auth_key=1879262064-4c487ce0df7f4e588b5064a28fdc1d28-0-750c14f78e64b65fc87bcaf982c5efd6" alt="LIT Elite Basketball Team" class="w-full h-full object-cover object-top cinematic-img" />
+      <div class="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background z-10"></div>
+      <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-background via-background/60 to-transparent z-10"></div>
+    </div>
+    <div class="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-16 lg:px-24 -mt-16 md:-mt-24">
+      <div class="max-w-3xl mx-auto w-full text-center">
+        <div class="w-16 h-1 bg-primary mx-auto mb-8"></div>
+        <div class="section-badge mb-4">LIT Elite Basketball · U7–U15 · District 7, HCMC</div>
+        <!-- H1: font-hero — UnisonPro Bold, main headline only -->
+        <h1 class="font-hero text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-4 leading-none font-bold uppercase">More Than<br/><span class="text-primary">Basketball</span></h1>
+        <p class="text-white text-lg md:text-xl max-w-xl mx-auto mb-6">Purposeful basketball training for U7–U15 athletes — built to develop real skill, game understanding, and the confidence to play freely.</p>
+        <p class="text-primary font-accent uppercase tracking-[0.15em] md:tracking-widest text-sm md:text-base mb-10 max-w-xl mx-auto">Confidence is trained. Every rep has purpose.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-pink-600 text-white text-lg px-8 py-5 rounded-full glow-pink group inline-flex items-center font-bold font-accent transition-all">Book a Trial Session <i data-lucide="arrow-right" class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"></i></a>
+          <button onclick="scrollToSection('programs')" class="text-white hover:text-primary text-base font-medium transition-colors flex items-center gap-2 py-4 font-sans">View Programs <i data-lucide="chevron-down" class="w-4 h-4"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- 🧊 PROGRAMS — Full-Width Cards -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section id="programs" class="py-20 md:py-32 relative z-[1]">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header mb-16">
+        <div class="section-badge mb-4">OUR PROGRAMS</div>
+        <!-- H2: font-heading — UnisonPro-LightRound -->
+        <h2 class="font-heading text-4xl sm:text-5xl md:text-6xl text-white mb-6 tracking-wide">YOUTH BASKETBALL DEVELOPMENT <span class="block text-gradient">FOR EVERY AGE</span></h2>
+        <p class="text-white/80 text-lg leading-relaxed">Every athlete develops differently. Our age pathways are designed to provide the right level of challenge, support, and confidence at every stage of the journey.</p>
+      </div>
+    </div>
+
+    <div class="w-full px-3 sm:px-6 lg:px-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 max-w-[1920px] mx-auto">
+        <!-- U7 -->
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col group">
+          <div class="h-2 bg-gradient-to-r from-pink-500 to-rose-500"></div>
+          <div class="aspect-[4/3] lg:aspect-[3/4] overflow-hidden relative">
+            <img src="https://z-cdn-media.chatglm.cn/files/83ba50e2-d9cc-487f-8ef2-e9f193760382.JPG?auth_key=1879160977-9c5e12fb9abe42109d1b3d90cc32322c-0-ad4437d3397e72d062ec8ea02df89a8e" alt="U7 program" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute top-4 left-4"><span class="bg-black/60 backdrop-blur-sm text-white px-4 py-1.5 rounded-full text-sm font-bold font-accent border border-white/20">U7</span></div>
+          </div>
+          <div class="p-6 lg:p-8 flex flex-col flex-1">
+            <!-- H3: font-accent — Jeko Black -->
+            <h3 class="font-accent text-2xl lg:text-3xl text-white mb-2 font-bold">U7 Basketball</h3>
+            <p class="text-primary font-semibold font-accent text-xs tracking-wider mb-4">AGES 5–7 · START STRONG</p>
+            <p class="text-white/70 text-base leading-relaxed mb-6 flex-1">Building early confidence through movement and play for young athletes.</p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i><span class="text-white text-base">Movement Foundations</span></li>
+              <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i><span class="text-white text-base">Basketball Basics</span></li>
+              <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i><span class="text-white text-base">Confidence Through Play</span></li>
+            </ul>
+            <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20book%20a%20trial%20session%20for%20the%20U7%20basketball%20program." target="_blank" rel="noopener noreferrer" class="mt-auto w-full bg-primary hover:bg-pink-600 text-white py-4 rounded-xl inline-flex items-center justify-center font-bold font-accent transition-all text-base tracking-wider">Book a Trial</a>
+          </div>
+        </div>
+        <!-- U9 -->
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col group">
+          <div class="h-2 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+          <div class="aspect-[4/3] lg:aspect-[3/4] overflow-hidden relative">
+            <img src="https://z-cdn-media.chatglm.cn/files/1763238d-49a6-4940-b183-2f566133a905.JPG?auth_key=1879160977-e291eb3bdbe04edda220ae670e7689b9-0-da2431dac3e51639d73a57f8b414437c" alt="U9 training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute top-4 left-4"><span class="bg-black/60 backdrop-blur-sm text-white px-4 py-1.5 rounded-full text-sm font-bold font-accent border border-white/20">U9</span></div>
+          </div>
+          <div class="p-6 lg:p-8 flex flex-col flex-1">
+            <h3 class="font-accent text-2xl lg:text-3xl text-white mb-2 font-bold">U9 Basketball</h3>
+            <p class="text-primary font-semibold font-accent text-xs tracking-wider mb-4">AGES 8–9 · BUILD THE BASE</p>
+            <p class="text-white/70 text-base leading-relaxed mb-6 flex-1">Developing strong fundamentals and game awareness for kids in HCMC.</p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i><span class="text-white text-base">Strong Fundamentals</span></li>
+              <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i><span class="text-white text-base">Game Awareness</span></li>
+              <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i><span class="text-white text-base">Training Habits</span></li>
+            </ul>
+            <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20book%20a%20trial%20session%20for%20the%20U9%20basketball%20program." target="_blank" rel="noopener noreferrer" class="mt-auto w-full bg-primary hover:bg-pink-600 text-white py-4 rounded-xl inline-flex items-center justify-center font-bold font-accent transition-all text-base tracking-wider">Book a Trial</a>
+          </div>
+        </div>
+        <!-- U11 -->
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col group">
+          <div class="h-2 bg-gradient-to-r from-blue-500 to-purple-500"></div>
+          <div class="aspect-[4/3] lg:aspect-[3/4] overflow-hidden relative">
+            <img src="https://z-cdn-media.chatglm.cn/files/5091b9aa-3188-431b-8910-4f90fca3fcb1.jpg?auth_key=1879158352-98c4b0883b3f4e38857f8c6ef6f3a914-0-9b7724b6bdb58a266788b8db1b551a58" alt="U11 development" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute top-4 left-4"><span class="bg-black/60 backdrop-blur-sm text-white px-4 py-1.5 rounded-full text-sm font-bold font-accent border border-white/20">U11</span></div>
+          </div>
+          <div class="p-6 lg:p-8 flex flex-col flex-1">
+            <h3 class="font-accent text-2xl lg:text-3xl text-white mb-2 font-bold">U11 Basketball</h3>
+            <p class="text-primary font-semibold font-accent text-xs tracking-wider mb-4">AGES 10–11 · SHARPEN THE EDGE</p>
+            <p class="text-white/70 text-base leading-relaxed mb-6 flex-1">Sharpening complete skill development and student-athlete growth.</p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i><span class="text-white text-base">Complete Skill Development</span></li>
+              <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i><span class="text-white text-base">Basketball IQ</span></li>
+              <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i><span class="text-white text-base">Competitive Mindset</span></li>
+            </ul>
+            <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20book%20a%20trial%20session%20for%20the%20U11%20basketball%20program." target="_blank" rel="noopener noreferrer" class="mt-auto w-full bg-primary hover:bg-pink-600 text-white py-4 rounded-xl inline-flex items-center justify-center font-bold font-accent transition-all text-base tracking-wider">Book a Trial</a>
+          </div>
+        </div>
+        <!-- U15 -->
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col group">
+          <div class="h-2 bg-gradient-to-r from-cyan-500 to-blue-500"></div>
+          <div class="aspect-[4/3] lg:aspect-[3/4] overflow-hidden relative">
+            <img src="https://z-cdn-media.chatglm.cn/files/12358887-2cb1-47de-ab4c-c80646708b15.JPG?auth_key=1879160977-e534e5af07c740ffadc0fe3039bf7135-0-bd15325ad13fbd0ac2fdf5546f10611e" alt="U15 training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute top-4 left-4"><span class="bg-black/60 backdrop-blur-sm text-white px-4 py-1.5 rounded-full text-sm font-bold font-accent border border-white/20">U15</span></div>
+          </div>
+          <div class="p-6 lg:p-8 flex flex-col flex-1">
+            <h3 class="font-accent text-2xl lg:text-3xl text-white mb-2 font-bold">U15 Basketball</h3>
+            <p class="text-primary font-semibold font-accent text-xs tracking-wider mb-4">AGES 12–15 · COMPETE WITH PURPOSE</p>
+            <p class="text-white/70 text-base leading-relaxed mb-6 flex-1">Building high-level basketball skills, leadership, and accountability.</p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i><span class="text-white text-base">Game-Ready Skills</span></li>
+              <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i><span class="text-white text-base">Higher-Level Understanding</span></li>
+              <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i><span class="text-white text-base">Leadership & Accountability</span></li>
+            </ul>
+            <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20book%20a%20trial%20session%20for%20the%20U15%20basketball%20program." target="_blank" rel="noopener noreferrer" class="mt-auto w-full bg-primary hover:bg-pink-600 text-white py-4 rounded-xl inline-flex items-center justify-center font-bold font-accent transition-all text-base tracking-wider">Book a Trial</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ PRICING ═══ -->
+    <div class="w-full px-3 sm:px-6 lg:px-10 mt-20 md:mt-28">
+      <div class="glass-card rounded-2xl overflow-hidden max-w-[1920px] mx-auto">
+        <div class="h-1.5 bg-gradient-to-r from-primary via-pink-500 to-purple-500"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 lg:py-16">
+          <div class="text-center mb-14">
+            <h2 class="font-heading text-4xl sm:text-5xl md:text-6xl text-white mb-6 tracking-wide">TRAINING PACKAGES & <span class="block text-gradient">PRICING</span></h2>
+            <p class="text-white/80 text-lg leading-relaxed max-w-2xl mx-auto">Choose the right pathway for your athlete. Every package includes sessions led by Coach Zinger, a LIT Elite jersey, equipment, and facility costs.</p>
+          </div>
+
+          <!-- PACKAGES FIRST -->
+          <div class="grid md:grid-cols-2 gap-6 mb-16">
+            <!-- Package Fundamental -->
+            <div class="package-card package-fundamental rounded-2xl p-8 md:p-10 flex flex-col">
+              <div class="mb-3"><span class="inline-block bg-primary/15 text-primary border border-primary/40 px-3 py-1 text-xs font-bold rounded-full font-accent uppercase tracking-wider">Fundamental</span></div>
+              <h3 class="font-accent text-2xl md:text-3xl font-bold text-white mb-2">Package Fundamental</h3>
+              <p class="text-primary font-accent text-xs tracking-wider mb-5">AGES 5–10 · BUILD THE BASE</p>
+              <div class="border-t border-white/10 my-5 w-16"></div>
+              <p class="text-4xl md:text-5xl font-bold text-white mb-2 tracking-tight font-sans">4,500,000 <span class="text-lg font-normal text-white/50">VND</span></p>
+              <p class="text-muted-foreground text-sm mb-6 font-sans">12 sessions · 60 minutes each</p>
+              <ul class="space-y-3 mb-8 flex-1">
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i><span class="text-white text-base">1 session per week</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i><span class="text-white text-base">May join 2 sessions/week if classes are available</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i><span class="text-white text-base">Depends on class schedule at the time</span></li>
+              </ul>
+              <p class="text-white/70 text-base leading-relaxed">For younger athletes building coordination, confidence, and strong basketball foundations.</p>
+            </div>
+            <!-- Package Advanced -->
+            <div class="package-card package-advanced rounded-2xl p-8 md:p-10 flex flex-col">
+              <div class="mb-3"><span class="inline-block bg-purple-500/15 text-purple-400 border border-purple-500/40 px-3 py-1 text-xs font-bold rounded-full font-accent uppercase tracking-wider">Advanced</span></div>
+              <h3 class="font-accent text-2xl md:text-3xl font-bold text-white mb-2">Package Advanced</h3>
+              <p class="text-purple-400 font-accent text-xs tracking-wider mb-5">AGES 11–15 · SHARPEN THE EDGE</p>
+              <div class="border-t border-white/10 my-5 w-16"></div>
+              <p class="text-4xl md:text-5xl font-bold text-white mb-2 tracking-tight font-sans">6,500,000 <span class="text-lg font-normal text-white/50">VND</span></p>
+              <p class="text-muted-foreground text-sm mb-6 font-sans">15 sessions · 90 minutes each</p>
+              <ul class="space-y-3 mb-8 flex-1">
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-purple-400 shrink-0 mt-0.5"></i><span class="text-white text-base">1 session per week</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-purple-400 shrink-0 mt-0.5"></i><span class="text-white text-base">May join 2 sessions/week if classes are available</span></li>
+                <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-purple-400 shrink-0 mt-0.5"></i><span class="text-white text-base">Depends on class schedule at the time</span></li>
+              </ul>
+              <p class="text-white/70 text-base leading-relaxed">For older athletes developing skill, confidence, and game understanding through focused training.</p>
+            </div>
+          </div>
+
+          <!-- Trial -->
+          <div class="relative bg-primary/5 border border-primary/20 rounded-2xl p-8 md:p-10 mb-14 text-center overflow-hidden">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-48 bg-primary/10 blur-[80px] rounded-full pointer-events-none"></div>
+            <div class="relative z-10">
+              <span class="mb-4 inline-block bg-primary/10 text-primary border border-primary/30 px-4 py-1.5 text-[11px] font-bold rounded-full font-accent uppercase tracking-[0.15em]">Best Way to Start</span>
+              <h3 class="font-accent text-2xl md:text-3xl text-white font-bold mb-5">Start With a Trial Session</h3>
+              <p class="text-5xl md:text-6xl font-bold text-white mb-5 tracking-tight font-sans">380,000 <span class="text-xl font-normal text-white/60">VND</span></p>
+              <p class="text-white/60 text-base md:text-lg max-w-xl mx-auto mb-8 leading-relaxed">Experience the coaching style, training environment, and program fit before committing to a full package.</p>
+              <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-pink-600 text-white text-lg px-10 py-4 rounded-full group inline-flex items-center font-bold font-accent transition-all shadow-lg shadow-primary/25">Book a Trial <i data-lucide="arrow-right" class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"></i></a>
+            </div>
+          </div>
+
+          <!-- What's Included -->
+          <div class="border-t border-white/10 pt-12">
+            <h4 class="text-sm font-bold text-white/50 mb-8 text-center uppercase tracking-[0.15em] font-accent">What's Included in Every Package</h4>
+            <div class="grid sm:grid-cols-2 gap-x-12 gap-y-4 max-w-2xl mx-auto">
+              <div class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-primary/60 shrink-0 mt-0.5"></i><span class="text-white/70 text-sm md:text-base">Sessions led by Coach Zinger</span></div>
+              <div class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-primary/60 shrink-0 mt-0.5"></i><span class="text-white/70 text-sm md:text-base">LIT Elite jersey included</span></div>
+              <div class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-primary/60 shrink-0 mt-0.5"></i><span class="text-white/70 text-sm md:text-base">Equipment included</span></div>
+              <div class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-primary/60 shrink-0 mt-0.5"></i><span class="text-white/70 text-sm md:text-base">Facility costs included</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- 🎬 ABOUT -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section id="about" class="relative z-[1]">
+    <div class="relative h-[55vh] md:h-[65vh] overflow-hidden z-10">
+      <img src="https://z-cdn-media.chatglm.cn/files/1768a9da-0751-4323-a0c1-aa7d8c8f8533.png?auth_key=1878735359-c9e238fe546b4693a588d8ce956e1dd9-0-c1bac810834caa1bb574110a19b525eb" alt="Coach Zinger leading training" class="w-full h-full object-cover object-[center_20%] cinematic-img" />
+      <div class="absolute inset-0 bg-gradient-to-b from-background via-background/40 to-background z-10"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-center px-4 w-full max-w-3xl">
+        <div class="section-badge mb-4">WHO WE ARE</div>
+        <h2 class="font-heading text-4xl sm:text-5xl md:text-6xl text-white mb-6 tracking-wide">WHAT IS <span class="block text-gradient">LIT ELITE BASKETBALL?</span></h2>
+        <!-- H3 sub-headline: font-accent — Jeko Black -->
+        <h3 class="font-accent text-2xl md:text-4xl text-white font-bold tracking-wide leading-tight">WE BUILD <span class="text-gradient">ATHLETES FOR LIFE</span></h3>
+      </div>
+    </div>
+    <div class="relative z-20 -mt-28 md:-mt-36 pb-24 md:pb-32">
+      <div class="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
+        <img src="https://z-cdn-media.chatglm.cn/files/e90e40c1-4419-437f-963c-ad862ed8e7f7.png?auth_key=1878735359-3012cbe4a29545fc9044ed54b5551d6b-0-5b7549e81727d14aa69b296997e9ee7b" alt="" class="fade-bg-img object-[center_25%]" />
+        <img src="https://z-cdn-media.chatglm.cn/files/ebd7a1c8-8b3f-40cd-b52c-6260dc2cc03e.png?auth_key=1878735359-960690f48cd249d3b63aafa4cc97657d-0-0d2f245d5621a1244fbc75179d62b69f" alt="" class="fade-bg-img object-[center_30%]" />
+        <img src="https://z-cdn-media.chatglm.cn/files/df139ace-834f-4ea9-8319-e50e0e612cc7.png?auth_key=1878735359-b749211d77e94cc5be7c7bc400ec6d2e-0-8af83db7137d55df2801c9228e75a286" alt="" class="fade-bg-img object-[center_25%]" />
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background z-[1]"></div>
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="glass-card-dark rounded-2xl p-8 md:p-12 lg:p-16 max-w-5xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-x-12 lg:gap-x-16 gap-y-8 mb-12">
+            <div>
+              <p class="text-xl md:text-2xl font-semibold text-white leading-snug mb-4 font-sans">Every athlete starts from a different place.</p>
+              <p class="text-white/80 text-base md:text-lg leading-relaxed">Some need stronger fundamentals. Some need better game understanding. Some need the confidence to play freely and trust themselves on the court.</p>
+            </div>
+            <div>
+              <p class="text-xl md:text-2xl font-semibold text-primary leading-snug mb-4 font-sans">LIT Elite Basketball exists to guide that journey.</p>
+              <p class="text-white/80 text-base md:text-lg leading-relaxed">Based in Ho Chi Minh City, LIT Elite provides purposeful basketball training for U7, U9, U11, and U15 athletes — helping players build real skill, better habits, and stronger confidence through sport.</p>
+            </div>
+            <div>
+              <p class="text-xl md:text-2xl font-semibold text-white leading-snug mb-4 font-sans">We believe confidence is trained.</p>
+              <p class="text-white/80 text-base md:text-lg leading-relaxed">It grows in an environment where athletes are challenged, supported, corrected, and encouraged to keep trying.</p>
+            </div>
+            <div>
+              <p class="text-xl md:text-2xl font-semibold text-white leading-snug mb-4 font-sans">Nothing is random. <span class="text-primary">Every drill has a purpose. Every rep is designed to transfer to the game.</span></p>
+            </div>
+          </div>
+          <div class="border-t border-white/10 pt-10 text-center">
+            <p class="text-primary font-accent uppercase text-sm font-bold tracking-wider leading-relaxed mb-8">WE DON'T BELIEVE IN RANDOM REPS.<br/>WE BELIEVE IN PURPOSEFUL DEVELOPMENT.</p>
+            <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-pink-600 text-white text-lg px-10 py-4 rounded-full group inline-flex items-center font-bold font-accent transition-all shadow-lg shadow-primary/25">Book a Trial Session <i data-lucide="arrow-right" class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- 🧊 WHY LIT -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section id="why-lit" class="py-20 md:py-32 relative z-[1]">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header mb-16">
+        <div class="section-badge mb-4">WHY LIT?</div>
+        <h2 class="font-heading text-4xl sm:text-5xl md:text-6xl text-white mb-6 tracking-wide">THE LIT ELITE <span class="block text-gradient">DIFFERENCE</span></h2>
+        <p class="text-white/80 text-lg leading-relaxed">If a player goes home smiling, sweating, tired, and proud — we've won the day.</p>
+      </div>
+      <div class="glass-card rounded-2xl p-8 md:p-12 lg:p-16 max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="relative"><div class="aspect-[4/3] rounded-2xl overflow-hidden premium-shadow"><img src="https://z-cdn-media.chatglm.cn/files/8b08260f-33ec-455d-979a-b0d7cfc673f0.png?auth_key=1878818639-3e11cf590fcb4fe2a18a8cf9ed7f4e2e-0-2d9f0fa00ed1685ca1e06b2d661a0f26" alt="Training session" class="w-full h-full object-cover object-center scale-105" /></div></div>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="inner-card rounded-2xl p-6 flex flex-col">
+              <div class="flex items-start gap-4 mb-3"><div class="w-10 h-10 bg-gradient-to-br from-primary/20 to-pink-500/20 rounded-lg flex items-center justify-center shrink-0"><i data-lucide="target" class="w-5 h-5 text-primary"></i></div><div><h3 class="font-accent text-xl text-white mb-1 font-bold">Purposeful Practice</h3><p class="text-primary font-semibold font-accent text-xs tracking-wider">EVERY REP HAS A REASON</p></div></div>
+              <p class="text-white/80 text-sm leading-relaxed flex-1">Nothing is random. Every drill has a purpose, and every rep is designed to transfer to the game.</p>
+            </div>
+            <div class="inner-card rounded-2xl p-6 flex flex-col">
+              <div class="flex items-start gap-4 mb-3"><div class="w-10 h-10 bg-gradient-to-br from-primary/20 to-pink-500/20 rounded-lg flex items-center justify-center shrink-0"><i data-lucide="sparkles" class="w-5 h-5 text-primary"></i></div><div><h3 class="font-accent text-xl text-white mb-1 font-bold">Confidence Is Trained</h3><p class="text-primary font-semibold font-accent text-xs tracking-wider">BUILT THROUGH ENVIRONMENT</p></div></div>
+              <p class="text-white/80 text-sm leading-relaxed flex-1">Confidence grows when athletes are challenged, supported, corrected, and encouraged to keep trying.</p>
+            </div>
+            <div class="inner-card rounded-2xl p-6 flex flex-col">
+              <div class="flex items-start gap-4 mb-3"><div class="w-10 h-10 bg-gradient-to-br from-primary/20 to-pink-500/20 rounded-lg flex items-center justify-center shrink-0"><i data-lucide="flame" class="w-5 h-5 text-primary"></i></div><div><h3 class="font-accent text-xl text-white mb-1 font-bold">High Standards</h3><p class="text-primary font-semibold font-accent text-xs tracking-wider">EFFORT & ATTITUDE</p></div></div>
+              <p class="text-white/80 text-sm leading-relaxed flex-1">Players learn in a positive training space where they are expected to focus, compete, make mistakes, and grow.</p>
+            </div>
+            <div class="inner-card rounded-2xl p-6 flex flex-col">
+              <div class="flex items-start gap-4 mb-3"><div class="w-10 h-10 bg-gradient-to-br from-primary/20 to-pink-500/20 rounded-lg flex items-center justify-center shrink-0"><i data-lucide="puzzle" class="w-5 h-5 text-primary"></i></div><div><h3 class="font-accent text-xl text-white mb-1 font-bold">Constraint-Led Approach</h3><p class="text-primary font-semibold font-accent text-xs tracking-wider">PLAYER-CENTERED</p></div></div>
+              <p class="text-white/80 text-sm leading-relaxed flex-1">We use games, rules, space, and challenges to help players solve problems, make decisions, and adapt.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- 🧊 COACH -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section id="coach" class="py-20 md:py-32 relative z-[1]">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header mb-16">
+        <div class="section-badge mb-4">FOUNDER & HEAD COACH</div>
+        <h2 class="font-heading text-4xl sm:text-5xl md:text-6xl text-white mb-6 tracking-wide">LED BY <span class="text-gradient">COACH ZINGER</span></h2>
+      </div>
+      <div class="glass-card rounded-2xl p-8 md:p-12 lg:p-16 max-w-6xl mx-auto">
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          <div class="w-full lg:w-2/5 flex items-center justify-center relative">
+            <div class="inner-card rounded-2xl p-2 w-full max-w-sm mx-auto relative z-10"><img src="https://z-cdn-media.chatglm.cn/files/6922d3e8-08b2-41ad-86b1-215cc8171d37.png?auth_key=1878735359-75699a0e686a4e1782b8e4f3325ccb7a-0-3cdeb827e699cca34ac0ae1565bd89a4" alt="Coach Zinger" class="w-full h-auto rounded-xl" /></div>
+            <div class="absolute -bottom-4 right-4 md:right-10 w-2/5 sm:w-[38%] aspect-[4/3] rounded-xl overflow-hidden premium-shadow border-4 border-[#0f0f0f] z-20"><img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=600&auto=format&fit=crop" alt="Coach training" class="w-full h-full object-cover" /></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-primary/20 blur-[80px] rounded-full z-0"></div>
+          </div>
+          <div class="w-full lg:w-3/5 flex flex-col justify-center">
+            <div class="grid grid-cols-2 gap-4 mb-8">
+              <!-- Stats: keep font-hero for impact -->
+              <div class="inner-card rounded-xl p-4"><p class="text-3xl text-gradient font-bold font-hero">15+</p><p class="text-white/70 text-sm mt-1 font-sans">Years Experience</p></div>
+              <div class="inner-card rounded-xl p-4"><p class="text-3xl text-gradient font-bold font-hero">1200+</p><p class="text-white/70 text-sm mt-1 font-sans">Athletes Trained</p></div>
+            </div>
+            <div class="space-y-5 text-left mb-10">
+              <p class="text-white/80 text-lg leading-relaxed font-sans">LIT Elite Basketball started with athletes asking for more. More time in the gym. More purposeful coaching. More opportunity to keep growing.</p>
+              <p class="text-white/80 text-lg leading-relaxed font-sans">It was built from trust — and from a shared belief that young athletes deserve an environment where they can be challenged, supported, corrected, and known.</p>
+              <p class="text-white/80 text-lg leading-relaxed font-sans">As a coach, I'm committed to helping players build real skill, stronger confidence, better habits, and the discipline to keep growing on and off the court.</p>
+            </div>
+            <p class="text-primary text-lg md:text-xl font-bold font-accent uppercase tracking-wide leading-snug">MORE THAN BASKETBALL.<br/>REAL DEVELOPMENT, BUILT WITH PURPOSE.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- 🧊 RESULTS -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section id="results" class="py-20 md:py-28 relative z-[1]">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header mb-16">
+        <div class="section-badge mb-4">FAMILY STORIES</div>
+        <h2 class="font-heading text-4xl sm:text-5xl text-white mb-6 tracking-wide">REAL RESULTS, <span class="block text-gradient">REAL FAMILIES</span></h2>
+        <p class="text-white/80 text-lg leading-relaxed">Growth parents can see. Confidence athletes can feel.</p>
+      </div>
+      <div class="glass-card rounded-2xl p-8 md:p-12 lg:p-16 max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div>
+            <div class="flex items-start gap-4 py-5 border-b border-white/10"><div class="w-12 h-12 rounded-xl overflow-hidden border-2 border-primary/50 shrink-0"><img src="https://z-cdn-media.chatglm.cn/files/77f765e8-e65b-44db-b261-8cf726855de0.png?auth_key=1878735359-7ec8f47edd684fbda74b4f2d2c39badc-0-2d88f8e54035164683affcadd246ae48" alt="Jan Nguyen" class="w-full h-full object-cover object-top" /></div><div class="relative pl-5 border-l-4 border-primary"><span class="absolute top-0 left-0 -translate-x-1/2 -translate-y-2 text-2xl text-primary font-serif leading-none">"</span><p class="text-white text-base leading-relaxed font-medium font-sans">Coach helps me keep improving my skills, work harder, and believe in myself on the court.</p><p class="text-primary text-xs font-bold font-accent uppercase tracking-wider mt-2">Jan Nguyen · U15 Girls Team</p></div></div>
+            <div class="flex items-start gap-4 py-5 border-b border-white/10"><div class="w-12 h-12 rounded-xl overflow-hidden border-2 border-white/20 shrink-0 bg-card/60 flex items-center justify-center"><i data-lucide="user" class="w-6 h-6 text-primary/40"></i></div><div class="relative pl-5 border-l-4 border-white/20"><span class="absolute top-0 left-0 -translate-x-1/2 -translate-y-2 text-2xl text-white/30 font-serif leading-none">"</span><p class="text-white text-base leading-relaxed font-medium font-sans">Training is hard, but so much fun. I feel like I'm getting better every single session.</p><p class="text-primary text-xs font-bold font-accent uppercase tracking-wider mt-2">U11 Athlete</p></div></div>
+            <div class="flex items-start gap-4 py-5"><div class="w-12 h-12 rounded-xl overflow-hidden border-2 border-white/20 shrink-0 bg-card/60 flex items-center justify-center"><i data-lucide="user" class="w-6 h-6 text-primary/40"></i></div><div class="relative pl-5 border-l-4 border-white/20"><span class="absolute top-0 left-0 -translate-x-1/2 -translate-y-2 text-2xl text-white/30 font-serif leading-none">"</span><p class="text-white text-base leading-relaxed font-medium font-sans">My son used to be shy, but since joining LIT Elite, he's become more confident and excited to come to practice every week.</p><p class="text-primary text-xs font-bold font-accent uppercase tracking-wider mt-2">Parent of U9 Athlete</p></div></div>
+            <div class="flex flex-col sm:flex-row gap-6 mt-8 pt-6 border-t border-white/10"><div class="flex items-center gap-3"><div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center"><i data-lucide="award" class="w-6 h-6 text-primary"></i></div><div><p class="text-white font-semibold font-sans">Skill Growth</p><p class="text-white/60 text-sm font-sans">Measurable Progress</p></div></div><div class="flex items-center gap-3"><div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center"><i data-lucide="star" class="w-6 h-6 text-primary"></i></div><div><p class="text-white font-semibold font-sans">Confidence Boost</p><p class="text-white/60 text-sm font-sans">On & Off Court</p></div></div></div>
+          </div>
+          <div class="relative flex justify-center lg:justify-end"><div class="grid grid-cols-3 gap-3 w-full max-w-xl"><div class="col-span-2 row-span-2 rounded-2xl overflow-hidden group"><img src="https://z-cdn-media.chatglm.cn/files/8b08260f-33ec-455d-979a-b0d7cfc673f0.png?auth_key=1878818639-3e11cf590fcb4fe2a18a8cf9ed7f4e2e-0-2d9f0fa00ed1685ca1e06b2d661a0f26" alt="Training" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" /></div><div class="rounded-2xl overflow-hidden group aspect-[3/4]"><img src="https://z-cdn-media.chatglm.cn/files/83ba50e2-d9cc-487f-8ef2-e9f193760382.JPG?auth_key=1879160977-9c5e12fb9abe42109d1b3d90cc32322c-0-ad4437d3397e72d062ec8ea02df89a8e" alt="U9" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" /></div><div class="rounded-2xl overflow-hidden group aspect-[3/4]"><img src="https://z-cdn-media.chatglm.cn/files/5091b9aa-3188-431b-8910-4f90fca3fcb1.jpg?auth_key=1879158352-98c4b0883b3f4e38857f8c6ef6f3a914-0-9b7724b6bdb58a266788b8db1b551a58" alt="U11" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" /></div><div class="rounded-2xl overflow-hidden group aspect-square"><img src="https://z-cdn-media.chatglm.cn/files/12358887-2cb1-47de-ab4c-c80646708b15.JPG?auth_key=1879160977-e534e5af07c740ffadc0fe3039bf7135-0-bd15325ad13fbd0ac2fdf5546f10611e" alt="U15" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" /></div><div class="rounded-2xl overflow-hidden group aspect-square"><img src="https://z-cdn-media.chatglm.cn/files/618d0715-ed34-4cce-a585-f25f1d96aef5.png?auth_key=1879266121-01cdc44a244447abb61004fcee8c8ec0-0-4f84b22ea304a3e4d6fed26af4f147d8" alt="Athlete" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" /></div><div class="rounded-2xl overflow-hidden group aspect-square"><img src="https://z-cdn-media.chatglm.cn/files/b01c0018-0ebc-4e87-b495-38e8a2ce2d66.JPG?auth_key=1879160977-3aabf54a67514c1fab6e295c74e95337-0-6bf49eea0436c70296cf249352dbb70b" alt="Young" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" /></div></div></div>
+        </div>
+        <div class="text-center mt-12 pt-8 border-t border-white/10"><p class="text-white/80 text-lg mb-6 font-sans">Want your athlete to build skill and confidence through LIT Elite?</p><a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="inline-block bg-primary hover:bg-pink-600 text-white font-bold font-accent py-3.5 px-8 rounded-full transition-all duration-300 tracking-wider text-sm md:text-base premium-shadow hover:scale-105">Book a Trial Session</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- 🧊 ATHLETES -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section id="athletes" class="py-20 md:py-32 relative z-[1]">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header mb-16">
+        <div class="section-badge mb-4">OUR ATHLETES</div>
+        <h2 class="font-heading text-4xl sm:text-5xl md:text-6xl text-white mb-6 tracking-wide">OUR <span class="block text-gradient">ATHLETES</span></h2>
+        <p class="text-white/80 text-lg leading-relaxed">The young athletes bringing the LIT standard to life.</p>
+      </div>
+      <div class="glass-card rounded-2xl p-6 md:p-10 lg:p-14 max-w-6xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+          <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden premium-shadow cursor-pointer"><img src="https://z-cdn-media.chatglm.cn/files/cce816a4-d6a6-4a4c-9db0-2e57d10547d6.png?auth_key=1879783501-27cd315f9b464583b57aab5e9f8e07b3-0-14fa5dbf281f92a375ccb9e87a8a94a4" alt="U15" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-5 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"><p class="text-white font-bold text-sm md:text-base font-sans">U15 Athlete</p><p class="text-primary font-accent text-xs tracking-wider uppercase mt-1">Growth Mindset</p></div></div>
+          <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden premium-shadow cursor-pointer"><img src="https://z-cdn-media.chatglm.cn/files/0970242b-ee0e-4025-88fd-243cdf4efe3d.png?auth_key=1879783501-87b1181312ad430483d239a926eb6ada-0-188b8045c2ddc20f149930ff62321f7e" alt="Elite" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-5 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"><p class="text-white font-bold text-sm md:text-base font-sans">LIT Elite Athlete</p><p class="text-primary font-accent text-xs tracking-wider uppercase mt-1">Confidence Builder</p></div></div>
+          <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden premium-shadow cursor-pointer"><img src="https://z-cdn-media.chatglm.cn/files/c1b75fd6-991d-4e95-9e1a-991bcf76e7ea.png?auth_key=1879783501-5d3fa4d9d8c145cfbb93c5f9ff2bbd92-0-dd94409a0f8a41e1b48684f02610d81e" alt="U11" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-5 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"><p class="text-white font-bold text-sm md:text-base font-sans">U11 Athlete</p><p class="text-primary font-accent text-xs tracking-wider uppercase mt-1">Purposeful Player</p></div></div>
+          <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden premium-shadow cursor-pointer"><img src="https://z-cdn-media.chatglm.cn/files/55edd56f-d131-456a-a9a9-c45abd95a107.png?auth_key=1879783501-8ef564874a384f828ddbca7edeace9e4-0-326f9bf236faa9720276bccd6979d2d7" alt="U15" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-5 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"><p class="text-white font-bold text-sm md:text-base font-sans">U15 Athlete</p><p class="text-primary font-accent text-xs tracking-wider uppercase mt-1">Leads by Example</p></div></div>
+          <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden premium-shadow cursor-pointer"><img src="https://z-cdn-media.chatglm.cn/files/109a18cb-2440-41ac-a41f-dbe4659eccbb.png?auth_key=1879783501-1a386ba2c381463a824e1058b115fd8f-0-05f9f1b8c5135eac9e779ef251788514" alt="Girls" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-5 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"><p class="text-white font-bold text-sm md:text-base font-sans">U15 Girls Team</p><p class="text-primary font-accent text-xs tracking-wider uppercase mt-1">Team First</p></div></div>
+          <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden premium-shadow cursor-pointer"><img src="https://z-cdn-media.chatglm.cn/files/4c0cb421-1ce4-4054-948d-e14c31f14d10.png?auth_key=1879783501-ab156754977f483eb719308edfa58023-0-08d30d117a94574c584606f99854e955" alt="U13" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-5 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"><p class="text-white font-bold text-sm md:text-base font-sans">U13 Athlete</p><p class="text-primary font-accent text-xs tracking-wider uppercase mt-1">Trains With Purpose</p></div></div>
+          <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden premium-shadow cursor-pointer"><img src="https://z-cdn-media.chatglm.cn/files/17deedd6-54cc-45c9-a0f9-26aa30477ff4.png?auth_key=1879783501-75f8a146b2f74275aed2eafaec3379b6-0-76080e04717e713c9ab6f176a815eb31" alt="U11" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-5 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"><p class="text-white font-bold text-sm md:text-base font-sans">U11 Athlete</p><p class="text-primary font-accent text-xs tracking-wider uppercase mt-1">Learns Through Mistakes</p></div></div>
+          <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden premium-shadow cursor-pointer"><img src="https://z-cdn-media.chatglm.cn/files/08584e74-ad9e-4d12-9e14-0f92a057d078.png?auth_key=1879783501-071ff3600c764911ba286d3ebcea83af-0-cd36688b5227778e281ff0ceed0443c0" alt="U9" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-5 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"><p class="text-white font-bold text-sm md:text-base font-sans">U9 Athlete</p><p class="text-primary font-accent text-xs tracking-wider uppercase mt-1">Keeps Growing</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- 🧊 FAQ -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section id="faq" class="py-20 md:py-32 relative z-[1]">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="section-header mb-16">
+        <div class="section-badge mb-4">FAQ</div>
+        <h2 class="font-heading text-4xl sm:text-5xl md:text-6xl text-white mb-6 tracking-wide">FREQUENTLY ASKED <span class="block text-gradient">QUESTIONS</span></h2>
+      </div>
+      <div class="glass-card rounded-2xl p-6 md:p-10 max-w-3xl mx-auto">
+        <div class="space-y-4">
+          <details class="group inner-card rounded-2xl" open><summary class="flex items-center justify-between p-6 cursor-pointer text-white font-semibold text-lg list-none font-sans">What ages does LIT Elite Basketball cater to?<i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 group-open:rotate-180 transition-transform duration-300"></i></summary><div class="px-6 pb-6 text-muted-foreground text-base leading-relaxed font-sans">LIT Elite Basketball currently supports athletes from 5 to 15 years old, with training groups designed to match each athlete's age, skill level, confidence, and stage of development.</div></details>
+          <details class="group inner-card rounded-2xl"><summary class="flex items-center justify-between p-6 cursor-pointer text-white font-semibold text-lg list-none font-sans">Does my child need prior basketball experience to join?<i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 group-open:rotate-180 transition-transform duration-300"></i></summary><div class="px-6 pb-6 text-muted-foreground text-base leading-relaxed font-sans">Not at all! Our programs are designed to develop athletes from the ground up. Whether your child is picking up a basketball for the first time or looking to elevate their game, our small-group sessions provide the focused attention they need.</div></details>
+          <details class="group inner-card rounded-2xl"><summary class="flex items-center justify-between p-6 cursor-pointer text-white font-semibold text-lg list-none font-sans">Who leads the training sessions?<i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 group-open:rotate-180 transition-transform duration-300"></i></summary><div class="px-6 pb-6 text-muted-foreground text-base leading-relaxed font-sans">All sessions are led by Coach Zinger, an experienced international coach with 15+ years of experience. He is committed to a hands-on, purposeful coaching approach for every single athlete.</div></details>
+          <details class="group inner-card rounded-2xl"><summary class="flex items-center justify-between p-6 cursor-pointer text-white font-semibold text-lg list-none font-sans">What is included in the program fee?<i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 group-open:rotate-180 transition-transform duration-300"></i></summary><div class="px-6 pb-6 text-muted-foreground text-base leading-relaxed font-sans">The fee covers all sessions led by Coach Zinger, one custom LIT Elite Basketball jersey, and all equipment and facility costs. There are no hidden fees.</div></details>
+          <details class="group inner-card rounded-2xl"><summary class="flex items-center justify-between p-6 cursor-pointer text-white font-semibold text-lg list-none font-sans">How do I sign up for a trial session?<i data-lucide="chevron-down" class="w-5 h-5 text-primary shrink-0 group-open:rotate-180 transition-transform duration-300"></i></summary><div class="px-6 pb-6 text-muted-foreground text-base leading-relaxed font-sans">You can easily book a trial session by clicking the "Book a Trial Session" button on this page or messaging us directly on WhatsApp. A trial is just 380,000 VND and requires no long-term commitment.</div></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- 🎬 CTA -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <section id="join" class="relative z-[1]">
+    <div class="relative h-[50vh] md:h-[60vh] overflow-hidden z-10">
+      <img src="https://z-cdn-media.chatglm.cn/files/05455be0-80d0-4b22-822a-b505f408de6a.png?auth_key=1879262064-4c487ce0df7f4e588b5064a28fdc1d28-0-750c14f78e64b65fc87bcaf982c5efd6" alt="LIT Elite Basketball team" class="w-full h-full object-cover object-top cinematic-img" />
+      <div class="absolute inset-0 bg-gradient-to-b from-background via-background/40 to-background z-10"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-center px-4 w-full max-w-3xl">
+        <div class="section-badge mb-4">START YOUR JOURNEY</div>
+        <h2 class="font-heading text-4xl sm:text-5xl md:text-6xl text-white mb-4 tracking-wide">TRAIN WITH <span class="text-gradient">LIT ELITE</span></h2>
+      </div>
+    </div>
+    <div class="relative z-20 -mt-24 md:-mt-32 pb-24 md:pb-32">
+      <div class="absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
+        <img src="https://z-cdn-media.chatglm.cn/files/8b08260f-33ec-455d-979a-b0d7cfc673f0.png?auth_key=1878818639-3e11cf590fcb4fe2a18a8cf9ed7f4e2e-0-2d9f0fa00ed1685ca1e06b2d661a0f26" alt="" class="fade-bg-img object-[center_30%]" />
+        <img src="https://z-cdn-media.chatglm.cn/files/df139ace-834f-4ea9-8319-e50e0e612cc7.png?auth_key=1878735359-b749211d77e94cc5be7c7bc400ec6d2e-0-8af83db7137d55df2801c9228e75a286" alt="" class="fade-bg-img object-[center_25%]" />
+        <img src="https://z-cdn-media.chatglm.cn/files/e90e40c1-4419-437f-963c-ad862ed8e7f7.png?auth_key=1878735359-3012cbe4a29545fc9044ed54b5551d6b-0-5b7549e81727d14aa69b296997e9ee7b" alt="" class="fade-bg-img object-[center_35%]" />
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background z-[1]"></div>
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="glass-card-dark rounded-2xl p-8 md:p-12 lg:p-16 max-w-3xl mx-auto text-center">
+          <p class="text-white/80 text-lg md:text-xl leading-relaxed mb-6 font-sans">Ready to see your athlete grow in skill, confidence, and character? Book a trial session and experience the LIT Elite environment firsthand.</p>
+          <div class="flex flex-col sm:flex-row gap-3 justify-center items-center mb-8 text-white/60 text-sm font-sans">
+            <div class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-primary shrink-0"></i><span>District 7, HCMC</span></div>
+            <span class="hidden sm:inline text-border">·</span>
+            <div class="flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4 text-primary shrink-0"></i><span>Weekdays 6:30–8:00PM</span></div>
+            <span class="hidden sm:inline text-border">·</span>
+            <div class="flex items-center gap-2"><i data-lucide="calendar" class="w-4 h-4 text-primary shrink-0"></i><span>Weekends 12:15–3:00PM</span></div>
+          </div>
+          <div class="grid grid-cols-4 gap-3 mb-10 max-w-md mx-auto">
+            <!-- Age group labels: font-accent — Jeko -->
+            <div class="inner-card rounded-lg p-3 text-center"><p class="text-xl text-gradient font-bold font-accent">U7</p><p class="text-white/60 text-xs font-sans">Max 8</p></div>
+            <div class="inner-card rounded-lg p-3 text-center"><p class="text-xl text-gradient font-bold font-accent">U9</p><p class="text-white/60 text-xs font-sans">Max 10</p></div>
+            <div class="inner-card rounded-lg p-3 text-center"><p class="text-xl text-gradient font-bold font-accent">U11</p><p class="text-white/60 text-xs font-sans">Max 12</p></div>
+            <div class="inner-card rounded-lg p-3 text-center"><p class="text-xl text-gradient font-bold font-accent">U15</p><p class="text-white/60 text-xs font-sans">Max 12</p></div>
+          </div>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-primary hover:bg-pink-600 text-white font-bold font-accent py-4 px-8 rounded-full transition-all duration-300 tracking-wider text-base premium-shadow hover:scale-105 glow-pink">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Book a Trial Session
+            </a>
+            <a href="https://www.instagram.com/litelitebasketball/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-transparent border border-white/20 hover:border-primary/50 text-white hover:text-primary font-bold font-accent py-4 px-8 rounded-full transition-all duration-300 tracking-wider text-base hover:scale-105">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              See LIT in Action
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="border-t border-border bg-[#0a0a0a] relative z-[1]">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+        <div>
+          <a href="#" onclick="scrollToSection('hero'); return false;" class="inline-block mb-4"><span class="text-2xl md:text-3xl font-hero text-white tracking-wider">LIT <span class="text-gradient">ELITE</span></span></a>
+          <p class="text-white/60 text-sm leading-relaxed mb-6 font-sans">Structured youth basketball development in Ho Chi Minh City, building skill, confidence, and character through purposeful practice.</p>
+          <div class="flex items-center gap-4">
+            <a href="https://wa.me/84938454724" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-border hover:border-primary/50 flex items-center justify-center text-white/60 hover:text-primary transition-colors" aria-label="WhatsApp"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            <a href="https://www.instagram.com/litelitebasketball/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-border hover:border-primary/50 flex items-center justify-center text-white/60 hover:text-primary transition-colors" aria-label="Instagram"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-white font-accent font-bold uppercase tracking-wider text-sm mb-6">Quick Links</h4>
+          <nav class="flex flex-col space-y-3">
+            <a href="#programs" class="text-white/60 hover:text-primary transition-colors text-sm font-sans">Programs</a>
+            <a href="#why-lit" class="text-white/60 hover:text-primary transition-colors text-sm font-sans">Why LIT</a>
+            <a href="#coach" class="text-white/60 hover:text-primary transition-colors text-sm font-sans">Coach Zinger</a>
+            <a href="#results" class="text-white/60 hover:text-primary transition-colors text-sm font-sans">Family Stories</a>
+            <a href="#athletes" class="text-white/60 hover:text-primary transition-colors text-sm font-sans">Our Athletes</a>
+            <a href="#faq" class="text-white/60 hover:text-primary transition-colors text-sm font-sans">FAQ</a>
+          </nav>
+        </div>
+        <div>
+          <h4 class="text-white font-accent font-bold uppercase tracking-wider text-sm mb-6">Get In Touch</h4>
+          <div class="space-y-4">
+            <a href="https://wa.me/84938454724" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-white/60 hover:text-primary transition-colors text-sm group font-sans"><span class="w-8 h-8 rounded-lg bg-card border border-border flex items-center justify-center group-hover:border-primary/50 transition-colors shrink-0"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></span>WhatsApp Inquiry</a>
+            <a href="https://www.instagram.com/litelitebasketball/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-white/60 hover:text-primary transition-colors text-sm group font-sans"><span class="w-8 h-8 rounded-lg bg-card border border-border flex items-center justify-center group-hover:border-primary/50 transition-colors shrink-0"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></span>@litelitebasketball</a>
+            <a href="mailto:lockedin.saigon@gmail.com" class="flex items-center gap-3 text-white/60 hover:text-primary transition-colors text-sm group font-sans"><span class="w-8 h-8 rounded-lg bg-card border border-border flex items-center justify-center group-hover:border-primary/50 transition-colors shrink-0"><i data-lucide="mail" class="w-4 h-4"></i></span>lockedin.saigon@gmail.com</a>
+            <div class="flex items-center gap-3 text-white/60 text-sm font-sans"><span class="w-8 h-8 rounded-lg bg-card border border-border flex items-center justify-center shrink-0"><i data-lucide="map-pin" class="w-4 h-4"></i></span>74 Nguyễn Thị Thập, District 7, HCMC</div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto">
+        <p class="text-white/40 text-xs mb-4 md:mb-0 font-sans">&copy; 2026 LIT Elite Basketball. All rights reserved.</p>
+        <p class="text-white/40 text-xs font-sans">Youth Basketball Development · Ho Chi Minh City</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20learn%20more%20about%20the%20basketball%20program%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20bd5a] text-white w-14 h-14 rounded-full flex items-center justify-center premium-shadow transition-all duration-300 hover:scale-110 group" aria-label="Chat on WhatsApp"><svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.05
