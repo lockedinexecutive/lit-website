@@ -454,7 +454,6 @@
         <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           <div class="w-full lg:w-2/5 flex items-center justify-center relative">
             <div class="inner-card rounded-2xl p-2 w-full max-w-sm mx-auto relative z-10"><img src="https://z-cdn-media.chatglm.cn/files/6922d3e8-08b2-41ad-86b1-215cc8171d37.png?auth_key=1878735359-75699a0e686a4e1782b8e4f3325ccb7a-0-3cdeb827e699cca34ac0ae1565bd89a4" alt="Coach Zinger" class="w-full h-auto rounded-xl" /></div>
-            <div class="absolute -bottom-4 right-4 md:right-10 w-2/5 sm:w-[38%] aspect-[4/3] rounded-xl overflow-hidden premium-shadow border-4 border-[#0f0f0f] z-20"><img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=600&auto=format&fit=crop" alt="Coach training" class="w-full h-full object-cover" /></div>
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-primary/20 blur-[80px] rounded-full z-0"></div>
           </div>
           <div class="w-full lg:w-3/5 flex flex-col justify-center">
@@ -474,7 +473,6 @@
       </div>
     </div>
   </section>
-
   <!-- ══════════════════════════════════════════════════════ -->
   <!-- 🧊 RESULTS -->
   <!-- ══════════════════════════════════════════════════════ -->
@@ -500,30 +498,159 @@
     </div>
   </section>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIT Elite — Results Section Preview (Option B)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#ff0099',
+            card: '#1a1a1a',
+          },
+          fontFamily: {
+            heading: ['Oswald', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            hero: ['Oswald', 'sans-serif'],
+            accent: ['Oswald', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #050505; font-family: 'Inter', sans-serif; }
+    .text-gradient {
+      background: linear-gradient(to right, #ff0099, #ff4d6d, #ff0099);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .glass-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      backdrop-filter: blur(12px);
+    }
+    .inner-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .premium-shadow {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
+    }
+    .section-badge {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #ff0099;
+      font-weight: 700;
+      font-family: 'Oswald', sans-serif;
+    }
+  </style>
+</head>
+<body class="min-h-screen text-white">
+
   <!-- ══════════════════════════════════════════════════════ -->
-  <!-- 🧊 ATHLETES -->
+  <!-- 🧊 RESULTS — Option B: 3 Testimonial Cards -->
   <!-- ══════════════════════════════════════════════════════ -->
-  <section id="athletes" class="py-20 md:py-32 relative z-[1]">
+  <section id="results" class="py-20 md:py-28 relative z-[1]">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-header mb-16">
-        <div class="section-badge mb-4">OUR ATHLETES</div>
-        <h2 class="font-heading text-2xl sm:text-3xl md:text-4xl text-white mb-6 tracking-wide">OUR <span class="block text-gradient">ATHLETES</span></h2>
-        <p class="text-white/80 text-lg leading-relaxed">The young athletes bringing the LIT standard to life.</p>
+      <div class="text-center mb-16">
+        <div class="section-badge mb-4">FAMILY STORIES</div>
+        <h2 class="font-heading text-4xl sm:text-5xl text-white mb-6 tracking-wide">REAL RESULTS, <span class="block text-gradient">REAL FAMILIES</span></h2>
+        <p class="text-white/80 text-lg leading-relaxed">Growth parents can see. Confidence athletes can feel.</p>
       </div>
-      <div class="glass-card rounded-2xl p-6 md:p-10 lg:p-14 max-w-6xl mx-auto">
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-          <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden premium-shadow cursor-pointer"><img src="https://z-cdn-media.chatglm.cn/files/cce816a4-d6a6-4a4c-9db0-2e57d10547d6.png?auth_key=1879783501-27cd315f9b464583b57aab5e9f8e07b3-0-14fa5dbf281f92a375ccb9e87a8a94a4" alt="U15" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-5 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"><p class="text-white font-bold text-sm md:text-base font-sans">U15 Athlete</p><p class="text-primary font-accent text-xs tracking-wider uppercase mt-1">Growth Mindset</p></div></div>
-          <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden premium-shadow cursor-pointer"><img src="https://z-cdn-media.chatglm.cn/files/0970242b-ee0e-4025-88fd-243cdf4efe3d.png?auth_key=1879783501-87b1181312ad430483d239a926eb6ada-0-188b8045c2ddc20f149930ff62321f7e" alt="Elite" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-5 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"><p class="text-white font-bold text-sm md:text-base font-sans">LIT Elite Athlete</p><p class="text-primary font-accent text-xs tracking-wider uppercase mt-1">Confidence Builder</p></div></div>
-          <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden premium-shadow cursor-pointer"><img src="https://z-cdn-media.chatglm.cn/files/c1b75fd6-991d-4e95-9e1a-991bcf76e7ea.png?auth_key=1879783501-5d3fa4d9d8c145cfbb93c5f9ff2bbd92-0-dd94409a0f8a41e1b48684f02610d81e" alt="U11" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-5 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"><p class="text-white font-bold text-sm md:text-base font-sans">U11 Athlete</p><p class="text-primary font-accent text-xs tracking-wider uppercase mt-1">Purposeful Player</p></div></div>
-          <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden premium-shadow cursor-pointer"><img src="https://z-cdn-media.chatglm.cn/files/55edd56f-d131-456a-a9a9-c45abd95a107.png?auth_key=1879783501-8ef564874a384f828ddbca7edeace9e4-0-326f9bf236faa9720276bccd6979d2d7" alt="U15" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-5 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"><p class="text-white font-bold text-sm md:text-base font-sans">U15 Athlete</p><p class="text-primary font-accent text-xs tracking-wider uppercase mt-1">Leads by Example</p></div></div>
-          <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden premium-shadow cursor-pointer"><img src="https://z-cdn-media.chatglm.cn/files/109a18cb-2440-41ac-a41f-dbe4659eccbb.png?auth_key=1879783501-1a386ba2c381463a824e1058b115fd8f-0-05f9f1b8c5135eac9e779ef251788514" alt="Girls" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-5 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"><p class="text-white font-bold text-sm md:text-base font-sans">U15 Girls Team</p><p class="text-primary font-accent text-xs tracking-wider uppercase mt-1">Team First</p></div></div>
-          <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden premium-shadow cursor-pointer"><img src="https://z-cdn-media.chatglm.cn/files/4c0cb421-1ce4-4054-948d-e14c31f14d10.png?auth_key=1879783501-ab156754977f483eb719308edfa58023-0-08d30d117a94574c584606f99854e955" alt="U13" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-5 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"><p class="text-white font-bold text-sm md:text-base font-sans">U13 Athlete</p><p class="text-primary font-accent text-xs tracking-wider uppercase mt-1">Trains With Purpose</p></div></div>
-          <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden premium-shadow cursor-pointer"><img src="https://z-cdn-media.chatglm.cn/files/17deedd6-54cc-45c9-a0f9-26aa30477ff4.png?auth_key=1879783501-75f8a146b2f74275aed2eafaec3379b6-0-76080e04717e713c9ab6f176a815eb31" alt="U11" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-5 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"><p class="text-white font-bold text-sm md:text-base font-sans">U11 Athlete</p><p class="text-primary font-accent text-xs tracking-wider uppercase mt-1">Learns Through Mistakes</p></div></div>
-          <div class="group relative aspect-[3/4] rounded-2xl overflow-hidden premium-shadow cursor-pointer"><img src="https://z-cdn-media.chatglm.cn/files/08584e74-ad9e-4d12-9e14-0f92a057d078.png?auth_key=1879783501-071ff3600c764911ba286d3ebcea83af-0-cd36688b5227778e281ff0ceed0443c0" alt="U9" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" /><div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4 md:p-5 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"><p class="text-white font-bold text-sm md:text-base font-sans">U9 Athlete</p><p class="text-primary font-accent text-xs tracking-wider uppercase mt-1">Keeps Growing</p></div></div>
+
+      <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+        <!-- Card 1: Jan Nguyen -->
+        <div class="glass-card rounded-2xl overflow-hidden group">
+          <div class="aspect-[3/4] overflow-hidden">
+            <img src="https://z-cdn-media.chatglm.cn/files/9ef803c3-420d-458c-b5fe-652f9b9ef7cd.jpg?auth_key=1880986251-7b4290f9464849f496cfe664e5d8c3f8-0-1a3e128038b6af3966a3d6e3b87081c7" alt="Jan Nguyen — U15 Girls Team" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <span class="text-4xl text-primary/30 font-serif leading-none">"</span>
+            <p class="text-white text-base leading-relaxed font-medium font-sans mt-1">Coach helps me keep improving my skills, work harder, and believe in myself on the court.</p>
+            <div class="mt-4 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full overflow-hidden border-2 border-primary/50">
+                <img src="https://z-cdn-media.chatglm.cn/files/77f765e8-e65b-44db-b261-8cf726855de0.png?auth_key=1878735359-7ec8f47edd684fbda74b4f2d2c39badc-0-2d88f8e54035164683affcadd246ae48" alt="Jan Nguyen" class="w-full h-full object-cover object-top" />
+              </div>
+              <p class="text-primary text-xs font-bold font-accent uppercase tracking-wider">Jan Nguyen · U15 Girls</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: U11 Athlete -->
+        <div class="glass-card rounded-2xl overflow-hidden group">
+          <div class="aspect-[3/4] overflow-hidden">
+            <img src="https://z-cdn-media.chatglm.cn/files/587e579b-0c16-4fa4-a00e-7a8a2430c2cb.png?auth_key=1880986251-bcbe1844b65341669638460f098af3fb-0-b04fb553ca0bd938cf96e1f7ba2499c3" alt="U11 Athlete training" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <span class="text-4xl text-primary/30 font-serif leading-none">"</span>
+            <p class="text-white text-base leading-relaxed font-medium font-sans mt-1">Training is hard, but so much fun. I feel like I'm getting better every single session.</p>
+            <div class="mt-4 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center border-2 border-primary/50">
+                <i data-lucide="user" class="w-3.5 h-3.5 text-primary/60"></i>
+              </div>
+              <p class="text-primary text-xs font-bold font-accent uppercase tracking-wider">U11 Athlete</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Parent — zoom vào parent đang đứng bên court -->
+        <div class="glass-card rounded-2xl overflow-hidden group">
+          <div class="aspect-[3/4] overflow-hidden">
+            <img src="https://z-cdn-media.chatglm.cn/files/6ce27729-0831-46fd-8c85-af3eecfa28a0.png?auth_key=1880986251-e254aa916b2a4fd396ec8ce3fb38027d-0-6a543f1fd79c9a49e9d5b35a3b31f38f" alt="Parent watching training" class="w-full h-full object-cover object-[15%_50%] scale-150 group-hover:scale-[1.6] transition-transform duration-500" />
+          </div>
+          <div class="p-6">
+            <span class="text-4xl text-primary/30 font-serif leading-none">"</span>
+            <p class="text-white text-base leading-relaxed font-medium font-sans mt-1">My son used to be shy, but since joining LIT Elite, he's become more confident and excited to come to practice every week.</p>
+            <div class="mt-4 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center border-2 border-primary/50">
+                <i data-lucide="user" class="w-3.5 h-3.5 text-primary/60"></i>
+              </div>
+              <p class="text-primary text-xs font-bold font-accent uppercase tracking-wider">Parent · U9 Athlete</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Stats + CTA -->
+      <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col sm:flex-row justify-center gap-8 mt-12 pt-8 border-t border-white/10">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center"><i data-lucide="award" class="w-6 h-6 text-primary"></i></div>
+            <div><p class="text-white font-semibold font-sans">Skill Growth</p><p class="text-white/60 text-sm font-sans">Measurable Progress</p></div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center"><i data-lucide="star" class="w-6 h-6 text-primary"></i></div>
+            <div><p class="text-white font-semibold font-sans">Confidence Boost</p><p class="text-white/60 text-sm font-sans">On & Off Court</p></div>
+          </div>
+        </div>
+        <div class="text-center mt-10">
+          <p class="text-white/80 text-lg mb-6 font-sans">Want your athlete to build skill and confidence through LIT Elite?</p>
+          <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="inline-block bg-primary hover:bg-pink-600 text-white font-bold font-accent py-3.5 px-8 rounded-full transition-all duration-300 tracking-wider text-sm md:text-base premium-shadow hover:scale-105">Book a Trial Session</a>
         </div>
       </div>
     </div>
   </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
 
   <!-- ══════════════════════════════════════════════════════ -->
   <!-- 🧊 FAQ -->
