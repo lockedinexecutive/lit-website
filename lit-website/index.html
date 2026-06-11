@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LIT Elite Basketball Academy — Youth Basketball Development Ages 5-16 in Ho Chi Minh City</title>
-  <meta name="description" content="Coach-led basketball development for athletes ages 5–16 in District 7, HCMC. From first-time players to experienced competitors. Train with purpose, read the game, commit to the next play." />
+  <title>LIT Elite Basketball Academy — Purposeful Youth Basketball Training in Ho Chi Minh City</title>
+  <meta name="description" content="LIT Elite Basketball provides purposeful basketball training for U7–U16 athletes in Ho Chi Minh City. Build real skill, confidence, and character with Coach Zinger." />
   
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -44,24 +44,45 @@
     @font-face { font-family: 'Jeko'; src: url("./fonts/SVN-Jeko-Black.woff2") format("woff2"); font-weight: 900; font-style: normal; }
     @font-face { font-family: 'UTMNokia'; src: url("./fonts/UTM Nokia.woff2") format("woff2"); font-weight: 400; font-style: normal; }
 
+    /* ═══ TYPOGRAPHY SYSTEM ═══
+       font-hero    = UnisonPro Bold        → H1 main headline only
+       font-heading = UnisonPro-LightRound  → H2 section headlines
+       font-accent  = Jeko                  → H3 sub-headlines, labels, badges, buttons, tracking text
+       font-sans    = Gilroy                → Body text, paragraphs, descriptions
+    */
     body { background-color: #121220; color: #f8f8f2; font-family: 'Gilroy', 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
     p, .text-muted-foreground { line-height: 1.8; }
+    .text-gradient { background: linear-gradient(to right, #ec4899, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .premium-shadow { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
     .glow-pink { box-shadow: 0 0 40px rgba(255, 64, 129, 0.3); }
     html { scroll-behavior: smooth; }
     details summary::-webkit-details-marker { display: none; }
     details summary { list-style: none; }
 
+    /* Glass Cards */
     .glass-card { background: rgba(42, 42, 61, 0.75); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(63, 63, 90, 0.5); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6); }
     .glass-card-dark { background: rgba(18, 18, 32, 0.80); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border: 1px solid rgba(63, 63, 90, 0.5); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6); }
     .inner-card { background: rgba(42, 42, 61, 0.6); border: 1px solid rgba(63, 63, 90, 0.4); transition: all 0.3s; }
     .inner-card:hover { border-color: rgba(236, 72, 153, 0.4); }
 
+    /* Package highlight border cards */
     .package-card { background: rgba(18, 18, 32, 0.7); border: 2px solid rgba(236, 72, 153, 0.35); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); transition: all 0.3s; position: relative; overflow: hidden; }
     .package-card:hover { border-color: rgba(236, 72, 153, 0.7); box-shadow: 0 0 40px -10px rgba(236, 72, 153, 0.2); }
     .package-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
     .package-fundamental::before { background: linear-gradient(to right, #ec4899, #f472b6); }
     .package-advanced::before { background: linear-gradient(to right, #a855f7, #ec4899); }
+
+    /* Fading Background */
+    @keyframes imageFade {
+      0% { opacity: 0; } 10% { opacity: 1; } 30% { opacity: 1; } 40% { opacity: 0; } 100% { opacity: 0; }
+    }
+    .fade-bg-img { animation: imageFade 24s infinite; opacity: 0; position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: blur(6px) brightness(0.35); mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent); -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent); }
+    .fade-bg-img:nth-child(1) { animation-delay: 0s; }
+    .fade-bg-img:nth-child(2) { animation-delay: 8s; }
+    .fade-bg-img:nth-child(3) { animation-delay: 16s; }
+
+    @keyframes cinematicZoom { 0% { transform: scale(1); } 100% { transform: scale(1.08); } }
+    .cinematic-img { animation: cinematicZoom 20s ease-in-out infinite alternate; }
 
     .section-badge { display: inline-block; background: rgba(236, 72, 153, 0.15); color: #ec4899; border: 1px solid rgba(236, 72, 153, 0.4); padding: 6px 16px; font-size: 13px; border-radius: 9999px; font-family: 'Jeko', sans-serif; letter-spacing: 0.05em; }
     .section-header { text-align: center; max-width: 48rem; margin-left: auto; margin-right: auto; }
@@ -103,6 +124,7 @@
     </div>
   </nav>
 
+
   <!-- ═══ HERO ═══ -->
   <section id="hero" class="relative min-h-screen flex flex-col bg-background" itemscope itemtype="https://schema.org/SportsTraining">
     <div class="relative w-full h-[75vh] md:h-[85vh] overflow-hidden">
@@ -121,17 +143,17 @@
           <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-pink-600 text-white text-sm md:text-base px-8 py-4 rounded-full glow-pink group inline-flex items-center font-bold font-accent transition-all uppercase tracking-wider">BOOK A TRIAL <i data-lucide="arrow-right" class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"></i></a>
           <button onclick="scrollToSection('programs')" class="border-2 border-white/30 hover:border-white text-white text-sm md:text-base px-8 py-4 rounded-full group inline-flex items-center font-bold font-accent transition-all uppercase tracking-wider hover:bg-white/10">SEE HOW WE TRAIN</button>
         </div>
-        <!-- Reassurance Bar: Text changed to pure white -->
+  <!-- Reassurance Bar with Icons -->
         <div class="glass-card inline-flex flex-col sm:flex-row flex-wrap justify-center items-center gap-x-6 gap-y-2 px-8 py-3 rounded-full mx-auto">
-          <span class="font-accent text-[11px] md:text-xs tracking-[0.15em] text-white uppercase flex items-center gap-2">
+          <span class="font-accent text-[11px] md:text-xs tracking-[0.15em] text-muted-foreground uppercase flex items-center gap-2">
             <i data-lucide="users" class="w-4 h-4 text-primary"></i> Limited Enrolment
           </span>
-          <span class="hidden sm:block w-1 h-1 bg-white/50 rounded-full"></span>
-          <span class="font-accent text-[11px] md:text-xs tracking-[0.15em] text-white uppercase flex items-center gap-2">
+          <span class="hidden sm:block w-1 h-1 bg-muted-foreground/50 rounded-full"></span>
+          <span class="font-accent text-[11px] md:text-xs tracking-[0.15em] text-muted-foreground uppercase flex items-center gap-2">
             <i data-lucide="calendar" class="w-4 h-4 text-primary"></i> Ages 5–16
           </span>
-          <span class="hidden sm:block w-1 h-1 bg-white/50 rounded-full"></span>
-          <span class="font-accent text-[11px] md:text-xs tracking-[0.15em] text-white uppercase flex items-center gap-2">
+          <span class="hidden sm:block w-1 h-1 bg-muted-foreground/50 rounded-full"></span>
+          <span class="font-accent text-[11px] md:text-xs tracking-[0.15em] text-muted-foreground uppercase flex items-center gap-2">
             <i data-lucide="trending-up" class="w-4 h-4 text-primary"></i> Beginner to Competitive
           </span>
         </div>
