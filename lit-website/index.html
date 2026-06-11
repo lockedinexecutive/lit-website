@@ -251,11 +251,11 @@
     
     <!-- Overlays: Top clear to show faces, Bottom dark to support text -->
     <div class="absolute inset-0 bg-gradient-to-b from-background/10 via-transparent to-background z-10"></div>
-    <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-background via-background/90 to-transparent z-10"></div>
+    <div class="absolute inset-x-0 bottom-0 h-[65%] bg-gradient-to-t from-background via-background/80 to-transparent z-10"></div>
     <div class="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-background/60 to-transparent z-10"></div>
 
     <!-- Hero Content Container -->
-    <div class="relative z-20 w-full max-w-5xl mx-auto px-6 md:px-12 text-center pb-16 md:pb-24 pt-48 md:pt-64">
+    <div class="relative z-20 w-full max-w-5xl mx-auto px-6 md:px-12 text-center pb-20 md:pb-28 pt-12 md:pt-16">
       
       <!-- Eyebrow -->
       <p class="font-accent text-[10px] sm:text-xs md:text-sm tracking-[0.2em] md:tracking-[0.25em] text-primary/90 uppercase mb-6 md:mb-8" itemprop="category">
@@ -263,7 +263,7 @@
       </p>
       
       <!-- Headline -->
-      <h1 class="font-hero text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[0.95] uppercase mb-6 md:mb-8" itemprop="name">
+      <h1 class="font-hero text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] uppercase mb-6 md:mb-8" itemprop="name">
         UNDERSTAND THE GAME.<br/>
         TRUST YOUR DECISIONS.<br/>
         <span class="text-gradient">PLAY WITH CONFIDENCE.</span>
@@ -307,36 +307,6 @@
     </div>
   </section>
 
-  <!-- ═══ REST OF THE WEBSITE SECTIONS (Programs, About, etc.) WOULD GO HERE ═══ -->
-
-  <script>
-    // Initialize Lucide Icons
-    lucide.createIcons();
-
-    // Mobile Menu Toggle
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    if (menuBtn && mobileMenu) {
-      menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-    }
-
-    // Smooth scroll function
-    function scrollToSection(id) {
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-        // Close mobile menu if open
-        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-          mobileMenu.classList.add('hidden');
-        }
-      }
-    }
-  </script>
-</body>
-</html>
   <!-- ══════════════════════════════════════════════════════ -->
   <!-- 🧊 PROGRAMS — Full-Width Cards -->
   <!-- ══════════════════════════════════════════════════════ -->
