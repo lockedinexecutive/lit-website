@@ -124,27 +124,219 @@
     </div>
   </nav>
 
-    <!-- ═══ HERO ═══ -->
-  <section id="hero" class="relative min-h-screen flex flex-col bg-background" itemscope itemtype="https://schema.org/SportsTraining">
-    <div class="relative w-full h-[75vh] md:h-[85vh] overflow-hidden">
-      <img src="https://z-cdn-media.chatglm.cn/files/d297ab19-cd45-4c3b-8c78-234a61473671.png?auth_key=1880973410-dd6318c30c7b4483a32519e1616bcf4e-0-b868538fa71dbd94a623ec5e400b8f77" alt="LIT Elite Basketball Academy team — youth basketball training program for U7 to U16 athletes in Ho Chi Minh City" class="w-full h-full object-cover object-top cinematic-img" itemprop="image" loading="eager" />
-      <div class="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background z-10"></div>
-      <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-background via-background/60 to-transparent z-10"></div>
-    </div>
-    <div class="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-16 lg:px-24 -mt-16 md:-mt-24">
-      <div class="max-w-3xl mx-auto w-full text-center">
-        <div class="w-16 h-1 bg-primary mx-auto mb-8"></div>
-        <div class="section-badge mb-4">LIT Elite Basketball · U7–U16 · District 7, HCMC</div>
-        <h1 class="font-hero text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-4 leading-none font-bold uppercase">More Than<br/><span class="text-primary">Basketball</span></h1>
-        <p class="text-white text-lg md:text-xl max-w-xl mx-auto mb-6">Purposeful basketball training for U7–U16 athletes — built to develop real skill, game understanding, and the confidence to play freely.</p>
-        <p class="text-primary font-accent uppercase tracking-[0.15em] md:tracking-widest text-sm md:text-base mb-10 max-w-xl mx-auto">Confidence is trained. Every rep has purpose.</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-pink-600 text-white text-lg px-8 py-5 rounded-full glow-pink group inline-flex items-center font-bold font-accent transition-all">Book a Trial Session <i data-lucide="arrow-right" class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"></i></a>
-          <button onclick="scrollToSection('programs')" class="text-white hover:text-primary text-base font-medium transition-colors flex items-center gap-2 py-4 font-sans">View Programs <i data-lucide="chevron-down" class="w-4 h-4"></i></button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LIT Elite Basketball Academy — Youth Basketball Development Ages 5-16 in Ho Chi Minh City</title>
+  <meta name="description" content="Youth basketball development for ages 5–16 in District 7, HCMC. LIT Elite combines purposeful training, personal coaching and the right level of challenge for every athlete. Every athlete is seen. Every rep has a reason." />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#ec4899',
+            secondary: '#1e1e2e',
+            card: '#2a2a3d',
+            border: '#3f3f5a',
+            background: '#121220',
+            foreground: '#f8f8f2',
+            'muted-foreground': '#c8ccd8',
+          },
+          fontFamily: {
+            sans: ['Gilroy', 'Inter', 'sans-serif'],
+            hero: ['UnisonPro', 'sans-serif'],
+            heading: ['UTMNokia', 'sans-serif'],
+            accent: ['Jeko', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    @font-face { font-family: 'UnisonPro'; src: url("./fonts/UnisonPro-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; }
+    @font-face { font-family: 'UnisonPro-LightRound'; src: url("./fonts/UnisonPro-LightRound.woff2") format("woff2"); font-weight: 300; font-style: normal; }
+    @font-face { font-family: 'Gilroy'; src: url("./fonts/SVN-Gilroy.woff2") format("woff2"); font-weight: 400; font-style: normal; }
+    @font-face { font-family: 'Gilroy'; src: url("./fonts/SVN-GilroySemiBold.woff2") format("woff2"); font-weight: 600; font-style: normal; }
+    @font-face { font-family: 'Gilroy'; src: url("./fonts/SVN-GilroyBold.woff2") format("woff2"); font-weight: 700; font-style: normal; }
+    @font-face { font-family: 'Gilroy'; src: url("./fonts/SVN-GilroyItalic.woff2") format("woff2"); font-weight: 400; font-style: italic; }
+    @font-face { font-family: 'Jeko'; src: url("./fonts/SVN-Jeko-Light.woff2") format("woff2"); font-weight: 300; font-style: normal; }
+    @font-face { font-family: 'Jeko'; src: url("./fonts/SVN-Jeko-Black.woff2") format("woff2"); font-weight: 900; font-style: normal; }
+    @font-face { font-family: 'UTMNokia'; src: url("./fonts/UTM Nokia.woff2") format("woff2"); font-weight: 400; font-style: normal; }
+
+    body { background-color: #121220; color: #f8f8f2; font-family: 'Gilroy', 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
+    p, .text-muted-foreground { line-height: 1.8; }
+    .text-gradient { background: linear-gradient(to right, #ec4899, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .premium-shadow { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
+    .glow-pink { box-shadow: 0 0 40px rgba(255, 64, 129, 0.3); }
+    html { scroll-behavior: smooth; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary { list-style: none; }
+
+    .glass-card { background: rgba(42, 42, 61, 0.75); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(63, 63, 90, 0.5); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6); }
+    .glass-card-dark { background: rgba(18, 18, 32, 0.80); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border: 1px solid rgba(63, 63, 90, 0.5); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6); }
+    .inner-card { background: rgba(42, 42, 61, 0.6); border: 1px solid rgba(63, 63, 90, 0.4); transition: all 0.3s; }
+    .inner-card:hover { border-color: rgba(236, 72, 153, 0.4); }
+
+    .package-card { background: rgba(18, 18, 32, 0.7); border: 2px solid rgba(236, 72, 153, 0.35); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); transition: all 0.3s; position: relative; overflow: hidden; }
+    .package-card:hover { border-color: rgba(236, 72, 153, 0.7); box-shadow: 0 0 40px -10px rgba(236, 72, 153, 0.2); }
+    .package-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+    .package-fundamental::before { background: linear-gradient(to right, #ec4899, #f472b6); }
+    .package-advanced::before { background: linear-gradient(to right, #a855f7, #ec4899); }
+
+    @keyframes imageFade {
+      0% { opacity: 0; } 10% { opacity: 1; } 30% { opacity: 1; } 40% { opacity: 0; } 100% { opacity: 0; }
+    }
+    .fade-bg-img { animation: imageFade 24s infinite; opacity: 0; position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: blur(6px) brightness(0.35); mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent); -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent); }
+    .fade-bg-img:nth-child(1) { animation-delay: 0s; }
+    .fade-bg-img:nth-child(2) { animation-delay: 8s; }
+    .fade-bg-img:nth-child(3) { animation-delay: 16s; }
+
+    @keyframes cinematicZoom { 0% { transform: scale(1); } 100% { transform: scale(1.08); } }
+    .cinematic-img { animation: cinematicZoom 20s ease-in-out infinite alternate; }
+
+    .section-badge { display: inline-block; background: rgba(236, 72, 153, 0.15); color: #ec4899; border: 1px solid rgba(236, 72, 153, 0.4); padding: 6px 16px; font-size: 13px; border-radius: 9999px; font-family: 'Jeko', sans-serif; letter-spacing: 0.05em; }
+    .section-header { text-align: center; max-width: 48rem; margin-left: auto; margin-right: auto; }
+  </style>
+</head>
+<body class="font-sans">
+
+  <!-- NAVIGATION -->
+  <nav id="navbar" class="w-full z-50 bg-white/95 backdrop-blur-md transition-all duration-300 h-16 sticky top-0">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-full">
+      <div class="flex items-center justify-between h-full">
+        <div class="flex items-center cursor-pointer" onclick="scrollToSection('hero')">
+          <img src="https://z-cdn-media.chatglm.cn/files/e2f8cfe7-1e43-4b1a-88d6-4350b231bf71.png?auth_key=1878815395-dd6897666469472db12bff51e2f3b468-0-464542c0236a8db563b1c263fb523343" alt="LIT Elite Basketball Academy" class="h-10 md:h-12 w-auto" />
         </div>
+        <div class="hidden md:flex items-center gap-6">
+          <button onclick="scrollToSection('programs')" class="text-sm font-semibold text-primary hover:text-pink-600 transition-colors font-sans">Programs</button>
+          <button onclick="scrollToSection('about')" class="text-sm font-semibold text-primary hover:text-pink-600 transition-colors font-sans">About</button>
+          <button onclick="scrollToSection('why-lit')" class="text-sm font-semibold text-primary hover:text-pink-600 transition-colors font-sans">Why LIT</button>
+          <button onclick="scrollToSection('coach')" class="text-sm font-semibold text-primary hover:text-pink-600 transition-colors font-sans">Coach</button>
+          <button onclick="scrollToSection('faq')" class="text-sm font-semibold text-primary hover:text-pink-600 transition-colors font-sans">FAQ</button>
+          <a href="https://www.instagram.com/litelitebasketball/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-primary hover:text-pink-600 transition-colors flex items-center gap-1 font-sans">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            Instagram
+          </a>
+          <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20learn%20more%20about%20the%20basketball%20program%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-primary to-pink-500 hover:from-pink-500 hover:to-primary text-white font-bold px-5 py-2 rounded-md text-sm transition-all font-accent">Book a Trial</a>
+        </div>
+        <button id="menu-btn" class="md:hidden text-primary"><i data-lucide="menu" class="w-5 h-5"></i></button>
       </div>
     </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-pink-200">
+      <div class="container mx-auto px-4 py-3 flex flex-col gap-2">
+        <button onclick="scrollToSection('programs')" class="text-left py-2 text-primary font-semibold text-sm font-sans">Programs</button>
+        <button onclick="scrollToSection('about')" class="text-left py-2 text-primary font-semibold text-sm font-sans">About</button>
+        <button onclick="scrollToSection('why-lit')" class="text-left py-2 text-primary font-semibold text-sm font-sans">Why LIT</button>
+        <button onclick="scrollToSection('coach')" class="text-left py-2 text-primary font-semibold text-sm font-sans">Coach</button>
+        <button onclick="scrollToSection('faq')" class="text-left py-2 text-primary font-semibold text-sm font-sans">FAQ</button>
+        <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20learn%20more%20about%20the%20basketball%20program%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="block text-center mt-1 bg-gradient-to-r from-primary to-pink-500 text-white font-bold py-2 rounded-md text-sm font-accent">Book a Trial</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="hero" class="relative min-h-screen flex items-end bg-background overflow-hidden" itemscope itemtype="https://schema.org/SportsTraining">
+    
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://z-cdn-media.chatglm.cn/files/d297ab19-cd45-4c3b-8c78-234a61473671.png?auth_key=1880973410-dd6318c30c7b4483a32519e1616bcf4e-0-b868538fa71dbd94a623ec5e400b8f77" alt="LIT Elite Basketball Academy — youth basketball development program for ages 5 to 16 in District 7, Ho Chi Minh City" class="w-full h-full object-cover object-top cinematic-img" itemprop="image" loading="eager" />
+    </div>
+    
+    <!-- Overlays: Top clear to show faces, Bottom dark to support text -->
+    <div class="absolute inset-0 bg-gradient-to-b from-background/10 via-transparent to-background z-10"></div>
+    <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-background via-background/90 to-transparent z-10"></div>
+    <div class="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-background/60 to-transparent z-10"></div>
+
+    <!-- Hero Content Container -->
+    <div class="relative z-20 w-full max-w-5xl mx-auto px-6 md:px-12 text-center pb-16 md:pb-24 pt-48 md:pt-64">
+      
+      <!-- Eyebrow -->
+      <p class="font-accent text-[10px] sm:text-xs md:text-sm tracking-[0.2em] md:tracking-[0.25em] text-primary/90 uppercase mb-6 md:mb-8" itemprop="category">
+        YOUTH BASKETBALL DEVELOPMENT · AGES 5–16 · DISTRICT 7, HCMC
+      </p>
+      
+      <!-- Headline -->
+      <h1 class="font-hero text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[0.95] uppercase mb-6 md:mb-8" itemprop="name">
+        UNDERSTAND THE GAME.<br/>
+        TRUST YOUR DECISIONS.<br/>
+        <span class="text-gradient">PLAY WITH CONFIDENCE.</span>
+      </h1>
+      
+      <!-- Subheadline -->
+      <p class="font-sans text-white/80 text-base md:text-lg max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed" itemprop="description">
+        From first-time players to experienced competitors, LIT Elite combines purposeful training, personal coaching and the right level of challenge for every athlete.
+      </p>
+      
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 md:mb-16">
+        <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-pink-600 text-white text-sm md:text-base px-8 py-4 rounded-full glow-pink group inline-flex items-center font-bold font-accent transition-all uppercase tracking-wider">
+          Book a Trial Session <i data-lucide="arrow-right" class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <button onclick="scrollToSection('programs')" class="border border-white/30 hover:border-white/60 text-white hover:text-white text-sm md:text-base px-8 py-4 rounded-full group inline-flex items-center font-bold font-accent transition-all uppercase tracking-wider backdrop-blur-sm bg-white/5 hover:bg-white/10">
+          Find Your Starting Point <i data-lucide="compass" class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+        </button>
+      </div>
+      
+      <!-- Reassurance Bar -->
+      <div class="glass-card inline-flex flex-col sm:flex-row flex-wrap justify-center items-center gap-x-6 gap-y-2 px-8 py-3 rounded-full mb-8 mx-auto">
+        <span class="font-accent text-[11px] md:text-xs tracking-[0.15em] text-muted-foreground uppercase flex items-center gap-2">
+          <i data-lucide="users" class="w-4 h-4 text-primary"></i> Limited Enrolment
+        </span>
+        <span class="hidden sm:block w-1 h-1 bg-muted-foreground/50 rounded-full"></span>
+        <span class="font-accent text-[11px] md:text-xs tracking-[0.15em] text-muted-foreground uppercase flex items-center gap-2">
+          <i data-lucide="shield-check" class="w-4 h-4 text-primary"></i> Coach-Led Training
+        </span>
+        <span class="hidden sm:block w-1 h-1 bg-muted-foreground/50 rounded-full"></span>
+        <span class="font-accent text-[11px] md:text-xs tracking-[0.15em] text-muted-foreground uppercase flex items-center gap-2">
+          <i data-lucide="trending-up" class="w-4 h-4 text-primary"></i> Beginner to Advanced
+        </span>
+      </div>
+      
+      <!-- Brand Promise -->
+      <p class="font-accent text-[10px] md:text-xs tracking-[0.2em] text-white/40 uppercase max-w-md mx-auto" itemprop="slogan">
+        EVERY ATHLETE IS SEEN. EVERY REP HAS A REASON.
+      </p>
+
+    </div>
   </section>
+
+  <!-- ═══ REST OF THE WEBSITE SECTIONS (Programs, About, etc.) WOULD GO HERE ═══ -->
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // Smooth scroll function
+    function scrollToSection(id) {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        // Close mobile menu if open
+        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+        }
+      }
+    }
+  </script>
+</body>
+</html>
   <!-- ══════════════════════════════════════════════════════ -->
   <!-- 🧊 PROGRAMS — Full-Width Cards -->
   <!-- ══════════════════════════════════════════════════════ -->
