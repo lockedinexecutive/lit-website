@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LIT Elite Basketball Academy — Purposeful Youth Basketball Training in Ho Chi Minh City</title>
-  <meta name="description" content="LIT Elite Basketball provides purposeful basketball training for U7–U16 athletes in Ho Chi Minh City. Build real skill, confidence, and character with Coach Zinger." />
+  <title>LIT Elite Basketball Academy — Youth Basketball Development Ages 5-16 in Ho Chi Minh City</title>
+  <meta name="description" content="Coach-led basketball development for athletes ages 5–16 in District 7, HCMC. From first-time players to experienced competitors. Train with purpose, read the game, commit to the next play." />
   
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -44,48 +44,23 @@
     @font-face { font-family: 'Jeko'; src: url("./fonts/SVN-Jeko-Black.woff2") format("woff2"); font-weight: 900; font-style: normal; }
     @font-face { font-family: 'UTMNokia'; src: url("./fonts/UTM Nokia.woff2") format("woff2"); font-weight: 400; font-style: normal; }
 
-    /* ═══ TYPOGRAPHY SYSTEM ═══
-       font-hero    = UnisonPro Bold        → H1 main headline only
-       font-heading = UnisonPro-LightRound  → H2 section headlines
-       font-accent  = Jeko                  → H3 sub-headlines, labels, badges, buttons, tracking text
-       font-sans    = Gilroy                → Body text, paragraphs, descriptions
-    */
     body { background-color: #121220; color: #f8f8f2; font-family: 'Gilroy', 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
     p, .text-muted-foreground { line-height: 1.8; }
-    .text-gradient { background: linear-gradient(to right, #ec4899, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .premium-shadow { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
     .glow-pink { box-shadow: 0 0 40px rgba(255, 64, 129, 0.3); }
     html { scroll-behavior: smooth; }
     details summary::-webkit-details-marker { display: none; }
     details summary { list-style: none; }
 
-    /* Glass Cards */
     .glass-card { background: rgba(42, 42, 61, 0.75); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(63, 63, 90, 0.5); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6); }
-    .glass-card-dark { background: rgba(18, 18, 32, 0.80); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border: 1px solid rgba(63, 63, 90, 0.5); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6); }
     .inner-card { background: rgba(42, 42, 61, 0.6); border: 1px solid rgba(63, 63, 90, 0.4); transition: all 0.3s; }
     .inner-card:hover { border-color: rgba(236, 72, 153, 0.4); }
-
-    /* Package highlight border cards */
-    .package-card { background: rgba(18, 18, 32, 0.7); border: 2px solid rgba(236, 72, 153, 0.35); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); transition: all 0.3s; position: relative; overflow: hidden; }
-    .package-card:hover { border-color: rgba(236, 72, 153, 0.7); box-shadow: 0 0 40px -10px rgba(236, 72, 153, 0.2); }
-    .package-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
-    .package-fundamental::before { background: linear-gradient(to right, #ec4899, #f472b6); }
-    .package-advanced::before { background: linear-gradient(to right, #a855f7, #ec4899); }
-
-    /* Fading Background */
-    @keyframes imageFade {
-      0% { opacity: 0; } 10% { opacity: 1; } 30% { opacity: 1; } 40% { opacity: 0; } 100% { opacity: 0; }
-    }
-    .fade-bg-img { animation: imageFade 24s infinite; opacity: 0; position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: blur(6px) brightness(0.35); mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent); -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent); }
-    .fade-bg-img:nth-child(1) { animation-delay: 0s; }
-    .fade-bg-img:nth-child(2) { animation-delay: 8s; }
-    .fade-bg-img:nth-child(3) { animation-delay: 16s; }
-
-    @keyframes cinematicZoom { 0% { transform: scale(1); } 100% { transform: scale(1.08); } }
-    .cinematic-img { animation: cinematicZoom 20s ease-in-out infinite alternate; }
-
     .section-badge { display: inline-block; background: rgba(236, 72, 153, 0.15); color: #ec4899; border: 1px solid rgba(236, 72, 153, 0.4); padding: 6px 16px; font-size: 13px; border-radius: 9999px; font-family: 'Jeko', sans-serif; letter-spacing: 0.05em; }
-    .section-header { text-align: center; max-width: 48rem; margin-left: auto; margin-right: auto; }
+
+    .sp-card { background: rgba(42, 42, 61, 0.5); border: 1px solid rgba(63, 63, 90, 0.4); transition: all 0.3s; position: relative; }
+    .sp-card:hover { border-color: rgba(236, 72, 153, 0.5); background: rgba(42, 42, 61, 0.7); }
+    .sp-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(to right, #ec4899, #f472b6); border-radius: 12px 12px 0 0; opacity: 0; transition: opacity 0.3s; }
+    .sp-card:hover::before { opacity: 1; }
   </style>
 </head>
 <body class="font-sans">
@@ -124,7 +99,6 @@
     </div>
   </nav>
 
-
   <!-- ═══ HERO ═══ -->
   <section id="hero" class="relative min-h-screen flex flex-col bg-background" itemscope itemtype="https://schema.org/SportsTraining">
     <div class="relative w-full h-[75vh] md:h-[85vh] overflow-hidden">
@@ -135,102 +109,106 @@
     <div class="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-16 lg:px-24 -mt-16 md:-mt-24">
       <div class="max-w-5xl mx-auto w-full text-center">
         <div class="section-badge mb-4">LIT ELITE BASKETBALL · DISTRICT 7, HCMC</div>
-        <!-- Reduced font size 1 step to ensure 2 lines, text changed to pure white -->
         <h1 class="font-hero text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-5 leading-[1.05] font-bold uppercase" itemprop="name">DISCOVER WHAT<br/>YOU'RE <span class="text-primary">CAPABLE</span> OF.</h1>
-        <p class="font-accent text-[11px] sm:text-xs md:text-sm tracking-[0.15em] text-white uppercase mb-4">TRAIN WITH PURPOSE. READ THE GAME. COMMIT TO THE NEXT PLAY.</p>
+        <p class="font-accent font-bold text-[11px] sm:text-xs md:text-sm tracking-[0.15em] text-white uppercase mb-4">TRAIN WITH PURPOSE. READ THE GAME. COMMIT TO THE NEXT PLAY.</p>
         <p class="text-white text-base md:text-lg max-w-xl mx-auto mb-8 leading-relaxed" itemprop="description">Coach-led basketball development for athletes ages 5–16, from first-time players to experienced competitors.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
           <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-pink-600 text-white text-sm md:text-base px-8 py-4 rounded-full glow-pink group inline-flex items-center font-bold font-accent transition-all uppercase tracking-wider">BOOK A TRIAL <i data-lucide="arrow-right" class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"></i></a>
           <button onclick="scrollToSection('programs')" class="border-2 border-white/30 hover:border-white text-white text-sm md:text-base px-8 py-4 rounded-full group inline-flex items-center font-bold font-accent transition-all uppercase tracking-wider hover:bg-white/10">SEE HOW WE TRAIN</button>
         </div>
-  <!-- Reassurance Bar with Icons -->
         <div class="glass-card inline-flex flex-col sm:flex-row flex-wrap justify-center items-center gap-x-6 gap-y-2 px-8 py-3 rounded-full mx-auto">
-          <span class="font-accent text-[11px] md:text-xs tracking-[0.15em] text-muted-foreground uppercase flex items-center gap-2">
-            <i data-lucide="users" class="w-4 h-4 text-primary"></i> Limited Enrolment
-          </span>
-          <span class="hidden sm:block w-1 h-1 bg-muted-foreground/50 rounded-full"></span>
-          <span class="font-accent text-[11px] md:text-xs tracking-[0.15em] text-muted-foreground uppercase flex items-center gap-2">
-            <i data-lucide="calendar" class="w-4 h-4 text-primary"></i> Ages 5–16
-          </span>
-          <span class="hidden sm:block w-1 h-1 bg-muted-foreground/50 rounded-full"></span>
-          <span class="font-accent text-[11px] md:text-xs tracking-[0.15em] text-muted-foreground uppercase flex items-center gap-2">
-            <i data-lucide="trending-up" class="w-4 h-4 text-primary"></i> Beginner to Competitive
-          </span>
+          <span class="font-accent text-[11px] md:text-xs tracking-[0.15em] text-white uppercase flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-primary"></i> Limited Enrolment</span>
+          <span class="hidden sm:block w-1 h-1 bg-white/50 rounded-full"></span>
+          <span class="font-accent text-[11px] md:text-xs tracking-[0.15em] text-white uppercase flex items-center gap-2"><i data-lucide="calendar" class="w-4 h-4 text-primary"></i> Ages 5–16</span>
+          <span class="hidden sm:block w-1 h-1 bg-white/50 rounded-full"></span>
+          <span class="font-accent text-[11px] md:text-xs tracking-[0.15em] text-white uppercase flex items-center gap-2"><i data-lucide="trending-up" class="w-4 h-4 text-primary"></i> Beginner to Competitive</span>
         </div>
       </div>
     </div>
   </section>
 
-    <!-- ═══ HERO BRIDGE: YOUR STARTING POINT (EDITORIAL SPLIT) ═══ -->
-  <section id="starting-point" class="py-20 md:py-28 bg-background">
+  <!-- ═══ HERO BRIDGE: YOUR STARTING POINT (CINEMATIC CENTER-STACK) ═══ -->
+  <section id="starting-point" class="py-20 md:py-32 bg-background" aria-labelledby="starting-point-heading">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <!-- 1. Header Text (Centered) -->
+      <div class="text-center max-w-4xl mx-auto mb-12 md:mb-16">
+        <div class="section-badge mb-6">WHERE ATHLETES START MATTERS</div>
         
-        <!-- Left Column: Image -->
-        <div class="relative order-2 lg:order-1">
-          <div class="aspect-[4/5] md:aspect-[3/4] rounded-2xl overflow-hidden premium-shadow">
-            <img src="https://z-cdn-media.chatglm.cn/files/e03c8e8f-75de-4036-8bde-33a610b49a8e.JPG?auth_key=1881497179-812468d9ac54459db5e65515256c29da-0-b08617f9a1abdaf305cea9e09dc3996f" alt="LIT Elite Basketball coach crouching down to give purposeful feedback to young athletes during a training session" class="w-full h-full object-cover object-center" loading="lazy" />
-          </div>
-          <div class="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-primary/30 rounded-2xl -z-10"></div>
-        </div>
+        <!-- Adjusted size scaling to strictly prevent 3rd line wrapping on smaller screens -->
+        <h2 id="starting-point-heading" class="font-hero text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white leading-tight uppercase mb-8">
+          YOUR <span class="text-primary">STARTING POINT</span> MATTERS.<br/>
+          SO DOES THE <span class="text-primary">COACHING THAT COMES NEXT</span>.
+        </h2>
+        
+        <p class="font-sans text-white text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+          LIT Elite is built for those starting points. We meet athletes where they are, coach them with purpose and help them move forward with the right challenge.
+        </p>
+      </div>
 
-        <!-- Right Column: Content -->
-        <div class="order-1 lg:order-2">
-          <div class="section-badge mb-6">WHERE ATHLETES START MATTERS</div>
-          
-          <!-- H2 Size Reduced (text-2xl sm:text-3xl md:text-4xl) -->
-          <h2 class="font-hero text-2xl sm:text-3xl md:text-4xl text-white leading-tight uppercase mb-8">
-            YOUR <span class="text-primary">STARTING POINT</span> MATTERS.<br/>
-            SO DOES THE <span class="text-primary">COACHING THAT COMES NEXT</span>.
-          </h2>
-          
-          <p class="font-sans text-white text-base md:text-lg max-w-xl leading-relaxed mb-10">
-            LIT Elite is built for those starting points. We meet athletes where they are, coach them with purpose and help them move forward with the right challenge.
+      <!-- 2. Cinematic Image (Ultrawide) -->
+      <div class="relative rounded-2xl overflow-hidden premium-shadow aspect-[16/9] md:aspect-[21/9] mb-16 md:mb-20">
+        <img src="https://z-cdn-media.chatglm.cn/files/e03c8e8f-75de-4036-8bde-33a610b49a8e.JPG?auth_key=1881497179-812468d9ac54459db5e65515256c29da-0-b08617f9a1abdaf305cea9e09dc3996f" alt="LIT Elite Basketball coach crouching down to give purposeful feedback to young athletes during a training session" class="w-full h-full object-cover object-center" loading="lazy" />
+        
+        <!-- Overlay text on image bottom -->
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background via-background/80 to-transparent pt-24 pb-8 px-8 md:px-12 text-center">
+          <p class="font-accent text-primary text-xs md:text-sm tracking-[0.25em] uppercase">
+            EVERY ATHLETE IS SEEN. EVERY REP HAS A REASON.
           </p>
-
-          <div class="space-y-4 mb-12">
-            <div class="sp-card rounded-xl p-6 flex flex-col sm:flex-row sm:items-start gap-4">
-              <div class="flex-1">
-                <h3 class="font-accent text-primary text-xs uppercase tracking-widest mb-2">NEW TO THE GAME</h3>
-                <p class="font-sans text-white text-sm leading-relaxed">
-                  Start with movement, fundamentals and confidence in an environment built for learning.
-                </p>
-              </div>
-            </div>
-            
-            <div class="sp-card rounded-xl p-6 flex flex-col sm:flex-row sm:items-start gap-4">
-              <div class="flex-1">
-                <h3 class="font-accent text-primary text-xs uppercase tracking-widest mb-2">HOLDING BACK</h3>
-                <p class="font-sans text-white text-sm leading-relaxed">
-                  Learn to attempt, make decisions and try again without being embarrassed for still learning.
-                </p>
-              </div>
-            </div>
-            
-            <div class="sp-card rounded-xl p-6 flex flex-col sm:flex-row sm:items-start gap-4">
-              <div class="flex-1">
-                <h3 class="font-accent text-primary text-xs uppercase tracking-widest mb-2">READY FOR MORE</h3>
-                <p class="font-sans text-white text-sm leading-relaxed">
-                  Build game understanding, stronger skills and habits that transfer into competition.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="border-t border-white/10 pt-8 max-w-xl">
-            <p class="font-accent text-primary text-xs tracking-[0.2em] uppercase mb-3">
-              EVERY ATHLETE IS SEEN. EVERY REP HAS A REASON.
-            </p>
-            <p class="font-accent text-white text-xs tracking-[0.15em] uppercase">
-              Different starting points. One standard.
-            </p>
-          </div>
         </div>
+      </div>
+
+      <!-- 3. Three Cards Grid (Horizontal) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+        <div class="sp-card rounded-xl p-8 flex flex-col text-center">
+          <h3 class="font-accent text-primary text-xs uppercase tracking-widest mb-4">NEW TO THE GAME</h3>
+          <p class="font-sans text-white text-sm leading-relaxed flex-1">
+            Start with movement, fundamentals and confidence in an environment built for learning.
+          </p>
+        </div>
+        
+        <div class="sp-card rounded-xl p-8 flex flex-col text-center">
+          <h3 class="font-accent text-primary text-xs uppercase tracking-widest mb-4">HOLDING BACK</h3>
+          <p class="font-sans text-white text-sm leading-relaxed flex-1">
+            Learn to attempt, make decisions and try again without being embarrassed for still learning.
+          </p>
+        </div>
+        
+        <div class="sp-card rounded-xl p-8 flex flex-col text-center">
+          <h3 class="font-accent text-primary text-xs uppercase tracking-widest mb-4">READY FOR MORE</h3>
+          <p class="font-sans text-white text-sm leading-relaxed flex-1">
+            Build game understanding, stronger skills and habits that transfer into competition.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4. Closing Line (Centered) -->
+      <div class="text-center">
+        <p class="font-accent text-white/40 text-xs tracking-[0.15em] uppercase">
+          Different starting points. One standard.
+        </p>
       </div>
 
     </div>
   </section>
+
+  <script>
+    lucide.createIcons();
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+    }
+    function scrollToSection(id) {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        if (mobileMenu && !mobileMenu.classList.contains('hidden')) { mobileMenu.classList.add('hidden'); }
+      }
+    }
+  </script>
+</body>
+</html>
   <!-- ══════════════════════════════════════════════════════ -->
   <!-- 🧊 PROGRAMS — Full-Width Cards -->
   <!-- ══════════════════════════════════════════════════════ -->
