@@ -137,10 +137,8 @@
         <div class="section-badge mb-4">LIT ELITE BASKETBALL · DISTRICT 7, HCMC</div>
         <h1 class="font-hero text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-5 leading-[1.05] font-bold uppercase" itemprop="name">DISCOVER WHAT<br/>YOU'RE <span class="text-primary">CAPABLE</span> OF.</h1>
         
-        <!-- Giữ lại subline gốc -->
         <p class="font-accent text-[11px] sm:text-xs md:text-sm tracking-[0.15em] text-white uppercase mb-4">TRAIN WITH PURPOSE. READ THE GAME. COMMIT TO THE NEXT PLAY.</p>
         
-        <!-- Body copy mới -->
         <p class="text-white text-base md:text-lg max-w-xl mx-auto mb-8 leading-relaxed" itemprop="description">Led by Coach Zinger and a coaching team that holds the same standard — for athletes ages 5 to 16, from their very first rep to their most competitive.</p>
         
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
@@ -148,19 +146,27 @@
           <button onclick="scrollToSection('programs')" class="border-2 border-white/30 hover:border-white text-white text-sm md:text-base px-8 py-4 rounded-full group inline-flex items-center font-bold font-accent transition-all uppercase tracking-wider hover:bg-white/10">SEE HOW WE TRAIN</button>
         </div>
         
-        <!-- Trust bar giữ nguyên -->
-        <div class="glass-card inline-flex flex-col sm:flex-row flex-wrap justify-center items-center gap-x-6 gap-y-2 px-8 py-3 rounded-full mx-auto">
-          <span class="font-accent text-[11px] md:text-xs tracking-[0.15em] text-muted-foreground uppercase flex items-center gap-2">
-            <i data-lucide="users" class="w-4 h-4 text-primary"></i> Limited Enrolment
-          </span>
-          <span class="hidden sm:block w-1 h-1 bg-muted-foreground/50 rounded-full"></span>
-          <span class="font-accent text-[11px] md:text-xs tracking-[0.15em] text-muted-foreground uppercase flex items-center gap-2">
-            <i data-lucide="calendar" class="w-4 h-4 text-primary"></i> Ages 5–16
-          </span>
-          <span class="hidden sm:block w-1 h-1 bg-muted-foreground/50 rounded-full"></span>
-          <span class="font-accent text-[11px] md:text-xs tracking-[0.15em] text-muted-foreground uppercase flex items-center gap-2">
-            <i data-lucide="trending-up" class="w-4 h-4 text-primary"></i> Beginner to Competitive
-          </span>
+        <!-- Collapsible Trust Bar (Hover on Desktop, Tap on Mobile) -->
+        <div class="group inline-flex flex-col sm:flex-row items-center justify-center glass-card rounded-full cursor-pointer transition-all duration-300 hover:bg-white/5" tabindex="0" role="button" aria-label="Toggle Academy Info">
+          <div class="flex items-center gap-2 px-6 py-3">
+            <i data-lucide="info" class="w-4 h-4 text-primary transition-transform group-hover:rotate-12 group-focus-within:rotate-12"></i>
+            <span class="font-accent text-[11px] md:text-xs tracking-[0.15em] text-muted-foreground uppercase">LIT Elite Standards</span>
+          </div>
+          <div class="max-h-0 sm:max-w-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out group-hover:max-h-96 group-hover:sm:max-w-lg group-hover:opacity-100 group-focus-within:max-h-96 group-focus-within:sm:max-w-lg group-focus-within:opacity-100">
+            <div class="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-x-6 gap-y-2 px-6 pb-4 sm:py-3 border-t sm:border-t-0 sm:border-l border-white/10 mt-2 sm:mt-0 sm:ml-2">
+              <span class="font-accent text-[11px] md:text-xs tracking-[0.15em] text-muted-foreground uppercase flex items-center gap-2 whitespace-nowrap">
+                <i data-lucide="users" class="w-4 h-4 text-primary"></i> Limited Enrolment
+              </span>
+              <span class="hidden sm:block w-1 h-1 bg-muted-foreground/50 rounded-full"></span>
+              <span class="font-accent text-[11px] md:text-xs tracking-[0.15em] text-muted-foreground uppercase flex items-center gap-2 whitespace-nowrap">
+                <i data-lucide="calendar" class="w-4 h-4 text-primary"></i> Ages 5–16
+              </span>
+              <span class="hidden sm:block w-1 h-1 bg-muted-foreground/50 rounded-full"></span>
+              <span class="font-accent text-[11px] md:text-xs tracking-[0.15em] text-muted-foreground uppercase flex items-center gap-2 whitespace-nowrap">
+                <i data-lucide="trending-up" class="w-4 h-4 text-primary"></i> Beginner to Competitive
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -170,24 +176,21 @@
   <section id="starting-point" class="py-20 md:py-32 bg-background" aria-labelledby="starting-point-heading">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- 1. Header Text (Centered) -->
       <div class="text-center max-w-5xl mx-auto mb-12 md:mb-16">
         <div class="section-badge mb-6">WHERE ATHLETES START MATTERS</div>
         
-        <!-- H2 được tối ưu SEO -->
         <h2 id="starting-point-heading" class="font-hero text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white leading-tight uppercase mb-8">
           EVERY ATHLETE<br/>STARTS SOMEWHERE.<br/><span class="text-primary">THIS IS WHERE.</span>
         </h2>
         
-        <!-- Body copy mới: Sử dụng span block để ép xuống dòng chuẩn -->
+        <!-- Body copy với "The coaching does" được tô hồng và in đậm -->
         <p class="font-sans text-white text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
           <span class="block mb-2">Every athlete who walks in is at a different stage.</span>
           <span class="block mb-2">Different experience. Different confidence. Different challenges.</span>
-          <span class="block">The standard doesn't change. The coaching does.</span>
+          <span class="block">The standard doesn't change. <span class="text-primary font-bold">The coaching does.</span></span>
         </p>
       </div>
 
-      <!-- 2. Cinematic Image (Ultrawide) -->
       <div class="relative rounded-2xl overflow-hidden premium-shadow aspect-[16/9] md:aspect-[16/9] lg:aspect-[21/9] mb-16 md:mb-20">
         <img src="https://z-cdn-media.chatglm.cn/files/e03c8e8f-75de-4036-8bde-33a610b49a8e.JPG?auth_key=1881497179-812468d9ac54459db5e65515256c29da-0-b08617f9a1abdaf305cea9e09dc3996f" alt="LIT Elite Basketball coach crouching down to give purposeful feedback to young athletes during a training session" class="w-full h-full object-cover object-center" loading="lazy" />
         
@@ -198,7 +201,6 @@
         </div>
       </div>
 
-      <!-- 3. Three Cards Grid (Horizontal) - H3 tối ưu SEO -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
         <div class="sp-card rounded-xl p-8 flex flex-col text-center">
           <h3 class="font-accent text-primary text-xs uppercase tracking-widest mb-4">STARTING OUT</h3>
@@ -222,7 +224,6 @@
         </div>
       </div>
 
-      <!-- 4. Closing Line (Centered) -->
       <div class="text-center">
         <p class="font-accent text-white/40 text-xs tracking-[0.15em] uppercase">
           DIFFERENT STARTING POINTS. ONE STANDARD.
