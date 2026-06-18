@@ -918,72 +918,174 @@
       </div>
     </div>
   </section>
+  <!-- ══════════════════════════════════════════════════════ -->
+  <!-- 🔻 FOOTER -->
+  <!-- ══════════════════════════════════════════════════════ -->
+  <footer class="bg-secondary/40 border-t border-white/10 pt-16 pb-8 relative z-[1]" role="contentinfo" aria-label="Site footer">
 
-<!-- FOOTER -->
-  <footer id="contact" class="border-t border-border bg-[#0a0a0a] relative z-[1]">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div class="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
-        <div>
-          <a href="#" onclick="scrollToSection('hero'); return false;" class="inline-block mb-4">
-            <span class="text-2xl md:text-3xl font-hero text-white tracking-wider">LIT <span class="text-gradient">ELITE</span></span>
+    <!-- ═══ Structured Data: LocalBusiness + SportsOrganization ═══ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["SportsOrganization", "LocalBusiness"],
+      "name": "LIT Elite Basketball Academy",
+      "alternateName": "LIT Elite Basketball",
+      "url": "https://litelitebasketball.com",
+      "logo": "https://z-cdn-media.chatglm.cn/files/e2f8cfe7-1e43-4b1a-88d6-4350b231bf71.png?auth_key=1878815395-dd6897666469472db12bff51e2f3b468-0-464542c0236a8db563b1c263fb523343",
+      "description": "Purposeful youth basketball training for athletes ages 5 to 16 in District 7, Ho Chi Minh City. Led by Coach Zinger with 15+ years of experience.",
+      "image": "https://z-cdn-media.chatglm.cn/files/d297ab19-cd45-4c3b-8c78-234a61473671.png?auth_key=1880973410-dd6318c30c7b4483a32519e1616bcf4e-0-b868538fa71dbd94a623ec5e400b8f77",
+      "telephone": "+84938454724",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+84938454724",
+        "contactType": "customer service",
+        "availableLanguage": ["English", "Vietnamese"]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ho Chi Minh City",
+        "addressRegion": "District 7",
+        "addressCountry": "VN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "10.7326",
+        "longitude": "106.7195"
+      },
+      "sameAs": [
+        "https://www.instagram.com/litelitebasketball/"
+      ],
+      "areaServed": {
+        "@type": "City",
+        "name": "Ho Chi Minh City"
+      },
+      "sport": "Basketball",
+      "coach": {
+        "@type": "Person",
+        "name": "Coach Zinger",
+        "jobTitle": "Head Coach",
+        "description": "Experienced international basketball coach and educator with 15+ years of coaching youth athletes."
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Basketball Training Programs",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "U7 Basketball — Ages 5 to 7", "description": "Movement foundations, basketball basics, confidence through play" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "U9 Basketball — Ages 8 to 9", "description": "Strong fundamentals, game awareness, training habits" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "U11/U13 Basketball — Ages 10 to 13", "description": "Complete skill development, basketball IQ, decision-making under pressure" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "U16 Basketball — Ages 14 to 16", "description": "Game-ready skills, higher-level understanding, leadership and accountability" } }
+        ]
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "09:00",
+        "closes": "20:00"
+      }
+    }
+    </script>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- ═══ Main Footer Grid ═══ -->
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10 lg:gap-12 mb-14">
+
+        <!-- Column 1: Brand + Tagline + Social -->
+        <div class="col-span-2 md:col-span-4 lg:col-span-2 lg:pr-8">
+          <a href="#hero" class="inline-block mb-5" aria-label="LIT Elite Basketball — Back to top">
+            <img src="https://z-cdn-media.chatglm.cn/files/e2f8cfe7-1e43-4b1a-88d6-4350b231bf71.png?auth_key=1878815395-dd6897666469472db12bff51e2f3b468-0-464542c0236a8db563b1c263fb523343" alt="LIT Elite Basketball Academy logo" class="h-10 md:h-11 w-auto" width="180" height="44" />
           </a>
-          <p class="text-white/60 text-sm leading-relaxed mb-6">Structured youth basketball development in Ho Chi Minh City, building skill, confidence, and character through purposeful practice.</p>
-          <div class="flex items-center gap-4">
-            <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20learn%20more%20about%20the%20basketball%20program%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-border hover:border-primary/50 flex items-center justify-center text-white/60 hover:text-primary transition-colors" aria-label="Contact LIT Elite via WhatsApp">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <p class="text-white/50 text-sm leading-relaxed max-w-sm mb-6">
+            Purposeful youth basketball training for athletes ages 5 to 16 in <strong class="text-white/70 font-medium">District 7, Ho Chi Minh City</strong>. Built around Coach Zinger's coaching principles — skill, confidence, and character.
+          </p>
+          <div class="flex items-center gap-3">
+            <a href="https://www.instagram.com/litelitebasketball/" target="_blank" rel="noopener noreferrer" aria-label="Follow LIT Elite Basketball on Instagram" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-primary hover:border-primary/40 hover:bg-primary/10 transition-all duration-300">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
             </a>
-            <a href="https://www.instagram.com/litelitebasketball/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-border hover:border-primary/50 flex items-center justify-center text-white/60 hover:text-primary transition-colors" aria-label="Follow LIT Elite on Instagram">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20learn%20more%20about%20the%20basketball%20program." target="_blank" rel="noopener noreferrer" aria-label="Contact LIT Elite Basketball on WhatsApp" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-green-400 hover:border-green-400/40 hover:bg-green-400/10 transition-all duration-300">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             </a>
           </div>
         </div>
+
+        <!-- Column 2: Programs -->
+        <nav aria-label="Basketball programs">
+          <h3 class="font-accent text-[11px] uppercase tracking-[0.15em] text-white/80 mb-5">Programs</h3>
+          <ul class="space-y-3">
+            <li><a href="#programs" class="text-white/50 hover:text-primary text-sm transition-colors duration-200 inline-flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-primary/60 shrink-0" aria-hidden="true"></span>U7 Basketball · Ages 5–7</a></li>
+            <li><a href="#programs" class="text-white/50 hover:text-primary text-sm transition-colors duration-200 inline-flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-primary/60 shrink-0" aria-hidden="true"></span>U9 Basketball · Ages 8–9</a></li>
+            <li><a href="#programs" class="text-white/50 hover:text-primary text-sm transition-colors duration-200 inline-flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-primary/60 shrink-0" aria-hidden="true"></span>U11/U13 · Ages 10–13</a></li>
+            <li><a href="#programs" class="text-white/50 hover:text-primary text-sm transition-colors duration-200 inline-flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-primary/60 shrink-0" aria-hidden="true"></span>U16 Basketball · Ages 14–16</a></li>
+            <li><a href="#programs" class="text-white/50 hover:text-primary text-sm transition-colors duration-200 inline-flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-purple-400/60 shrink-0" aria-hidden="true"></span>Private 1:1 Coaching</a></li>
+          </ul>
+        </nav>
+
+        <!-- Column 3: Academy -->
+        <nav aria-label="Academy information">
+          <h3 class="font-accent text-[11px] uppercase tracking-[0.15em] text-white/80 mb-5">Academy</h3>
+          <ul class="space-y-3">
+            <li><a href="#starting-point" class="text-white/50 hover:text-primary text-sm transition-colors duration-200 inline-flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-white/20 shrink-0" aria-hidden="true"></span>Our Approach</a></li>
+            <li><a href="#real-growth" class="text-white/50 hover:text-primary text-sm transition-colors duration-200 inline-flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-white/20 shrink-0" aria-hidden="true"></span>Athlete Growth</a></li>
+            <li><a href="#coach-zinger" class="text-white/50 hover:text-primary text-sm transition-colors duration-200 inline-flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-white/20 shrink-0" aria-hidden="true"></span>Coach Zinger</a></li>
+            <li><a href="#life-on-court" class="text-white/50 hover:text-primary text-sm transition-colors duration-200 inline-flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-white/20 shrink-0" aria-hidden="true"></span>Life on Court</a></li>
+            <li><a href="#why-lit" class="text-white/50 hover:text-primary text-sm transition-colors duration-200 inline-flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-white/20 shrink-0" aria-hidden="true"></span>Why LIT Elite</a></li>
+            <li><a href="#about" class="text-white/50 hover:text-primary text-sm transition-colors duration-200 inline-flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-white/20 shrink-0" aria-hidden="true"></span>About</a></li>
+            <li><a href="#faq" class="text-white/50 hover:text-primary text-sm transition-colors duration-200 inline-flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-white/20 shrink-0" aria-hidden="true"></span>FAQ</a></li>
+          </ul>
+        </nav>
+
+        <!-- Column 4: Contact & Location -->
         <div>
-          <h4 class="text-white font-accent font-bold uppercase tracking-wider text-sm mb-6">Quick Links</h4>
-          <nav class="flex flex-col space-y-3">
-            <a href="#programs" class="text-white/60 hover:text-primary transition-colors text-sm">Programs</a>
-            <a href="#why-lit" class="text-white/60 hover:text-primary transition-colors text-sm">Why LIT</a>
-            <a href="#coach" class="text-white/60 hover:text-primary transition-colors text-sm">Coach Zinger</a>
-            <a href="#results" class="text-white/60 hover:text-primary transition-colors text-sm">Family Stories</a>
-            <a href="#athletes" class="text-white/60 hover:text-primary transition-colors text-sm">Our Athletes</a>
-            <a href="#faq" class="text-white/60 hover:text-primary transition-colors text-sm">FAQ</a>
-          </nav>
-        </div>
-        <div>
-          <h4 class="text-white font-accent font-bold uppercase tracking-wider text-sm mb-6">Get In Touch</h4>
-          <div class="space-y-4">
-            <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20learn%20more%20about%20the%20basketball%20program%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-white/60 hover:text-primary transition-colors text-sm group">
-              <span class="w-8 h-8 rounded-lg bg-card border border-border flex items-center justify-center group-hover:border-primary/50 transition-colors shrink-0">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              </span>
-              WhatsApp Inquiry
+          <h3 class="font-accent text-[11px] uppercase tracking-[0.15em] text-white/80 mb-5">Contact</h3>
+          <address class="not-italic space-y-4">
+            <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20learn%20more%20about%20the%20basketball%20program." target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 text-white/50 hover:text-primary text-sm transition-colors duration-200 group">
+              <i data-lucide="phone" class="w-4 h-4 text-primary/60 shrink-0 mt-0.5 group-hover:text-primary transition-colors"></i>
+              <span>+84 938 454 724</span>
             </a>
-            <a href="https://www.instagram.com/litelitebasketball/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-white/60 hover:text-primary transition-colors text-sm group">
-              <span class="w-8 h-8 rounded-lg bg-card border border-border flex items-center justify-center group-hover:border-primary/50 transition-colors shrink-0">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-              </span>
-              @litelitebasketball
-            </a>
-            <a href="mailto:info@litelitebasketball.com" class="flex items-center gap-3 text-white/60 hover:text-primary transition-colors text-sm group">
-              <span class="w-8 h-8 rounded-lg bg-card border border-border flex items-center justify-center group-hover:border-primary/50 transition-colors shrink-0">
-                <i data-lucide="mail" class="w-4 h-4"></i>
-              </span>
-              lockedin.saigon@gmail.com
-            </a>
-            <div class="flex items-center gap-3 text-white/60 text-sm">
-              <span class="w-8 h-8 rounded-lg bg-card border border-border flex items-center justify-center shrink-0">
-                <i data-lucide="map-pin" class="w-4 h-4"></i>
-              </span>
-              74 Nguyễn Thị Thập, District 7, HCMC
+            <div class="flex items-start gap-3 text-white/50 text-sm">
+              <i data-lucide="map-pin" class="w-4 h-4 text-primary/60 shrink-0 mt-0.5"></i>
+              <span>District 7,<br/>Ho Chi Minh City, Vietnam</span>
             </div>
-          </div>
+            <div class="flex items-start gap-3 text-white/50 text-sm">
+              <i data-lucide="clock" class="w-4 h-4 text-primary/60 shrink-0 mt-0.5"></i>
+              <span>Mon – Sun<br/>9:00 AM – 8:00 PM</span>
+            </div>
+          </address>
+
+          <!-- Quick CTA -->
+          <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center gap-2 bg-primary/10 border border-primary/30 text-primary text-xs font-bold font-accent uppercase tracking-wider px-4 py-2.5 rounded-full hover:bg-primary/20 hover:border-primary/50 transition-all duration-300">
+            Book a Trial
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+          </a>
         </div>
+
       </div>
-      <div class="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto">
-        <p class="text-white/40 text-xs mb-4 md:mb-0">&copy; 2026 LIT Elite Basketball. All rights reserved.</p>
-        <p class="text-white/40 text-xs">Youth Basketball Development · Ho Chi Minh City</p>
+
+      <!-- ═══ SEO Content Block (visible, useful, keyword-rich) ═══ -->
+      <div class="border-t border-white/5 pt-10 pb-10 mb-10">
+        <p class="text-white/30 text-xs sm:text-sm leading-relaxed max-w-4xl mx-auto text-center">
+          <strong class="text-white/40 font-medium">LIT Elite Basketball Academy</strong> is a youth basketball training program in <strong class="text-white/40 font-medium">District 7, Ho Chi Minh City</strong>, offering purposeful basketball coaching for children and teens ages 5 to 16. Programs include U7, U9, U11/U13, and U16 basketball development, plus private 1:1 coaching with Coach Zinger. Whether your child is a beginner learning basketball fundamentals or an experienced athlete preparing for competitive play, LIT Elite provides age-appropriate training focused on skill development, basketball IQ, confidence, and character. Book a trial session today.
+        </p>
       </div>
+
+      <!-- ═══ Bottom Bar ═══ -->
+      <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-white/25 text-xs font-sans">
+          &copy; <span id="footer-year">2025</span> LIT Elite Basketball Academy. All rights reserved.
+        </p>
+        <p class="text-white/20 text-[11px] font-sans tracking-wide">
+          Ho Chi Minh City, Vietnam
+        </p>
+      </div>
+
     </div>
   </footer>
+
+  <!-- Dynamic year + Lucide init -->
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+    lucide.createIcons();
+  </script>
 
   <!-- FLOATING WHATSAPP BUTTON -->
   <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20learn%20more%20about%20the%20basketball%20program%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20bd5a] text-white w-14 h-14 rounded-full flex items-center justify-center premium-shadow transition-all duration-300 hover:scale-110 group" aria-label="Chat with LIT Elite on WhatsApp">
