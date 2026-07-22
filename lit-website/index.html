@@ -163,24 +163,70 @@
     </div>
   </nav>
 
-   <!-- ══════════════════════════════════════════════════════ -->
-  <!-- 🎬 HERO (Giữ nguyên min-h-screen, không đổi padding dọc) -->
+    <!-- ══════════════════════════════════════════════════════ -->
+  <!-- 🎬 HERO -->
   <!-- ══════════════════════════════════════════════════════ -->
   <section id="hero" class="relative min-h-screen flex flex-col bg-background" itemscope itemtype="https://schema.org/SportsTraining">
-    <!-- ... (inner code unchanged) ... -->
-  </section>
+    <h1 class="sr-only">Youth Basketball Academy District 7 Ho Chi Minh City — LIT Elite Basketball Training for Ages 5 to 18</h1>
+    
+    <div class="relative w-full h-[70vh] md:h-[80vh] overflow-hidden">
+      <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/hero-girls-team.webp" width="1672" height="941" alt="LIT Elite Basketball Academy girls team group photo with Coach Zinger — young female athletes in black and pink LIT ELITE BASKETBALL jerseys holding basketballs, purple branded backdrop with team logo, District 7 Ho Chi Minh City youth basketball training" class="w-full h-full object-cover object-[center_5%]" itemprop="image" loading="eager" fetchpriority="high" />
+      
+      <!-- Gradients -->
+      <div class="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background z-10"></div>
+      <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-background via-background/60 to-transparent z-10"></div>
+    </div>
+    
+    <div class="relative z-10 flex-1 flex flex-col justify-center px-6 md:px-16 lg:px-24 -mt-16 md:-mt-24">
+      <!-- Mở rộng max-width lên 5xl để chữ có chỗ nằm -->
+      <div class="max-w-5xl mx-auto w-full text-center">
+        
+        <div class="section-badge mb-5">Basketball Coaching • Ages 5–18 • District 7</div>
+        
+         <!-- Dùng sm:whitespace-nowrap để chỉ ép 1 dòng từ tablet trở lên, mobile tự xuống dòng -->
+        <h2 class="font-hero text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-[1.1] font-bold uppercase tracking-tight">
+          <span class="block sm:whitespace-nowrap">EVERY ATHLETE</span>
+          <span class="block text-primary sm:whitespace-nowrap">DEVELOPS DIFFERENTLY.</span>
+        </h2>
+        
+        <p class="text-white/90 text-base md:text-lg max-w-2xl mx-auto mb-4 leading-relaxed" itemprop="description">
+          Find coaching that matches where you are today. From beginners to competitive players, every athlete deserves a clear next step.
+        </p>
 
+        <p class="text-white/70 text-sm md:text-base max-w-2xl mx-auto mb-10 leading-relaxed italic font-sans">
+          Confidence grows when practice makes sense. That's why every session meets you where you are—and challenges you to take the next step.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
+          <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-pink-600 text-white text-sm md:text-base px-8 py-3.5 rounded-full glow-pink group inline-flex items-center font-bold font-accent transition-all uppercase tracking-wider shadow-lg shadow-primary/30">
+            BOOK YOUR TRIAL <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14" />
+  <path d="m12 5 7 7-7 7" /></svg>
+          </a>
+          <button onclick="scrollToSection('programs')" class="border-2 border-white/30 hover:border-white text-white text-sm md:text-base px-8 py-3.5 rounded-full group inline-flex items-center font-bold font-accent transition-all uppercase tracking-wider hover:bg-white/10">
+            FIND YOUR BEST FIT
+          </button>
+        </div>
+        
+        <div class="inline-flex flex-wrap justify-center items-center gap-x-4 gap-y-2 bg-white/5 border border-white/10 rounded-full px-5 py-2.5 font-accent text-[10px] md:text-xs tracking-[0.15em] text-white/60 uppercase">
+          <span>LIMITED ENROLMENT</span>
+          <span class="hidden sm:inline opacity-50">·</span>
+          <span>AIR-CONDITIONED FACILITY</span>
+          <span class="hidden sm:inline opacity-50">·</span>
+          <span>BEGINNER TO COMPETITIVE</span>
+        </div>
+        
+      </div>
+    </div>
+  </section>
   <!-- ═══ STARTING POINTS ═══ -->
-  <!-- Py đổi từ py-20 md:py-32 -> py-12 md:py-24 -->
-  <section id="starting-point" class="py-12 md:py-24 bg-background" aria-labelledby="starting-point-heading">
+  <section id="starting-point" class="py-20 md:py-32 bg-background" aria-labelledby="starting-point-heading">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Mb đổi từ mb-12 md:mb-16 -> mb-8 md:mb-12 -->
-      <div class="text-center max-w-5xl mx-auto mb-8 md:mb-12">
+      <div class="text-center max-w-5xl mx-auto mb-12 md:mb-16">
         <div class="section-badge mb-6">WHERE ATHLETES START MATTERS</div>
         <h2 id="starting-point-heading" class="font-hero text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white leading-tight uppercase mb-8">EVERY ATHLETE STARTS SOMEWHERE.<br/><span class="text-primary">THIS IS WHERE YOURS BEGINS.</span></h2>
         <p class="font-sans text-white text-base md:text-lg max-w-2xl mx-auto leading-relaxed">Different experience. Different confidence. Different challenges.<br/>The standard doesn't change. <span class="text-primary font-bold">The coaching does.</span></p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
         <div class="inner-card rounded-xl p-8 flex flex-col text-center"><h3 class="font-accent text-primary text-xs uppercase tracking-widest mb-4">STARTING OUT</h3><p class="font-sans text-white text-sm leading-relaxed flex-1">First reps. Right habits. An environment where trying is always the right answer.</p></div>
         <div class="inner-card rounded-xl p-8 flex flex-col text-center"><h3 class="font-accent text-primary text-xs uppercase tracking-widest mb-4">READY TO TRY</h3><p class="font-sans text-white text-sm leading-relaxed flex-1">You want to play more. This is where that happens. One decision at a time.</p></div>
         <div class="inner-card rounded-xl p-8 flex flex-col text-center"><h3 class="font-accent text-primary text-xs uppercase tracking-widest mb-4">READY TO COMPETE</h3><p class="font-sans text-white text-sm leading-relaxed flex-1">Stronger decisions. Faster reads. Training that transfers when the game actually matters.</p></div>
@@ -189,69 +235,230 @@
     </div>
   </section>
 
-  <!-- ═══ PROOF / REAL GROWTH ═══ -->
-  <!-- Py đổi từ py-24 md:py-32 -> py-12 md:py-24 -->
-  <section id="real-growth" class="py-12 md:py-24 bg-background" aria-labelledby="real-growth-heading">
+  <!-- ═══ PROOF ═══ -->
+  <section id="real-growth" class="py-24 md:py-32 bg-background" aria-labelledby="real-growth-heading">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Mb đổi từ mb-16 md:mb-20 -> mb-10 md:mb-12 -->
-      <div class="text-center max-w-4xl mx-auto mb-10 md:mb-12">
+      <div class="text-center max-w-4xl mx-auto mb-16 md:mb-20">
         <div class="section-badge mb-8">REAL ATHLETES. REAL GROWTH.</div>
         <h2 id="real-growth-heading" class="font-hero text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white leading-tight uppercase mb-10 tracking-tight">WHEN ATHLETES ARE <span class="text-primary">SEEN</span>,<br/>THEY GROW DIFFERENTLY.</h2>
         <div class="font-sans text-base md:text-lg max-w-2xl mx-auto leading-relaxed"><p class="text-muted-foreground">Every athlete who walks in needs something different.<br/>LIT Elite's job is to find that — and coach it forward.</p></div>
       </div>
-      <!-- Mb đổi từ mb-20 -> mb-12 md:mb-16 -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto mb-12 md:mb-16 items-stretch">
-        <!-- ... (card items unchanged) ... -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto mb-20 items-stretch">
+        <article class="inner-card rounded-xl flex flex-col overflow-hidden">
+          <div class="relative w-full aspect-[4/3] bg-secondary overflow-hidden border-b border-white/10"><img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/testimonial-trung.webp" width="800" height="1200" alt="Trung wearing LIT Elite jersey during basketball training session at District 7 academy" class="absolute inset-0 w-full h-full object-cover object-center transition-all duration-500 hover:scale-105" loading="lazy"></div>
+          <div class="p-8 flex flex-col flex-1">
+            <h3 class="font-accent text-primary text-sm uppercase tracking-widest mb-6">YOU BELIEVED IN ME.</h3>
+            <figure class="mb-4 flex-1"><blockquote class="font-sans text-white text-lg leading-relaxed">"You're the best coach I could ever ask for. You believed in me when no one else did on the A team last year. Thank you, Coach."</blockquote><figcaption class="mt-4 font-accent text-white/70 text-sm uppercase tracking-wide">— Trung · LIT Elite Athlete</figcaption></figure>
+            <p class="font-sans text-muted-foreground text-sm leading-relaxed border-t border-white/10 pt-4 mt-auto">Coached by Coach Zinger. Kept showing up. Kept improving.</p>
+          </div>
+        </article>
+        <article class="inner-card rounded-xl flex flex-col overflow-hidden">
+          <div class="relative w-full aspect-[4/3] bg-secondary overflow-hidden border-b border-white/10"><img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/testimonial-jan-tran.webp" width="800" height="533" alt="Jan Tran dribbling basketball at LIT Elite training session in Ho Chi Minh City" class="absolute inset-0 w-full h-full object-cover object-center transition-all duration-500 hover:scale-105" loading="lazy"></div>
+          <div class="p-8 flex flex-col flex-1">
+            <h3 class="font-accent text-primary text-sm uppercase tracking-widest mb-6">MORE THAN SKILL DEVELOPMENT.</h3>
+            <figure class="mb-4 flex-1"><blockquote class="font-sans text-white text-lg leading-relaxed">"LIT Elite isn't just about improving basketball skills — it's also helped me build confidence and leadership."</blockquote><figcaption class="mt-4 font-accent text-white/70 text-sm uppercase tracking-wide">— Jan Tran · SSIS Varsity · MRISA Champion 2024 & 2025</figcaption></figure>
+            <p class="font-sans text-muted-foreground text-sm leading-relaxed border-t border-white/10 pt-4 mt-auto">Jan's experience shows what LIT Elite is built to develop: stronger basketball players, greater confidence, and growth beyond the court.</p>
+          </div>
+        </article>
+        <article class="inner-card rounded-xl flex flex-col overflow-hidden">
+          <div class="relative w-full aspect-[4/3] bg-secondary overflow-hidden border-b border-white/10"><img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/ssis-mrisa-championship-team.webp" width="800" height="875" alt="SSIS middle school girls basketball team with Coach Zinger after winning MRISA championship" class="absolute inset-0 w-full h-full object-cover object-center transition-all duration-500 hover:scale-105" loading="lazy"></div>
+          <div class="p-8 flex flex-col flex-1">
+            <h3 class="font-accent text-primary text-sm uppercase tracking-widest mb-6">BUILT TOGETHER. EARNED TOGETHER.</h3>
+            <div class="flex-1 space-y-4 mb-6">
+              <p class="font-sans text-white text-base leading-relaxed">Coach Zinger led the SSIS middle school girls with the same personal, purposeful coaching behind LIT Elite — seeing each athlete, giving specific feedback, and building game IQ as a team.</p>
+              <p class="font-sans text-muted-foreground text-sm leading-relaxed">The athletes bought in, stayed committed, and earned Jr. MRISA championships in 2024 and 2025.</p>
+            </div>
+          </div>
+        </article>
       </div>
       <div class="text-center max-w-3xl mx-auto"><p class="font-sans text-white text-base md:text-lg leading-relaxed">This is what happens when athletes are seen, challenged, and coached with purpose.</p></div>
     </div>
   </section>
 
   <!-- ═══ PROGRAMS ═══ -->
-  <!-- Py đổi từ py-20 md:py-32 -> py-12 md:py-24 -->
-  <section id="programs" class="py-12 md:py-24 relative z-[1]" aria-labelledby="programs-heading">
+  <section id="programs" class="py-20 md:py-32 relative z-[1]" aria-labelledby="programs-heading">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Mb đổi từ mb-16 -> mb-10 md:mb-16 -->
-      <div class="section-header mb-10 md:mb-16">
+      <div class="section-header mb-16">
         <div class="section-badge mb-4">OUR PROGRAMS</div>
         <h2 id="programs-heading" class="font-heading text-2xl sm:text-3xl md:text-4xl text-white mb-6 tracking-wide">THE RIGHT CHALLENGE. <span class="block text-gradient">AT THE RIGHT STAGE.</span></h2>
         <p class="text-white/80 text-lg leading-relaxed">Every athlete develops differently. Find the group that fits where you are now.</p>
       </div>
     </div>
     <div class="w-full px-3 sm:px-6 lg:px-10">
-      <!-- ... (grid items unchanged) ... -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 max-w-[1920px] mx-auto">
+        <article class="glass-card rounded-2xl overflow-hidden flex flex-col group">
+          <div class="h-2 bg-gradient-to-r from-pink-500 to-rose-500"></div>
+          <div class="aspect-[4/3] lg:aspect-[3/4] overflow-hidden relative">
+            <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/program-u7.webp" width="1000" height="667" alt="U7 basketball training for kids ages 5-7 at LIT Elite Academy District 7 HCMC" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute top-4 left-4"><span class="bg-black/60 backdrop-blur-sm text-white px-4 py-1.5 rounded-full text-sm font-bold font-accent border border-white/20">U7</span></div>
+          </div>
+          <div class="p-6 lg:p-8 flex flex-col flex-1">
+            <h3 class="font-accent text-2xl lg:text-3xl text-white mb-2 font-bold">U7 Basketball</h3>
+            <p class="text-primary font-semibold font-accent text-xs tracking-wider mb-4">AGES 5–7 · START STRONG</p>
+            <p class="text-white/70 text-base leading-relaxed mb-6 flex-1">First reps. Right habits. Built to last.</p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 6 9 17l-5-5" /></svg><span class="text-white text-base">Movement Foundations</span></li>
+              <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 6 9 17l-5-5" /></svg><span class="text-white text-base">Basketball Basics</span></li>
+              <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 6 9 17l-5-5" /></svg><span class="text-white text-base">Confidence Through Play</span></li>
+            </ul>
+            <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20book%20a%20trial%20session%20for%20the%20U7%20basketball%20program." target="_blank" rel="noopener noreferrer" class="mt-auto w-full bg-primary hover:bg-pink-600 text-white py-4 rounded-xl inline-flex items-center justify-center font-bold font-accent transition-all text-base tracking-wider">Book a Trial</a>
+          </div>
+        </article>
+        <article class="glass-card rounded-2xl overflow-hidden flex flex-col group">
+          <div class="h-2 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+          <div class="aspect-[4/3] lg:aspect-[3/4] overflow-hidden relative">
+            <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/program-u9.webp" width="1000" height="1777" alt="U9 youth basketball player shooting during training at LIT Elite Academy HCMC" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute top-4 left-4"><span class="bg-black/60 backdrop-blur-sm text-white px-4 py-1.5 rounded-full text-sm font-bold font-accent border border-white/20">U9</span></div>
+          </div>
+          <div class="p-6 lg:p-8 flex flex-col flex-1">
+            <h3 class="font-accent text-2xl lg:text-3xl text-white mb-2 font-bold">U9 Basketball</h3>
+            <p class="text-primary font-semibold font-accent text-xs tracking-wider mb-4">AGES 8–9 · BUILD THE BASE</p>
+            <p class="text-white/70 text-base leading-relaxed mb-6 flex-1">The habits built now follow athletes for years. We make sure the right ones form.</p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 6 9 17l-5-5" /></svg><span class="text-white text-base">Strong Fundamentals</span></li>
+              <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 6 9 17l-5-5" /></svg><span class="text-white text-base">Game Awareness</span></li>
+              <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 6 9 17l-5-5" /></svg><span class="text-white text-base">Training Habits</span></li>
+            </ul>
+            <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20book%20a%20trial%20session%20for%20the%20U9%20basketball%20program." target="_blank" rel="noopener noreferrer" class="mt-auto w-full bg-primary hover:bg-pink-600 text-white py-4 rounded-xl inline-flex items-center justify-center font-bold font-accent transition-all text-base tracking-wider">Book a Trial</a>
+          </div>
+        </article>
+        <article class="glass-card rounded-2xl overflow-hidden flex flex-col group">
+          <div class="h-2 bg-gradient-to-r from-blue-500 to-purple-500"></div>
+          <div class="aspect-[4/3] lg:aspect-[3/4] overflow-hidden relative">
+            <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/program-u11-u13.webp" width="1000" height="1500" alt="U11 and U13 basketball development training session with coach at LIT Elite Academy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute top-4 left-4"><span class="bg-black/60 backdrop-blur-sm text-white px-4 py-1.5 rounded-full text-sm font-bold font-accent border border-white/20">U11/U13</span></div>
+          </div>
+          <div class="p-6 lg:p-8 flex flex-col flex-1">
+            <h3 class="font-accent text-2xl lg:text-3xl text-white mb-2 font-bold">U11/U13 Basketball</h3>
+            <p class="text-primary font-semibold font-accent text-xs tracking-wider mb-4">AGES 10–13 · SHARPEN THE EDGE</p>
+            <p class="text-white/70 text-base leading-relaxed mb-6 flex-1">Old enough to compete. Young enough to build everything. The stage where what you do now compounds later.</p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 6 9 17l-5-5" /></svg><span class="text-white text-base">Complete Skill Development</span></li>
+              <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 6 9 17l-5-5" /></svg><span class="text-white text-base">Basketball IQ</span></li>
+              <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 6 9 17l-5-5" /></svg><span class="text-white text-base">Competitive Mindset</span></li>
+            </ul>
+            <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20book%20a%20trial%20session%20for%20the%20U11/U13%20basketball%20program." target="_blank" rel="noopener noreferrer" class="mt-auto w-full bg-primary hover:bg-pink-600 text-white py-4 rounded-xl inline-flex items-center justify-center font-bold font-accent transition-all text-base tracking-wider">Book a Trial</a>
+          </div>
+        </article>
+        <article class="glass-card rounded-2xl overflow-hidden flex flex-col group">
+          <div class="h-2 bg-gradient-to-r from-cyan-500 to-blue-500"></div>
+          <div class="aspect-[4/3] lg:aspect-[3/4] overflow-hidden relative">
+            <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/program-u18.webp" width="1000" height="500" alt="U18 girls basketball team training with Coach Zinger at LIT Elite Academy HCMC" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute top-4 left-4"><span class="bg-black/60 backdrop-blur-sm text-white px-4 py-1.5 rounded-full text-sm font-bold font-accent border border-white/20">U18</span></div>
+          </div>
+          <div class="p-6 lg:p-8 flex flex-col flex-1">
+            <h3 class="font-accent text-2xl lg:text-3xl text-white mb-2 font-bold">U18 Basketball</h3>
+            <p class="text-primary font-semibold font-accent text-xs tracking-wider mb-4">AGES 14–18 · COMPETE WITH PURPOSE</p>
+            <p class="text-white/70 text-base leading-relaxed mb-6 flex-1">High standards. Real accountability. Training that transfers when it matters most.</p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 6 9 17l-5-5" /></svg><span class="text-white text-base">Game-Ready Skills</span></li>
+              <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 6 9 17l-5-5" /></svg><span class="text-white text-base">Higher-Level Understanding</span></li>
+              <li class="flex items-start gap-3"><svg class="w-5 h-5 text-primary shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 6 9 17l-5-5" /></svg><span class="text-white text-base">Leadership & Accountability</span></li>
+            </ul>
+            <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20book%20a%20trial%20session%20for%20the%20U16%20basketball%20program." target="_blank" rel="noopener noreferrer" class="mt-auto w-full bg-primary hover:bg-pink-600 text-white py-4 rounded-xl inline-flex items-center justify-center font-bold font-accent transition-all text-base tracking-wider">Book a Trial</a>
+          </div>
+        </article>
+      </div>
     </div>
 
     <!-- ═══ PRICING ═══ -->
-    <!-- Mt đổi từ mt-16 sm:mt-20 md:mt-28 -> mt-12 md:mt-20 -->
-    <div class="w-full px-3 sm:px-6 lg:px-10 mt-12 md:mt-20" aria-labelledby="pricing-heading">
+    <div class="w-full px-3 sm:px-6 lg:px-10 mt-16 sm:mt-20 md:mt-28" aria-labelledby="pricing-heading">
       <div class="glass-card rounded-2xl overflow-hidden max-w-[1920px] mx-auto" itemscope itemtype="https://schema.org/OfferCatalog">
-        <!-- ... (inner pricing items unchanged, just adjust inner margins) ... -->
+        <div class="h-1.5 bg-gradient-to-r from-primary via-pink-500 to-purple-500" aria-hidden="true"></div>
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-12 lg:py-16">
-          <!-- Mb đổi từ mb-10 sm:mb-14 -> mb-8 md:mb-10 -->
-          <header class="text-center mb-8 md:mb-10">
-            <!-- ... (header content) ... -->
+          <header class="text-center mb-10 sm:mb-14">
+            <div class="section-badge mb-3 sm:mb-4">TRAINING PACKAGES</div>
+            <h2 id="pricing-heading" class="font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white mb-4 sm:mb-6 tracking-wide">SIMPLE. TRANSPARENT. <span class="block text-gradient">NO SURPRISES.</span></h2>
+            <p class="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed max-w-xl sm:max-w-2xl mx-auto">Every package includes coach-led sessions, a LIT Elite jersey, equipment and facility costs. One price. Nothing hidden.</p>
           </header>
-          <!-- Mb đổi từ mb-10 sm:mb-16 -> mb-8 md:mb-12 -->
-          <div class="grid md:grid-cols-2 gap-4 sm:gap-6 mb-8 md:mb-12" role="list">
-            <!-- ... (pricing cards) ... -->
+          <div class="grid md:grid-cols-2 gap-4 sm:gap-6 mb-10 sm:mb-16" role="list">
+            <article class="package-card package-fundamental rounded-2xl p-5 sm:p-6 md:p-8 lg:p-10 flex flex-col" role="listitem" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+              <div class="mb-2 sm:mb-3"><span class="inline-block bg-primary/15 text-primary border border-primary/40 px-2.5 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-bold rounded-full font-accent uppercase tracking-wider">Fundamentals</span></div>
+              <h3 class="font-accent text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1.5 sm:mb-2" itemprop="name">Fundamentals Development</h3>
+              <p class="text-primary font-accent text-[10px] sm:text-xs tracking-wider mb-4 sm:mb-5">AGES 5–11</p>
+              <div class="border-t border-white/10 my-3 sm:my-5 w-12 sm:w-16" aria-hidden="true"></div>
+              <data value="4500000" itemprop="price" class="sr-only">4,500,000 VND</data>
+              <meta itemprop="priceCurrency" content="VND" />
+              <p class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-1.5 sm:mb-2 tracking-tight font-sans">4,500,000 <span class="text-base sm:text-lg font-normal text-white/50">VND</span></p>
+              <p class="text-muted-foreground text-xs sm:text-sm mb-4 sm:mb-6 font-sans">12 sessions · 60 minutes each · 1 session per week</p>
+              <p class="text-white/70 text-sm sm:text-base leading-relaxed mb-6">For athletes starting out or building strong fundamentals. Every session introduces skills that matter — in an environment where trying is always the right answer.</p>
+              <ul class="space-y-2 sm:space-y-3 mb-6 sm:mb-8 flex-1" role="list">
+                <li class="flex items-start gap-2.5 sm:gap-3" role="listitem"><svg class="w-4 h-4 sm:w-5 sm:h-5 text-primary shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg><span class="text-white text-sm sm:text-base">1 session per week</span></li>
+                <li class="flex items-start gap-2.5 sm:gap-3" role="listitem"><svg class="w-4 h-4 sm:w-5 sm:h-5 text-primary shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg><span class="text-white text-sm sm:text-base">May join 2 sessions/week if classes available</span></li>
+                <li class="flex items-start gap-2.5 sm:gap-3" role="listitem"><svg class="w-4 h-4 sm:w-5 sm:h-5 text-primary shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg><span class="text-white text-sm sm:text-base">Depends on class schedule at the time</span></li>
+              </ul>
+            </article>
+            <article class="package-card package-advanced rounded-2xl p-5 sm:p-6 md:p-8 lg:p-10 flex flex-col" role="listitem" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+              <div class="mb-2 sm:mb-3"><span class="inline-block bg-purple-500/15 text-purple-400 border border-purple-500/40 px-2.5 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-bold rounded-full font-accent uppercase tracking-wider">Advanced</span></div>
+              <h3 class="font-accent text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1.5 sm:mb-2" itemprop="name">Advanced Development</h3>
+              <p class="text-purple-400 font-accent text-[10px] sm:text-xs tracking-wider mb-4 sm:mb-5">AGES 12–18</p>
+              <div class="border-t border-white/10 my-3 sm:my-5 w-12 sm:w-16" aria-hidden="true"></div>
+              <data value="6500000" itemprop="price" class="sr-only">6,500,000 VND</data>
+              <meta itemprop="priceCurrency" content="VND" />
+              <p class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-1.5 sm:mb-2 tracking-tight font-sans">6,500,000 <span class="text-base sm:text-lg font-normal text-white/50">VND</span></p>
+              <p class="text-muted-foreground text-xs sm:text-sm mb-4 sm:mb-6 font-sans">15 sessions · 90 minutes each · 1 session per week</p>
+              <p class="text-white/70 text-sm sm:text-base leading-relaxed mb-6">For athletes ready to train seriously. Longer sessions, higher intensity, deeper skill development. This is where real progress happens.</p>
+              <ul class="space-y-2 sm:space-y-3 mb-6 sm:mb-8 flex-1" role="list">
+                <li class="flex items-start gap-2.5 sm:gap-3" role="listitem"><svg class="w-4 h-4 sm:w-5 sm:h-5 text-purple-400 shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg><span class="text-white text-sm sm:text-base">1 session per week</span></li>
+                <li class="flex items-start gap-2.5 sm:gap-3" role="listitem"><svg class="w-4 h-4 sm:w-5 sm:h-5 text-purple-400 shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg><span class="text-white text-sm sm:text-base">May join 2 sessions/week if classes available</span></li>
+                <li class="flex items-start gap-2.5 sm:gap-3" role="listitem"><svg class="w-4 h-4 sm:w-5 sm:h-5 text-purple-400 shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg><span class="text-white text-sm sm:text-base">Depends on class schedule at the time</span></li>
+              </ul>
+            </article>
           </div>
-          <!-- Mb đổi từ mb-10 sm:mb-16 -> mb-8 md:mb-10 -->
-          <div class="border-t border-white/10 pt-6 sm:pt-8 mb-8 md:mb-10 text-center px-2">
-            <!-- ... (group size text) ... -->
+          <div class="border-t border-white/10 pt-6 sm:pt-8 mb-10 sm:mb-16 text-center px-2">
+            <p class="font-accent text-[10px] sm:text-[11px] md:text-xs uppercase tracking-[0.12em] sm:tracking-[0.15em] text-white/60 leading-relaxed font-bold">Group sizes are intentionally limited: U7 (8:1) · U9 (10:1) · U11/U13 (10:1) · U16 (12:1).<br class="sm:hidden"/><span class="sm:inline"><br class="hidden sm:inline"/>Every athlete is seen. Every session has a reason.</span></p>
           </div>
-          <!-- Mb đổi từ mb-10 sm:mb-16 -> mb-8 md:mb-12 -->
-          <article class="glass-card rounded-2xl overflow-hidden relative mb-8 md:mb-12" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
-             <!-- ... -->
+          <article class="glass-card rounded-2xl overflow-hidden relative mb-10 sm:mb-16" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+            <div class="absolute top-0 left-0 right:0 h-1 bg-gradient-to-r from-primary via-purple-500 to-indigo-500" aria-hidden="true"></div>
+            <div class="p-5 sm:p-6 md:p-8 lg:p-10">
+              <div class="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-12">
+                <div class="flex-1">
+                  <span class="inline-block bg-gradient-to-r from-primary/15 to-purple-500/15 text-purple-300 border border-purple-400/40 px-3 sm:px-4 py-1 sm:py-1.5 text-[10px] sm:text-[11px] font-bold rounded-full font-accent uppercase tracking-[0.12em] sm:tracking-[0.15em] mb-3 sm:mb-4">Private Coaching</span>
+                  <h3 class="font-accent text-xl sm:text-2xl md:text-3xl text-white font-bold mb-1.5 sm:mb-2" itemprop="name">1:1 Training with Coach Zinger</h3>
+                  <p class="text-purple-300 font-accent text-[10px] sm:text-xs tracking-wider mb-4 sm:mb-6">PERSONALIZED BASKETBALL DEVELOPMENT · HO CHI MINH CITY</p>
+                  <p class="text-white/60 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8" itemprop="description">Coach Zinger designs every session around your athlete's specific needs — helping them sharpen skills, improve game understanding, build confidence and prepare to compete with purpose.</p>
+                  <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20learn%20more%20about%20Private%201:1%20Coaching%20with%20Coach%20Zinger." target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-primary to-purple-500 hover:from-pink-500 hover:to-purple-600 text-white text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-3.5 rounded-full group inline-flex items-center font-bold font-accent transition-all shadow-lg shadow-primary/20">Contact for Pricing &amp; Schedule <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" />
+  <path d="m12 5 7 7-7 7" /></svg></a>
+                </div>
+                <div class="lg:w-2/5">
+                  <ul class="grid grid-cols-2 gap-2.5 sm:gap-3" role="list">
+                    <li class="bg-white/5 rounded-lg sm:rounded-xl p-3 sm:p-4 text-center border border-white/5" role="listitem"><svg class="w-5 h-5 sm:w-6 sm:h-6 text-purple-400 mx-auto mb-1.5 sm:mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" />
+  <circle cx="12" cy="12" r="6" />
+  <circle cx="12" cy="12" r="2" /></svg><p class="text-white text-xs sm:text-sm font-semibold">Custom Plan</p><p class="text-white/50 text-[10px] sm:text-xs">Tailored to athlete</p></li>
+                    <li class="bg-white/5 rounded-lg sm:rounded-xl p-3 sm:p-4 text-center border border-white/5" role="listitem"><svg class="w-5 h-5 sm:w-6 sm:h-6 text-purple-400 mx-auto mb-1.5 sm:mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" />
+  <path d="M12 6v6l4 2" /></svg><p class="text-white text-xs sm:text-sm font-semibold">Flexible Time</p><p class="text-white/50 text-[10px] sm:text-xs">Fit your schedule</p></li>
+                    <li class="bg-white/5 rounded-lg sm:rounded-xl p-3 sm:p-4 text-center border border-white/5" role="listitem"><svg class="w-5 h-5 sm:w-6 sm:h-6 text-purple-400 mx-auto mb-1.5 sm:mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" />
+  <line x1="22" x2="18" y1="12" y2="12" />
+  <line x1="6" x2="2" y1="12" y2="12" />
+  <line x1="12" x2="12" y1="6" y2="2" />
+  <line x1="12" x2="12" y1="22" y2="18" /></svg><p class="text-white text-xs sm:text-sm font-semibold">Position Work</p><p class="text-white/50 text-[10px] sm:text-xs">Skill-specific drills</p></li>
+                    <li class="bg-white/5 rounded-lg sm:rounded-xl p-3 sm:p-4 text-center border border-white/5" role="listitem"><svg class="w-5 h-5 sm:w-6 sm:h-6 text-purple-400 mx-auto mb-1.5 sm:mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5" />
+  <rect x="2" y="6" width="14" height="12" rx="2" /></svg><p class="text-white text-xs sm:text-sm font-semibold">Film Analysis</p><p class="text-white/50 text-[10px] sm:text-xs">Game breakdown</p></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </article>
+          <div class="relative bg-primary/5 border border-primary/20 rounded-2xl p-5 sm:p-8 md:p-10 mb-10 sm:mb-14 text-center overflow-hidden" itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-36 sm:w-48 h-36 sm:h-48 bg-primary/10 blur-[60px] sm:blur-[80px] rounded-full pointer-events-none" aria-hidden="true"></div>
+            <div class="relative z-10">
+              <span class="mb-3 sm:mb-4 inline-block bg-primary/10 text-primary border border-primary/30 px-3 sm:px-4 py-1 sm:py-1.5 text-[10px] sm:text-[11px] font-bold rounded-full font-accent uppercase tracking-[0.12em] sm:tracking-[0.15em]">Best Way to Start</span>
+              <h3 class="font-accent text-xl sm:text-2xl md:text-3xl text-white font-bold mb-4 sm:mb-5" itemprop="name">Trial Session</h3>
+              <data value="400000" itemprop="price" class="sr-only">400,000 VND</data>
+              <meta itemprop="priceCurrency" content="VND" />
+              <p class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 sm:mb-5 tracking-tight font-sans">400,000 <span class="text-lg sm:text-xl font-normal text-white/60">VND</span></p>
+              <p class="text-white/60 text-sm sm:text-base md:text-lg max-w-md sm:max-w-xl mx-auto mb-6 sm:mb-8 leading-relaxed" itemprop="description">One session is enough to know. Experience the coaching, the environment, and the standard — no commitment required.</p>
+              <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-pink-600 text-white text-sm sm:text-base md:text-lg px-8 sm:px-10 py-3.5 sm:py-4 rounded-full glow-pink group inline-flex items-center font-bold font-accent transition-all uppercase tracking-wider">Book a Trial <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" />
+  <path d="m12 5 7 7-7 7" /></svg></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ═══ COACH ZINGER ═══ -->
-  <!-- Py: 20/32 -> 12/24 -->
-  <section id="coach-zinger" class="py-12 md:py-24 bg-background relative overflow-hidden" aria-labelledby="coach-zinger-heading">
+  <section id="coach-zinger" class="py-20 md:py-32 bg-background relative overflow-hidden" aria-labelledby="coach-zinger-heading">
     <div class="absolute top-1/2 -right-32 w-96 h-96 bg-primary/5 blur-[120px] rounded-full pointer-events-none" aria-hidden="true"></div>
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -286,15 +493,14 @@
   </section>
 
   <!-- ═══ HOW IT WORKS ═══ -->
-  <!-- Py: 20/32 -> 12/24 | Header mb: 16 -> 10/16 | Grid mb: 12 -> 8/12 -->
-  <section id="how-it-works" class="py-12 md:py-24 bg-background relative overflow-hidden" aria-labelledby="how-it-works-heading">
+  <section id="how-it-works" class="py-20 md:py-32 bg-background relative overflow-hidden" aria-labelledby="how-it-works-heading">
     <div class="absolute bottom-0 -left-32 w-96 h-96 bg-primary/5 blur-[120px] rounded-full pointer-events-none" aria-hidden="true"></div>
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="section-header mb-10 md:mb-16">
+      <div class="section-header mb-16">
         <div class="section-badge mb-4">THREE STEPS TO START</div>
         <h2 id="how-it-works-heading" class="font-heading text-2xl sm:text-3xl md:text-4xl text-white mb-6 tracking-wide">IT'S STRAIGHTFORWARD.</h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-8 md:mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
         <div class="text-center">
           <div class="w-16 h-16 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center mx-auto mb-6"><span class="font-hero text-2xl text-primary">1</span></div>
           <h3 class="font-accent text-white text-lg uppercase tracking-wider mb-3">Book a trial session</h3>
@@ -312,22 +518,21 @@
         </div>
       </div>
       <div class="text-center">
-        <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-pink-600 text-white text-sm md:text-base px-8 py-4 rounded-full glow-pink group inline-flex items-center font-bold font-accent transition-all uppercase tracking-wider">BOOK A TRIAL SESSION <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
+        <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-pink-600 text-white text-sm md:text-base px-8 py-4 rounded-full glow-pink group inline-flex items-center font-bold font-accent transition-all uppercase tracking-wider">BOOK A TRIAL SESSION <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14" />
+  <path d="m12 5 7 7-7 7" /></svg></a>
       </div>
     </div>
   </section>
 
   <!-- ═══ FAQ ═══ -->
-  <!-- Py: 20/32 -> 12/24 | Glass card mt: 10/14 -> 8/12 -->
-  <section id="faq" class="py-12 md:py-24 relative z-[1]" aria-labelledby="faq-heading">
+  <section id="faq" class="py-20 md:py-32 relative z-[1]" aria-labelledby="faq-heading">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="section-header mb-6">
         <div class="section-badge mb-4">BEFORE YOU BOOK</div>
         <h2 id="faq-heading" class="font-heading text-2xl sm:text-3xl md:text-4xl text-white mb-6 tracking-wide">COMMON QUESTIONS FROM<br class="hidden sm:block"/> PARENTS AND ATHLETES.</h2>
       </div>
-      <div class="glass-card rounded-2xl p-4 sm:p-6 md:p-10 max-w-3xl mx-auto mt-8 md:mt-12">
+      <div class="glass-card rounded-2xl p-4 sm:p-6 md:p-10 max-w-3xl mx-auto mt-10 md:mt-14">
         <div class="space-y-3 md:space-y-4">
-          <!-- ... FAQ items unchanged inner margins ... -->
           <details class="group inner-card rounded-2xl"><summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer text-white font-semibold text-base md:text-lg list-none font-sans gap-4">Does my child need prior experience?<svg class="w-5 h-5 text-primary shrink-0 group-open:rotate-180 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="m6 9 6 6 6-6" /></svg></summary><div class="px-5 md:px-6 pb-5 md:pb-6 text-muted-foreground text-sm md:text-base leading-relaxed font-sans">No. Athletes join at every level — from their very first session to those already competing at school level. What matters is readiness to learn and respond to coaching.</div></details>
           <details class="group inner-card rounded-2xl"><summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer text-white font-semibold text-base md:text-lg list-none font-sans gap-4">Who leads the sessions?<svg class="w-5 h-5 text-primary shrink-0 group-open:rotate-180 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="m6 9 6 6 6-6" /></svg></summary><div class="px-5 md:px-6 pb-5 md:pb-6 text-muted-foreground text-sm md:text-base leading-relaxed font-sans">Every session is coach-led. Coach Zinger leads the program and remains actively involved in every athlete's development, supported by assistant coaches who hold the same standard.</div></details>
           <details class="group inner-card rounded-2xl"><summary class="flex items-center justify-between p-5 md:p-6 cursor-pointer text-white font-semibold text-base md:text-lg list-none font-sans gap-4">How large are the groups?<svg class="w-5 h-5 text-primary shrink-0 group-open:rotate-180 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="m6 9 6 6 6-6" /></svg></summary><div class="px-5 md:px-6 pb-5 md:pb-6 text-muted-foreground text-sm md:text-base leading-relaxed font-sans">Group sizes are intentionally limited by age group: U7 (8:1) · U9 (10:1) · U11/U13 (10:1) · U18 (12:1). Every athlete receives individual attention and feedback every session.</div></details>
@@ -341,19 +546,17 @@
   </section>
 
   <!-- ═══ LIFE ON COURT ═══ -->
-  <!-- Py: 20/32 -> 12/24 | Header mb: 12 -> 8/12 | Grid mb: 20/28 -> 12/16 -->
-  <section id="life-on-court" class="py-12 md:py-24 relative z-[1]" aria-labelledby="life-on-court-heading" itemscope itemtype="https://schema.org/ImageGallery">
+  <section id="life-on-court" class="py-20 md:py-32 relative z-[1]" aria-labelledby="life-on-court-heading" itemscope itemtype="https://schema.org/ImageGallery">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="section-header mb-8 md:mb-12">
+      <div class="section-header mb-12">
         <div class="section-badge mb-4">LIFE ON COURT</div>
         <h2 id="life-on-court-heading" class="font-heading text-2xl sm:text-3xl md:text-4xl text-white mb-6 tracking-wide">WEEKLY <span class="block text-gradient">HIGHLIGHTS</span></h2>
         <p class="text-white/80 text-lg leading-relaxed">Real moments from the court. Unscripted.</p>
       </div>
-      <div class="flex items-center gap-3 mb-8 md:mb-10">
+      <div class="flex items-center gap-3 mb-10">
         <h3 class="inline-flex items-center gap-2 bg-primary/15 border border-primary/40 text-primary px-4 py-2 rounded-full text-xs font-bold font-accent uppercase tracking-wider"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>From The Court</h3>
       </div>
-      <!-- CUT HUGE MARGIN: mb-20 md:mb-28 changed to mb-12 md:mb-16 -->
-      <div class="columns-2 md:columns-3 gap-3 md:gap-4 space-y-3 md:space-y-4 mb-12 md:mb-16">
+      <div class="columns-2 md:columns-3 gap-3 md:gap-4 space-y-3 md:space-y-4 mb-20 md:mb-28">
         <figure class="break-inside-avoid rounded-2xl overflow-hidden border border-white/10 premium-shadow group" itemscope itemtype="https://schema.org/ImageObject"><img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/gallery-team-group-photo.webp" width="900" height="506" alt="LIT Elite basketball team group photo — athletes in black and pink ELITE jerseys holding basketballs at indoor court" loading="lazy" decoding="async" itemprop="contentUrl" class="w-full object-cover group-hover:scale-105 transition-transform duration-700" /><figcaption class="sr-only" itemprop="caption">LIT Elite basketball team group photo</figcaption></figure>
         <figure class="break-inside-avoid rounded-2xl overflow-hidden border border-white/10 premium-shadow group" itemscope itemtype="https://schema.org/ImageObject"><img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/gallery-coach-instructing.webp" width="800" height="1200" alt="Coach in LIT ELITE BASKETBALL sportswear instructing athletes during basketball training session" loading="lazy" decoding="async" itemprop="contentUrl" class="w-full object-cover group-hover:scale-105 transition-transform duration-700" /><figcaption class="sr-only" itemprop="caption">Coach-led training session</figcaption></figure>
         <figure class="break-inside-avoid rounded-2xl overflow-hidden border border-white/10 premium-shadow group" itemscope itemtype="https://schema.org/ImageObject"><img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/gallery-circle-huddle.webp" width="900" height="600" alt="LIT Elite players in circle huddle during training session" loading="lazy" decoding="async" itemprop="contentUrl" class="w-full object-cover group-hover:scale-105 transition-transform duration-700" /><figcaption class="sr-only" itemprop="caption">Circle huddle at LIT Elite</figcaption></figure>
@@ -368,7 +571,7 @@
         <figure class="break-inside-avoid rounded-2xl overflow-hidden border border-white/10 premium-shadow group" itemscope itemtype="https://schema.org/ImageObject"><img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/gallery-saq-training.webp" width="900" height="1350" alt="Female athletes competing for the basketball during SAQ training at LIT Elite" loading="lazy" decoding="async" itemprop="contentUrl" class="w-full object-cover group-hover:scale-105 transition-transform duration-700" /><figcaption class="sr-only" itemprop="caption">SAQ training at LIT Elite</figcaption></figure>
       </div>
       <!-- Our Athletes -->
-      <div class="mb-8 text-center">
+      <div class="mb-10 text-center">
         <h3 class="inline-block bg-white/5 border border-white/10 text-white/80 px-4 py-1.5 rounded-full text-[10px] md:text-[11px] font-accent tracking-widest uppercase">Our Athletes</h3>
         <p class="text-white/70 text-base md:text-lg leading-relaxed mt-4 max-w-xl mx-auto">The young athletes bringing the LIT Elite standard to life.</p>
       </div>
@@ -392,55 +595,66 @@
   </section>
 
   <!-- ═══ FINAL CTA ═══ -->
-  <!-- Py: 20 -> 12/24 | Inner mb: standardized -->
-  <section class="relative py-12 md:py-24 px-4 sm:px-8 bg-zinc-950 border border-white/5 rounded-3xl overflow-hidden my-12 premium-shadow">
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-pink-500/10 via-transparent to-transparent"></div>
-    <div class="relative max-w-3xl mx-auto text-center">
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-6 md:mb-8 text-xs font-bold uppercase tracking-widest text-pink-400 bg-pink-500/10 border border-pink-500/20 rounded-full">
-        <span class="w-2 h-2 bg-pink-500 rounded-full animate-pulse"></span>
-        START HERE
+<section class="relative py-20 px-4 sm:px-8 bg-zinc-950 border border-white/5 rounded-3xl overflow-hidden my-12 premium-shadow">
+  <!-- Hiệu ứng ánh sáng nền -->
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-pink-500/10 via-transparent to-transparent"></div>
+  
+  <div class="relative max-w-3xl mx-auto text-center">
+    <!-- Badge START HERE -->
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-xs font-bold uppercase tracking-widest text-pink-400 bg-pink-500/10 border border-pink-500/20 rounded-full">
+      <span class="w-2 h-2 bg-pink-500 rounded-full animate-pulse"></span>
+      START HERE
+    </div>
+    
+    <!-- Headline -->
+    <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight mb-6">
+      One Session.<br class="hidden sm:block"/>That's All It Takes.
+    </h2>
+    
+    <!-- Description -->
+    <p class="text-lg md:text-xl text-zinc-400 leading-relaxed mb-10 max-w-2xl mx-auto">
+      Come see the environment for yourself. No commitment, no pressure – just one session to experience the standard.
+    </p>
+    
+    <!-- Info Block (Địa chỉ & Thời gian) -->
+    <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 mb-12 text-zinc-300 border-y border-white/10 py-8">
+      <div class="flex items-center gap-3">
+        <svg class="w-5 h-5 text-pink-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+        <span class="text-base font-medium">74 Nguyễn Thị Thập, District 7, HCMC</span>
       </div>
-      <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight mb-6">
-        One Session.<br class="hidden sm:block"/>That's All It Takes.
-      </h2>
-      <p class="text-lg md:text-xl text-zinc-400 leading-relaxed mb-8 md:mb-10 max-w-2xl mx-auto">
-        Come see the environment for yourself. No commitment, no pressure – just one session to experience the standard.
-      </p>
-      <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 mb-8 md:mb-10 text-zinc-300 border-y border-white/10 py-6 md:py-8">
-        <div class="flex items-center gap-3">
-          <svg class="w-5 h-5 text-pink-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-          <span class="text-base font-medium">74 Nguyễn Thị Thập, District 7, HCMC</span>
-        </div>
-        <div class="hidden md:block w-px h-6 bg-white/10"></div>
-        <div class="flex items-center gap-3">
-          <svg class="w-5 h-5 text-pink-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-          <span class="text-base font-medium">Weekdays 6:30–8:00PM · Weekends 12:00–4:00PM</span>
-        </div>
-      </div>
-      <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-        <a href="#book-trial" class="w-full sm:w-auto inline-flex justify-center items-center px-8 py-4 bg-pink-600 hover:bg-pink-500 text-white font-bold text-lg rounded-2xl transition-all duration-300 shadow-lg shadow-pink-600/30 hover:shadow-pink-500/40 hover:-translate-y-0.5">
-          BOOK A TRIAL – 400,000 VND
-        </a>
-        <a href="#whatsapp" class="w-full sm:w-auto inline-flex justify-center items-center gap-3 px-8 py-4 bg-zinc-800 hover:bg-zinc-700 text-white font-bold rounded-2xl border border-white/10 transition-colors duration-300">
-          <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
-          MESSAGE US ON WHATSAPP
-        </a>
+      
+      <!-- Dấu gạch dọc phân cách trên Desktop -->
+      <div class="hidden md:block w-px h-6 bg-white/10"></div>
+      
+      <div class="flex items-center gap-3">
+        <svg class="w-5 h-5 text-pink-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        <span class="text-base font-medium">Weekdays 6:30–8:00PM · Weekends 12:00–4:00PM</span>
       </div>
     </div>
-  </section>
+    
+    <!-- CTA Buttons -->
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+      <a href="#book-trial" class="w-full sm:w-auto inline-flex justify-center items-center px-8 py-4 bg-pink-600 hover:bg-pink-500 text-white font-bold text-lg rounded-2xl transition-all duration-300 shadow-lg shadow-pink-600/30 hover:shadow-pink-500/40 hover:-translate-y-0.5">
+        BOOK A TRIAL – 400,000 VND
+      </a>
+      <a href="#whatsapp" class="w-full sm:w-auto inline-flex justify-center items-center gap-3 px-8 py-4 bg-zinc-800 hover:bg-zinc-700 text-white font-bold rounded-2xl border border-white/10 transition-colors duration-300">
+        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+        MESSAGE US ON WHATSAPP
+      </a>
+    </div>
+  </div>
+</section>
 
   <!-- ═══ LOCATION / MAP ═══ -->
-  <!-- Py: 20/32 -> 12/24 | Header mb: 12/16 -> 8/12 -->
-  <section id="location" class="py-12 md:py-24 bg-background relative overflow-hidden" aria-labelledby="location-heading">
+  <section id="location" class="py-20 md:py-32 bg-background relative overflow-hidden" aria-labelledby="location-heading">
     <div class="absolute bottom-0 -left-32 w-96 h-96 bg-primary/5 blur-[120px] rounded-full pointer-events-none" aria-hidden="true"></div>
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="text-center mb-8 md:mb-12">
+      <div class="text-center mb-12 md:mb-16">
         <div class="section-badge mb-6" aria-hidden="true">FIND US</div>
         <h2 id="location-heading" class="font-hero text-2xl sm:text-3xl md:text-4xl text-white leading-[1.1] uppercase tracking-tight">TRAIN WITH US IN<br class="hidden sm:block"/> <span class="text-primary">HO CHI MINH CITY</span></h2>
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-stretch">
         <div class="lg:col-span-2 flex flex-col justify-between bg-white/[0.03] border border-white/10 rounded-2xl p-8 md:p-10">
-          <!-- Inner location content unchanged -->
           <div>
             <h3 class="font-hero text-lg md:text-xl text-white uppercase tracking-tight mb-6">LIT Elite Basketball Academy</h3>
             <div class="space-y-5">
@@ -459,11 +673,10 @@
             </div>
           </div>
           <div class="mt-8 flex flex-col sm:flex-row gap-3">
-            <a href="https://maps.app.goo.gl/rMR3ooFQJ26eFGcS9" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 bg-primary text-white font-accent text-xs md:text-sm uppercase tracking-wider px-6 py-3.5 rounded-lg hover:brightness-110 transition-all duration-200"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z"/></svg>Get Directions</a>
+            <a href="https://maps.app.goo.gl/rMR3ooFQJ26eFGcS9" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 bg-primary text-white font-accent text-xs md:text-sm uppercase tracking-wider px-6 py-3.5 rounded-lg hover:brightness-110 transition-all duration-200"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z"/></svg></svg>Get Directions</a>
             <a href="https://wa.me/84938454724?text=Hi%20LIT%20Elite,%20I'd%20like%20to%20learn%20more." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 bg-white/5 border border-white/10 text-white/80 font-accent text-xs md:text-sm uppercase tracking-wider px-6 py-3.5 rounded-lg hover:bg-white/10 hover:text-white transition-all duration-200">Contact Us</a>
           </div>
         </div>
-        <!-- MAP DIV unchanged -->
         <div class="lg:col-span-3 rounded-2xl overflow-hidden border border-white/10 min-h-[350px] md:min-h-[460px] relative">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.952476319015!2d106.7220969755478!3d10.738146259897592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175250001c2a003%3A0x1a1addffb0a5bee5!2sLIT%20Elite%20Basketball%20Academy!5e0!3m2!1sen!2s!4v1782121749390!5m2!1sen!2s" style="border:0; position:absolute; inset:0; width:100%; height:100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="LIT Elite Basketball Academy location on Google Maps — 74 Nguyen Thi Thap, District 7, Ho Chi Minh City" class="grayscale-[40%] contrast-[1.1] brightness-[0.85] transition-all duration-500 hover:grayscale-0 hover:brightness-100"></iframe>
           <a href="https://maps.app.goo.gl/rMR3ooFQJ26eFGcS9" target="_blank" rel="noopener noreferrer" class="absolute inset-0 flex flex-col items-center justify-center bg-background/90 backdrop-blur-sm opacity-0 hover:opacity-100 transition-opacity duration-300 z-10" aria-label="Open Google Maps in new tab">
@@ -476,13 +689,12 @@
   </section>
 
   <!-- ═══ FOOTER ═══ -->
-  <!-- Footer unchanged (py-12 md:py-16 is already optimal) -->
   <footer class="bg-[#0B0B14] border-t border-white/5 py-12 md:py-16">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mb-8">
         <div>
           <div class="flex items-center gap-4 mb-3">
-            <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/logo.webp" width="220" height="203" alt="LIT Elite Basketball Academy" class="h-16 w-auto mb-4 rounded-full" />
+<img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/logo.webp" width="220" height="203" alt="LIT Elite Basketball Academy" class="h-16 w-auto mb-4 rounded-full" />
           </div>
           <p class="text-white/40 text-xs font-sans">A Locked In Training Academy</p>
         </div>
@@ -494,7 +706,7 @@
           <a href="https://www.instagram.com/litelitebasketball/" target="_blank" rel="noopener noreferrer" class="text-white/40 hover:text-primary transition-colors text-sm font-sans">Instagram</a>
         </div>
         <div class="flex items-center gap-3">
-          <a href="https://www.instagram.com/litelitebasketball/" target="_blank" rel="noopener noreferrer" class="text-white/40 hover:text-primary transition-colors" aria-label="Instagram"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="https://www.instagram.com/litelitebasketball/" target="_blank" rel="noopener noreferrer" class="text-white/40 hover:text-primary transition-colors" aria-label="Instagram"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a></a>
           <a href="https://wa.me/84938454724" target="_blank" rel="noopener noreferrer" class="text-white/40 hover:text-primary transition-colors" aria-label="WhatsApp"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.767.966-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 6.78 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
         </div>
       </div>
@@ -505,3 +717,89 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    function scrollToSection(id) {
+      var el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      var menu = document.getElementById('mobile-menu');
+      if (menu) menu.classList.add('hidden');
+    }
+    document.getElementById('menu-btn').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    (function() {
+      'use strict';
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var mobile = window.matchMedia('(max-width: 768px)').matches;
+      if (reduced) {
+        document.querySelectorAll('[data-animate],.animate-on-scroll,.fade-in,.fade-in-up,.fade-in-down,.slide-up,.scale-in').forEach(function(el) {
+          el.classList.add('is-visible'); el.style.opacity='1'; el.style.transform='none';
+        });
+        return;
+      }
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry, i) {
+          if (entry.isIntersecting) {
+            var el = entry.target;
+            var d = mobile ? Math.min((parseInt(el.dataset.delay)||i*30), 200) : Math.min((parseInt(el.dataset.delay)||i*80), 500);
+            setTimeout(function() {
+              if (mobile) { el.style.transition='opacity 0.3s ease-out'; el.style.opacity='1'; }
+              else { el.classList.add('is-visible'); }
+            }, d);
+            obs.unobserve(el);
+          }
+        });
+      }, { threshold: mobile ? 0 : 0.12, rootMargin: mobile ? '0px 0px -10px 0px' : '0px 0px -50px 0px' });
+      document.querySelectorAll('[data-animate],.animate-on-scroll,.fade-in,.fade-in-up,.fade-in-down,.slide-up,.scale-in').forEach(function(el) {
+        if (mobile) { el.style.opacity='0'; el.style.transform='none'; }
+        obs.observe(el);
+      });
+      var nav = document.getElementById('navbar'), tick = false;
+      window.addEventListener('scroll', function() {
+        if (!tick) { requestAnimationFrame(function() {
+          nav.style.boxShadow = window.pageYOffset > 80 ? '0 4px 30px rgba(0,0,0,0.15)' : 'none';
+          tick = false;
+        }); tick = true; }
+      }, { passive: true });
+    })();
+  </script>
+       <!-- ══════════════════════════════════════════════════════ -->
+      <!-- 📊 GA4 EVENT TRACKING SCRIPT -->
+      <!-- ══════════════════════════════════════════════════════ -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          
+          // ---------------------------------------------------------
+          // GLOBAL GA4 CLICK TRACKING (EVENT DELEGATION)
+          // ---------------------------------------------------------
+          document.addEventListener('click', function (e) {
+            const targetEl = e.target.closest('a, button');
+            if (!targetEl) return;
+
+            const textContent = (targetEl.textContent || '').trim().toLowerCase();
+            const href = (targetEl.getAttribute('href') || '').toLowerCase();
+
+            // 1. Mọi nút "Book a Trial", "Book Your Trial", "Book a Trial Session"
+            if (textContent.includes('book a trial') || textContent.includes('book your trial') || textContent.includes('book a trial session')) {
+              window.gtag && gtag('event', 'qualify_lead', { method: 'book_trial_button' });
+              return; 
+            }
+
+            // 2. Nút "Contact for Pricing & Schedule" và "Contact Us"
+            if (textContent.includes('contact for pricing') || textContent.includes('contact us')) {
+              window.gtag && gtag('event', 'qualify_lead', { method: 'contact_click' });
+              return;
+            }
+
+            // 3. Nút "Message us on WhatsApp" hoặc bất kỳ link wa.me/whatsapp
+            if (textContent.includes('message us on whatsapp') || href.includes('wa.me') || href.includes('whatsapp')) {
+              window.gtag && gtag('event', 'qualify_lead', { method: 'whatsapp_click' });
+              return;
+            }
+          });
+
+        });
+      </script>
+</body>
+</html>
