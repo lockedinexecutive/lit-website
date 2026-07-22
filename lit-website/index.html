@@ -764,5 +764,42 @@
       }, { passive: true });
     })();
   </script>
+       <!-- ══════════════════════════════════════════════════════ -->
+      <!-- 📊 GA4 EVENT TRACKING SCRIPT -->
+      <!-- ══════════════════════════════════════════════════════ -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          
+          // ---------------------------------------------------------
+          // GLOBAL GA4 CLICK TRACKING (EVENT DELEGATION)
+          // ---------------------------------------------------------
+          document.addEventListener('click', function (e) {
+            const targetEl = e.target.closest('a, button');
+            if (!targetEl) return;
+
+            const textContent = (targetEl.textContent || '').trim().toLowerCase();
+            const href = (targetEl.getAttribute('href') || '').toLowerCase();
+
+            // 1. Mọi nút "Book a Trial", "Book Your Trial", "Book a Trial Session"
+            if (textContent.includes('book a trial') || textContent.includes('book your trial') || textContent.includes('book a trial session')) {
+              window.gtag && gtag('event', 'qualify_lead', { method: 'book_trial_button' });
+              return; 
+            }
+
+            // 2. Nút "Contact for Pricing & Schedule" và "Contact Us"
+            if (textContent.includes('contact for pricing') || textContent.includes('contact us')) {
+              window.gtag && gtag('event', 'qualify_lead', { method: 'contact_click' });
+              return;
+            }
+
+            // 3. Nút "Message us on WhatsApp" hoặc bất kỳ link wa.me/whatsapp
+            if (textContent.includes('message us on whatsapp') || href.includes('wa.me') || href.includes('whatsapp')) {
+              window.gtag && gtag('event', 'qualify_lead', { method: 'whatsapp_click' });
+              return;
+            }
+          });
+
+        });
+      </script>
 </body>
 </html>
