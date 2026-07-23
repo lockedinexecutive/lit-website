@@ -112,6 +112,7 @@
     @keyframes cinematicZoom { 0% { transform: scale(1); } 100% { transform: scale(1.08); } }
     .cinematic-img { animation: cinematicZoom 20s ease-in-out infinite alternate; }
     .section-badge { display: inline-block; background: rgba(236, 72, 153, 0.15); color: #ec4899; border: 1px solid rgba(236, 72, 153, 0.4); padding: 6px 16px; font-size: 13px; border-radius: 9999px; font-family: 'Jeko', sans-serif; letter-spacing: 0.05em; }
+        section[id] { scroll-margin-top: 80px; } /* Đảm bảo hash-link & scroll luôn dừng dưới Navbar 64px + 16px padding */
     .section-header { text-align: center; max-width: 48rem; margin-left: auto; margin-right: auto; }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
@@ -650,7 +651,7 @@
         </div>
         <div class="flex flex-wrap items-center gap-x-6 gap-y-2">
           <button onclick="scrollToSection('programs')" class="text-white/40 hover:text-primary transition-colors text-sm font-sans">Programs</button>
-          <button onclick="scrollToSection('how-it-works')" class="text-white/40 hover:text-primary transition-colors text-sm font-sans">How We Coach</button>
+          <button onclick="scrollToSection('how-it-works')" class="text-white/40 hover:text-primary transition-colors text-sm font-sans">How It Works</button>
           <button onclick="scrollToSection('coach-zinger')" class="text-white/40 hover:text-primary transition-colors text-sm font-sans">Coach</button>
           <button onclick="scrollToSection('faq')" class="text-white/40 hover:text-primary transition-colors text-sm font-sans">FAQ</button>
           <a href="https://www.instagram.com/litelitebasketball/" target="_blank" rel="noopener noreferrer" class="text-white/40 hover:text-primary transition-colors text-sm font-sans">Instagram</a>
@@ -670,12 +671,22 @@
 
   <!-- ═══════════ SCRIPTS ═══════════ -->
   <script>
+    // ═══ FIXED SCROLL LOGIC (Manual Offset) ═══
     function scrollToSection(id) {
       var el = document.getElementById(id);
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
       var menu = document.getElementById('mobile-menu');
+      
+      // 1. Đóng menu trước để layout không nhảy
       if (menu) menu.classList.add('hidden');
+      
+      // 2. Nếu tìm thấy section, cuộn mượt tới đúng vị trí (trừ h Navbar)
+      if (el) {
+        var navbarHeight = 80; // Navbar = 64px (h-16) + 16px buffer cho đẹp
+        var y = el.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+        window.scrollTo({top: y, behavior: 'smooth'});
+      }
     }
+
     document.getElementById('menu-btn').addEventListener('click', function() {
       document.getElementById('mobile-menu').classList.toggle('hidden');
     });
@@ -738,6 +749,10 @@
         const textContent = (targetEl.textContent || '').trim().toLowerCase();
         const href = (targetEl.getAttribute('href') || '').toLowerCase();
 
+        if (textContent.includes('đặt lịch học thử') || textContent.includes('đặt lịch')) {
+          window.gtag && gtag('event', 'qualify_lead', { method: 'sticky_cta' });
+          return; 
+        }
         if (textContent.includes('book a trial') || textContent.includes('book your trial') || textContent.includes('book a trial session')) {
           window.gtag && gtag('event', 'qualify_lead', { method: 'book_trial_button' });
           return; 
