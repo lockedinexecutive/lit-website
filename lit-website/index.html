@@ -265,16 +265,54 @@
   </section>
 
 
-  <!-- ═══ PROGRAMS ═══ -->
+   <!-- ═══ COACH ZINGER ═══ (MOVED: Now appears before Programs/Packages) -->
+  <section id="coach-zinger" class="py-12 md:py-24 bg-background relative overflow-hidden" aria-labelledby="coach-zinger-heading">
+    <div class="absolute top-1/2 -right-32 w-96 h-96 bg-primary/5 blur-[120px] rounded-full pointer-events-none" aria-hidden="true"></div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="order-1">
+          <div class="section-badge mb-6" aria-hidden="true">THE COACH BEHIND LIT ELITE</div>
+          <h2 id="coach-zinger-heading" class="font-hero text-2xl sm:text-3xl md:text-4xl text-white leading-[1.1] uppercase mb-8 tracking-tight">I CAME INTO COACHING<br/>AS AN <span class="text-primary">EDUCATOR</span> FIRST.</h2>
+          <div class="font-sans text-white/80 text-base md:text-lg leading-relaxed space-y-4 max-w-xl">
+            <p>I know what it feels like to be an athlete who isn't being seen.</p>
+            <p>I've spent 15+ years at international schools across Vietnam and Korea — working with athletes from their very first rep to their most competitive. I've seen what changes when a young athlete finally has a coach who gets down to their level, gives them the right cue, and lets them try again.</p>
+            <p>That's what LIT Elite is built on.</p>
+            <p>If your athlete trains here, I will know their name, their hesitations, and exactly which rep they've been avoiding. That's the standard I hold myself to — every session.</p>
+          </div>
+          <div class="mt-8 space-y-2">
+            <p class="font-accent text-white/50 text-[11px] md:text-xs uppercase tracking-[0.15em]">· 15+ Years · International Schools, Vietnam & Korea</p>
+            <p class="font-accent text-white/50 text-[11px] md:text-xs uppercase tracking-[0.15em]">· Athletics Director · K–12 International Schools</p>
+            <p class="font-accent text-white/50 text-[11px] md:text-xs uppercase tracking-[0.15em]">· MRISA Jr. Girls Basketball Champions 2024 & 2025 - Head Coach</p>
+            <p class="font-accent text-white/50 text-[11px] md:text-xs uppercase tracking-[0.15em]">· Sports Management & Educational Leadership Background</p>
+          </div>
+          <div class="mt-8 pt-8 border-t border-white/10">
+            <blockquote class="font-sans text-white text-lg leading-relaxed italic">"You believed in me when no one else did."</blockquote>
+            <p class="font-accent text-primary text-sm uppercase tracking-wider mt-3">— Trung · LIT Elite Athlete</p>
+          </div>
+        </div>
+        <div class="order-2 flex justify-center lg:justify-end">
+          <figure class="w-full max-w-sm aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 premium-shadow">
+            <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/coach-zinger-portrait.webp" width="800" height="1200" alt="Coach Zinger professional portrait" class="w-full h-full object-cover object-[center_15%] hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" />
+            <figcaption class="sr-only">Coach Zinger — Founder and Head Coach</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROGRAMS ═══ (Includes Pricing/Packages inside this section wrapper) -->
   <section id="programs" class="py-12 md:py-24 relative z-[1]" aria-labelledby="programs-heading">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="section-header mb-10 md:mb-16">
-        <!-- Eyebrow (Fixed: Corrected typo from sectionBadge to section-badge) -->
+        <!-- Eyebrow -->
         <div class="section-badge mb-4">OUR PROGRAMS</div>
         <h2 id="programs-heading" class="font-heading text-2xl sm:text-3xl md:text-4xl text-white mb-6 tracking-wide">THE RIGHT CHALLENGE. <span class="block text-gradient">AT THE RIGHT STAGE.</span></h2>
-        <p class="text-white/80 text-lg leading-relaxed mb-6">Every athlete develops differently. Find the group that fits where you are now.</p>
         
-        <!-- Training Levels Row (Moved here from Hero) -->
+        <!-- Subtext Group -->
+        <p class="text-white/80 text-lg leading-relaxed mb-4">Every athlete develops differently. Find the group that fits where you are now.</p>
+        <p class="text-white/80 text-lg leading-relaxed mb-8">Boys and girls train in separate groups at every age, with strictly limited group sizes — so every athlete gets seen, not lost in a crowd.</p>
+        
+        <!-- Training Levels Row -->
         <div class="inline-flex flex-wrap justify-center items-center gap-x-4 gap-y-2 bg-white/5 border border-white/10 rounded-full px-5 py-2.5 font-accent text-[10px] md:text-xs tracking-[0.15em] text-white/60 uppercase">
           <span>Starting Out</span>
           <span class="hidden sm:inline opacity-50">·</span>
@@ -360,9 +398,8 @@
         </article>
       </div>
     </div>
-  </section>
-    <!-- ═══ PRICING ═══ -->
-    <!-- SPACING UPDATED: mt-16 sm:mt-20 md:mt-28 -> mt-12 md:mt-20 | mb-10 sm:mb-14 -> mb-8 md:mb-10 | mb-10 sm:mb-16 -> mb-8 md:mb-12 -->
+    
+    <!-- ═══ PRICING ═══ (Remains nested inside Programs section wrapper) -->
     <div class="w-full px-3 sm:px-6 lg:px-10 mt-12 md:mt-20" aria-labelledby="pricing-heading">
       <div class="glass-card rounded-2xl overflow-hidden max-w-[1920px] mx-auto" itemscope itemtype="https://schema.org/OfferCatalog">
         <div class="h-1.5 bg-gradient-to-r from-primary via-pink-500 to-purple-500" aria-hidden="true"></div>
@@ -435,40 +472,6 @@
       </div>
     </div>
   </section>
-
-   <!-- ═══ COACH ZINGER ═══ -->
-  <section id="coach-zinger" class="py-12 md:py-24 bg-background relative overflow-hidden" aria-labelledby="coach-zinger-heading">
-    <div class="absolute top-1/2 -right-32 w-96 h-96 bg-primary/5 blur-[120px] rounded-full pointer-events-none" aria-hidden="true"></div>
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        <div class="order-1">
-          <div class="section-badge mb-6" aria-hidden="true">THE COACH BEHIND LIT ELITE</div>
-          <h2 id="coach-zinger-heading" class="font-hero text-2xl sm:text-3xl md:text-4xl text-white leading-[1.1] uppercase mb-8 tracking-tight">I CAME INTO COACHING<br/>AS AN <span class="text-primary">EDUCATOR</span> FIRST.</h2>
-          <div class="font-sans text-white/80 text-base md:text-lg leading-relaxed space-y-4 max-w-xl">
-            <p>I know what it feels like to be an athlete who isn't being seen.</p>
-            <p>I've spent 15+ years at international schools across Vietnam and Korea — working with athletes from their very first rep to their most competitive. I've seen what changes when a young athlete finally has a coach who gets down to their level, gives them the right cue, and lets them try again.</p>
-            <p>That's what LIT Elite is built on.</p>
-            <p>If your athlete trains here, I will know their name, their hesitations, and exactly which rep they've been avoiding. That's the standard I hold myself to — every session.</p>
-          </div>
-          <div class="mt-8 space-y-2">
-            <p class="font-accent text-white/50 text-[11px] md:text-xs uppercase tracking-[0.15em]">· 15+ Years · International Schools, Vietnam & Korea</p>
-            <p class="font-accent text-white/50 text-[11px] md:text-xs uppercase tracking-[0.15em]">· Athletics Director · K–12 International Schools</p>
-            <p class="font-accent text-white/50 text-[11px] md:text-xs uppercase tracking-[0.15em]">· MRISA Jr. Girls Basketball Champions 2024 & 2025 - Head Coach</p>
-            <p class="font-accent text-white/50 text-[11px] md:text-xs uppercase tracking-[0.15em]">· Sports Management & Educational Leadership Background</p>
-          </div>
-          <div class="mt-8 pt-8 border-t border-white/10">
-            <blockquote class="font-sans text-white text-lg leading-relaxed italic">"You believed in me when no one else did."</blockquote>
-            <p class="font-accent text-primary text-sm uppercase tracking-wider mt-3">— Trung · LIT Elite Athlete</p>
-          </div>
-        </div>
-        <div class="order-2 flex justify-center lg:justify-end">
-          <figure class="w-full max-w-sm aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 premium-shadow">
-            <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/coach-zinger-portrait.webp" width="800" height="1200" alt="Coach Zinger professional portrait" class="w-full h-full object-cover object-[center_15%] hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" />
-            <figcaption class="sr-only">Coach Zinger — Founder and Head Coach</figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
   </section>
 
   <!-- ═══ HOW IT WORKS ═══ -->
