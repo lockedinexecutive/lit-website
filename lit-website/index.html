@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ══ Analytics (existing GA4 — kept) ══ -->
+  <!-- ══ Analytics ══ -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FQD4DBW7E2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -12,7 +12,7 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#121220">
+  <meta name="theme-color" content="#120D1F">
 
   <!-- ══ SEO ══ -->
   <title>Youth Basketball Training in District 7 | LIT Elite Basketball</title>
@@ -37,18 +37,22 @@
   <meta name="twitter:description" content="Youth basketball development for ages 5–18 in District 7, Ho Chi Minh City.">
   <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/hero-girls-team.webp">
 
-  <!-- ══ Favicons (existing assets) ══ -->
+  <!-- ══ Favicons ══ -->
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
 
   <!-- ══ Performance hints ══ -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/hero-girls-team.webp" fetchpriority="high">
 
-  <!-- ══ Structured data: real, visible information only.
-       Old fixed address / opening hours / package prices intentionally removed. ══ -->
+  <!-- ══ Fonts: Playfair Display (Headings) + Inter (Body) ══ -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,700&display=swap" rel="stylesheet">
+
+  <!-- ══ Structured data ══ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -111,98 +115,104 @@
   </script>
 
   <style>
-    /* ══════════ Brand fonts (same files as current site — deploy alongside ./fonts/) ══════════ */
-    @font-face{font-family:'UnisonPro';src:url('./fonts/UnisonPro-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
-    @font-face{font-family:'Gilroy';src:url('./fonts/SVN-Gilroy.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
-    @font-face{font-family:'Gilroy';src:url('./fonts/SVN-GilroySemiBold.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
-    @font-face{font-family:'Gilroy';src:url('./fonts/SVN-GilroyBold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
-    @font-face{font-family:'Jeko';src:url('./fonts/SVN-Jeko-Black.woff2') format('woff2');font-weight:900;font-style:normal;font-display:swap}
-
-    /* ══════════ Design tokens ══════════ */
+    /* ══════════ Design Tokens ══════════ */
     :root{
-      --bg:#121220;
-      --bg-soft:#151527;
-      --bg-deep:#0e0e1a;
-      --card:rgba(255,255,255,.035);
-      --border:rgba(255,255,255,.09);
-      --border-pink:rgba(236,72,153,.38);
+      --bg:#120D1F;
+      --bg-soft:#1A0E2A;
+      --bg-deep:#0C0815;
+      --text:#F8F8F2;
+      --muted:#C4B8D0;
+      --faint:rgba(248,248,242,.45);
+      
       --pink:#ec4899;
       --pink-soft:#f472b6;
-      --pink-cta:#db2777;   /* AA-safe button background on white text */
+      --pink-cta:#db2777;
       --pink-deep:#bd1c67;
       --purple:#a855f7;
-      --text:#f8f8f2;
-      --muted:rgba(248,248,242,.66);
-      --faint:rgba(248,248,242,.45);
-      --font-display:'UnisonPro','Gilroy',-apple-system,'Segoe UI',Arial,sans-serif;
-      --font-body:'Gilroy',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
-      --font-accent:'Jeko','Gilroy',-apple-system,'Segoe UI',Arial,sans-serif;
-      --radius:18px;
+      
+      --glass-bg:rgba(255,255,255,.04);
+      --glass-bg-hover:rgba(255,255,255,.07);
+      --glass-border:rgba(255,255,255,.1);
+      --glass-blur:blur(16px);
+      
+      --font-display:'Playfair Display', serif;
+      --font-body:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      
+      --radius:20px;
       --shadow:0 24px 50px -18px rgba(0,0,0,.55);
     }
 
     /* ══════════ Base ══════════ */
     *,*::before,*::after{box-sizing:border-box}
     html{scroll-behavior:smooth;overflow-x:clip}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;overflow-x:clip}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:clip;position:relative;min-height:100vh}
+    
+    /* Glow blobs tạo chiều sâu cho nền */
+    body::before{content:'';position:fixed;top:-10%;left:-10%;width:50vw;height:50vw;background:var(--pink);filter:blur(120px);opacity:.2;border-radius:50%;z-index:-1;pointer-events:none}
+    body::after{content:'';position:fixed;bottom:-10%;right:-10%;width:60vw;height:60vw;background:var(--purple);filter:blur(140px);opacity:.15;border-radius:50%;z-index:-1;pointer-events:none}
+
     img{max-width:100%;display:block}
-    h1,h2,h3,p,figure,blockquote{margin:0}
-    a{color:inherit}
-    [id]{scroll-margin-top:92px}
+    h1,h2,h3,h4,p,figure,blockquote{margin:0}
+    a{color:inherit;text-decoration:none}
+    [id]{scroll-margin-top:100px}
     :focus-visible{outline:2px solid var(--pink-soft);outline-offset:3px;border-radius:4px}
     .icon{width:1.05em;height:1.05em;flex:none}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
-    .skip-link{position:fixed;left:16px;top:-64px;z-index:300;background:var(--pink);color:#fff;padding:11px 20px;border-radius:0 0 12px 12px;font-weight:700;font-size:.9rem;text-decoration:none;transition:top .2s ease}
+    .skip-link{position:fixed;left:16px;top:-64px;z-index:300;background:var(--pink);color:#fff;padding:11px 20px;border-radius:0 0 12px 12px;font-weight:700;font-size:.9rem;transition:top .2s ease}
     .skip-link:focus{top:0}
 
-    .container{max-width:1240px;margin-inline:auto;padding-inline:clamp(20px,4.5vw,48px)}
+    .container{max-width:1280px;margin-inline:auto;padding-inline:clamp(20px,4.5vw,48px)}
+    /* ✎ Container Wide dành riêng cho Programs */
+    .container-wide{max-width:1600px;margin-inline:auto;padding-inline:clamp(20px,4.5vw,48px)}
+    
     .section{padding-block:clamp(72px,9vw,128px);position:relative}
-    .section-alt{background:var(--bg-soft);border-block:1px solid var(--border)}
     .decor{overflow:hidden}
 
-    /* ══════════ Section headers / badges ══════════ */
-    .section-head{max-width:780px;margin:0 auto clamp(40px,6vw,64px);text-align:center;display:flex;flex-direction:column;align-items:center;gap:18px}
-    .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-accent);font-weight:900;font-size:clamp(.72rem,1.4vw,.8rem);letter-spacing:.16em;text-transform:uppercase;color:var(--pink-soft);background:rgba(236,72,153,.1);border:1px solid var(--border-pink);padding:8px 18px;border-radius:999px}
+    /* ══════════ Typography & Headers ══════════ */
+    h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height: 1.05; }
+    .section-head{max-width:100%;margin:0 0 clamp(40px,6vw,64px);text-align:left;display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-weight:700;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--pink-soft);background:rgba(236,72,153,.1);border:1px solid var(--glass-border);padding:8px 18px;border-radius:999px}
     .eyebrow--purple{color:#d8b4fe;background:rgba(168,85,247,.1);border-color:rgba(168,85,247,.4)}
-    .section-title{font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:1.06;font-size:clamp(1.55rem,3.4vw,2.4rem)}
+    .section-title{font-size:clamp(2rem,5vw,3.5rem);font-weight:700}
     .section-sub{color:var(--muted);font-size:clamp(1rem,2vw,1.15rem);max-width:58ch}
-    .grad{background:linear-gradient(100deg,var(--pink) 5%,var(--pink-soft) 55%,var(--purple) 115%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    /* ✎ Bỏ in nghiêng (italic), đổi sang đậm (bold) thẳng để chữ IQ cực kỳ dễ nhìn */
+    .grad{color:var(--pink-soft);font-weight:700}
+
+    /* ══════════ Glass Helper ══════════ */
+    .glass{background:var(--glass-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border:1px solid var(--glass-border);border-radius:var(--radius);box-shadow:0 8px 32px 0 rgba(0,0,0,.2)}
 
     /* ══════════ Buttons ══════════ */
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 30px;border-radius:999px;font-family:var(--font-accent);font-weight:900;font-size:.84rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:2px solid transparent;transition:transform .2s ease,background-color .2s ease,border-color .2s ease,box-shadow .2s ease}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 30px;border-radius:999px;font-family:var(--font-body);font-weight:700;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:1px solid transparent;transition:all .2s ease}
     .btn:hover{transform:translateY(-2px)}
-    .btn:active{transform:translateY(0)}
-    .btn-primary{background:var(--pink-cta);color:#fff;box-shadow:0 14px 34px -12px rgba(219,39,119,.6)}
-    .btn-primary:hover{background:var(--pink-deep)}
-    .btn-outline{border-color:rgba(255,255,255,.3);color:#fff}
-    .btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.06)}
-    .btn-sm{min-height:44px;padding:10px 22px;font-size:.76rem}
+    .btn-primary{background:var(--pink);color:#fff;box-shadow:0 4px 15px rgba(236,72,153,.4)}
+    .btn-primary:hover{background:var(--pink-deep);box-shadow:0 6px 20px rgba(236,72,153,.5)}
+    .btn-glass{background:rgba(255,255,255,.1);color:#fff;border:1px solid var(--glass-border);backdrop-filter:blur(4px)}
+    .btn-glass:hover{background:rgba(255,255,255,.2)}
+    .btn-sm{min-height:44px;padding:10px 22px;font-size:.75rem}
     .btn-block{width:100%}
 
-    /* ══════════ Header / navigation ══════════ */
-    .site-header{position:sticky;top:0;z-index:100;background:rgba(18,18,32,.84);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07)}
-    .nav-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+    /* ══════════ Header / Nav (Glass) ══════════ */
+    .site-header{position:sticky;top:10px;z-index:100;margin:10px clamp(20px,4.5vw,48px) 0;border-radius:16px}
+    .nav-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px;padding:0 30px}
     .brand-logo{display:inline-flex;align-items:center;padding:4px;border-radius:50%}
-    .brand-logo img{height:44px;width:auto;border-radius:50%}
+    .brand-logo img{height:40px;width:auto;border-radius:50%}
     .nav-links{display:flex;align-items:center;gap:clamp(18px,2.6vw,36px);margin:0;padding:0;list-style:none}
-    .nav-link{position:relative;font-family:var(--font-accent);font-weight:900;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.72);text-decoration:none;padding:8px 2px;transition:color .2s}
+    .nav-link{font-family:var(--font-body);font-weight:600;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.72);transition:color .2s}
     .nav-link:hover{color:#fff}
-    .nav-link::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:2px;background:var(--pink);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
-    .nav-link:hover::after{transform:scaleX(1)}
-    .nav-ig{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;color:rgba(255,255,255,.72);transition:color .2s,background-color .2s}
+    .nav-ig{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;color:rgba(255,255,255,.72);transition:all .2s}
     .nav-ig:hover{color:#fff;background:rgba(255,255,255,.08)}
     .nav-ig .icon{width:20px;height:20px}
-    .menu-btn{display:none;align-items:center;justify-content:center;width:46px;height:46px;border:1px solid var(--border);border-radius:12px;background:transparent;color:#fff;cursor:pointer}
+    .menu-btn{display:none;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid var(--glass-border);border-radius:12px;background:transparent;color:#fff;cursor:pointer}
     .menu-btn .icon{width:22px;height:22px}
     .menu-btn .i-close{display:none}
     .menu-btn.is-open .i-close{display:block}
     .menu-btn.is-open .i-open{display:none}
 
-    .mobile-menu{position:absolute;top:100%;left:0;right:0;background:#15152b;border-bottom:1px solid var(--border);box-shadow:0 30px 60px -20px rgba(0,0,0,.65);visibility:hidden;opacity:0;transform:translateY(-8px);transition:opacity .25s ease,transform .25s ease,visibility .25s}
+    .mobile-menu{position:absolute;top:100%;left:0;right:0;background:rgba(18,13,31,.95);backdrop-filter:blur(16px);border:1px solid var(--glass-border);border-radius:16px;box-shadow:0 30px 60px -20px rgba(0,0,0,.65);visibility:hidden;opacity:0;transform:translateY(-8px);transition:all .25s ease;margin-top:10px}
     .mobile-menu.open{visibility:visible;opacity:1;transform:none}
-    .mobile-menu nav{display:flex;flex-direction:column;gap:2px;padding:16px clamp(20px,4.5vw,48px) 26px}
-    .mobile-menu a:not(.btn){font-family:var(--font-accent);font-weight:900;font-size:.92rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.85);text-decoration:none;padding:15px 6px;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:12px}
+    .mobile-menu nav{display:flex;flex-direction:column;gap:2px;padding:16px}
+    .mobile-menu a:not(.btn){font-family:var(--font-body);font-weight:600;font-size:1rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85);padding:15px 6px;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:12px}
     .mobile-menu a:not(.btn):hover{color:var(--pink-soft)}
     .mobile-menu .btn{margin-top:16px}
     @media (min-width:900px){.mobile-menu{display:none}}
@@ -212,78 +222,75 @@
     }
 
     /* ══════════ Hero ══════════ */
-    .hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;isolation:isolate;padding:130px 0 100px}
-    /* ✎ nới rộng riêng hero để tiêu đề tràn ngang */
-    .hero .container{max-width:1440px}
+    .hero{position:relative;min-height:90vh;display:flex;align-items:center;overflow:hidden;isolation:isolate;padding:100px 0 60px}
     .hero-bg{position:absolute;inset:0;z-index:-2}
-    .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
-    .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to bottom,rgba(18,18,32,.62) 0%,rgba(18,18,32,.18) 34%,rgba(18,18,32,.55) 62%,rgba(18,18,32,.94) 86%,#121220 100%)}
-    /* ✎ hero-inner full width */
-    .hero-inner{display:flex;flex-direction:column;align-items:center;gap:clamp(20px,3.5vh,30px);width:100%}
-    /* ✎ tiêu đề to, tự cân dòng */
-    .hero-title{width:100%;font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:1.02;font-size:clamp(2.2rem,8.5vw,7rem);text-wrap:balance}
-    .hero-sub{font-weight:600;font-size:clamp(1.05rem,2.4vw,1.4rem);color:rgba(255,255,255,.92)}
-    .hero-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:6px}
-    .hero-meta{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px;font-family:var(--font-accent);font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);font-size:clamp(.7rem,1.5vw,.78rem)}
+    .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:brightness(0.6)}
+    .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg, rgba(18,13,31,0.9) 0%, rgba(18,13,31,0.6) 50%, rgba(18,13,31,0.2) 100%)}
+    .hero .container{max-width:1280px}
+    .hero-inner{max-width:850px;padding:50px 60px}
+    .hero-title{font-family:var(--font-display);font-weight:900;font-size:clamp(2.5rem, 7vw, 5rem);line-height:1.05;text-align:left;margin-bottom:24px;letter-spacing:-0.02em}
+    .hero-sub{font-size:clamp(1.1rem,2.4vw,1.3rem);color:rgba(255,255,255,.9);max-width:50ch;margin-bottom:30px}
+    .hero-actions{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:14px;margin-bottom:20px}
+    .hero-meta{display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:center;gap:14px;font-family:var(--font-body);font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-size:.75rem}
     .hero-meta .dot{width:4px;height:4px;border-radius:50%;background:var(--pink)}
     .hero-scroll{position:absolute;left:50%;bottom:26px;color:rgba(255,255,255,.5);animation:bob 2.4s ease-in-out infinite}
     .hero-scroll .icon{width:22px;height:22px}
     @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
 
     /* ══════════ Why Basketball IQ ══════════ */
-    .why-inner{max-width:800px;margin-inline:auto;text-align:center;display:flex;flex-direction:column;align-items:center;gap:22px}
-    .why-kicker{font-family:var(--font-accent);font-weight:900;letter-spacing:.22em;color:var(--pink-soft);text-transform:uppercase;font-size:clamp(.8rem,1.8vw,.95rem)}
-    .why-body{color:var(--muted);font-size:clamp(1.02rem,2vw,1.18rem);max-width:56ch}
-    .why-body strong{color:var(--text)}
+    .why-inner{max-width:800px;margin-inline:0;text-align:left;display:flex;flex-direction:column;align-items:flex-start;gap:22px}
+    /* ✎ Đổi font sang Inter, bỏ nghiêng, tăng độ đậm để dễ đọc */
+    .why-body{color:var(--text);font-size:clamp(1.2rem,2.2vw,1.4rem);max-width:56ch;font-family:var(--font-body);font-weight:400;line-height:1.6}
+    .why-body strong{color:var(--pink-soft);font-weight:700}
 
-    /* ══════════ Programs ══════════ */
-    .split-callout{position:relative;margin-bottom:clamp(36px,5vw,56px);padding:clamp(30px,5vw,52px) clamp(20px,4vw,48px);border:1px solid var(--border-pink);border-radius:22px;background:linear-gradient(115deg,rgba(236,72,153,.1),rgba(18,18,32,.2) 45%,rgba(168,85,247,.1));text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px;overflow:hidden}
+    /* ══════════ Programs (Layout Rộng Lớn, Giá Tiền To) ══════════ */
+    .split-callout{position:relative;margin-bottom:clamp(36px,5vw,56px);padding:clamp(30px,5vw,52px) clamp(20px,4vw,48px);display:flex;flex-direction:column;align-items:flex-start;gap:14px;overflow:hidden}
     .split-callout::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--pink),var(--purple))}
     .split-callout .icon{width:34px;height:34px;color:var(--pink-soft)}
-    .split-title{font-family:var(--font-display);text-transform:uppercase;font-weight:700;line-height:1.1;font-size:clamp(1.2rem,2.8vw,1.8rem)}
+    .split-title{font-family:var(--font-display);font-weight:700;font-size:clamp(1.5rem,2.8vw,2rem)}
     .split-sub{color:var(--muted);font-size:clamp(.98rem,2vw,1.12rem)}
 
-    .card-grid{display:grid;grid-template-columns:1fr;gap:clamp(18px,2.5vw,26px)}
-    @media (min-width:620px){.card-grid{grid-template-columns:repeat(2,1fr)}}
-    @media (min-width:1180px){.card-grid{grid-template-columns:repeat(4,1fr)}}
+    .card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,2.5vw,26px)}
+    @media (max-width:1180px){.card-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:619px){.card-grid{grid-template-columns:1fr}}
 
-    .program-card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:transform .3s ease,border-color .3s ease}
-    .program-card:hover{transform:translateY(-5px);border-color:var(--border-pink)}
-    .card-bar{height:3px;background:linear-gradient(90deg,var(--pink),var(--purple));flex:none}
-    .program-media{position:relative;aspect-ratio:5/4;overflow:hidden;background:#0d0d18}
-    @media (min-width:1180px){.program-media{aspect-ratio:3/4}}
+    .program-card{display:flex;flex-direction:column;transition:all .3s ease;background:var(--glass-bg);backdrop-filter:var(--glass-blur);border:1px solid var(--glass-border);border-radius:var(--radius);overflow:hidden}
+    .program-card:hover{transform:translateY(-5px);background:var(--glass-bg-hover);border-color:rgba(236,72,153,.3)}
+    
+    .program-media{position:relative;aspect-ratio:4/3;overflow:hidden;background:#0d0d18;border-bottom:1px solid var(--glass-border)}
     .program-media img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
     .program-card:hover .program-media img{transform:scale(1.05)}
-    .age-chip{position:absolute;top:14px;left:14px;background:rgba(13,13,24,.72);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.18);color:#fff;font-family:var(--font-accent);font-weight:900;font-size:.72rem;letter-spacing:.12em;padding:7px 14px;border-radius:999px}
-    .program-body{display:flex;flex-direction:column;gap:14px;padding:clamp(20px,2.4vw,26px);flex:1}
-    .program-title{font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:1.12;font-size:clamp(1.1rem,1.8vw,1.3rem)}
-    .program-tag{color:var(--pink-soft);font-weight:600;font-size:.97rem}
+    .age-chip{position:absolute;top:14px;left:14px;background:rgba(18,13,31,.8);backdrop-filter:blur(6px);border:1px solid var(--glass-border);color:#fff;font-family:var(--font-body);font-weight:700;font-size:.7rem;letter-spacing:.1em;padding:7px 14px;border-radius:999px}
+    .program-body{display:flex;flex-direction:column;gap:14px;flex:1;padding:clamp(24px,2.5vw,36px)}
+    
+    /* Đổi font Tiêu đề sang Inter đậm, dễ nhìn */
+    .program-title{font-family:var(--font-body);font-weight:800;font-size:clamp(1.5rem,1.8vw,1.8rem);text-transform:uppercase;line-height:1.1}
+    .program-tag{color:var(--pink-soft);font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.1em}
     .program-desc{color:var(--muted);font-size:.95rem}
-    .focus-label{font-family:var(--font-accent);font-weight:900;font-size:.68rem;letter-spacing:.22em;color:var(--faint);margin-bottom:9px;text-transform:uppercase}
-    .focus-list{display:flex;flex-direction:column;gap:8px}
-    .focus-list li{display:flex;align-items:flex-start;gap:10px;font-size:.94rem}
+    .focus-label{font-family:var(--font-body);font-weight:700;font-size:.7rem;letter-spacing:.15em;color:var(--faint);margin-bottom:9px;text-transform:uppercase}
+    .focus-list{display:flex;flex-direction:column;gap:8px;list-style:none;padding:0}
+    .focus-list li{display:flex;align-items:flex-start;gap:10px;font-size:.95rem}
     .focus-list .icon{color:var(--pink);margin-top:5px;width:.95em;height:.95em}
-    /* ✎ margin-top:auto — khối giá neo xuống đáy, thẳng hàng giữa các card */
-    .program-price{margin-top:auto;border-top:1px solid var(--border);padding-top:14px;display:flex;flex-direction:column;gap:3px}
-    .price-main{font-size:clamp(1.3rem,2vw,1.5rem);font-weight:700;letter-spacing:-.01em;line-height:1.2}
-    .price-main small{font-family:var(--font-accent);font-weight:900;font-size:.64rem;letter-spacing:.12em;color:var(--muted);margin-left:6px;vertical-align:2px}
-    .price-meta{font-family:var(--font-accent);font-weight:900;font-size:.68rem;letter-spacing:.18em;color:var(--pink-soft);text-transform:uppercase}
-    .price-dual{display:grid;gap:14px}
-    .price-sub{font-family:var(--font-accent);font-weight:900;font-size:.66rem;letter-spacing:.16em;color:var(--faint);text-transform:uppercase}
-    /* ✎ .gender-badge đã xóa — không còn dùng */
-    /* ✎ nút theo sau khối giá với khoảng cố định */
-    .program-body .btn{margin-top:16px}
+    
+    /* ✎ Giá tiền KHỔNG LỒ, Font Inter, màu hồng nổi bật */
+    .program-price{margin-top:auto;border-top:1px solid var(--glass-border);padding-top:20px;display:flex;flex-direction:column;gap:5px}
+    .price-main{font-family:var(--font-body);font-size:clamp(2.2rem, 3.2vw, 3rem);font-weight:800;line-height:1;color:var(--pink-soft);text-shadow:0 0 20px rgba(236,72,153,0.4);letter-spacing:-0.02em}
+    .price-main small{display:block;font-family:var(--font-body);font-weight:600;font-size:.85rem;letter-spacing:.1em;color:rgba(244,114,182,0.7);margin-top:8px;text-transform:uppercase}
+    .price-meta{font-family:var(--font-body);font-weight:700;font-size:.85rem;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;margin-top:4px}
+    .price-dual{display:grid;gap:20px}
+    .price-sub{font-family:var(--font-body);font-weight:700;font-size:.8rem;letter-spacing:.1em;color:var(--pink-soft);text-transform:uppercase;margin-bottom:4px}
+    .program-body .btn{margin-top:20px}
 
     /* Private coaching */
-    .private-card{margin-top:clamp(18px,2.5vw,26px);display:grid;gap:clamp(24px,4vw,48px);align-items:center;background:linear-gradient(120deg,rgba(168,85,247,.09),rgba(236,72,153,.06));border:1px solid rgba(168,85,247,.35);border-radius:22px;padding:clamp(26px,4.5vw,52px)}
+    .private-card{margin-top:clamp(36px,5vw,56px);display:grid;gap:clamp(24px,4vw,48px);align-items:center;padding:clamp(26px,4.5vw,52px)}
     @media (min-width:900px){.private-card{grid-template-columns:1.45fr 1fr}}
-    .private-title{font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:1.12;font-size:clamp(1.2rem,2.5vw,1.65rem)}
+    .private-title{font-family:var(--font-display);font-weight:700;font-size:clamp(1.5rem,2.5vw,2rem)}
     .private-desc{color:var(--muted);font-size:1.02rem;max-width:56ch}
     .chip-row{display:flex;flex-wrap:wrap;gap:10px}
-    .chip{border:1px solid var(--border);background:rgba(255,255,255,.04);border-radius:999px;padding:8px 16px;font-size:.88rem}
+    .chip{border:1px solid var(--glass-border);background:rgba(255,255,255,.04);border-radius:999px;padding:8px 16px;font-size:.85rem}
     .private-aside{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
-    @media (min-width:900px){.private-aside{border-left:1px solid var(--border);padding-left:clamp(24px,4vw,48px)}}
-    .private-price-note{font-family:var(--font-accent);font-weight:900;letter-spacing:.16em;font-size:.76rem;color:var(--muted);text-transform:uppercase}
+    @media (min-width:900px){.private-aside{border-left:1px solid var(--glass-border);padding-left:clamp(24px,4vw,48px)}}
+    .private-price-note{font-family:var(--font-body);font-weight:700;letter-spacing:.15em;font-size:.75rem;color:var(--muted);text-transform:uppercase}
 
     /* ══════════ Training rates ══════════ */
     .rates-grid{display:grid;gap:clamp(18px,2.5vw,26px);grid-template-columns:1fr}
@@ -292,71 +299,72 @@
       .rate-trial{grid-column:1/-1;max-width:560px;margin-inline:auto}
     }
     @media (min-width:1080px){.rates-grid{grid-template-columns:repeat(3,1fr)}}
-    .rate-card{position:relative;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:clamp(28px,3.4vw,42px) clamp(20px,2.5vw,32px);text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;overflow:hidden}
+    .rate-card{position:relative;padding:clamp(28px,3.4vw,42px) clamp(20px,2.5vw,32px);text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;overflow:hidden}
     .rate-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--pink),var(--purple))}
-    .rate-title{font-family:var(--font-accent);font-weight:900;font-size:clamp(.82rem,1.6vw,.95rem);letter-spacing:.2em;color:var(--pink-soft);text-transform:uppercase}
-    .rate-price{font-size:clamp(2.2rem,4.8vw,3.2rem);font-weight:700;letter-spacing:-.02em;line-height:1.05}
-    .rate-price small{display:block;font-family:var(--font-accent);font-weight:900;font-size:.66rem;letter-spacing:.16em;color:var(--muted);margin-top:8px;text-transform:uppercase}
+    .rate-title{font-family:var(--font-body);font-weight:700;font-size:.85rem;letter-spacing:.15em;color:var(--pink-soft);text-transform:uppercase}
+    .rate-price{font-family:var(--font-body);font-size:clamp(2.5rem,4.8vw,3.5rem);font-weight:800;letter-spacing:-.02em;line-height:1.05;color:var(--pink-soft);text-shadow:0 0 15px rgba(236,72,153,0.3)}
+    .rate-price small{display:block;font-family:var(--font-body);font-weight:400;font-size:.7rem;letter-spacing:.1em;color:var(--muted);margin-top:8px;text-transform:uppercase}
     .rate-list{display:flex;flex-direction:column;gap:9px;margin-top:14px;text-align:left;list-style:none;padding:0}
-    .rate-list li{display:flex;gap:10px;align-items:flex-start;font-size:.93rem;color:var(--muted)}
+    .rate-list li{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;color:var(--muted)}
     .rate-list .icon{color:var(--pink);margin-top:5px;width:.95em;height:.95em}
-    .rate-trial{border-color:var(--border-pink);background:linear-gradient(180deg,rgba(236,72,153,.09),rgba(255,255,255,.02));box-shadow:0 24px 60px -30px rgba(236,72,153,.35)}
+    .rate-trial{border-color:rgba(236,72,153,.3);background:rgba(236,72,153,.05)}
     .rate-trial .btn{margin-top:8px}
-    .rates-loc{margin-top:clamp(28px,4vw,42px);display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 26px;font-family:var(--font-accent);font-weight:900;letter-spacing:.16em;font-size:.74rem;color:var(--muted);text-transform:uppercase}
+    .rates-loc{margin-top:clamp(28px,4vw,42px);display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 26px;font-family:var(--font-body);font-weight:600;letter-spacing:.15em;font-size:.75rem;color:var(--muted);text-transform:uppercase}
     .rates-loc span{display:inline-flex;align-items:center;gap:9px}
     .rates-loc .icon{color:var(--pink);width:17px;height:17px}
     .rates-loc .dot{width:4px;height:4px;border-radius:50%;background:var(--pink)}
 
     /* ══════════ Basketball IQ brand strip ══════════ */
-    .iq-strip{position:relative;overflow:hidden;text-align:center;isolation:isolate}
+    .iq-strip{position:relative;overflow:hidden;text-align:center;isolation:isolate;margin:0 clamp(20px,4.5vw,48px);border-radius:var(--radius);border:1px solid var(--glass-border)}
     .iq-strip-bg{position:absolute;inset:0;z-index:-2}
     .iq-strip-bg img{width:100%;height:100%;object-fit:cover;object-position:center 35%}
-    .iq-strip::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at center,rgba(18,18,32,.66),rgba(18,18,32,.93))}
-    .iq-strip-inner{padding-block:clamp(96px,15vw,190px);display:flex;flex-direction:column;align-items:center;gap:clamp(20px,3.2vw,32px)}
-    .iq-line{font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:1.12;font-size:clamp(1.55rem,4.2vw,3rem)}
-    .iq-line--hot{color:var(--pink-soft)}
+    .iq-strip::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(18,13,31,0.8);backdrop-filter:blur(4px)}
+    .iq-strip-inner{padding-block:clamp(80px,15vw,160px);display:flex;flex-direction:column;align-items:center;gap:clamp(20px,3.2vw,32px)}
+    .iq-line{font-family:var(--font-display);font-weight:900;font-size:clamp(1.5rem,4.2vw,3rem)}
+    .iq-line--hot{color:var(--pink-soft);font-style:italic}
 
     /* ══════════ Player proof ══════════ */
     .proof-grid{display:grid;gap:clamp(18px,2.5vw,26px);grid-template-columns:1fr}
     @media (min-width:900px){.proof-grid{grid-template-columns:repeat(2,1fr)}}
-    .story-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:border-color .3s}
-    .story-card:hover{border-color:var(--border-pink)}
-    .story-media{aspect-ratio:4/3;overflow:hidden;background:#0d0d18}
+    .story-card{overflow:hidden;display:flex;flex-direction:column;transition:all .3s}
+    .story-card:hover{background:var(--glass-bg-hover)}
+    .story-media{aspect-ratio:4/3;overflow:hidden;background:#0d0d18;border-radius:12px 12px 0 0}
     .story-media img{width:100%;height:100%;object-fit:cover;object-position:center top}
     .story-body{padding:clamp(22px,2.6vw,30px);display:flex;flex-direction:column;gap:14px;flex:1}
-    .story-title{font-family:var(--font-accent);font-weight:900;letter-spacing:.14em;font-size:.84rem;color:var(--pink-soft);text-transform:uppercase}
-    .story-quote{font-size:clamp(1.02rem,1.8vw,1.18rem);line-height:1.6}
-    .story-who{font-family:var(--font-accent);font-weight:900;font-size:.7rem;letter-spacing:.14em;color:var(--faint);text-transform:uppercase;margin-top:auto}
-    .team-card{margin-top:clamp(18px,2.5vw,26px);display:grid;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+    .story-title{font-family:var(--font-body);font-weight:700;letter-spacing:.1em;font-size:.85rem;color:var(--pink-soft);text-transform:uppercase}
+    .story-quote{font-family:var(--font-display);font-style:italic;font-size:clamp(1.02rem,1.8vw,1.18rem);line-height:1.6}
+    .story-who{font-family:var(--font-body);font-weight:600;font-size:.75rem;letter-spacing:.1em;color:var(--faint);text-transform:uppercase;margin-top:auto}
+    .team-card{margin-top:clamp(18px,2.5vw,26px);display:grid;overflow:hidden}
     @media (min-width:900px){.team-card{grid-template-columns:1.05fr 1fr}}
     .team-media{position:relative;aspect-ratio:4/3;overflow:hidden;background:#0d0d18}
     @media (min-width:900px){.team-media{aspect-ratio:auto;min-height:360px}}
     .team-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 18%}
     .team-body{padding:clamp(26px,4vw,48px);display:flex;flex-direction:column;gap:18px;justify-content:center}
-    .team-title{font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:1.12;font-size:clamp(1.15rem,2.2vw,1.5rem)}
+    .team-title{font-family:var(--font-display);font-weight:700;font-size:clamp(1.5rem,2.2vw,2rem)}
     .team-champ{display:flex;flex-direction:column;gap:6px;border-left:3px solid var(--pink);padding-left:16px}
-    .team-champ strong{font-family:var(--font-accent);font-weight:900;letter-spacing:.1em;font-size:clamp(.95rem,1.8vw,1.15rem);color:var(--pink-soft);text-transform:uppercase}
-    .team-champ span{font-family:var(--font-accent);font-weight:900;letter-spacing:.22em;font-size:.78rem;color:var(--muted)}
+    .team-champ strong{font-family:var(--font-body);font-weight:700;letter-spacing:.05em;font-size:clamp(.95rem,1.8vw,1.15rem);color:var(--pink-soft);text-transform:uppercase}
+    .team-champ span{font-family:var(--font-body);font-weight:600;letter-spacing:.2em;font-size:.8rem;color:var(--muted)}
     .team-copy{color:var(--muted);font-size:1rem;max-width:48ch}
 
     /* ══════════ Coach ══════════ */
-    .coach-grid{display:grid;gap:clamp(32px,5vw,64px);align-items:center}
+    .coach-grid{display:grid;gap:clamp(32px,5vw,40px);align-items:stretch}
     @media (min-width:960px){.coach-grid{grid-template-columns:.85fr 1.15fr}}
-    .coach-media{max-width:440px;margin-inline:auto;border-radius:22px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow)}
-    .coach-media img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 12%}
-    .coach-title{font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:1.1;font-size:clamp(1.35rem,2.9vw,2rem)}
+    .coach-media{border-radius:var(--radius);overflow:hidden;border:1px solid var(--glass-border);box-shadow:var(--shadow);min-height:400px}
+    .coach-media img{width:100%;height:100%;object-fit:cover;object-position:center 12%}
+    .coach-text-wrap{padding:clamp(30px,4vw,50px);display:flex;flex-direction:column;justify-content:center;gap:20px}
+    .coach-title{font-family:var(--font-display);font-weight:700;font-size:clamp(1.8rem,2.9vw,2.5rem)}
     .coach-body{color:var(--muted);font-size:clamp(1rem,1.9vw,1.12rem);max-width:60ch}
     .coach-credo{display:flex;flex-direction:column;gap:7px;margin:4px 0}
-    .credo-line{font-family:var(--font-display);font-weight:700;text-transform:uppercase;font-size:clamp(1.02rem,2.2vw,1.4rem);line-height:1.25;display:flex;gap:14px;align-items:baseline}
-    .credo-line em{font-style:normal;font-family:var(--font-accent);font-weight:900;font-size:.7em;color:var(--pink);letter-spacing:.08em}
-    .cred-list{display:flex;flex-direction:column;gap:10px;border-top:1px solid var(--border);padding-top:20px;list-style:none;margin:0}
-    .cred-list li{display:flex;gap:11px;align-items:flex-start;font-family:var(--font-accent);font-weight:900;font-size:.73rem;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+    .credo-line{font-family:var(--font-display);font-weight:700;font-size:clamp(1.02rem,2.2vw,1.4rem);line-height:1.25;display:flex;gap:14px;align-items:baseline}
+    .credo-line em{font-style:normal;font-family:var(--font-body);font-weight:700;font-size:.7em;color:var(--pink);letter-spacing:.05em}
+    .cred-list{display:flex;flex-direction:column;gap:10px;border-top:1px solid var(--glass-border);padding-top:20px;list-style:none;margin:0}
+    .cred-list li{display:flex;gap:11px;align-items:flex-start;font-family:var(--font-body);font-weight:600;font-size:.8rem;letter-spacing:.05em;color:var(--muted);text-transform:uppercase}
     .cred-list .icon{color:var(--pink);margin-top:4px;width:.95em;height:.95em}
     .coach-actions{margin-top:24px}
 
     /* ══════════ Life at LIT ══════════ */
     .gallery{display:grid;grid-template-columns:repeat(2,1fr);grid-auto-rows:180px;gap:clamp(10px,1.6vw,16px)}
-    .gallery-item{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--border);background:#0d0d18}
+    .gallery-item{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--glass-border);background:#0d0d18}
     .gallery-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
     @media (hover:hover){.gallery-item:hover img{transform:scale(1.05)}}
     .gallery-feature{grid-column:span 2;grid-row:span 1;min-height:240px}
@@ -370,64 +378,64 @@
 
     /* ══════════ FAQ ══════════ */
     .faq-list{max-width:820px;margin-inline:auto;display:flex;flex-direction:column;gap:12px}
-    .faq-item{background:var(--card);border:1px solid var(--border);border-radius:14px;transition:border-color .25s}
-    .faq-item[open]{border-color:var(--border-pink)}
+    .faq-item{transition:background .25s}
+    .faq-item[open]{background:var(--glass-bg-hover)}
     .faq-item summary{display:flex;align-items:center;gap:18px;padding:18px clamp(16px,3vw,26px);cursor:pointer;min-height:64px;list-style:none}
     .faq-item summary::-webkit-details-marker{display:none}
-    .faq-q{flex:1;font-weight:600;font-size:clamp(.98rem,1.8vw,1.08rem);line-height:1.45}
-    .faq-icon{width:34px;height:34px;flex:none;border:1px solid var(--border);border-radius:50%;display:grid;place-items:center;color:var(--pink-soft);transition:transform .3s ease,border-color .3s}
+    .faq-q{flex:1;font-family:var(--font-display);font-weight:700;font-size:clamp(1.1rem,1.8vw,1.3rem);line-height:1.45}
+    .faq-icon{width:34px;height:34px;flex:none;border:1px solid var(--glass-border);border-radius:50%;display:grid;place-items:center;color:var(--pink-soft);transition:transform .3s ease,border-color .3s}
     .faq-icon .icon{width:15px;height:15px}
     .faq-item[open] .faq-icon{transform:rotate(45deg);border-color:var(--pink)}
-    .faq-a{padding:0 clamp(16px,3vw,26px) 22px;color:var(--muted);display:flex;flex-direction:column;gap:14px;font-size:.97rem;max-width:65ch}
-    .faq-a .hl{color:var(--pink-soft);font-family:var(--font-accent);font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+    .faq-a{padding:0 clamp(16px,3vw,26px) 22px;color:var(--muted);display:flex;flex-direction:column;gap:14px;font-size:1rem;max-width:65ch}
+    .faq-a .hl{color:var(--pink-soft);font-weight:700;text-transform:uppercase}
     .faq-a strong{color:var(--text)}
     .faq-rates{display:grid;gap:10px}
     @media (min-width:560px){.faq-rates{grid-template-columns:1fr 1fr}}
-    .faq-rate{border:1px solid var(--border);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:3px}
-    .faq-rate span{font-family:var(--font-accent);font-weight:900;font-size:.66rem;letter-spacing:.16em;color:var(--faint);text-transform:uppercase}
+    .faq-rate{border:1px solid var(--glass-border);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:3px}
+    .faq-rate span{font-weight:700;font-size:.7rem;letter-spacing:.1em;color:var(--faint);text-transform:uppercase}
     .faq-rate strong{font-size:1.02rem;color:var(--text)}
     .faq-rate em{font-style:normal;color:var(--muted);font-size:.85rem}
     .faq-actions{display:flex;flex-wrap:wrap;gap:12px}
 
     /* ══════════ Final CTA ══════════ */
-    .final{position:relative;overflow:hidden;text-align:center;isolation:isolate}
+    .final{position:relative;overflow:hidden;text-align:center;isolation:isolate;margin:0 clamp(20px,4.5vw,48px);border-radius:var(--radius);border:1px solid var(--glass-border)}
     .final-bg{position:absolute;inset:0;z-index:-2}
-    .final-bg img{width:100%;height:100%;object-fit:cover;object-position:center 80%}
-    .final::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to bottom,rgba(18,18,32,.55),rgba(18,18,32,.88) 70%,#121220)}
+    .final-bg img{width:100%;height:100%;object-fit:cover;object-position:center 80%;filter:brightness(0.5)}
+    .final::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(18,13,31,0.7);backdrop-filter:blur(4px)}
     .final-inner{padding-block:clamp(100px,15vw,190px);display:flex;flex-direction:column;align-items:center;gap:clamp(18px,3vw,28px)}
-    .final-title{font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:1.06;font-size:clamp(1.7rem,4.8vw,3.4rem)}
-    .final-sub{font-weight:600;font-size:clamp(1rem,2.2vw,1.3rem);color:rgba(255,255,255,.9)}
-    .final-brand{font-family:var(--font-display);font-weight:700;text-transform:uppercase;font-size:clamp(1.1rem,3vw,1.9rem);color:var(--pink-soft)}
+    .final-title{font-family:var(--font-display);font-weight:700;font-size:clamp(2rem,4.8vw,3.4rem)}
+    .final-sub{font-size:clamp(1rem,2.2vw,1.3rem);color:rgba(255,255,255,.9)}
+    .final-brand{font-family:var(--font-display);font-weight:700;font-size:clamp(1.1rem,3vw,1.9rem);color:var(--pink-soft)}
     .final-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:10px}
 
     /* ══════════ Footer ══════════ */
-    .site-footer{border-top:1px solid var(--border);background:var(--bg-deep);padding:clamp(48px,6vw,72px) 0 28px}
+    .site-footer{padding:40px 0;margin-top:100px}
+    .footer-inner{padding:50px}
     .footer-grid{display:grid;gap:clamp(32px,5vw,56px);grid-template-columns:1fr}
     @media (min-width:860px){.footer-grid{grid-template-columns:1.6fr 1fr 1fr}}
     .footer-brand{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
     .footer-brand img{height:46px;border-radius:50%}
-    .footer-name{font-family:var(--font-display);font-weight:700;text-transform:uppercase;font-size:1.15rem;letter-spacing:.04em}
-    .footer-line{font-family:var(--font-accent);font-weight:900;font-size:.7rem;letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
-    .footer-heading{font-family:var(--font-accent);font-weight:900;font-size:.7rem;letter-spacing:.22em;color:var(--faint);margin-bottom:16px;text-transform:uppercase}
+    .footer-name{font-family:var(--font-display);font-weight:700;font-size:1.5rem}
+    .footer-line{font-family:var(--font-body);font-weight:600;font-size:.75rem;letter-spacing:.1em;color:var(--muted);text-transform:uppercase}
+    .footer-heading{font-family:var(--font-body);font-weight:700;font-size:.75rem;letter-spacing:.15em;color:var(--faint);margin-bottom:16px;text-transform:uppercase}
     .footer-links{display:flex;flex-direction:column;gap:11px;list-style:none;padding:0;margin:0}
-    .footer-links a{color:var(--muted);text-decoration:none;font-size:.95rem;transition:color .2s;display:inline-flex;align-items:center;gap:9px}
+    .footer-links a{color:var(--muted);font-size:.95rem;transition:color .2s;display:inline-flex;align-items:center;gap:9px}
     .footer-links a:hover{color:var(--pink-soft)}
     .footer-connect{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
-    .footer-bottom{margin-top:clamp(36px,5vw,56px);padding-top:24px;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between}
-    .footer-tag{font-family:var(--font-accent);font-weight:900;font-size:.68rem;letter-spacing:.26em;color:var(--pink-soft);text-transform:uppercase}
-    .footer-copy{font-size:.82rem;color:var(--faint)}
+    .footer-bottom{margin-top:clamp(36px,5vw,40px);padding-top:24px;border-top:1px solid var(--glass-border);display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between}
+    .footer-tag{font-family:var(--font-body);font-weight:700;font-size:.7rem;letter-spacing:.2em;color:var(--pink-soft);text-transform:uppercase}
+    .footer-copy{font-size:.8rem;color:var(--faint)}
 
-    /* ══════════ Scroll-reveal (progressive enhancement — content visible without JS) ══════════ */
+    /* ══════════ Scroll-reveal Failsafe ══════════ */
     .js-reveal .reveal,.js-reveal .stagger>*{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.25,1)}
     .js-reveal .stagger>*:nth-child(2){transition-delay:.08s}
     .js-reveal .stagger>*:nth-child(3){transition-delay:.16s}
     .js-reveal .stagger>*:nth-child(4){transition-delay:.24s}
     .js-reveal .reveal.is-visible,.js-reveal .stagger.is-visible>*{opacity:1;transform:none}
 
-    /* ══════════ Reduced motion & touch ══════════ */
     @media (prefers-reduced-motion:reduce){
       html{scroll-behavior:auto}
-      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+      *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
       .js-reveal .reveal,.js-reveal .stagger>*{opacity:1!important;transform:none!important}
       .hero-scroll{display:none}
       .program-card:hover,.btn:hover,.gallery-item:hover img{transform:none}
@@ -442,7 +450,7 @@
 
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- ══ Icon sprite (referenced via <use>) ══ -->
+  <!-- ══ Icon sprite ══ -->
   <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
     <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -457,33 +465,31 @@
   </svg>
 
   <!-- ════════════════════════ HEADER / NAV ════════════════════════ -->
-  <header class="site-header">
-    <div class="container">
-      <div class="nav-bar">
-        <a class="brand-logo" href="#hero" aria-label="LIT Elite Basketball — back to top">
-          <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/logo.webp" width="220" height="203" alt="LIT Elite Basketball Academy logo">
-        </a>
+  <header class="site-header glass">
+    <div class="nav-bar">
+      <a class="brand-logo" href="#hero" aria-label="LIT Elite Basketball — back to top">
+        <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/logo.webp" width="220" height="203" alt="LIT Elite Basketball Academy logo">
+      </a>
 
-        <ul class="nav-links">
-          <li><a class="nav-link" href="#programs">Programs</a></li>
-          <li><a class="nav-link" href="#training-rates">Training Rates</a></li>
-          <li><a class="nav-link" href="#coach">Coach</a></li>
-          <li><a class="nav-link" href="#faq">FAQ</a></li>
-          <li>
-            <a class="nav-ig" id="nav-instagram" href="https://www.instagram.com/litelitebasketball/" target="_blank" rel="noopener noreferrer" aria-label="LIT Elite Basketball on Instagram" data-cta-location="nav" data-cta-action="instagram">
-              <svg class="icon"><use href="#i-ig"/></svg>
-            </a>
-          </li>
-          <li>
-            <a class="btn btn-primary btn-sm" id="nav-book-trial" href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" data-cta-location="nav" data-cta-action="book-trial">Book a Trial</a>
-          </li>
-        </ul>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="#programs">Programs</a></li>
+        <li><a class="nav-link" href="#training-rates">Training Rates</a></li>
+        <li><a class="nav-link" href="#coach">Coach</a></li>
+        <li><a class="nav-link" href="#faq">FAQ</a></li>
+        <li>
+          <a class="nav-ig" id="nav-instagram" href="https://www.instagram.com/litelitebasketball/" target="_blank" rel="noopener noreferrer" aria-label="LIT Elite Basketball on Instagram" data-cta-location="nav" data-cta-action="instagram">
+            <svg class="icon"><use href="#i-ig"/></svg>
+          </a>
+        </li>
+        <li>
+          <a class="btn btn-primary btn-sm" id="nav-book-trial" href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" data-cta-location="nav" data-cta-action="book-trial">Book a Trial</a>
+        </li>
+      </ul>
 
-        <button class="menu-btn" id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
-          <svg class="icon i-open"><use href="#i-burger"/></svg>
-          <svg class="icon i-close"><use href="#i-x"/></svg>
-        </button>
-      </div>
+      <button class="menu-btn" id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <svg class="icon i-open"><use href="#i-burger"/></svg>
+        <svg class="icon i-close"><use href="#i-x"/></svg>
+      </button>
     </div>
 
     <div class="mobile-menu" id="mobile-menu">
@@ -508,7 +514,7 @@
         <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/hero-girls-team.webp" width="1672" height="941" alt="LIT Elite girls basketball team in black and pink jerseys with Coach Zinger during training in District 7, Ho Chi Minh City" loading="eager" fetchpriority="high" decoding="async">
       </div>
       <div class="container">
-        <div class="hero-inner">
+        <div class="hero-inner glass">
           <p class="eyebrow">Youth Basketball · Ages 5–18 · District 7</p>
           <h1 class="hero-title" id="hero-heading">Be the <span class="grad">Smartest</span> Player on the Court.</h1>
           <p class="hero-sub">See more. Decide better. Play one step ahead.</p>
@@ -516,7 +522,7 @@
             <a class="btn btn-primary" id="hero-book-trial" href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" data-cta-location="hero" data-cta-action="book-trial">
               Book Your Trial <svg class="icon"><use href="#i-arrow"/></svg>
             </a>
-            <a class="btn btn-outline" id="hero-find-fit" href="#programs" data-cta-location="hero" data-cta-action="find-fit">Find Your Best Fit</a>
+            <a class="btn btn-glass" id="hero-find-fit" href="#programs" data-cta-location="hero" data-cta-action="find-fit">Find Your Best Fit</a>
           </div>
           <p class="hero-meta">
             <span>Beginner to Competitive</span>
@@ -534,10 +540,10 @@
     <section class="section decor" id="why-iq" aria-labelledby="why-iq-heading">
       <div class="container">
         <div class="why-inner reveal">
-          <h2 class="section-title" id="why-iq-heading">To stand out on the court, a high <span class="grad">basketball IQ</span> is essential.</h2>
-          <p class="why-kicker">Skills are only part of the game.</p>
-          <p class="why-body">Join our players to discover the uncommon skills, leadership traits, and mindset needed to <strong>stand out and get noticed.</strong></p>
-          <a class="btn btn-outline" id="why-explore-programs" href="#programs" data-cta-location="why-iq" data-cta-action="explore-programs">
+          <p class="eyebrow">The Philosophy</p>
+          <h2 class="section-title" id="why-iq-heading">Why <span class="grad">Basketball IQ?</span></h2>
+          <p class="why-body">To stand out on the court, a high <strong>basketball IQ</strong> is essential. Skills are only part of the game. Join our players to discover the uncommon skills, leadership traits, and mindset needed to <strong>stand out and get noticed.</strong></p>
+          <a class="btn btn-glass" id="why-explore-programs" href="#programs" data-cta-location="why-iq" data-cta-action="explore-programs">
             Explore Our Programs <svg class="icon"><use href="#i-down"/></svg>
           </a>
         </div>
@@ -546,15 +552,14 @@
 
     <!-- ════════════════════════ 03 · PROGRAMS ════════════════════════ -->
     <section class="section" id="programs" aria-labelledby="programs-heading">
-      <div class="container">
+      <div class="container-wide">
         <header class="section-head reveal">
           <p class="eyebrow">Our Programs</p>
           <h2 class="section-title" id="programs-heading">Find your <span class="grad">best fit.</span></h2>
           <p class="section-sub">From first-time players to competitive athletes, find the right environment for your age, experience and game.</p>
         </header>
 
-        <!-- Product differentiator callout -->
-        <div class="split-callout reveal">
+        <div class="split-callout glass reveal">
           <svg class="icon" aria-hidden="true"><use href="#i-split"/></svg>
           <h3 class="split-title">Boys &amp; Girls <span class="grad">train separately.</span></h3>
           <p class="split-sub">Separate groups. More space to compete, learn and grow.</p>
@@ -564,7 +569,6 @@
 
           <!-- U7 -->
           <article class="program-card" aria-labelledby="u7-title">
-            <span class="card-bar" aria-hidden="true"></span>
             <div class="program-media">
               <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/program-u7.webp" width="1000" height="667" alt="Young LIT Elite basketball players ages 5–7 practicing movement and ball control at a District 7 training session" loading="lazy" decoding="async">
               <span class="age-chip">U7 · Ages 5–7</span>
@@ -593,7 +597,6 @@
 
           <!-- U9 -->
           <article class="program-card" aria-labelledby="u9-title">
-            <span class="card-bar" aria-hidden="true"></span>
             <div class="program-media">
               <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/program-u9.webp" width="1000" height="1777" alt="U9 youth basketball player shooting during a LIT Elite training session in Ho Chi Minh City" loading="lazy" decoding="async">
               <span class="age-chip">U9 · Ages 8–9</span>
@@ -621,7 +624,6 @@
 
           <!-- U11 / U13 -->
           <article class="program-card" aria-labelledby="u11-u13-title">
-            <span class="card-bar" aria-hidden="true"></span>
             <div class="program-media">
               <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/program-u11-u13.webp" width="1000" height="1500" alt="U11 and U13 basketball players training against live defense with Coach Zinger at LIT Elite" loading="lazy" decoding="async">
               <span class="age-chip">U11 / U13 · Ages 10–13</span>
@@ -657,7 +659,6 @@
 
           <!-- U18 -->
           <article class="program-card" aria-labelledby="u18-title">
-            <span class="card-bar" aria-hidden="true"></span>
             <div class="program-media">
               <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/program-u18.webp" width="1000" height="500" alt="U18 girls basketball group in a competitive training session with Coach Zinger at LIT Elite" loading="lazy" decoding="async">
               <span class="age-chip">U18 · Ages 14–18</span>
@@ -685,7 +686,7 @@
         </div>
 
         <!-- Private coaching -->
-        <article class="private-card reveal" aria-labelledby="private-title">
+        <article class="private-card glass reveal" aria-labelledby="private-title">
           <div>
             <p class="eyebrow eyebrow--purple">Private Coaching · 1:1 with Coach Zinger</p>
             <h3 class="private-title" id="private-title">Your Game. Your Next Step.</h3>
@@ -708,7 +709,7 @@
     </section>
 
     <!-- ════════════════════════ 04 · TRAINING RATES + TRIAL ════════════════════════ -->
-    <section class="section section-alt decor" id="training-rates" aria-labelledby="rates-heading">
+    <section class="section decor" id="training-rates" aria-labelledby="rates-heading">
       <div class="container">
         <header class="section-head reveal">
           <p class="eyebrow">Training Rates</p>
@@ -717,7 +718,7 @@
         </header>
 
         <div class="rates-grid stagger reveal">
-          <article class="rate-card" aria-labelledby="rate-5-11">
+          <article class="rate-card glass" aria-labelledby="rate-5-11">
             <h3 class="rate-title" id="rate-5-11">Ages 5–11</h3>
             <p class="rate-price">350,000 <small>VND · Per Session · 60 Minutes</small></p>
             <ul class="rate-list">
@@ -727,7 +728,7 @@
             </ul>
           </article>
 
-          <article class="rate-card" aria-labelledby="rate-12-18">
+          <article class="rate-card glass" aria-labelledby="rate-12-18">
             <h3 class="rate-title" id="rate-12-18">Ages 12–18</h3>
             <p class="rate-price">425,000 <small>VND · Per Session · 90 Minutes</small></p>
             <ul class="rate-list">
@@ -737,7 +738,7 @@
             </ul>
           </article>
 
-          <article class="rate-card rate-trial" aria-labelledby="rate-trial">
+          <article class="rate-card glass rate-trial" aria-labelledby="rate-trial">
             <h3 class="rate-title" id="rate-trial">Trial Session</h3>
             <p class="rate-price">400,000 <small>VND</small></p>
             <p class="program-desc">Experience a real LIT session before committing.</p>
@@ -779,7 +780,7 @@
         </header>
 
         <div class="proof-grid stagger reveal">
-          <article class="story-card" aria-labelledby="trung-title">
+          <article class="story-card glass" aria-labelledby="trung-title">
             <div class="story-media">
               <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/testimonial-trung.webp" width="800" height="1200" alt="Trung, LIT Elite athlete, wearing his LIT Elite jersey after a training session" loading="lazy" decoding="async">
             </div>
@@ -790,7 +791,7 @@
             </div>
           </article>
 
-          <article class="story-card" aria-labelledby="jan-title">
+          <article class="story-card glass" aria-labelledby="jan-title">
             <div class="story-media">
               <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/testimonial-jan-tran.webp" width="800" height="533" alt="Jan Tran dribbling a basketball during a LIT Elite training session in Ho Chi Minh City" loading="lazy" decoding="async">
             </div>
@@ -802,7 +803,7 @@
           </article>
         </div>
 
-        <article class="team-card reveal" aria-labelledby="team-title">
+        <article class="team-card glass reveal" aria-labelledby="team-title">
           <div class="team-media">
             <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/ssis-mrisa-championship-team.webp" width="800" height="875" alt="Championship girls basketball team celebrating with Coach Zinger after winning the Jr. MRISA title" loading="lazy" decoding="async">
           </div>
@@ -819,7 +820,7 @@
     </section>
 
     <!-- ════════════════════════ 07 · COACH ZINGER ════════════════════════ -->
-    <section class="section section-alt decor" id="coach" aria-labelledby="coach-heading">
+    <section class="section decor" id="coach" aria-labelledby="coach-heading">
       <div class="container">
         <div class="coach-grid">
           <figure class="coach-media reveal">
@@ -827,7 +828,7 @@
             <figcaption class="sr-only">Coach Zinger — Founder and Head Coach, LIT Elite Basketball</figcaption>
           </figure>
 
-          <div class="reveal">
+          <div class="coach-text-wrap glass reveal">
             <p class="eyebrow">The Coach Behind LIT</p>
             <h2 class="coach-title" id="coach-heading">An Educator First.<br><span class="grad">A Basketball Coach Always.</span></h2>
             <p class="coach-body">Coach Zinger has spent more than 15 years working with young athletes in international-school environments across Vietnam and Korea.</p>
@@ -886,7 +887,7 @@
         </div>
 
         <div class="gallery-cta reveal">
-          <a class="btn btn-outline" id="life-instagram" href="https://www.instagram.com/litelitebasketball/" target="_blank" rel="noopener noreferrer" data-cta-location="life" data-cta-action="instagram">
+          <a class="btn btn-glass" id="life-instagram" href="https://www.instagram.com/litelitebasketball/" target="_blank" rel="noopener noreferrer" data-cta-location="life" data-cta-action="instagram">
             <svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg> Follow @litelitebasketball
           </a>
         </div>
@@ -894,7 +895,7 @@
     </section>
 
     <!-- ════════════════════════ 09 · FAQ ════════════════════════ -->
-    <section class="section section-alt" id="faq" aria-labelledby="faq-heading">
+    <section class="section decor" id="faq" aria-labelledby="faq-heading">
       <div class="container">
         <header class="section-head reveal">
           <p class="eyebrow">Before You Book</p>
@@ -903,7 +904,7 @@
 
         <div class="faq-list reveal">
 
-          <details class="faq-item">
+          <details class="faq-item glass">
             <summary>
               <h3 class="faq-q">Does my child need basketball experience?</h3>
               <span class="faq-icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span>
@@ -913,7 +914,7 @@
             </div>
           </details>
 
-          <details class="faq-item">
+          <details class="faq-item glass">
             <summary>
               <h3 class="faq-q">Do boys and girls train together?</h3>
               <span class="faq-icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span>
@@ -923,7 +924,7 @@
             </div>
           </details>
 
-          <details class="faq-item">
+          <details class="faq-item glass">
             <summary>
               <h3 class="faq-q">What ages does LIT train?</h3>
               <span class="faq-icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span>
@@ -933,7 +934,7 @@
             </div>
           </details>
 
-          <details class="faq-item">
+          <details class="faq-item glass">
             <summary>
               <h3 class="faq-q">Where does LIT train?</h3>
               <span class="faq-icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span>
@@ -943,7 +944,7 @@
             </div>
           </details>
 
-          <details class="faq-item">
+          <details class="faq-item glass">
             <summary>
               <h3 class="faq-q">How much is training?</h3>
               <span class="faq-icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span>
@@ -964,7 +965,7 @@
             </div>
           </details>
 
-          <details class="faq-item">
+          <details class="faq-item glass">
             <summary>
               <h3 class="faq-q">Is LIT only about basketball IQ?</h3>
               <span class="faq-icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span>
@@ -974,7 +975,7 @@
             </div>
           </details>
 
-          <details class="faq-item">
+          <details class="faq-item glass">
             <summary>
               <h3 class="faq-q">How do I know which group is right?</h3>
               <span class="faq-icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span>
@@ -989,7 +990,7 @@
             </div>
           </details>
 
-          <details class="faq-item">
+          <details class="faq-item glass">
             <summary>
               <h3 class="faq-q">Can I try a session first?</h3>
               <span class="faq-icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span>
@@ -1020,7 +1021,7 @@
             <a class="btn btn-primary" id="final-book-trial" href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" data-cta-location="final" data-cta-action="book-trial">
               Book Your Trial <svg class="icon"><use href="#i-arrow"/></svg>
             </a>
-            <a class="btn btn-outline" id="final-find-fit" href="#programs" data-cta-location="final" data-cta-action="find-fit">Find Your Best Fit</a>
+            <a class="btn btn-glass" id="final-find-fit" href="#programs" data-cta-location="final" data-cta-action="find-fit">Find Your Best Fit</a>
           </div>
         </div>
       </div>
@@ -1030,52 +1031,54 @@
   <!-- ════════════════════════ 11 · FOOTER ════════════════════════ -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/logo.webp" width="220" height="203" alt="LIT Elite Basketball Academy logo">
-          <p class="footer-name">Lit Elite Basketball</p>
-          <p class="footer-line">Youth Basketball · Ages 5–18</p>
-          <p class="footer-line">District 7 · Ho Chi Minh City</p>
+      <div class="footer-inner glass">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/logo.webp" width="220" height="203" alt="LIT Elite Basketball Academy logo">
+            <p class="footer-name">Lit Elite Basketball</p>
+            <p class="footer-line">Youth Basketball · Ages 5–18</p>
+            <p class="footer-line">District 7 · Ho Chi Minh City</p>
+          </div>
+
+          <nav aria-label="Footer navigation">
+            <p class="footer-heading">Explore</p>
+            <ul class="footer-links">
+              <li><a href="#programs">Programs</a></li>
+              <li><a href="#training-rates">Training Rates</a></li>
+              <li><a href="#coach">Coach</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li>
+                <a id="footer-instagram" href="https://www.instagram.com/litelitebasketball/" target="_blank" rel="noopener noreferrer" data-cta-location="footer" data-cta-action="instagram">
+                  <svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg> Instagram
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="footer-connect">
+            <p class="footer-heading">Get in Touch</p>
+            <a class="btn btn-primary btn-sm" id="footer-whatsapp" href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'm%20interested%20in%20LIT%20basketball%20training." target="_blank" rel="noopener noreferrer" data-cta-location="footer" data-cta-action="whatsapp">
+              <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg> WhatsApp
+            </a>
+          </div>
         </div>
 
-        <nav aria-label="Footer navigation">
-          <p class="footer-heading">Explore</p>
-          <ul class="footer-links">
-            <li><a href="#programs">Programs</a></li>
-            <li><a href="#training-rates">Training Rates</a></li>
-            <li><a href="#coach">Coach</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li>
-              <a id="footer-instagram" href="https://www.instagram.com/litelitebasketball/" target="_blank" rel="noopener noreferrer" data-cta-location="footer" data-cta-action="instagram">
-                <svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg> Instagram
-              </a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="footer-connect">
-          <p class="footer-heading">Get in Touch</p>
-          <a class="btn btn-primary btn-sm" id="footer-whatsapp" href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'm%20interested%20in%20LIT%20basketball%20training." target="_blank" rel="noopener noreferrer" data-cta-location="footer" data-cta-action="whatsapp">
-            <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg> WhatsApp
-          </a>
+        <div class="footer-bottom">
+          <p class="footer-tag">A Locked In Training Academy</p>
+          <p class="footer-copy">© 2026 LIT Elite Basketball Academy</p>
         </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p class="footer-tag">A Locked In Training Academy</p>
-        <p class="footer-copy">© 2026 LIT Elite Basketball Academy</p>
       </div>
     </div>
   </footer>
 
-  <!-- Mobile menu still works if JS is unavailable -->
-  <noscript><style>.mobile-menu{visibility:visible;opacity:1;transform:none;position:static}.menu-btn{display:none}</style></noscript>
+  <noscript><style>.mobile-menu{visibility:visible;opacity:1;transform:none;position:static}.menu-btn{display:none}.reveal, .stagger > * {opacity: 1 !important; transform: none !important;}</style></noscript>
 
   <script>
   (function () {
-    /* ── Mobile menu ── */
+    /* Mobile menu */
     var btn = document.getElementById('menu-toggle');
     var panel = document.getElementById('mobile-menu');
+    if (!btn || !panel) return;
     function setOpen(open) {
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
@@ -1098,7 +1101,7 @@
       if (e.matches) setOpen(false);
     });
 
-    /* ── Scroll-reveal (skipped when reduced motion is preferred; content stays visible without JS) ── */
+    /* Scroll-reveal */
     var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (!reduced && 'IntersectionObserver' in window) {
       document.documentElement.classList.add('js-reveal');
@@ -1113,7 +1116,7 @@
       document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
     }
 
-    /* ── Analytics-ready CTA events (pushes to dataLayer → flows into existing GA4) ── */
+    /* Analytics CTA events */
     document.addEventListener('click', function (e) {
       var cta = e.target.closest('[data-cta-action]');
       if (!cta) return;
