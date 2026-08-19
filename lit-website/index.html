@@ -165,7 +165,7 @@
     .section-head{max-width:780px;margin:0 auto clamp(40px,6vw,64px);text-align:center;display:flex;flex-direction:column;align-items:center;gap:18px}
     .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-accent);font-weight:900;font-size:clamp(.72rem,1.4vw,.8rem);letter-spacing:.16em;text-transform:uppercase;color:var(--pink-soft);background:rgba(236,72,153,.1);border:1px solid var(--border-pink);padding:8px 18px;border-radius:999px}
     .eyebrow--purple{color:#d8b4fe;background:rgba(168,85,247,.1);border-color:rgba(168,85,247,.4)}
-    .section-title{font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:1.06;font-size:clamp(1.9rem,4.6vw,3.4rem)}
+    .section-title{font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:1.06;font-size:clamp(1.55rem,3.4vw,2.4rem)}
     .section-sub{color:var(--muted);font-size:clamp(1rem,2vw,1.15rem);max-width:58ch}
     .grad{background:linear-gradient(100deg,var(--pink) 5%,var(--pink-soft) 55%,var(--purple) 115%);-webkit-background-clip:text;background-clip:text;color:transparent}
 
@@ -213,11 +213,15 @@
 
     /* ══════════ Hero ══════════ */
     .hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;isolation:isolate;padding:130px 0 100px}
+    /* ✎ nới rộng riêng hero để tiêu đề tràn ngang */
+    .hero .container{max-width:1440px}
     .hero-bg{position:absolute;inset:0;z-index:-2}
     .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
     .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to bottom,rgba(18,18,32,.62) 0%,rgba(18,18,32,.18) 34%,rgba(18,18,32,.55) 62%,rgba(18,18,32,.94) 86%,#121220 100%)}
-    .hero-inner{display:flex;flex-direction:column;align-items:center;gap:clamp(20px,3.5vh,30px);max-width:1020px;margin-inline:auto}
-    .hero-title{font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:1.04;font-size:clamp(2.35rem,7.6vw,5.9rem)}
+    /* ✎ hero-inner full width */
+    .hero-inner{display:flex;flex-direction:column;align-items:center;gap:clamp(20px,3.5vh,30px);width:100%}
+    /* ✎ tiêu đề to, tự cân dòng */
+    .hero-title{width:100%;font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:1.02;font-size:clamp(2.2rem,8.5vw,7rem);text-wrap:balance}
     .hero-sub{font-weight:600;font-size:clamp(1.05rem,2.4vw,1.4rem);color:rgba(255,255,255,.92)}
     .hero-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:6px}
     .hero-meta{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px;font-family:var(--font-accent);font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);font-size:clamp(.7rem,1.5vw,.78rem)}
@@ -236,7 +240,7 @@
     .split-callout{position:relative;margin-bottom:clamp(36px,5vw,56px);padding:clamp(30px,5vw,52px) clamp(20px,4vw,48px);border:1px solid var(--border-pink);border-radius:22px;background:linear-gradient(115deg,rgba(236,72,153,.1),rgba(18,18,32,.2) 45%,rgba(168,85,247,.1));text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px;overflow:hidden}
     .split-callout::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--pink),var(--purple))}
     .split-callout .icon{width:34px;height:34px;color:var(--pink-soft)}
-    .split-title{font-family:var(--font-display);text-transform:uppercase;font-weight:700;line-height:1.1;font-size:clamp(1.5rem,4.2vw,2.6rem)}
+    .split-title{font-family:var(--font-display);text-transform:uppercase;font-weight:700;line-height:1.1;font-size:clamp(1.2rem,2.8vw,1.8rem)}
     .split-sub{color:var(--muted);font-size:clamp(.98rem,2vw,1.12rem)}
 
     .card-grid{display:grid;grid-template-columns:1fr;gap:clamp(18px,2.5vw,26px)}
@@ -252,27 +256,28 @@
     .program-card:hover .program-media img{transform:scale(1.05)}
     .age-chip{position:absolute;top:14px;left:14px;background:rgba(13,13,24,.72);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.18);color:#fff;font-family:var(--font-accent);font-weight:900;font-size:.72rem;letter-spacing:.12em;padding:7px 14px;border-radius:999px}
     .program-body{display:flex;flex-direction:column;gap:14px;padding:clamp(20px,2.4vw,26px);flex:1}
-    .program-title{font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:1.12;font-size:clamp(1.3rem,2.2vw,1.62rem)}
+    .program-title{font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:1.12;font-size:clamp(1.1rem,1.8vw,1.3rem)}
     .program-tag{color:var(--pink-soft);font-weight:600;font-size:.97rem}
     .program-desc{color:var(--muted);font-size:.95rem}
     .focus-label{font-family:var(--font-accent);font-weight:900;font-size:.68rem;letter-spacing:.22em;color:var(--faint);margin-bottom:9px;text-transform:uppercase}
     .focus-list{display:flex;flex-direction:column;gap:8px}
     .focus-list li{display:flex;align-items:flex-start;gap:10px;font-size:.94rem}
     .focus-list .icon{color:var(--pink);margin-top:5px;width:.95em;height:.95em}
-    .program-price{border-top:1px solid var(--border);padding-top:14px;display:flex;flex-direction:column;gap:3px}
+    /* ✎ margin-top:auto — khối giá neo xuống đáy, thẳng hàng giữa các card */
+    .program-price{margin-top:auto;border-top:1px solid var(--border);padding-top:14px;display:flex;flex-direction:column;gap:3px}
     .price-main{font-size:clamp(1.3rem,2vw,1.5rem);font-weight:700;letter-spacing:-.01em;line-height:1.2}
     .price-main small{font-family:var(--font-accent);font-weight:900;font-size:.64rem;letter-spacing:.12em;color:var(--muted);margin-left:6px;vertical-align:2px}
     .price-meta{font-family:var(--font-accent);font-weight:900;font-size:.68rem;letter-spacing:.18em;color:var(--pink-soft);text-transform:uppercase}
     .price-dual{display:grid;gap:14px}
     .price-sub{font-family:var(--font-accent);font-weight:900;font-size:.66rem;letter-spacing:.16em;color:var(--faint);text-transform:uppercase}
-    .gender-badge{display:inline-flex;align-items:center;gap:9px;align-self:flex-start;border:1px dashed rgba(236,72,153,.5);color:var(--pink-soft);border-radius:999px;padding:8px 14px;font-family:var(--font-accent);font-weight:900;font-size:.64rem;letter-spacing:.12em;text-transform:uppercase}
-    .gender-badge .icon{width:15px;height:15px}
-    .program-body .btn{margin-top:auto}
+    /* ✎ .gender-badge đã xóa — không còn dùng */
+    /* ✎ nút theo sau khối giá với khoảng cố định */
+    .program-body .btn{margin-top:16px}
 
     /* Private coaching */
     .private-card{margin-top:clamp(18px,2.5vw,26px);display:grid;gap:clamp(24px,4vw,48px);align-items:center;background:linear-gradient(120deg,rgba(168,85,247,.09),rgba(236,72,153,.06));border:1px solid rgba(168,85,247,.35);border-radius:22px;padding:clamp(26px,4.5vw,52px)}
     @media (min-width:900px){.private-card{grid-template-columns:1.45fr 1fr}}
-    .private-title{font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:1.12;font-size:clamp(1.45rem,3.4vw,2.2rem)}
+    .private-title{font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:1.12;font-size:clamp(1.2rem,2.5vw,1.65rem)}
     .private-desc{color:var(--muted);font-size:1.02rem;max-width:56ch}
     .chip-row{display:flex;flex-wrap:wrap;gap:10px}
     .chip{border:1px solid var(--border);background:rgba(255,255,255,.04);border-radius:999px;padding:8px 16px;font-size:.88rem}
@@ -308,7 +313,7 @@
     .iq-strip-bg img{width:100%;height:100%;object-fit:cover;object-position:center 35%}
     .iq-strip::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at center,rgba(18,18,32,.66),rgba(18,18,32,.93))}
     .iq-strip-inner{padding-block:clamp(96px,15vw,190px);display:flex;flex-direction:column;align-items:center;gap:clamp(20px,3.2vw,32px)}
-    .iq-line{font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:1.12;font-size:clamp(1.85rem,5.6vw,4.1rem)}
+    .iq-line{font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:1.12;font-size:clamp(1.55rem,4.2vw,3rem)}
     .iq-line--hot{color:var(--pink-soft)}
 
     /* ══════════ Player proof ══════════ */
@@ -328,7 +333,7 @@
     @media (min-width:900px){.team-media{aspect-ratio:auto;min-height:360px}}
     .team-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 18%}
     .team-body{padding:clamp(26px,4vw,48px);display:flex;flex-direction:column;gap:18px;justify-content:center}
-    .team-title{font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:1.12;font-size:clamp(1.4rem,3vw,2rem)}
+    .team-title{font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:1.12;font-size:clamp(1.15rem,2.2vw,1.5rem)}
     .team-champ{display:flex;flex-direction:column;gap:6px;border-left:3px solid var(--pink);padding-left:16px}
     .team-champ strong{font-family:var(--font-accent);font-weight:900;letter-spacing:.1em;font-size:clamp(.95rem,1.8vw,1.15rem);color:var(--pink-soft);text-transform:uppercase}
     .team-champ span{font-family:var(--font-accent);font-weight:900;letter-spacing:.22em;font-size:.78rem;color:var(--muted)}
@@ -339,7 +344,7 @@
     @media (min-width:960px){.coach-grid{grid-template-columns:.85fr 1.15fr}}
     .coach-media{max-width:440px;margin-inline:auto;border-radius:22px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow)}
     .coach-media img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 12%}
-    .coach-title{font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:1.1;font-size:clamp(1.65rem,3.8vw,2.6rem)}
+    .coach-title{font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:1.1;font-size:clamp(1.35rem,2.9vw,2rem)}
     .coach-body{color:var(--muted);font-size:clamp(1rem,1.9vw,1.12rem);max-width:60ch}
     .coach-credo{display:flex;flex-direction:column;gap:7px;margin:4px 0}
     .credo-line{font-family:var(--font-display);font-weight:700;text-transform:uppercase;font-size:clamp(1.02rem,2.2vw,1.4rem);line-height:1.25;display:flex;gap:14px;align-items:baseline}
@@ -390,7 +395,7 @@
     .final-bg img{width:100%;height:100%;object-fit:cover;object-position:center 80%}
     .final::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to bottom,rgba(18,18,32,.55),rgba(18,18,32,.88) 70%,#121220)}
     .final-inner{padding-block:clamp(100px,15vw,190px);display:flex;flex-direction:column;align-items:center;gap:clamp(18px,3vw,28px)}
-    .final-title{font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:1.06;font-size:clamp(2.05rem,6vw,4.5rem)}
+    .final-title{font-family:var(--font-display);font-weight:700;text-transform:uppercase;line-height:1.06;font-size:clamp(1.7rem,4.8vw,3.4rem)}
     .final-sub{font-weight:600;font-size:clamp(1rem,2.2vw,1.3rem);color:rgba(255,255,255,.9)}
     .final-brand{font-family:var(--font-display);font-weight:700;text-transform:uppercase;font-size:clamp(1.1rem,3vw,1.9rem);color:var(--pink-soft)}
     .final-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:10px}
@@ -582,7 +587,6 @@
                 <p class="price-main">350,000 <small>VND / Session</small></p>
                 <p class="price-meta">60 Minutes</p>
               </div>
-              <span class="gender-badge"><svg class="icon" aria-hidden="true"><use href="#i-split"/></svg>Boys &amp; Girls Train Separately</span>
               <a class="btn btn-primary btn-block" id="u7-book-trial" href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'm%20interested%20in%20the%20U7%20basketball%20program." target="_blank" rel="noopener noreferrer" data-cta-location="programs" data-cta-action="book-trial" data-program="u7">Book Your Trial</a>
             </div>
           </article>
@@ -611,7 +615,6 @@
                 <p class="price-main">350,000 <small>VND / Session</small></p>
                 <p class="price-meta">60 Minutes</p>
               </div>
-              <span class="gender-badge"><svg class="icon" aria-hidden="true"><use href="#i-split"/></svg>Boys &amp; Girls Train Separately</span>
               <a class="btn btn-primary btn-block" id="u9-book-trial" href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'm%20interested%20in%20the%20U9%20basketball%20program." target="_blank" rel="noopener noreferrer" data-cta-location="programs" data-cta-action="book-trial" data-program="u9">Book Your Trial</a>
             </div>
           </article>
@@ -648,7 +651,6 @@
                   <p class="price-meta">90 Minutes</p>
                 </div>
               </div>
-              <span class="gender-badge"><svg class="icon" aria-hidden="true"><use href="#i-split"/></svg>Boys &amp; Girls Train Separately</span>
               <a class="btn btn-primary btn-block" id="u11-u13-book-trial" href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'm%20interested%20in%20the%20U11%2FU13%20basketball%20program." target="_blank" rel="noopener noreferrer" data-cta-location="programs" data-cta-action="book-trial" data-program="u11-u13">Book Your Trial</a>
             </div>
           </article>
@@ -662,7 +664,7 @@
             </div>
             <div class="program-body">
               <h3 class="program-title" id="u18-title">Compete with Purpose.</h3>
-              <p class="program-desc">For players ready to take their game further — whether they are building their foundation or already competing at a higher level. See more. Make faster decisions. Solve pressure. Understand the game at a deeper level.</p>
+              <p class="program-desc">For players ready to take their game further — whether building a foundation or already competing at a higher level. See more. Decide faster. Solve pressure.</p>
               <div>
                 <p class="focus-label">Focus</p>
                 <ul class="focus-list">
@@ -677,7 +679,6 @@
                 <p class="price-main">425,000 <small>VND / Session</small></p>
                 <p class="price-meta">90 Minutes</p>
               </div>
-              <span class="gender-badge"><svg class="icon" aria-hidden="true"><use href="#i-split"/></svg>Boys &amp; Girls Train Separately</span>
               <a class="btn btn-primary btn-block" id="u18-book-trial" href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'm%20interested%20in%20the%20U18%20basketball%20program." target="_blank" rel="noopener noreferrer" data-cta-location="programs" data-cta-action="book-trial" data-program="u18">Book Your Trial</a>
             </div>
           </article>
