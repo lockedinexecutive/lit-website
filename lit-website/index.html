@@ -67,6 +67,7 @@
         "description": "Youth basketball training for ages 5–18 in District 7, Ho Chi Minh City. Separate boys and girls groups, beginner to competitive development, with a focus on basketball IQ.",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "74 Nguyen Thi Thap Street, Binh Thuan Ward",
           "addressLocality": "District 7",
           "addressRegion": "Ho Chi Minh City",
           "addressCountry": "VN"
@@ -103,7 +104,7 @@
           { "@type": "Question", "name": "Does my child need basketball experience?", "acceptedAnswer": { "@type": "Answer", "text": "No. Players can start at different experience levels. A beginner will work on foundations appropriate for their age, while more experienced players can be challenged at a higher level." } },
           { "@type": "Question", "name": "Do boys and girls train together?", "acceptedAnswer": { "@type": "Answer", "text": "No. Boys and girls train in separate groups. This gives players their own space to compete, learn and receive meaningful coaching attention." } },
           { "@type": "Question", "name": "What ages does LIT train?", "acceptedAnswer": { "@type": "Answer", "text": "LIT works with players from ages 5–18." } },
-          { "@type": "Question", "name": "Where does LIT train?", "acceptedAnswer": { "@type": "Answer", "text": "District 7, Ho Chi Minh City. Contact Coach for current group details." } },
+          { "@type": "Question", "name": "Where does LIT train?", "acceptedAnswer": { "@type": "Answer", "text": "74 Nguyen Thi Thap Street, Binh Thuan Ward, District 7, Ho Chi Minh City. Contact Coach for current group details." } },
           { "@type": "Question", "name": "How much is training?", "acceptedAnswer": { "@type": "Answer", "text": "Ages 5–11: 350,000 VND per 60-minute session. Ages 12–18: 425,000 VND per 90-minute session." } },
           { "@type": "Question", "name": "Is LIT only about basketball IQ?", "acceptedAnswer": { "@type": "Answer", "text": "No. Strong basketball skills still matter. The goal is to become better at using those skills in the game — knowing when, where and why to use them." } },
           { "@type": "Question", "name": "How do I know which group is right?", "acceptedAnswer": { "@type": "Answer", "text": "Send Coach the player's age and current basketball experience." } },
@@ -120,7 +121,6 @@
       --bg:#120D1F;
       --bg-soft:#1A0E2A;
       --bg-deep:#0C0815;
-      /* ✎ Đổi màu chữ chính sang trắng hoàn toàn */
       --text:#FFFFFF;
       --muted:#C4B8D0;
       --faint:rgba(255,255,255,.45);
@@ -146,7 +146,6 @@
     /* ══════════ Base ══════════ */
     *,*::before,*::after{box-sizing:border-box}
     html{scroll-behavior:smooth;overflow-x:clip}
-    /* ✎ Tăng cỡ chữ nền và khoảng cách dòng cho toàn trang */
     body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:18px;line-height:1.8;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:clip;position:relative;min-height:100vh}
     
     body::before{content:'';position:fixed;top:-10%;left:-10%;width:50vw;height:50vw;background:var(--pink);filter:blur(120px);opacity:.2;border-radius:50%;z-index:-1;pointer-events:none}
@@ -175,7 +174,6 @@
     .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-weight:700;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--pink-soft);background:rgba(236,72,153,.1);border:1px solid var(--glass-border);padding:8px 18px;border-radius:999px}
     .eyebrow--purple{color:#d8b4fe;background:rgba(168,85,247,.1);border-color:rgba(168,85,247,.4)}
     .section-title{font-size:clamp(2rem,5vw,3.5rem);font-weight:700}
-    /* ✎ Đổi mô tả section sang trắng, to hơn */
     .section-sub{color:var(--text);font-size:clamp(1.1rem,2vw,1.25rem);max-width:60ch;line-height:1.6}
     .grad{color:var(--pink-soft);font-weight:700}
 
@@ -237,18 +235,33 @@
     .hero-scroll .icon{width:22px;height:22px}
     @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
 
+    @media (max-width: 768px) {
+      .hero { min-height: auto; padding: 120px 0 60px; }
+      .hero::before { background: linear-gradient(to bottom, rgba(18,13,31,0.85) 0%, rgba(18,13,31,0.3) 40%, rgba(18,13,31,0.95) 100%); }
+      .hero-inner { padding: 30px 25px; max-width: 100%; }
+      .hero-title { font-size: clamp(1.8rem, 7vw, 2.4rem); line-height: 1.1; margin-bottom: 16px; }
+      .hero-sub { font-size: 1.05rem; margin-bottom: 24px; }
+      .hero-actions { flex-direction: column; gap: 12px; }
+      .hero-actions .btn { width: 100%; }
+      .hero-meta { font-size: 0.7rem; gap: 8px; justify-content: flex-start; }
+      .hero-scroll { display: none; }
+    }
+
     /* ══════════ Why Basketball IQ ══════════ */
     .why-inner{max-width:800px;margin-inline:0;text-align:left;display:flex;flex-direction:column;align-items:flex-start;gap:24px}
-    /* ✎ Chữ trắng, cỡ lớn, giãn dòng thoáng */
     .why-body{color:var(--text);font-size:clamp(1.2rem,2.2vw,1.4rem);max-width:60ch;font-family:var(--font-body);font-weight:400;line-height:1.8;letter-spacing:0.01em}
     .why-body strong{color:var(--pink-soft);font-weight:700}
+
+    /* FIX 2: CSS cho Section How We Train */
+    .how-train-card{padding:clamp(30px,5vw,60px);display:flex;flex-direction:column;gap:20px;align-items:flex-start;border-left:4px solid var(--pink)}
+    .method-pills{display:flex;flex-wrap:wrap;gap:10px 30px;font-family:var(--font-body);font-weight:800;font-size:clamp(1rem,1.5vw,1.2rem);letter-spacing:.1em;color:var(--text);text-transform:uppercase;padding:24px 0;border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border);width:100%}
+    .method-pills .dot{width:6px;height:6px;border-radius:50%;background:var(--pink);align-self:center}
 
     /* ══════════ Programs ══════════ */
     .split-callout{position:relative;margin-bottom:clamp(36px,5vw,56px);padding:clamp(30px,5vw,52px) clamp(20px,4vw,48px);display:flex;flex-direction:column;align-items:flex-start;gap:14px;overflow:hidden}
     .split-callout::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--pink),var(--purple))}
     .split-callout .icon{width:34px;height:34px;color:var(--pink-soft)}
     .split-title{font-family:var(--font-display);font-weight:700;font-size:clamp(1.5rem,2.8vw,2rem)}
-    /* ✎ Chữ trắng hẳn, dễ đọc */
     .split-sub{color:var(--text);font-size:clamp(1.05rem,2vw,1.2rem);line-height:1.6}
 
     .card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,2.5vw,26px)}
@@ -266,7 +279,6 @@
     
     .program-title{font-family:var(--font-body);font-weight:800;font-size:clamp(1.5rem,1.8vw,1.8rem);text-transform:uppercase;line-height:1.1}
     .program-tag{color:var(--pink-soft);font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.1em}
-    /* ✎ Tăng cỡ chữ, đổi sang trắng */
     .program-desc{color:var(--text);font-size:1.05rem;line-height:1.6}
     .focus-label{font-family:var(--font-body);font-weight:700;font-size:.7rem;letter-spacing:.15em;color:var(--faint);margin-bottom:9px;text-transform:uppercase}
     .focus-list{display:flex;flex-direction:column;gap:10px;list-style:none;padding:0}
@@ -281,8 +293,15 @@
     .price-sub{font-family:var(--font-body);font-weight:700;font-size:.8rem;letter-spacing:.1em;color:var(--pink-soft);text-transform:uppercase;margin-bottom:4px}
     .program-body .btn{margin-top:24px}
 
-    /* ✎ Private coaching - Dãn khoảng cách, to chữ, trắng */
-    .private-card{margin-top:clamp(36px,5vw,56px);display:grid;gap:clamp(30px,5vw,60px);align-items:center;padding:clamp(30px,4vw,60px)}
+    .private-card{
+      max-width:1280px; 
+      margin-inline:auto; 
+      margin-top:clamp(36px,5vw,56px);
+      display:grid;
+      gap:clamp(30px,5vw,60px);
+      align-items:center;
+      padding:clamp(30px,4vw,60px)
+    }
     @media (min-width:900px){.private-card{grid-template-columns:1.45fr 1fr}}
     .private-title{font-family:var(--font-display);font-weight:700;font-size:clamp(2rem,3vw,2.5rem);line-height:1.15;margin-bottom:20px}
     .private-desc{color:var(--text);font-size:1.15rem;line-height:1.7;max-width:56ch;margin-bottom:30px}
@@ -306,7 +325,6 @@
     .rate-price{font-family:var(--font-body);font-size:clamp(2.5rem,4.8vw,3.5rem);font-weight:800;letter-spacing:-.02em;line-height:1.05;color:var(--pink-soft);text-shadow:0 0 15px rgba(236,72,153,0.3)}
     .rate-price small{display:block;font-family:var(--font-body);font-weight:400;font-size:.7rem;letter-spacing:.1em;color:var(--muted);margin-top:8px;text-transform:uppercase}
     .rate-list{display:flex;flex-direction:column;gap:9px;margin-top:14px;text-align:left;list-style:none;padding:0}
-    /* ✎ Đổi list point sang trắng */
     .rate-list li{display:flex;gap:10px;align-items:flex-start;font-size:1rem;color:var(--text);line-height:1.5}
     .rate-list .icon{color:var(--pink);margin-top:5px;width:.95em;height:.95em}
     .rate-trial{border-color:rgba(236,72,153,.3);background:rgba(236,72,153,.05)}
@@ -388,7 +406,6 @@
     .faq-icon{width:34px;height:34px;flex:none;border:1px solid var(--glass-border);border-radius:50%;display:grid;place-items:center;color:var(--pink-soft);transition:transform .3s ease,border-color .3s}
     .faq-icon .icon{width:15px;height:15px}
     .faq-item[open] .faq-icon{transform:rotate(45deg);border-color:var(--pink)}
-    /* ✎ Tăng cỡ chữ câu trả lời, đổi trắng */
     .faq-a{padding:0 clamp(16px,3vw,26px) 22px;color:var(--text);display:flex;flex-direction:column;gap:14px;font-size:1.1rem;max-width:65ch;line-height:1.7}
     .faq-a .hl{color:var(--pink-soft);font-weight:700;text-transform:uppercase}
     .faq-a strong{color:var(--text)}
@@ -401,7 +418,7 @@
     .faq-actions{display:flex;flex-wrap:wrap;gap:12px}
 
     /* ══════════ Final CTA ══════════ */
-    .final{position:relative;overflow:hidden;text-align:center;isolation:isolate;margin:0 clamp(20px,4.5vw,48px);border-radius:var(--radius);border:1px solid var(--glass-border)}
+    .final{position:relative;overflow:hidden;text-text:center;isolation:isolate;margin:0 clamp(20px,4.5vw,48px);border-radius:var(--radius);border:1px solid var(--glass-border)}
     .final-bg{position:absolute;inset:0;z-index:-2}
     .final-bg img{width:100%;height:100%;object-fit:cover;object-position:center 80%;filter:brightness(0.5)}
     .final::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(18,13,31,0.7);backdrop-filter:blur(4px)}
@@ -410,6 +427,11 @@
     .final-sub{font-size:clamp(1.05rem,2.2vw,1.3rem);color:var(--text)}
     .final-brand{font-family:var(--font-display);font-weight:700;font-size:clamp(1.1rem,3vw,1.9rem);color:var(--pink-soft)}
     .final-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:10px}
+
+    /* ══════════ Map Location ══════════ */
+    .map-wrap{padding:10px}
+    .map-wrap iframe{width:100%;height:450px;border:0;border-radius:12px;filter:grayscale(0.2) contrast(1.1);display:block}
+    @media (max-width:768px){.map-wrap iframe{height:350px}}
 
     /* ══════════ Footer ══════════ */
     .site-footer{padding:40px 0;margin-top:100px}
@@ -542,15 +564,42 @@
       </a>
     </section>
 
-    <!-- ════════════════════════ 02 · WHY BASKETBALL IQ ════════════════════════ -->
+    <!-- ════════════════════════ 02 · WHY BASKETBALL IQ (FIX 1) ════════════════════════ -->
     <section class="section decor" id="why-iq" aria-labelledby="why-iq-heading">
       <div class="container">
         <div class="why-inner reveal">
           <p class="eyebrow">The Philosophy</p>
           <h2 class="section-title" id="why-iq-heading">Why <span class="grad">Basketball IQ?</span></h2>
-          <p class="why-body">To stand out on the court, a high <strong>basketball IQ</strong> is essential. Skills are only part of the game. Join our players to discover the uncommon skills, leadership traits, and mindset needed to <strong>stand out and get noticed.</strong></p>
-          <a class="btn btn-glass" id="why-explore-programs" href="#programs" data-cta-location="why-iq" data-cta-action="explore-programs">
-            Explore Our Programs <svg class="icon"><use href="#i-down"/></svg>
+          <p class="why-body">Every player learns to dribble, pass and shoot. But games aren't won by who has the most moves — they're won by who knows what to do with them… the best player is the one who sees it, understands it, and makes the right decision. That's basketball IQ… It's what helps our players <strong>stand out and get noticed.</strong></p>
+          <a class="btn btn-glass" id="why-explore-programs" href="#how-we-train" data-cta-location="why-iq" data-cta-action="explore-programs">
+            How We Train <svg class="icon"><use href="#i-down"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════ 02.5 · HOW WE TRAIN SMARTER PLAYERS (FIX 2) ════════════════════════ -->
+    <section class="section decor" id="how-we-train" aria-labelledby="how-train-heading">
+      <div class="container">
+        <div class="how-train-card glass reveal">
+          <p class="eyebrow">The LIT Method</p>
+          <h2 class="section-title" id="how-train-heading">How we train <span class="grad">smarter players.</span></h2>
+          <p class="why-body" style="max-width: 70ch; margin-bottom: 10px;">We don't teach players to run moves like robots. We explain the <strong>why</strong>, and coach them how to think — so they can read the game and solve situations on their own.</p>
+          
+          <div class="method-pills">
+            <span>SEE</span>
+            <span class="dot" aria-hidden="true"></span>
+            <span>UNDERSTAND</span>
+            <span class="dot" aria-hidden="true"></span>
+            <span>DECIDE</span>
+            <span class="dot" aria-hidden="true"></span>
+            <span>ADAPT</span>
+          </div>
+          
+          <p class="why-body" style="max-width: 70ch; font-style: italic; font-size: 1.3rem; margin-top: 10px; color: var(--pink-soft);">Skills are the tools. Using them well — that's the skill we build.</p>
+          
+          <a class="btn btn-primary" id="method-find-fit" href="#programs" data-cta-location="how-we-train" data-cta-action="find-fit" style="margin-top: 20px;">
+            Find Your Best Fit <svg class="icon"><use href="#i-arrow"/></svg>
           </a>
         </div>
       </div>
@@ -755,7 +804,7 @@
         </div>
 
         <p class="rates-loc reveal">
-          <span><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>District 7, Ho Chi Minh City</span>
+          <span><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>74 Nguyen Thi Thap, Binh Thuan Ward, District 7</span>
           <span class="dot" aria-hidden="true"></span>
           <span>Group fit &amp; schedule confirmed directly with Coach</span>
         </p>
@@ -777,7 +826,7 @@
       </div>
     </section>
 
-    <!-- ════════════════════════ 06 · PLAYER PROOF ════════════════════════ -->
+    <!-- ════════════════════════ 06 · PLAYER PROOF (FIX 3) ════════════════════════ -->
     <section class="section" id="player-proof" aria-labelledby="proof-heading">
       <div class="container">
         <header class="section-head reveal">
@@ -786,14 +835,14 @@
         </header>
 
         <div class="proof-grid stagger reveal">
-          <article class="story-card glass" aria-labelledby="trung-title">
+          <article class="story-card glass" aria-labelledby="jess-title">
             <div class="story-media">
-              <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/testimonial-trung.webp" width="800" height="1200" alt="Trung, LIT Elite athlete, wearing his LIT Elite jersey after a training session" loading="lazy" decoding="async">
+              <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/testimonial-trung.webp" width="800" height="1200" alt="Jess, LIT Elite U18 athlete, on the court" loading="lazy" decoding="async">
             </div>
             <div class="story-body">
-              <h3 class="story-title" id="trung-title">You Believed in Me.</h3>
-              <blockquote class="story-quote">"You're the best coach I could ever ask for. You believed in me when no one else did on the A team last year. Thank you, Coach."</blockquote>
-              <p class="story-who">— Trung · LIT Elite Athlete</p>
+              <h3 class="story-title" id="jess-title">Before, I just reacted.</h3>
+              <blockquote class="story-quote">"Before, I just reacted and hoped. Now I actually see the game — I read what the defence is doing and know my next move before it happens. My decisions got so much better."</blockquote>
+              <p class="story-who">— Jess · U18 Girl</p>
             </div>
           </article>
 
@@ -946,7 +995,7 @@
               <span class="faq-icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span>
             </summary>
             <div class="faq-a">
-              <p><span class="hl">District 7, Ho Chi Minh City.</span> Contact Coach for current group details.</p>
+              <p><span class="hl">74 Nguyen Thi Thap Street, Binh Thuan Ward, District 7.</span> Contact Coach for current group details.</p>
             </div>
           </details>
 
@@ -1032,9 +1081,31 @@
         </div>
       </div>
     </section>
+
+    <!-- ════════════════════════ 11 · LOCATION MAP ════════════════════════ -->
+    <section class="section" id="location" aria-labelledby="location-heading">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Find Us</p>
+          <h2 class="section-title" id="location-heading">Court <span class="grad">Location.</span></h2>
+          <p class="section-sub">74 Nguyen Thi Thap Street, Binh Thuan Ward, District 7, Ho Chi Minh City. Easily find your way to the court.</p>
+        </header>
+        <div class="map-wrap glass reveal">
+          <iframe 
+            src="https://maps.google.com/maps?q=74%20Nguyen%20Thi%20Thap%2C%20Binh%20Thuan%20Ward%2C%20District%207%2C%20Ho%20Chi%20Minh%20City&z=15&output=embed" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- ════════════════════════ 11 · FOOTER ════════════════════════ -->
+  <!-- ════════════════════════ 12 · FOOTER ════════════════════════ -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-inner glass">
@@ -1044,7 +1115,8 @@
             <div class="footer-text">
               <p class="footer-name">Lit Elite Basketball</p>
               <p class="footer-line">Youth Basketball · Ages 5–18</p>
-              <p class="footer-line">District 7 · Ho Chi Minh City</p>
+              <p class="footer-line">74 Nguyen Thi Thap, Binh Thuan Ward, D7</p>
+              <p class="footer-line">Ho Chi Minh City</p>
             </div>
           </div>
 
