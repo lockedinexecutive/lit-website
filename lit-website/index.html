@@ -14,11 +14,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#120D1F">
 
-  <!-- ══ SEO ══ -->
-  <title>Youth Basketball Training in District 7 | LIT Elite Basketball</title>
-  <meta name="description" content="Youth basketball training in District 7, Ho Chi Minh City for ages 5–18. Separate boys and girls groups, beginner to competitive development, with a focus on basketball IQ.">
+  <!-- ══ SEO & Hreflang ══ -->
+  <title>Basketball Classes District 7, HCMC | LIT Elite (5-18)</title>
+  <meta name="description" content="Youth basketball training in District 7, Ho Chi Minh City for ages 5–18. Boys & girls groups. Focus on basketball IQ. Book a trial session.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://litelitebasketball.com/">
+  <link rel="alternate" hreflang="en" href="https://litelitebasketball.com/" />
+  <link rel="alternate" hreflang="vi" href="https://litelitebasketball.com/vi.html" />
+  <link rel="alternate" hreflang="x-default" href="https://litelitebasketball.com/" />
 
   <!-- ══ Open Graph ══ -->
   <meta property="og:type" content="website">
@@ -30,6 +33,7 @@
   <meta property="og:image:width" content="1672">
   <meta property="og:image:height" content="941">
   <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="vi_VN">
 
   <!-- ══ Twitter / X card ══ -->
   <meta name="twitter:card" content="summary_large_image">
@@ -58,37 +62,18 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "SportsOrganization",
+        "@type": "SportsActivityLocation",
         "@id": "https://litelitebasketball.com/#organization",
-        "name": "LIT Elite Basketball",
-        "alternateName": "LIT Elite Basketball Academy",
+        "name": "LIT Elite Basketball Academy",
+        "alternateName": "LIT Elite Basketball",
         "url": "https://litelitebasketball.com/",
+        "image": "https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/hero-girls-team.webp",
         "logo": "https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/logo.webp",
-        "description": "Youth basketball training for ages 5–18 in District 7, Ho Chi Minh City. Separate boys and girls groups, beginner to competitive development, with a focus on basketball IQ.",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "74 Nguyen Thi Thap Street, Binh Thuan Ward",
-          "addressLocality": "District 7",
-          "addressRegion": "Ho Chi Minh City",
-          "addressCountry": "VN"
-        },
+        "description": "Youth basketball training in District 7, Ho Chi Minh City for ages 5–18. Separate boys and girls groups, beginner to competitive development, with a focus on basketball IQ.",
+        "telephone": "+84938454724",
+        "priceRange": "350,000–425,000 VND",
         "areaServed": "District 7, Ho Chi Minh City",
-        "sameAs": ["https://www.instagram.com/litelitebasketball/"],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "Coach",
-          "telephone": "+84938454724",
-          "availableLanguage": ["English", "Vietnamese"]
-        },
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Basketball Training",
-          "itemListElement": [
-            { "@type": "Offer", "name": "Group Training · Ages 5–11 · 60 min", "price": "350000", "priceCurrency": "VND" },
-            { "@type": "Offer", "name": "Group Training · Ages 12–18 · 90 min", "price": "425000", "priceCurrency": "VND" },
-            { "@type": "Offer", "name": "Trial Session", "price": "400000", "priceCurrency": "VND" }
-          ]
-        }
+        "sameAs": ["https://www.instagram.com/litelitebasketball/"]
       },
       {
         "@type": "WebSite",
@@ -104,7 +89,7 @@
           { "@type": "Question", "name": "Does my child need basketball experience?", "acceptedAnswer": { "@type": "Answer", "text": "No. Players can start at different experience levels. A beginner will work on foundations appropriate for their age, while more experienced players can be challenged at a higher level." } },
           { "@type": "Question", "name": "Do boys and girls train together?", "acceptedAnswer": { "@type": "Answer", "text": "No. Boys and girls train in separate groups. This gives players their own space to compete, learn and receive meaningful coaching attention." } },
           { "@type": "Question", "name": "What ages does LIT train?", "acceptedAnswer": { "@type": "Answer", "text": "LIT works with players from ages 5–18." } },
-          { "@type": "Question", "name": "Where does LIT train?", "acceptedAnswer": { "@type": "Answer", "text": "74 Nguyen Thi Thap Street, Binh Thuan Ward, District 7, Ho Chi Minh City. Contact Coach for current group details." } },
+          { "@type": "Question", "name": "Where does LIT train?", "acceptedAnswer": { "@type": "Answer", "text": "District 7, Ho Chi Minh City. Contact Coach for current group details." } },
           { "@type": "Question", "name": "How much is training?", "acceptedAnswer": { "@type": "Answer", "text": "Ages 5–11: 350,000 VND per 60-minute session. Ages 12–18: 425,000 VND per 90-minute session." } },
           { "@type": "Question", "name": "Is LIT only about basketball IQ?", "acceptedAnswer": { "@type": "Answer", "text": "No. Strong basketball skills still matter. The goal is to become better at using those skills in the game — knowing when, where and why to use them." } },
           { "@type": "Question", "name": "How do I know which group is right?", "acceptedAnswer": { "@type": "Answer", "text": "Send Coach the player's age and current basketball experience." } },
@@ -198,6 +183,10 @@
     .nav-links{display:flex;align-items:center;gap:clamp(18px,2.6vw,36px);margin:0;padding:0;list-style:none}
     .nav-link{font-family:var(--font-body);font-weight:600;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.72);transition:color .2s}
     .nav-link:hover{color:#fff}
+    .nav-lang{display:flex;align-items:center;gap:6px;font-family:var(--font-body);font-weight:700;font-size:.85rem;color:var(--muted)}
+    .nav-lang a{color:var(--muted);transition:color .2s}
+    .nav-lang a.active{color:var(--pink-soft)}
+    .nav-lang a:hover{color:#fff}
     .nav-ig{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;color:rgba(255,255,255,.72);transition:all .2s}
     .nav-ig:hover{color:#fff;background:rgba(255,255,255,.08)}
     .nav-ig .icon{width:20px;height:20px}
@@ -226,7 +215,7 @@
     .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg, rgba(18,13,31,0.9) 0%, rgba(18,13,31,0.6) 50%, rgba(18,13,31,0.2) 100%)}
     .hero .container{max-width:1280px}
     .hero-inner{max-width:850px;padding:50px 60px}
-    .hero-title{font-family:var(--font-display);font-weight:900;font-size:clamp(2.5rem, 7vw, 5rem);line-height:1.05;text-align:left;margin-bottom:24px;letter-spacing:-0.02em}
+    .hero-title{font-family:var(--font-display);font-weight:900;font-size:clamp(2.5rem, 7vw, 5rem);line-height:1.05;text-align:left;margin-bottom:12px;letter-spacing:-0.02em}
     .hero-sub{font-size:clamp(1.1rem,2.4vw,1.3rem);color:rgba(255,255,255,.9);max-width:50ch;margin-bottom:30px;line-height:1.5}
     .hero-actions{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:14px;margin-bottom:20px}
     .hero-meta{display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:center;gap:14px;font-family:var(--font-body);font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-size:.75rem}
@@ -252,7 +241,6 @@
     .why-body{color:var(--text);font-size:clamp(1.2rem,2.2vw,1.4rem);max-width:60ch;font-family:var(--font-body);font-weight:400;line-height:1.8;letter-spacing:0.01em}
     .why-body strong{color:var(--pink-soft);font-weight:700}
 
-    /* FIX 2: CSS cho Section How We Train */
     .how-train-card{padding:clamp(30px,5vw,60px);display:flex;flex-direction:column;gap:20px;align-items:flex-start;border-left:4px solid var(--pink)}
     .method-pills{display:flex;flex-wrap:wrap;gap:10px 30px;font-family:var(--font-body);font-weight:800;font-size:clamp(1rem,1.5vw,1.2rem);letter-spacing:.1em;color:var(--text);text-transform:uppercase;padding:24px 0;border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border);width:100%}
     .method-pills .dot{width:6px;height:6px;border-radius:50%;background:var(--pink);align-self:center}
@@ -504,6 +492,7 @@
         <li><a class="nav-link" href="#training-rates">Training Rates</a></li>
         <li><a class="nav-link" href="#coach">Coach</a></li>
         <li><a class="nav-link" href="#faq">FAQ</a></li>
+        <li class="nav-lang"><a href="https://litelitebasketball.com/" class="active">EN</a> | <a href="https://litelitebasketball.com/vi.html">VI</a></li>
         <li>
           <a class="nav-ig" id="nav-instagram" href="https://www.instagram.com/litelitebasketball/" target="_blank" rel="noopener noreferrer" aria-label="LIT Elite Basketball on Instagram" data-cta-location="nav" data-cta-action="instagram">
             <svg class="icon"><use href="#i-ig"/></svg>
@@ -530,6 +519,7 @@
           <svg class="icon"><use href="#i-ig"/></svg> Instagram
         </a>
         <a class="btn btn-primary" id="mobile-book-trial" href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" data-cta-location="nav" data-cta-action="book-trial">Book Your Trial</a>
+        <a href="https://litelitebasketball.com/vi.html" style="margin-top: 10px; text-align: center; border-bottom: none;">Tiếng Việt</a>
       </nav>
     </div>
   </header>
@@ -545,7 +535,7 @@
         <div class="hero-inner glass">
           <p class="eyebrow">Youth Basketball · Ages 5–18 · District 7</p>
           <h1 class="hero-title" id="hero-heading">Be the <span class="grad">Smartest</span> Player on the Court.</h1>
-          <p class="hero-sub">See more. Decide better. Play one step ahead.</p>
+          <p class="hero-sub">Youth basketball training in District 7, Ho Chi Minh City · Ages 5–18. See more. Decide better. Play one step ahead.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" id="hero-book-trial" href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" data-cta-location="hero" data-cta-action="book-trial">
               Book Your Trial <svg class="icon"><use href="#i-arrow"/></svg>
@@ -564,7 +554,7 @@
       </a>
     </section>
 
-    <!-- ════════════════════════ 02 · WHY BASKETBALL IQ (FIX 1) ════════════════════════ -->
+    <!-- ════════════════════════ 02 · WHY BASKETBALL IQ ════════════════════════ -->
     <section class="section decor" id="why-iq" aria-labelledby="why-iq-heading">
       <div class="container">
         <div class="why-inner reveal">
@@ -578,7 +568,7 @@
       </div>
     </section>
 
-    <!-- ════════════════════════ 02.5 · HOW WE TRAIN SMARTER PLAYERS (FIX 2) ════════════════════════ -->
+    <!-- ════════════════════════ 02.5 · HOW WE TRAIN SMARTER PLAYERS ════════════════════════ -->
     <section class="section decor" id="how-we-train" aria-labelledby="how-train-heading">
       <div class="container">
         <div class="how-train-card glass reveal">
@@ -621,7 +611,6 @@
         </div>
 
         <div class="card-grid stagger reveal">
-
           <!-- U7 -->
           <article class="program-card" aria-labelledby="u7-title">
             <div class="program-media">
@@ -804,7 +793,7 @@
         </div>
 
         <p class="rates-loc reveal">
-          <span><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>74 Nguyen Thi Thap, Binh Thuan Ward, District 7</span>
+          <span><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>District 7, Ho Chi Minh City</span>
           <span class="dot" aria-hidden="true"></span>
           <span>Group fit &amp; schedule confirmed directly with Coach</span>
         </p>
@@ -826,7 +815,7 @@
       </div>
     </section>
 
-    <!-- ════════════════════════ 06 · PLAYER PROOF (FIX 3) ════════════════════════ -->
+    <!-- ════════════════════════ 06 · PLAYER PROOF ════════════════════════ -->
     <section class="section" id="player-proof" aria-labelledby="proof-heading">
       <div class="container">
         <header class="section-head reveal">
@@ -995,7 +984,7 @@
               <span class="faq-icon" aria-hidden="true"><svg class="icon"><use href="#i-plus"/></svg></span>
             </summary>
             <div class="faq-a">
-              <p><span class="hl">74 Nguyen Thi Thap Street, Binh Thuan Ward, District 7.</span> Contact Coach for current group details.</p>
+              <p><span class="hl">District 7, Ho Chi Minh City.</span> Contact Coach for current group details.</p>
             </div>
           </details>
 
@@ -1088,11 +1077,11 @@
         <header class="section-head reveal">
           <p class="eyebrow">Find Us</p>
           <h2 class="section-title" id="location-heading">Court <span class="grad">Location.</span></h2>
-          <p class="section-sub">74 Nguyen Thi Thap Street, Binh Thuan Ward, District 7, Ho Chi Minh City. Easily find your way to the court.</p>
+          <p class="section-sub">District 7, Ho Chi Minh City. Easily find your way to the court.</p>
         </header>
         <div class="map-wrap glass reveal">
           <iframe 
-            src="https://maps.google.com/maps?q=74%20Nguyen%20Thi%20Thap%2C%20Binh%20Thuan%20Ward%2C%20District%207%2C%20Ho%20Chi%20Minh%20City&z=15&output=embed" 
+            src="https://maps.google.com/maps?q=LIT%20Elite%20Basketball%20District%207%20Ho%20Chi%20Minh%20City&z=14&output=embed" 
             width="100%" 
             height="450" 
             style="border:0;" 
@@ -1115,8 +1104,7 @@
             <div class="footer-text">
               <p class="footer-name">Lit Elite Basketball</p>
               <p class="footer-line">Youth Basketball · Ages 5–18</p>
-              <p class="footer-line">74 Nguyen Thi Thap, Binh Thuan Ward, D7</p>
-              <p class="footer-line">Ho Chi Minh City</p>
+              <p class="footer-line">District 7 · Ho Chi Minh City</p>
             </div>
           </div>
 
