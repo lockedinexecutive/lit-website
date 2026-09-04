@@ -333,7 +333,7 @@
       </div>
     </section>
 
-    <!-- ════════════════════════ PROOF (LIGHT) ════════════════════════ -->
+      <!-- ════════════════════════ PROOF (LIGHT) ════════════════════════ -->
     <section id="results" class="bg-lit-ground py-16 md:py-24 border-t border-lit-line">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mb-12">
@@ -341,30 +341,68 @@
           <h2 class="text-3xl md:text-4xl font-bold text-lit-text">What parents and players say.</h2>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          <blockquote class="bg-lit-card p-6 rounded-xl border border-lit-line shadow-sm">
-            <p class="text-lit-text text-lg leading-relaxed mb-4">"[insert real parent quote]"</p>
-            <footer class="text-sm font-semibold text-lit-muted uppercase tracking-wide">— Parent of a [age] player</footer>
+        <!-- 4 Quote Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+          
+          <!-- Quote 1 (Parent) -->
+          <blockquote class="bg-lit-card p-6 rounded-xl border border-lit-line shadow-sm flex flex-col">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 rounded-full bg-lit-alt flex items-center justify-center text-lit-muted font-bold text-lg">P</div>
+              <footer class="text-sm font-bold text-lit-muted uppercase tracking-wide">Parent of a [age] player</footer>
+            </div>
+            <p class="text-lit-text text-lg leading-relaxed">"[insert real parent quote]"</p>
           </blockquote>
-          <blockquote class="bg-lit-card p-6 rounded-xl border border-lit-line shadow-sm">
-            <p class="text-lit-text text-lg leading-relaxed mb-4">"[insert real beginner quote]"</p>
-            <footer class="text-sm font-semibold text-lit-muted uppercase tracking-wide">— First-year player</footer>
+
+          <!-- Quote 2 (Beginner) -->
+          <blockquote class="bg-lit-card p-6 rounded-xl border border-lit-line shadow-sm flex flex-col">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 rounded-full bg-lit-alt flex items-center justify-center text-lit-muted font-bold text-lg">B</div>
+              <footer class="text-sm font-bold text-lit-muted uppercase tracking-wide">First-year player</footer>
+            </div>
+            <p class="text-lit-text text-lg leading-relaxed">"[insert real beginner quote]"</p>
           </blockquote>
-          <blockquote class="bg-lit-card p-6 rounded-xl border border-lit-line shadow-sm">
-            <p class="text-lit-text text-lg leading-relaxed mb-4">"LIT Elite isn't just about improving basketball skills — it's also helped me build confidence and leadership."</p>
-            <footer class="text-sm font-semibold text-lit-muted uppercase tracking-wide">— Jan Tran · SSIS Varsity · MRISA Champion</footer>
+
+          <!-- Quote 3 (Jan Tran) -->
+          <blockquote class="bg-lit-card p-6 rounded-xl border border-lit-line shadow-sm flex flex-col">
+            <div class="flex items-center gap-4 mb-4">
+              <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/testimonial-jan-tran.webp" alt="Jan Tran" class="w-12 h-12 rounded-full object-cover border border-lit-line">
+              <footer class="text-sm font-bold text-lit-muted uppercase tracking-wide">Jan Tran · SSIS Varsity · MRISA Champion</footer>
+            </div>
+            <p class="text-lit-text text-lg leading-relaxed">"LIT Elite isn't just about improving basketball skills — it's also helped me build confidence and leadership."</p>
           </blockquote>
-          <blockquote class="bg-lit-card p-6 rounded-xl border border-lit-line shadow-sm">
-            <p class="text-lit-text text-lg leading-relaxed mb-4">"You're the best coach I could ask for. You believed in me when no one else did."</p>
-            <footer class="text-sm font-semibold text-lit-muted uppercase tracking-wide">— Trung · LIT Elite Athlete</footer>
+
+          <!-- Quote 4 (Trung) -->
+          <blockquote class="bg-lit-card p-6 rounded-xl border border-lit-line shadow-sm flex flex-col">
+            <div class="flex items-center gap-4 mb-4">
+              <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/testimonial-trung.webp" alt="Trung" class="w-12 h-12 rounded-full object-cover border border-lit-line">
+              <footer class="text-sm font-bold text-lit-muted uppercase tracking-wide">Trung · LIT Elite Athlete</footer>
+            </div>
+            <p class="text-lit-text text-lg leading-relaxed">"You're the best coach I could ask for. You believed in me when no one else did."</p>
           </blockquote>
         </div>
 
-        <div class="flex flex-wrap gap-3">
-          <span class="px-4 py-2 bg-lit-alt text-lit-text text-sm font-bold rounded-full border border-lit-line">MRISA Champions 2024 & 2025</span>
-          <span class="px-4 py-2 bg-lit-alt text-lit-text text-sm font-bold rounded-full border border-lit-line">Players who made school varsity</span>
-          <span class="px-4 py-2 bg-lit-alt text-lit-text text-sm font-bold rounded-full border border-lit-line">From first dribble to starting five</span>
+        <!-- Feature Card: Championship Team -->
+        <div class="bg-lit-card rounded-xl border border-lit-line shadow-sm overflow-hidden grid grid-cols-1 md:grid-cols-2">
+          
+          <!-- Ảnh đội vô địch -->
+          <div class="h-64 md:h-full overflow-hidden">
+            <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/ssis-mrisa-championship-team.webp" alt="MRISA Championship Team with Coach Zinger" class="w-full h-full object-cover">
+          </div>
+          
+          <!-- Chữ & Results chips -->
+          <div class="p-8 md:p-10 flex flex-col justify-center">
+            <h3 class="font-bold text-2xl text-lit-text mb-4">Built together. Earned together.</h3>
+            <p class="text-lit-sec mb-6 leading-relaxed">Growth. Accountability. Understanding the game. Competing together. The trophies followed.</p>
+            
+            <div class="flex flex-wrap gap-3">
+              <span class="px-4 py-2 bg-lit-alt text-lit-text text-sm font-bold rounded-full border border-lit-line">MRISA Champions 2024 & 2025</span>
+              <span class="px-4 py-2 bg-lit-alt text-lit-text text-sm font-bold rounded-full border border-lit-line">Players who made school varsity</span>
+              <span class="px-4 py-2 bg-lit-alt text-lit-text text-sm font-bold rounded-full border border-lit-line">From first dribble to starting five</span>
+            </div>
+          </div>
+          
         </div>
+
       </div>
     </section>
 
