@@ -46,20 +46,17 @@
       theme: {
         extend: {
           colors: {
-            // Dark Tokens
             'lit-dark-bg': '#140E1B',
             'lit-dark-bg2': '#1E1526',
             'lit-dark-text': '#F4EEF6',
             'lit-dark-sec': '#C6BAD2',
             'lit-dark-line': '#312539',
             'lit-dark-accent': '#FF5CAD',
-            // Light Tokens
             'lit-light-bg': '#FAF6F9',
             'lit-light-card': '#FFFFFF',
             'lit-light-text': '#1E1622',
             'lit-light-sec': '#574C63',
             'lit-light-line': '#EBE2EA',
-            // Pink Tokens
             'lit-pink-bg': '#C81C7C',
             'lit-pink-hover': '#A9146A',
           },
@@ -217,78 +214,107 @@
       </div>
     </section>
 
-    <!-- ════════════════════════ FIND YOUR GROUP (DARK) ════════════════════════ -->
+    <!-- ════════════════════════ FIND YOUR GROUP (DARK - ALTERNATING ROWS) ════════════════════════ -->
     <section id="programs" class="bg-lit-dark-bg py-24 md:py-32 border-t border-lit-dark-line">
       <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
-        <div class="mb-20">
+        <div class="mb-20 text-center">
           <p class="text-sm font-extrabold uppercase tracking-widest text-lit-dark-accent mb-4">Find your child's group</p>
-          <h2 class="text-4xl md:text-6xl font-extrabold text-lit-dark-text uppercase tracking-tight w-full">Programs built for their level.</h2>
+          <h2 class="text-4xl md:text-6xl font-extrabold text-lit-dark-text uppercase tracking-tight">Programs built for their level.</h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <article class="bg-lit-dark-bg2 rounded-xl border border-lit-dark-line overflow-hidden flex flex-col hover:border-lit-dark-accent transition group">
-            <div class="aspect-w-4 aspect-h-3 overflow-hidden">
-              <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/program-u7.webp" alt="U7 basketball" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition" loading="lazy">
+        <div class="space-y-20 md:space-y-32">
+          
+          <!-- U7 -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="rounded-xl overflow-hidden border border-lit-dark-line h-80 md:h-96 order-1">
+              <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/program-u7.webp" alt="U7 basketball" class="w-full h-full object-cover" loading="lazy">
             </div>
-            <div class="p-8 flex flex-col flex-grow">
-              <span class="text-xs font-bold uppercase tracking-widest text-lit-dark-accent mb-2">U7 · Ages 5–7</span>
-              <h3 class="font-extrabold text-2xl text-lit-dark-text mb-3 uppercase tracking-wide">Start Strong</h3>
-              <p class="text-lit-dark-sec text-base mb-6 flex-grow">First reps, first fun.</p>
-              <div class="border-t border-lit-dark-line pt-6 mt-auto">
+            <div class="order-2">
+              <span class="text-sm font-bold uppercase tracking-widest text-lit-dark-accent mb-2 block">U7 · Ages 5–7</span>
+              <h3 class="text-3xl md:text-4xl font-extrabold text-lit-dark-text mb-4 uppercase tracking-wide">Start Strong</h3>
+              <p class="text-lit-dark-sec text-xl mb-8">First reps, first fun.</p>
+              <div class="border-l-4 border-lit-dark-accent pl-6 mb-8">
                 <p class="text-xs font-bold text-lit-dark-sec uppercase tracking-wide mb-2">Best for</p>
-                <p class="text-base text-lit-dark-text mb-6">First-timers building coordination, ball control and a love of the game.</p>
-                <p class="font-extrabold text-2xl text-lit-dark-text">350,000₫ <span class="text-base font-normal text-lit-dark-sec">/ 60 min</span></p>
+                <p class="text-lit-dark-text text-lg">First-timers building coordination, ball control and a love of the game.</p>
               </div>
+              <p class="text-3xl font-extrabold text-lit-dark-text">350,000₫ <span class="text-lg font-normal text-lit-dark-sec">/ 60 min</span></p>
             </div>
-          </article>
-          <article class="bg-lit-dark-bg2 rounded-xl border border-lit-dark-line overflow-hidden flex flex-col hover:border-lit-dark-accent transition group">
-            <div class="aspect-w-4 aspect-h-3 overflow-hidden">
-              <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/program-u9.webp" alt="U9 basketball" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition" loading="lazy">
-            </div>
-            <div class="p-8 flex flex-col flex-grow">
-              <span class="text-xs font-bold uppercase tracking-widest text-lit-dark-accent mb-2">U9 · Ages 8–9</span>
-              <h3 class="font-extrabold text-2xl text-lit-dark-text mb-3 uppercase tracking-wide">Build the Base</h3>
-              <p class="text-lit-dark-sec text-base mb-6 flex-grow">Real fundamentals.</p>
-              <div class="border-t border-lit-dark-line pt-6 mt-auto">
+          </div>
+
+          <!-- U9 -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1">
+              <span class="text-sm font-bold uppercase tracking-widest text-lit-dark-accent mb-2 block">U9 · Ages 8–9</span>
+              <h3 class="text-3xl md:text-4xl font-extrabold text-lit-dark-text mb-4 uppercase tracking-wide">Build the Base</h3>
+              <p class="text-lit-dark-sec text-xl mb-8">Real fundamentals.</p>
+              <div class="border-l-4 border-lit-dark-accent pl-6 mb-8">
                 <p class="text-xs font-bold text-lit-dark-sec uppercase tracking-wide mb-2">Best for</p>
-                <p class="text-base text-lit-dark-text mb-6">Kids ready for proper skills and their first taste of game awareness.</p>
-                <p class="font-extrabold text-2xl text-lit-dark-text">350,000₫ <span class="text-base font-normal text-lit-dark-sec">/ 60 min</span></p>
+                <p class="text-lit-dark-text text-lg">Kids ready for proper skills and their first taste of game awareness.</p>
               </div>
+              <p class="text-3xl font-extrabold text-lit-dark-text">350,000₫ <span class="text-lg font-normal text-lit-dark-sec">/ 60 min</span></p>
             </div>
-          </article>
-          <article class="bg-lit-dark-bg2 rounded-xl border border-lit-dark-line overflow-hidden flex flex-col hover:border-lit-dark-accent transition group">
-            <div class="aspect-w-4 aspect-h-3 overflow-hidden">
-              <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/program-u11-u13.webp" alt="U11 U13 basketball" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition" loading="lazy">
+            <div class="rounded-xl overflow-hidden border border-lit-dark-line h-80 md:h-96 order-1 md:order-2">
+              <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/program-u9.webp" alt="U9 basketball" class="w-full h-full object-cover" loading="lazy">
             </div>
-            <div class="p-8 flex flex-col flex-grow">
-              <span class="text-xs font-bold uppercase tracking-widest text-lit-dark-accent mb-2">U11/U13 · Ages 10–13</span>
-              <h3 class="font-extrabold text-2xl text-lit-dark-text mb-3 uppercase tracking-wide">Turn Skills into Decisions</h3>
-              <p class="text-lit-dark-sec text-base mb-6 flex-grow">Read the game.</p>
-              <div class="border-t border-lit-dark-line pt-6 mt-auto">
+          </div>
+
+          <!-- U11/U13 -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="rounded-xl overflow-hidden border border-lit-dark-line h-80 md:h-96 order-1">
+              <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/program-u11-u13.webp" alt="U11 U13 basketball" class="w-full h-full object-cover" loading="lazy">
+            </div>
+            <div class="order-2">
+              <span class="text-sm font-bold uppercase tracking-widest text-lit-dark-accent mb-2 block">U11/U13 · Ages 10–13</span>
+              <h3 class="text-3xl md:text-4xl font-extrabold text-lit-dark-text mb-4 uppercase tracking-wide">Turn Skills into Decisions</h3>
+              <p class="text-lit-dark-sec text-xl mb-8">Read the game.</p>
+              <div class="border-l-4 border-lit-dark-accent pl-6 mb-8">
                 <p class="text-xs font-bold text-lit-dark-sec uppercase tracking-wide mb-2">Best for</p>
-                <p class="text-base text-lit-dark-text mb-6">Players who can play but freeze in-game, learning to decide fast.</p>
-                <p class="font-extrabold text-2xl text-lit-dark-text">425,000₫ <span class="text-base font-normal text-lit-dark-sec">/ 90 min</span></p>
+                <p class="text-lit-dark-text text-lg">Players who can play but freeze in-game, learning to decide fast.</p>
               </div>
+              <p class="text-3xl font-extrabold text-lit-dark-text">425,000₫ <span class="text-lg font-normal text-lit-dark-sec">/ 90 min</span></p>
             </div>
-          </article>
-          <article class="bg-lit-dark-bg2 rounded-xl border border-lit-dark-line overflow-hidden flex flex-col hover:border-lit-dark-accent transition group">
-            <div class="aspect-w-4 aspect-h-3 overflow-hidden">
-              <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/program-u18.webp" alt="U18 basketball" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition" loading="lazy">
-            </div>
-            <div class="p-8 flex flex-col flex-grow">
-              <span class="text-xs font-bold uppercase tracking-widest text-lit-dark-accent mb-2">U18 · Ages 14–18</span>
-              <h3 class="font-extrabold text-2xl text-lit-dark-text mb-3 uppercase tracking-wide">Compete with Purpose</h3>
-              <p class="text-lit-dark-sec text-base mb-6 flex-grow">Train to compete.</p>
-              <div class="border-t border-lit-dark-line pt-6 mt-auto">
+          </div>
+
+          <!-- U18 -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1">
+              <span class="text-sm font-bold uppercase tracking-widest text-lit-dark-accent mb-2 block">U18 · Ages 14–18</span>
+              <h3 class="text-3xl md:text-4xl font-extrabold text-lit-dark-text mb-4 uppercase tracking-wide">Compete with Purpose</h3>
+              <p class="text-lit-dark-sec text-xl mb-8">Train to compete.</p>
+              <div class="border-l-4 border-lit-dark-accent pl-6 mb-8">
                 <p class="text-xs font-bold text-lit-dark-sec uppercase tracking-wide mb-2">Best for</p>
-                <p class="text-base text-lit-dark-text mb-6">Teens training for school teams and real competition.</p>
-                <p class="font-extrabold text-2xl text-lit-dark-text">425,000₫ <span class="text-base font-normal text-lit-dark-sec">/ 90 min</span></p>
+                <p class="text-lit-dark-text text-lg">Teens training for school teams and real competition.</p>
               </div>
+              <p class="text-3xl font-extrabold text-lit-dark-text">425,000₫ <span class="text-lg font-normal text-lit-dark-sec">/ 90 min</span></p>
             </div>
-          </article>
+            <div class="rounded-xl overflow-hidden border border-lit-dark-line h-80 md:h-96 order-1 md:order-2">
+              <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/program-u18.webp" alt="U18 basketball" class="w-full h-full object-cover" loading="lazy">
+            </div>
+          </div>
+
+        </div>
+        
+        <!-- Private Coaching 1:1 -->
+        <div class="mt-20 md:mt-32 bg-lit-dark-bg2 border-2 border-lit-dark-accent rounded-xl p-10 md:p-16 grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+          <div class="md:col-span-2">
+            <span class="text-sm font-bold uppercase tracking-widest text-lit-dark-accent mb-2 block">Private Coaching · 1:1 with Coach Zinger</span>
+            <h3 class="text-3xl md:text-4xl font-extrabold text-lit-dark-text mb-6 uppercase tracking-wide">Your Game. Your Next Step.</h3>
+            <p class="text-lit-dark-sec text-xl mb-8 leading-relaxed max-w-2xl">Individual coaching built around the player's current game and goals.</p>
+            <div class="flex flex-wrap gap-3">
+              <span class="px-4 py-2 bg-lit-dark-bg border border-lit-dark-line rounded-full text-lit-dark-text text-sm font-semibold uppercase tracking-wide">Skill Development</span>
+              <span class="px-4 py-2 bg-lit-dark-bg border border-lit-dark-line rounded-full text-lit-dark-text text-sm font-semibold uppercase tracking-wide">Game Understanding</span>
+              <span class="px-4 py-2 bg-lit-dark-bg border border-lit-dark-line rounded-full text-lit-dark-text text-sm font-semibold uppercase tracking-wide">Decision-Making</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-start md:items-end gap-6">
+            <p class="text-2xl text-lit-dark-text font-extrabold uppercase tracking-wide">Contact for Pricing</p>
+            <a href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'm%20interested%20in%201%3A1%20basketball%20coaching." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-lit-dark-accent text-lit-dark-bg font-extrabold uppercase tracking-wide text-base hover:bg-white transition">
+              <svg class="w-6 h-6"><use href="#i-wa"/></svg> Message Coach
+            </a>
+          </div>
         </div>
 
-        <div class="mt-16">
+        <div class="mt-20 text-center">
           <p class="text-lit-dark-sec text-lg">
             Not sure which fits your child? <a href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'm%20not%20sure%20which%20group%20fits%20my%20child." target="_blank" rel="noopener noreferrer" class="text-lit-dark-accent font-bold hover:underline">Message the coach</a> — we'll place them for you.
           </p>
