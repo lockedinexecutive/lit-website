@@ -150,8 +150,8 @@
             'lit-pink-hover': '#A9146A',
           },
           fontFamily: {
-            'sans': ['Inter', 'sans-serif'],
-            'display': ['Teko', 'sans-serif'],
+            'sans': ['Roboto', 'sans-serif'], // Mặc định toàn bộ web dùng Roboto
+            'display': ['Teko', 'sans-serif'],  // Dùng cho tiêu đề H1, H2, H3
           }
         }
       }
@@ -161,18 +161,11 @@
   <!-- ══ Fonts ══ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Teko:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
   <style>
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; }
-    /* Thiết lập font Teko cho toàn bộ Headings */
-    h1, h2, h3 {
-      font-family: 'Teko', sans-serif;
-      font-weight: 700;
-      text-transform: uppercase;
-      line-height: 1.1;
-    }
+    body { font-family: 'Roboto', sans-serif; }
     details > summary { list-style: none; }
     details > summary::-webkit-details-marker { display: none; }
     .hero-text { text-shadow: 0 2px 15px rgba(0,0,0,0.8); }
@@ -208,12 +201,13 @@
     <a href="#rates" class="hover:underline">Trial Sessions Now Open — Book Your Child's Spot Today!</a>
   </div>
 
-  <!-- ════════════════════════ NAV (DARK) ════════════════════════ -->
-  <header class="sticky top-0 z-50 bg-lit-dark-bg/95 backdrop-blur-sm border-b border-lit-dark-line">
+  <!-- ════════════════════════ NAV (GLASSMORPHISM) ════════════════════════ -->
+  <!-- Đổi sang nền kính mờ: bg-lit-dark-bg/30 backdrop-blur-md border-white/10 -->
+  <header class="sticky top-0 z-50 bg-lit-dark-bg/30 backdrop-blur-md border-b border-white/10">
     <nav class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between h-16 sm:h-20">
       <a href="#hero" class="flex items-center gap-2 sm:gap-3">
         <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/logo.webp" width="40" height="36" alt="LIT Elite Basketball Academy logo" class="rounded-full sm:w-12 sm:h-11">
-        <span class="text-xl sm:text-2xl font-extrabold uppercase tracking-tight text-lit-dark-text">LIT Elite</span>
+        <span class="text-xl sm:text-2xl font-display font-bold uppercase tracking-tight text-lit-dark-text">LIT Elite</span>
       </a>
       <div class="hidden lg:flex items-center gap-10">
         <a href="#programs" class="text-sm font-bold uppercase tracking-wide text-lit-dark-sec hover:text-lit-dark-text transition">Programs</a>
@@ -228,23 +222,25 @@
           <span class="text-lit-dark-line">|</span>
           <a href="https://litelitebasketball.com/vi.html" class="text-lit-dark-sec hover:text-lit-dark-text">VI</a>
         </div>
-        <a href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-lit-dark-accent text-lit-dark-bg text-sm font-extrabold uppercase tracking-wide hover:bg-white transition">Book a Trial</a>
+        <a href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-lit-dark-accent text-lit-dark-bg text-sm font-bold uppercase tracking-wide hover:bg-white transition">Book a Trial</a>
         <button id="menu-btn" class="lg:hidden text-lit-dark-text p-2" aria-label="Open menu"><svg class="w-6 h-6"><use href="#i-menu"/></svg></button>
       </div>
     </nav>
-    <div id="mobile-menu" class="hidden lg:hidden absolute top-16 left-0 right-0 bg-lit-dark-bg2 border-b border-lit-dark-line p-6 flex-col gap-6 z-40">
+    
+    <!-- Mobile Menu cũng đổi sang kính mờ -->
+    <div id="mobile-menu" class="hidden lg:hidden absolute top-16 left-0 right-0 bg-lit-dark-bg/80 backdrop-blur-md border-b border-white/10 p-6 flex-col gap-6 z-40">
       <a href="#programs" class="text-base font-bold uppercase tracking-wide text-lit-dark-text hover:text-lit-dark-accent">Programs</a>
       <a href="#coach" class="text-base font-bold uppercase tracking-wide text-lit-dark-text hover:text-lit-dark-accent">Coach</a>
       <a href="#results" class="text-base font-bold uppercase tracking-wide text-lit-dark-text hover:text-lit-dark-accent">Results</a>
       <a href="resources.html" class="text-base font-bold uppercase tracking-wide text-lit-dark-text hover:text-lit-dark-accent">Resources</a>
       <a href="#faq" class="text-base font-bold uppercase tracking-wide text-lit-dark-text hover:text-lit-dark-accent">FAQ</a>
-      <div class="flex items-center justify-between border-t border-lit-dark-line pt-6">
+      <div class="flex items-center justify-between border-t border-white/10 pt-6">
         <div class="flex items-center gap-2 text-sm font-bold">
           <a href="https://litelitebasketball.com/" class="text-lit-dark-accent">EN</a>
           <span class="text-lit-dark-line">|</span>
           <a href="https://litelitebasketball.com/vi.html" class="text-lit-dark-sec hover:text-lit-dark-text">VI</a>
         </div>
-        <a href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-lit-dark-accent text-lit-dark-bg text-sm font-extrabold uppercase tracking-wide">Book a Trial</a>
+        <a href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-lit-dark-accent text-lit-dark-bg text-sm font-bold uppercase tracking-wide">Book a Trial</a>
       </div>
     </div>
   </header>
@@ -265,11 +261,11 @@
       <div class="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-20 sm:py-28 md:py-32 lg:py-40 flex flex-col items-center text-center">
         <div class="w-full max-w-3xl mx-auto">
           <span class="inline-block px-4 py-1 text-[10px] sm:text-xs font-bold uppercase tracking-widest text-white bg-lit-dark-bg/50 border border-white/20 rounded-full mb-6 backdrop-blur-sm">Youth Basketball · Ages 5–18 · District 7</span>
-          <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-none tracking-tight hero-text">Help your child play smarter.</h1>
-          <p class="text-sm sm:text-base md:text-lg text-white mb-8 max-w-2xl mx-auto leading-relaxed hero-text font-semibold">Basketball training for ages 5–18 that builds game sense, confidence, and coach-focused attention.</p>
+          <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-none tracking-tight hero-text uppercase">Help your child play smarter.</h1>
+          <p class="text-sm sm:text-base md:text-lg text-white mb-8 max-w-2xl mx-auto leading-relaxed hero-text font-medium">Basketball training for ages 5–18 that builds game sense, confidence, and coach-focused attention.</p>
           <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <a href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-lit-dark-accent text-lit-dark-bg font-extrabold uppercase tracking-wide text-sm hover:bg-white transition">Book a Trial</a>
-            <a href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'd%20like%20to%20learn%20more%20about%20training%20at%20LIT." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-white/50 bg-white/10 text-white font-extrabold uppercase tracking-wide text-sm hover:bg-white/20 transition backdrop-blur-sm">Message the Coach</a>
+            <a href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-lit-dark-accent text-lit-dark-bg font-bold uppercase tracking-wide text-sm hover:bg-white transition">Book a Trial</a>
+            <a href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'd%20like%20to%20learn%20more%20about%20training%20at%20LIT." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-white/50 bg-white/10 text-white font-bold uppercase tracking-wide text-sm hover:bg-white/20 transition backdrop-blur-sm">Message the Coach</a>
           </div>
           
           <!-- 3 points giãn rộng (sm:gap-x-10) y hệt hình Pro Skills -->
@@ -288,17 +284,17 @@
     <section id="getting-started" class="bg-lit-light-bg py-10 sm:py-12 border-t border-lit-light-line">
       <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
         <div class="mb-6 text-center reveal">
-          <p class="text-xs font-extrabold uppercase tracking-widest text-lit-pink-bg mb-2">Getting started is simple</p>
-          <h2 class="text-2xl sm:text-3xl text-lit-light-text tracking-tight">Four steps to the court.</h2>
+          <p class="text-xs font-bold uppercase tracking-widest text-lit-pink-bg mb-2">Getting started is simple</p>
+          <h2 class="font-display text-2xl sm:text-3xl text-lit-light-text tracking-tight uppercase">Four steps to the court.</h2>
         </div>
         <div class="bg-lit-light-card border border-lit-light-line rounded-xl p-2 flex flex-col md:flex-row md:items-center md:justify-between gap-2 reveal">
-          <div class="flex-1 flex items-center gap-3 p-3 rounded-lg hover:bg-lit-light-bg transition"><div class="w-9 h-9 rounded-full bg-lit-light-bg border border-lit-light-line flex items-center justify-center flex-shrink-0 text-lit-pink-bg font-extrabold text-base">1</div><div><h3 class="font-sans font-bold text-sm text-lit-light-text uppercase tracking-wide">Choose Age</h3><p class="text-xs text-lit-light-sec hidden sm:block">Match your child.</p></div></div>
+          <div class="flex-1 flex items-center gap-3 p-3 rounded-lg hover:bg-lit-light-bg transition"><div class="w-9 h-9 rounded-full bg-lit-light-bg border border-lit-light-line flex items-center justify-center flex-shrink-0 text-lit-pink-bg font-bold text-base">1</div><div><h3 class="font-bold text-sm text-lit-light-text uppercase tracking-wide">Choose Age</h3><p class="text-xs text-lit-light-sec hidden sm:block">Match your child.</p></div></div>
           <div class="hidden md:flex items-center justify-center text-lit-light-line px-2"><svg class="w-5 h-5"><use href="#i-arrow-right"/></svg></div>
-          <div class="flex-1 flex items-center gap-3 p-3 rounded-lg hover:bg-lit-light-bg transition"><div class="w-9 h-9 rounded-full bg-lit-light-bg border border-lit-light-line flex items-center justify-center flex-shrink-0 text-lit-pink-bg font-extrabold text-base">2</div><div><h3 class="font-sans font-bold text-sm text-lit-light-text uppercase tracking-wide">Book a Trial</h3><p class="text-xs text-lit-light-sec hidden sm:block">Low commitment.</p></div></div>
+          <div class="flex-1 flex items-center gap-3 p-3 rounded-lg hover:bg-lit-light-bg transition"><div class="w-9 h-9 rounded-full bg-lit-light-bg border border-lit-light-line flex items-center justify-center flex-shrink-0 text-lit-pink-bg font-bold text-base">2</div><div><h3 class="font-bold text-sm text-lit-light-text uppercase tracking-wide">Book a Trial</h3><p class="text-xs text-lit-light-sec hidden sm:block">Low commitment.</p></div></div>
           <div class="hidden md:flex items-center justify-center text-lit-light-line px-2"><svg class="w-5 h-5"><use href="#i-arrow-right"/></svg></div>
-          <div class="flex-1 flex items-center gap-3 p-3 rounded-lg hover:bg-lit-light-bg transition"><div class="w-9 h-9 rounded-full bg-lit-light-bg border border-lit-light-line flex items-center justify-center flex-shrink-0 text-lit-pink-bg font-extrabold text-base">3</div><div><h3 class="font-sans font-bold text-sm text-lit-light-text uppercase tracking-wide">We Match Group</h3><p class="text-xs text-lit-light-sec hidden sm:block">Right level for them.</p></div></div>
+          <div class="flex-1 flex items-center gap-3 p-3 rounded-lg hover:bg-lit-light-bg transition"><div class="w-9 h-9 rounded-full bg-lit-light-bg border border-lit-light-line flex items-center justify-center flex-shrink-0 text-lit-pink-bg font-bold text-base">3</div><div><h3 class="font-bold text-sm text-lit-light-text uppercase tracking-wide">We Match Group</h3><p class="text-xs text-lit-light-sec hidden sm:block">Right level for them.</p></div></div>
           <div class="hidden md:flex items-center justify-center text-lit-light-line px-2"><svg class="w-5 h-5"><use href="#i-arrow-right"/></svg></div>
-          <div class="flex-1 flex items-center gap-3 p-3 rounded-lg hover:bg-lit-light-bg transition"><div class="w-9 h-9 rounded-full bg-lit-light-bg border border-lit-light-line flex items-center justify-center flex-shrink-0 text-lit-pink-bg font-extrabold text-base">4</div><div><h3 class="font-sans font-bold text-sm text-lit-light-text uppercase tracking-wide">Start Training</h3><p class="text-xs text-lit-light-sec hidden sm:block">Watch them grow.</p></div></div>
+          <div class="flex-1 flex items-center gap-3 p-3 rounded-lg hover:bg-lit-light-bg transition"><div class="w-9 h-9 rounded-full bg-lit-light-bg border border-lit-light-line flex items-center justify-center flex-shrink-0 text-lit-pink-bg font-bold text-base">4</div><div><h3 class="font-bold text-sm text-lit-light-text uppercase tracking-wide">Start Training</h3><p class="text-xs text-lit-light-sec hidden sm:block">Watch them grow.</p></div></div>
         </div>
       </div>
     </section>
@@ -306,13 +302,13 @@
     <!-- ════════════════════════ THE REAL GAP (PINK) ════════════════════════ -->
     <section id="the-gap" class="bg-lit-pink-bg text-white py-16 sm:py-20 md:py-24">
       <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 reveal">
-        <p class="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-white/80 mb-4">The real gap</p>
-        <h2 class="text-3xl sm:text-4xl md:text-5xl text-white mb-8 tracking-tight leading-tight w-full max-w-5xl">Skills alone don't win games.</h2>
+        <p class="text-xs sm:text-sm font-bold uppercase tracking-widest text-white/80 mb-4">The real gap</p>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-white mb-8 tracking-tight leading-tight w-full max-w-5xl uppercase">Skills alone don't win games.</h2>
         <div class="space-y-4 text-white/90 text-sm sm:text-base md:text-lg leading-relaxed max-w-5xl">
           <p>Your child practises dribbling, passing and shooting — but in a real game the defender moves, the space changes, and they hesitate. The talent is there; the decisions aren't yet.</p>
           <p>Left unaddressed, that gap costs more than points. Talented kids get passed over at tryouts, lose confidence, and slowly stop enjoying the game they love.</p>
         </div>
-        <p class="mt-8 text-xl sm:text-2xl md:text-3xl font-sans font-extrabold text-lit-dark-bg leading-tight w-full max-w-4xl">That's exactly the gap LIT is built to close.</p>
+        <p class="mt-8 text-xl sm:text-2xl md:text-3xl font-bold text-lit-dark-bg leading-tight w-full max-w-4xl">That's exactly the gap LIT is built to close.</p>
       </div>
     </section>
 
@@ -320,59 +316,55 @@
     <section id="programs" class="bg-lit-dark-bg py-16 sm:py-20 md:py-24 border-t border-lit-dark-line">
       <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
         <div class="mb-10 sm:mb-12 text-center reveal">
-          <p class="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-lit-dark-accent mb-3">Find your child's group</p>
-          <h2 class="text-3xl sm:text-4xl md:text-5xl text-lit-dark-text tracking-tight">Programs built for their level.</h2>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-widest text-lit-dark-accent mb-3">Find your child's group</p>
+          <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-lit-dark-text tracking-tight uppercase">Programs built for their level.</h2>
         </div>
         <div class="space-y-10 sm:space-y-12 md:space-y-16">
           <!-- U7 -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center reveal">
-            <!-- Cắt bỏ trần nhà, focus vào mặt: object-position center 25% -->
             <div class="rounded-xl overflow-hidden border border-lit-dark-line h-56 sm:h-64 md:h-72 order-1"><img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/program-u7.webp" alt="Young player in a District 7 youth basketball class at LIT Elite" class="w-full h-full object-cover" style="object-position: center 25%;" loading="lazy"></div>
             <div class="order-2 mt-4 sm:mt-0">
               <span class="text-xs font-bold uppercase tracking-widest text-lit-dark-accent mb-2 block">U7 · Ages 5–7</span>
-              <h3 class="text-2xl sm:text-3xl md:text-4xl text-lit-dark-text mb-3 tracking-wide">Start Strong</h3>
+              <h3 class="font-display text-2xl sm:text-3xl md:text-4xl text-lit-dark-text mb-3 tracking-wide uppercase">Start Strong</h3>
               <p class="text-lit-dark-sec text-base sm:text-lg mb-6">First reps, first fun.</p>
               <div class="border-l-4 border-lit-dark-accent pl-4 mb-6"><p class="text-xs font-bold text-lit-dark-sec uppercase tracking-wide mb-1">Best for</p><p class="text-lit-dark-text text-sm sm:text-base">First-timers building coordination, ball control and a love of the game through beginner basketball for kids in Saigon.</p></div>
-              <p class="text-2xl sm:text-3xl md:text-4xl font-sans font-extrabold text-lit-dark-accent">350,000 VND <span class="text-sm sm:text-base font-bold text-lit-dark-sec">/ 60 min</span></p>
+              <p class="text-2xl sm:text-3xl md:text-4xl font-bold text-lit-dark-accent">350,000 VND <span class="text-sm sm:text-base font-bold text-lit-dark-sec">/ 60 min</span></p>
             </div>
           </div>
           <!-- U9 -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center reveal">
-            <!-- Cắt bỏ trần nhà, focus vào mặt: object-position center 25% -->
             <div class="rounded-xl overflow-hidden border border-lit-dark-line h-56 sm:h-64 md:h-72 order-1"><img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/program-u9.webp" alt="U9 basketball player shooting during kids basketball classes near Phu My Hung" class="w-full h-full object-cover" style="object-position: center 25%;" loading="lazy"></div>
             <div class="order-2 mt-4 sm:mt-0">
               <span class="text-xs font-bold uppercase tracking-widest text-lit-dark-accent mb-2 block">U9 · Ages 8–9</span>
-              <h3 class="text-2xl sm:text-3xl md:text-4xl text-lit-dark-text mb-3 tracking-wide">Build the Base</h3>
+              <h3 class="font-display text-2xl sm:text-3xl md:text-4xl text-lit-dark-text mb-3 tracking-wide uppercase">Build the Base</h3>
               <p class="text-lit-dark-sec text-base sm:text-lg mb-6">Real fundamentals.</p>
               <div class="border-l-4 border-lit-dark-accent pl-4 mb-6"><p class="text-xs font-bold text-lit-dark-sec uppercase tracking-wide mb-1">Best for</p><p class="text-lit-dark-text text-sm sm:text-base">Kids ready for proper skills and their first taste of game awareness in our basketball classes for kids in District 7.</p></div>
-              <p class="text-2xl sm:text-3xl md:text-4xl font-sans font-extrabold text-lit-dark-accent">350,000 VND <span class="text-sm sm:text-base font-bold text-lit-dark-sec">/ 60 min</span></p>
+              <p class="text-2xl sm:text-3xl md:text-4xl font-bold text-lit-dark-accent">350,000 VND <span class="text-sm sm:text-base font-bold text-lit-dark-sec">/ 60 min</span></p>
             </div>
           </div>
           
           <!-- U11/U13 (Most Popular) -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center relative reveal">
-            <span class="absolute top-4 right-4 z-20 bg-lit-dark-accent text-lit-dark-bg text-xs font-extrabold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-lg">Most Popular</span>
-            <!-- Cắt bỏ trần nhà, focus vào mặt: object-position center 20% -->
+            <span class="absolute top-4 right-4 z-20 bg-lit-dark-accent text-lit-dark-bg text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-lg">Most Popular</span>
             <div class="rounded-xl overflow-hidden border-2 border-lit-dark-accent h-56 sm:h-64 md:h-72 order-1 shadow-[0_0_15px_rgba(255,92,173,0.3)]"><img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/program-u11-u13.webp" alt="Youth basketball training District 7 HCMC for U11 and U13 players" class="w-full h-full object-cover" style="object-position: center 20%;" loading="lazy"></div>
             <div class="order-2 mt-4 sm:mt-0">
               <span class="text-xs font-bold uppercase tracking-widest text-lit-dark-accent mb-2 block">U11/U13 · Ages 10–13</span>
-              <h3 class="text-2xl sm:text-3xl md:text-4xl text-lit-dark-text mb-3 tracking-wide">Turn Skills into Decisions</h3>
+              <h3 class="font-display text-2xl sm:text-3xl md:text-4xl text-lit-dark-text mb-3 tracking-wide uppercase">Turn Skills into Decisions</h3>
               <p class="text-lit-dark-sec text-base sm:text-lg mb-6">Read the game.</p>
               <div class="border-l-4 border-lit-dark-accent pl-4 mb-6"><p class="text-xs font-bold text-lit-dark-sec uppercase tracking-wide mb-1">Best for</p><p class="text-lit-dark-text text-sm sm:text-base">Players who can play but freeze in-game, learning to decide fast with our youth basketball training District 7 HCMC.</p></div>
-              <p class="text-2xl sm:text-3xl md:text-4xl font-sans font-extrabold text-lit-dark-accent">425,000 VND <span class="text-sm sm:text-base font-bold text-lit-dark-sec">/ 90 min</span></p>
+              <p class="text-2xl sm:text-3xl md:text-4xl font-bold text-lit-dark-accent">425,000 VND <span class="text-sm sm:text-base font-bold text-lit-dark-sec">/ 90 min</span></p>
             </div>
           </div>
 
           <!-- U18 -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center reveal">
-            <!-- Cắt bỏ trần nhà, focus vào mặt: object-position center 20% -->
             <div class="rounded-xl overflow-hidden border border-lit-dark-line h-56 sm:h-64 md:h-72 order-1"><img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/program-u18.webp" alt="U18 teen basketball coaching for kids ages 5–18 at LIT Elite" class="w-full h-full object-cover" style="object-position: center 20%;" loading="lazy"></div>
             <div class="order-2 mt-4 sm:mt-0">
               <span class="text-xs font-bold uppercase tracking-widest text-lit-dark-accent mb-2 block">U18 · Ages 14–18</span>
-              <h3 class="text-2xl sm:text-3xl md:text-4xl text-lit-dark-text mb-3 tracking-wide">Compete with Purpose</h3>
+              <h3 class="font-display text-2xl sm:text-3xl md:text-4xl text-lit-dark-text mb-3 tracking-wide uppercase">Compete with Purpose</h3>
               <p class="text-lit-dark-sec text-base sm:text-lg mb-6">Train to compete.</p>
               <div class="border-l-4 border-lit-dark-accent pl-4 mb-6"><p class="text-xs font-bold text-lit-dark-sec uppercase tracking-wide mb-1">Best for</p><p class="text-lit-dark-text text-sm sm:text-base">Teens training for school teams and real competition as part of our youth basketball academy in Ho Chi Minh City.</p></div>
-              <p class="text-2xl sm:text-3xl md:text-4xl font-sans font-extrabold text-lit-dark-accent">425,000 VND <span class="text-sm sm:text-base font-bold text-lit-dark-sec">/ 90 min</span></p>
+              <p class="text-2xl sm:text-3xl md:text-4xl font-bold text-lit-dark-accent">425,000 VND <span class="text-sm sm:text-base font-bold text-lit-dark-sec">/ 90 min</span></p>
             </div>
           </div>
         </div>
@@ -381,7 +373,7 @@
         <div class="mt-10 sm:mt-12 bg-lit-dark-bg2 border-2 border-lit-dark-accent rounded-xl p-6 sm:p-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-center reveal">
           <div class="md:col-span-2">
             <span class="text-xs font-bold uppercase tracking-widest text-lit-dark-accent mb-2 block">Private Coaching · 1:1 with Coach Zinger</span>
-            <h3 class="text-2xl sm:text-3xl md:text-4xl text-lit-dark-text mb-4 tracking-wide">Your Game. Your Next Step.</h3>
+            <h3 class="font-display text-2xl sm:text-3xl md:text-4xl text-lit-dark-text mb-4 tracking-wide uppercase">Your Game. Your Next Step.</h3>
             <p class="text-lit-dark-sec text-base sm:text-lg mb-6 leading-relaxed max-w-2xl">Individual coaching built around the player's current game and goals for basketball coaching for kids ages 5–18.</p>
             <div class="flex flex-wrap gap-2">
               <span class="px-3 py-1.5 bg-lit-dark-bg border border-lit-dark-line rounded-full text-lit-dark-text text-xs font-semibold uppercase tracking-wide">Skill Development</span>
@@ -390,8 +382,8 @@
             </div>
           </div>
           <div class="flex flex-col items-start md:items-end gap-4">
-            <p class="text-lg sm:text-xl text-lit-dark-text font-sans font-extrabold uppercase tracking-wide">Contact for Pricing</p>
-            <a href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'm%20interested%20in%201%3A1%20basketball%20coaching." target="_blank" rel="noopener noreferrer" class="w-full md:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-lit-dark-accent text-lit-dark-bg font-extrabold uppercase tracking-wide text-sm hover:bg-white transition"><svg class="w-5 h-5"><use href="#i-wa"/></svg> Message Coach</a>
+            <p class="text-lg sm:text-xl text-lit-dark-text font-bold uppercase tracking-wide">Contact for Pricing</p>
+            <a href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'm%20interested%20in%201%3A1%20basketball%20coaching." target="_blank" rel="noopener noreferrer" class="w-full md:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-lit-dark-accent text-lit-dark-bg font-bold uppercase tracking-wide text-sm hover:bg-white transition"><svg class="w-5 h-5"><use href="#i-wa"/></svg> Message Coach</a>
           </div>
         </div>
         <div class="mt-10 text-center reveal"><p class="text-lit-dark-sec text-sm sm:text-base">Not sure which fits your child? <a href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'm%20not%20sure%20which%20group%20fits%20my%20child." target="_blank" rel="noopener noreferrer" class="text-lit-dark-accent font-bold hover:underline">Message the coach</a> — we'll place them for you.</p></div>
@@ -402,13 +394,13 @@
     <section id="how-we-coach" class="bg-lit-light-bg py-16 sm:py-20 md:py-24 border-t border-lit-light-line">
       <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
         <div class="mb-10 sm:mb-12 reveal">
-          <p class="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-lit-pink-bg mb-3">How LIT coaches</p>
-          <h2 class="text-3xl sm:text-4xl md:text-5xl text-lit-light-text tracking-tight w-full">A method that makes sense.</h2>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-widest text-lit-pink-bg mb-3">How LIT coaches</p>
+          <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-lit-light-text tracking-tight w-full uppercase">A method that makes sense.</h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-lit-light-line border border-lit-light-line rounded-xl overflow-hidden reveal">
-          <div class="bg-lit-light-card p-6 sm:p-8"><div class="flex items-center gap-4 mb-4"><svg class="w-6 h-6 sm:w-7 sm:h-7 text-lit-pink-bg"><use href="#i-check"/></svg><h3 class="font-sans font-bold text-lg sm:text-xl text-lit-light-text uppercase tracking-wide">Nothing is random</h3></div><p class="text-lit-light-sec text-sm sm:text-base leading-relaxed">Every drill has a reason your child can explain back — not just a move to copy.</p></div>
-          <div class="bg-lit-light-card p-6 sm:p-8"><div class="flex items-center gap-4 mb-4"><svg class="w-6 h-6 sm:w-7 sm:h-7 text-lit-pink-bg"><use href="#i-check"/></svg><h3 class="font-sans font-bold text-lg sm:text-xl text-lit-light-text uppercase tracking-wide">We coach the decision</h3></div><p class="text-lit-light-sec text-sm sm:text-base leading-relaxed">Your child is put into real game situations, then guided on the why behind the play.</p></div>
-          <div class="bg-lit-light-card p-6 sm:p-8"><div class="flex items-center gap-4 mb-4"><svg class="w-6 h-6 sm:w-7 sm:h-7 text-lit-pink-bg"><use href="#i-check"/></svg><h3 class="font-sans font-bold text-lg sm:text-xl text-lit-light-text uppercase tracking-wide">Your child is seen</h3></div><p class="text-lit-light-sec text-sm sm:text-base leading-relaxed">Small groups mean real attention every session — beginner or competitor.</p></div>
+          <div class="bg-lit-light-card p-6 sm:p-8"><div class="flex items-center gap-4 mb-4"><svg class="w-6 h-6 sm:w-7 sm:h-7 text-lit-pink-bg"><use href="#i-check"/></svg><h3 class="font-display font-bold text-lg sm:text-xl text-lit-light-text uppercase tracking-wide">Nothing is random</h3></div><p class="text-lit-light-sec text-sm sm:text-base leading-relaxed">Every drill has a reason your child can explain back — not just a move to copy.</p></div>
+          <div class="bg-lit-light-card p-6 sm:p-8"><div class="flex items-center gap-4 mb-4"><svg class="w-6 h-6 sm:w-7 sm:h-7 text-lit-pink-bg"><use href="#i-check"/></svg><h3 class="font-display font-bold text-lg sm:text-xl text-lit-light-text uppercase tracking-wide">We coach the decision</h3></div><p class="text-lit-light-sec text-sm sm:text-base leading-relaxed">Your child is put into real game situations, then guided on the why behind the play.</p></div>
+          <div class="bg-lit-light-card p-6 sm:p-8"><div class="flex items-center gap-4 mb-4"><svg class="w-6 h-6 sm:w-7 sm:h-7 text-lit-pink-bg"><use href="#i-check"/></svg><h3 class="font-display font-bold text-lg sm:text-xl text-lit-light-text uppercase tracking-wide">Your child is seen</h3></div><p class="text-lit-light-sec text-sm sm:text-base leading-relaxed">Small groups mean real attention every session — beginner or competitor.</p></div>
         </div>
       </div>
     </section>
@@ -421,8 +413,8 @@
       <div class="absolute inset-0 z-0 bg-lit-dark-bg/40"></div>
       
       <div class="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-16 sm:py-20 md:py-32 text-center">
-        <p class="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-lit-dark-accent mb-3" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8);">Real Players. Real Growth.</p>
-        <h2 class="text-3xl sm:text-4xl md:text-5xl text-white tracking-tight mb-12" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8);">What parents and players say.</h2>
+        <p class="text-xs sm:text-sm font-bold uppercase tracking-widest text-lit-dark-accent mb-3" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8);">Real Players. Real Growth.</p>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-white tracking-tight mb-12 uppercase" style="text-shadow: 0 2px 10px rgba(0,0,0,0.8);">What parents and players say.</h2>
 
         <div class="relative max-w-4xl mx-auto">
           <div id="ts-slides" class="overflow-hidden cursor-grab">
@@ -473,23 +465,23 @@
     <section id="results" class="bg-lit-light-bg py-16 sm:py-20 md:py-24 border-t border-lit-light-line">
       <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
         <div class="mb-10 sm:mb-12 text-center reveal">
-          <p class="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-lit-pink-bg mb-3">LIT Elite Alumni</p>
-          <h2 class="text-3xl sm:text-4xl md:text-5xl text-lit-light-text tracking-tight w-full">LIT Elite players have gone on to...</h2>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-widest text-lit-pink-bg mb-3">LIT Elite Alumni</p>
+          <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-lit-light-text tracking-tight w-full uppercase">LIT Elite players have gone on to...</h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 border border-lit-light-line rounded-xl p-6 sm:p-8 bg-lit-light-card reveal">
           <div class="flex flex-col items-center text-center pb-8 md:pb-0 border-b md:border-b-0 md:border-r border-lit-light-line">
             <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-lit-light-bg border border-lit-light-line flex items-center justify-center mb-6 text-lit-pink-bg"><svg class="w-7 h-7 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.196-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.381-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg></div>
-            <h3 class="font-sans font-bold text-lg sm:text-xl text-lit-light-text mb-3 uppercase tracking-wide">Win Championships</h3>
+            <h3 class="font-display font-bold text-lg sm:text-xl text-lit-light-text mb-3 uppercase tracking-wide">Win Championships</h3>
             <p class="text-lit-light-sec text-sm sm:text-base">Jr. MRISA Girls Basketball Champions 2024 & 2025.</p>
           </div>
           <div class="flex flex-col items-center text-center py-8 md:py-0 border-b md:border-b-0 md:border-r border-lit-light-line">
             <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-lit-light-bg border border-lit-light-line flex items-center justify-center mb-6 text-lit-pink-bg"><svg class="w-7 h-7 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg></div>
-            <h3 class="font-sans font-bold text-lg sm:text-xl text-lit-light-text mb-3 uppercase tracking-wide">Make School Varsity</h3>
+            <h3 class="font-display font-bold text-lg sm:text-xl text-lit-light-text mb-3 uppercase tracking-wide">Make School Varsity</h3>
             <p class="text-lit-light-sec text-sm sm:text-base">From first dribble to starting five at international schools.</p>
           </div>
           <div class="flex flex-col items-center text-center pt-8 md:pt-0">
             <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-lit-light-bg border border-lit-light-line flex items-center justify-center mb-6 text-lit-pink-bg"><svg class="w-7 h-7 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div>
-            <h3 class="font-sans font-bold text-lg sm:text-xl text-lit-light-text mb-3 uppercase tracking-wide">Grow As Leaders</h3>
+            <h3 class="font-display font-bold text-lg sm:text-xl text-lit-light-text mb-3 uppercase tracking-wide">Grow As Leaders</h3>
             <p class="text-lit-light-sec text-sm sm:text-base">Building confidence, accountability, and high Basketball IQ.</p>
           </div>
         </div>
@@ -500,11 +492,10 @@
     <section id="coach" class="bg-lit-dark-bg py-16 sm:py-20 md:py-24 border-t border-lit-dark-line">
       <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-12 items-center reveal">
-          <!-- Cắt bỏ trần nhà, focus vào mặt: object-position center 15% -->
           <div class="relative rounded-xl overflow-hidden border border-lit-dark-line h-80 sm:h-auto md:h-auto"><img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/coach-zinger-portrait.webp" alt="Coach Zinger, head coach for youth basketball training District 7 HCMC" class="w-full h-full object-cover" style="object-position: center 15%;" loading="lazy"></div>
           <div>
-            <p class="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-lit-dark-accent mb-4">The coach behind LIT</p>
-            <h2 class="text-3xl sm:text-4xl md:text-5xl text-lit-dark-text mb-6 tracking-tight leading-none">An educator first.<br>A basketball coach always.</h2>
+            <p class="text-xs sm:text-sm font-bold uppercase tracking-widest text-lit-dark-accent mb-4">The coach behind LIT</p>
+            <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-lit-dark-text mb-6 tracking-tight leading-none uppercase">An educator first.<br>A basketball coach always.</h2>
             <p class="text-lit-dark-sec text-base sm:text-lg leading-relaxed mb-8 max-w-3xl">Coach Zinger has spent 15+ years developing young athletes in international-school environments across Vietnam and Korea — so your child is coached by a teacher, not just a trainer.</p>
             <ul class="space-y-4 mb-8">
               <li class="flex items-start gap-4 text-lit-dark-text"><svg class="w-5 h-5 text-lit-dark-accent mt-1 flex-shrink-0"><use href="#i-check"/></svg><span class="text-sm sm:text-base">15+ years · international schools</span></li>
@@ -512,7 +503,7 @@
               <li class="flex items-start gap-4 text-lit-dark-text"><svg class="w-5 h-5 text-lit-dark-accent mt-1 flex-shrink-0"><use href="#i-check"/></svg><span class="text-sm sm:text-base">Jr. MRISA Girls Basketball Champion Head Coach · 2024 & 2025</span></li>
               <li class="flex items-start gap-4 text-lit-dark-text"><svg class="w-5 h-5 text-lit-dark-accent mt-1 flex-shrink-0"><use href="#i-check"/></svg><span class="text-sm sm:text-base">Sports management & educational leadership background</span></li>
             </ul>
-            <a href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'd%20like%20to%20learn%20more%20about%20training%20at%20LIT." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-lit-dark-accent text-lit-dark-bg font-extrabold uppercase tracking-wide text-sm hover:bg-white transition">Message the Coach</a>
+            <a href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'd%20like%20to%20learn%20more%20about%20training%20at%20LIT." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-lit-dark-accent text-lit-dark-bg font-bold uppercase tracking-wide text-sm hover:bg-white transition">Message the Coach</a>
           </div>
         </div>
       </div>
@@ -522,11 +513,10 @@
     <section id="gallery" class="bg-lit-light-bg py-16 sm:py-20 md:py-24 border-t border-lit-light-line">
       <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
         <div class="mb-10 sm:mb-12 reveal">
-          <p class="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-lit-pink-bg mb-3">See LIT in action</p>
-          <h2 class="text-3xl sm:text-4xl md:text-5xl text-lit-light-text tracking-tight w-full">Real sessions, real decisions.</h2>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-widest text-lit-pink-bg mb-3">See LIT in action</p>
+          <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-lit-light-text tracking-tight w-full uppercase">Real sessions, real decisions.</h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 reveal">
-          <!-- Cắt bỏ trần nhà, focus vào mặt: object-position center 25% -->
           <div class="rounded-xl overflow-hidden border border-lit-light-line h-48 sm:h-64 md:h-full"><img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/gallery-circle-huddle.webp" alt="Players in a huddle during basketball classes for kids in District 7" class="w-full h-full object-cover" style="object-position: center 25%;" loading="lazy"></div>
           <div class="grid grid-cols-2 gap-6">
             <div class="rounded-xl overflow-hidden border border-lit-light-line h-24 sm:h-32 md:h-full"><img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/gallery-young-athlete-drills.webp" alt="Young athlete running drills in beginner basketball for kids in Saigon" class="w-full h-full object-cover" style="object-position: center 25%;" loading="lazy"></div>
@@ -541,12 +531,12 @@
     <section id="rates" class="bg-lit-dark-bg py-16 sm:py-20 md:py-24 border-t border-lit-dark-line">
       <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
         <div class="bg-lit-dark-bg2 p-6 sm:p-10 rounded-xl border border-lit-dark-line text-center reveal">
-          <p class="text-xs font-extrabold uppercase tracking-widest text-lit-dark-accent mb-4">Not ready to book yet?</p>
-          <h2 class="text-3xl sm:text-4xl md:text-5xl text-lit-dark-text mb-6 tracking-tight">Get the class schedule & rates.</h2>
+          <p class="text-xs font-bold uppercase tracking-widest text-lit-dark-accent mb-4">Not ready to book yet?</p>
+          <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-lit-dark-text mb-6 tracking-tight uppercase">Get the class schedule & rates.</h2>
           <p class="text-lit-dark-sec text-sm sm:text-base mb-8 leading-relaxed max-w-3xl mx-auto">See the timetable, group sizes and pricing for your child's age — sent straight to your WhatsApp. No commitment, no pressure.</p>
           <form onsubmit="event.preventDefault(); var age = document.getElementById('child-age').value; var msg = 'Hi Coach, I\'d like the class schedule and rates. My child is ' + (age ? age : 'unknown') + ' years old.'; window.open('https://wa.me/84938454724?text=' + encodeURIComponent(msg), '_blank');" class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto mb-6">
             <input id="child-age" type="text" placeholder="Your child's age" class="flex-1 px-4 py-3 rounded-lg border border-lit-dark-line bg-lit-dark-bg text-lit-dark-text text-base placeholder-lit-dark-sec focus:outline-none focus:ring-2 focus:ring-lit-dark-accent focus:border-transparent">
-            <button type="submit" class="px-6 py-3 rounded-lg bg-lit-dark-accent text-lit-dark-bg font-extrabold uppercase tracking-wide text-sm hover:bg-white transition whitespace-nowrap inline-flex items-center justify-center gap-2"><svg class="w-5 h-5"><use href="#i-wa"/></svg> Get it on WhatsApp</button>
+            <button type="submit" class="px-6 py-3 rounded-lg bg-lit-dark-accent text-lit-dark-bg font-bold uppercase tracking-wide text-sm hover:bg-white transition whitespace-nowrap inline-flex items-center justify-center gap-2"><svg class="w-5 h-5"><use href="#i-wa"/></svg> Get it on WhatsApp</button>
           </form>
           <a href="mailto:lockedin.saigon@gmail.com" class="text-xs text-lit-dark-sec hover:text-lit-dark-accent underline">Prefer email? Send it to my inbox instead.</a>
         </div>
@@ -557,8 +547,8 @@
     <section id="faq" class="bg-lit-light-bg py-16 sm:py-20 md:py-24 border-t border-lit-light-line">
       <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
         <div class="mb-10 sm:mb-12 reveal">
-          <p class="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-lit-pink-bg mb-3">Before you book</p>
-          <h2 class="text-3xl sm:text-4xl md:text-5xl text-lit-light-text tracking-tight w-full">Common questions, answered.</h2>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-widest text-lit-pink-bg mb-3">Before you book</p>
+          <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-lit-light-text tracking-tight w-full uppercase">Common questions, answered.</h2>
         </div>
         <div class="space-y-4 reveal">
           <details class="bg-lit-light-card border border-lit-light-line rounded-xl group"><summary class="flex items-center justify-between p-5 cursor-pointer font-bold text-lit-light-text text-base sm:text-lg">Does my child need basketball experience?<svg class="w-6 h-6 text-lit-light-sec transition-transform group-open:rotate-45 flex-shrink-0 ml-4"><use href="#i-plus"/></svg></summary><div class="px-5 pb-5 text-lit-light-sec leading-relaxed text-sm sm:text-base">No prior basketball experience is necessary. Players can start at different experience levels in our youth basketball academy in Ho Chi Minh City. A beginner will work on foundations appropriate for their age, while more experienced players can be challenged at a higher level.</div></details>
@@ -575,8 +565,8 @@
     <section id="location" class="bg-lit-dark-bg py-16 sm:py-20 md:py-24 border-t border-lit-dark-line">
       <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
         <div class="mb-10 sm:mb-12 reveal">
-          <p class="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-lit-dark-accent mb-3">Find Us</p>
-          <h2 class="text-3xl sm:text-4xl md:text-5xl text-lit-dark-text tracking-tight w-full">Court Location.</h2>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-widest text-lit-dark-accent mb-3">Find Us</p>
+          <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-lit-dark-text tracking-tight w-full uppercase">Court Location.</h2>
           <p class="text-lit-dark-sec mt-4 text-sm sm:text-base">District 7, Ho Chi Minh City. Easily find your way to the court.</p>
         </div>
         <div class="bg-lit-dark-bg2 p-4 rounded-xl border border-lit-dark-line overflow-hidden reveal">
@@ -591,11 +581,11 @@
     <section id="final-cta" class="relative bg-lit-pink-bg overflow-hidden text-center border-t border-lit-dark-bg">
       <div class="absolute inset-0 z-0 opacity-10"><img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/gallery-circle-huddle.webp" alt="" class="w-full h-full object-cover"></div>
       <div class="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-20 sm:py-24 md:py-32 reveal">
-        <h2 class="text-3xl sm:text-4xl md:text-6xl text-white mb-6 leading-tight tracking-tight w-full">Ready to see your child play smarter?</h2>
+        <h2 class="font-display text-3xl sm:text-4xl md:text-6xl text-white mb-6 leading-tight tracking-tight w-full uppercase">Ready to see your child play smarter?</h2>
         <p class="text-base sm:text-lg md:text-xl text-white/90 mb-10 max-w-3xl mx-auto">Book a trial and watch them start reading the game within a few sessions.</p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <a href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-lit-dark-bg text-white font-extrabold uppercase tracking-wide text-sm hover:bg-lit-dark-bg2 transition">Book a Trial</a>
-          <a href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'd%20like%20to%20learn%20more%20about%20training%20at%20LIT." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-3 rounded-lg border border-white text-white font-extrabold uppercase tracking-wide text-sm hover:bg-white/10 transition">Message the Coach</a>
+          <a href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-lit-dark-bg text-white font-bold uppercase tracking-wide text-sm hover:bg-lit-dark-bg2 transition">Book a Trial</a>
+          <a href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'd%20like%20to%20learn%20more%20about%20training%20at%20LIT." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-3 rounded-lg border border-white text-white font-bold uppercase tracking-wide text-sm hover:bg-white/10 transition">Message the Coach</a>
         </div>
       </div>
     </section>
@@ -608,12 +598,12 @@
         <div class="md:col-span-2">
           <div class="flex items-center gap-4 mb-6">
             <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/logo.webp" width="40" height="36" alt="LIT Elite Basketball Academy logo" class="rounded-full sm:w-12 sm:h-11">
-            <span class="text-xl sm:text-2xl font-extrabold uppercase tracking-tight text-lit-dark-text">LIT Elite</span>
+            <span class="font-display text-xl sm:text-2xl font-bold uppercase tracking-tight text-lit-dark-text">LIT Elite</span>
           </div>
           <p class="text-lit-dark-sec text-sm sm:text-base leading-relaxed max-w-md">Youth basketball · Ages 5–18 · District 7, Ho Chi Minh City. A Locked In Training academy.</p>
         </div>
         <div class="mt-8 sm:mt-0">
-          <h3 class="text-xs font-extrabold uppercase tracking-widest text-lit-dark-text mb-6">Explore</h3>
+          <h3 class="text-xs font-bold uppercase tracking-widest text-lit-dark-text mb-6">Explore</h3>
           <ul class="space-y-4">
             <li><a href="#programs" class="text-lit-dark-sec hover:text-lit-dark-accent transition text-sm">Programs</a></li>
             <li><a href="#rates" class="text-lit-dark-sec hover:text-lit-dark-accent transition text-sm">Rates</a></li>
@@ -623,7 +613,7 @@
           </ul>
         </div>
         <div class="mt-8 sm:mt-0">
-          <h3 class="text-xs font-extrabold uppercase tracking-widest text-lit-dark-text mb-6">Get in touch</h3>
+          <h3 class="text-xs font-bold uppercase tracking-widest text-lit-dark-text mb-6">Get in touch</h3>
           <ul class="space-y-4">
             <li><a href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'd%20like%20to%20learn%20more%20about%20training%20at%20LIT." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-lit-dark-sec hover:text-lit-dark-accent transition text-sm"><svg class="w-4 h-4"><use href="#i-wa"/></svg> WhatsApp</a></li>
             <li><a href="https://www.instagram.com/litelitebasketball/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-lit-dark-sec hover:text-lit-dark-accent transition text-sm"><svg class="w-4 h-4"><use href="#i-ig"/></svg> Instagram</a></li>
