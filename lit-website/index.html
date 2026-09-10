@@ -186,6 +186,26 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    /* ===== HERO VIDEO CSS ===== */
+    .hero{
+      position:relative; height:100vh; min-height:600px; overflow:hidden;
+      /* Ảnh nét hiện ngay lúc video đang tải -> chống màn đen */
+      background:#000 url('https://img.youtube.com/vi/KAnHk644rnY/maxresdefault.jpg') center/cover no-repeat;
+    }
+    .hero-video{ position:absolute; inset:0; pointer-events:none; z-index:0; }
+    .hero-video iframe{
+      position:absolute; top:50%; left:50%;
+      width:100vw; height:56.25vw;            /* 16:9 */
+      min-height:100vh; min-width:177.77vh;   /* luôn phủ kín */
+      transform:translate(-50%,-50%);
+    }
+    .hero-overlay{ position:absolute; inset:0; background:rgba(0,0,0,.45); z-index:1; }
+    .hero-content{
+      position:relative; z-index:2; height:100%;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      text-align:center; color:#fff; padding:0 20px;
+    }
   </style>
 </head>
 <body class="bg-lit-dark-bg text-lit-dark-text antialiased">
@@ -249,32 +269,29 @@
   </header>
 
   <main>
-    <!-- ════════════════════════ HERO (DARK - CENTERED) ════════════════════════ -->
-    <section id="hero" class="relative bg-lit-dark-bg overflow-hidden">
-      <div class="absolute inset-0 z-0">
-        <video autoplay loop muted playsinline class="w-full h-full object-cover object-center opacity-90" poster="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/hero-girls-team.webp">
-          <source src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/hero.mp4" type="video/mp4">
-          <img src="https://cdn.jsdelivr.net/gh/lockedinexecutive/lit-website@main/lit-website/images/hero-girls-team.webp" alt="LIT Elite girls basketball team training" class="w-full h-full object-cover object-center opacity-90">
-        </video>
+    <!-- ════════════════════════ HERO (YOUTUBE VIDEO) ════════════════════════ -->
+    <section id="hero" class="hero">
+      <div class="hero-video">
+        <iframe
+          src="https://www.youtube.com/embed/KAnHk644rnY?autoplay=1&mute=1&loop=1&playlist=KAnHk644rnY&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&fs=0"
+          title="LIT Elite Basketball"
+          frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
-      <div class="absolute inset-0 z-0 bg-gradient-to-t from-lit-dark-bg via-lit-dark-bg/30 to-transparent"></div>
-      
-      <div class="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-20 sm:py-28 md:py-32 lg:py-40 flex flex-col items-center text-center">
-        <div class="w-full max-w-3xl mx-auto">
-          <span class="inline-block px-4 py-1 text-[10px] sm:text-xs font-bold uppercase tracking-widest text-white bg-lit-dark-bg/50 border border-white/20 rounded-full mb-6 backdrop-blur-sm">Youth Basketball · Ages 5–18 · District 7</span>
-          <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-none tracking-tight hero-text uppercase">Help your child play smarter.</h1>
-          <p class="text-sm sm:text-base md:text-lg text-white mb-8 max-w-2xl mx-auto leading-relaxed hero-text font-medium">Basketball training for ages 5–18 that builds game sense, confidence, and coach-focused attention.</p>
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <a href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-lit-dark-accent text-lit-dark-bg font-bold uppercase tracking-wide text-sm hover:bg-white transition">Book a Trial</a>
-            <a href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'd%20like%20to%20learn%20more%20about%20training%20at%20LIT." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-white/50 bg-white/10 text-white font-bold uppercase tracking-wide text-sm hover:bg-white/20 transition backdrop-blur-sm">Message the Coach</a>
-          </div>
-          <div class="flex flex-col sm:flex-row justify-center items-center gap-y-3 sm:gap-x-10 text-white font-bold text-[11px] sm:text-sm uppercase tracking-[0.15em] hero-text">
-            <span>Comprehensive Player Development</span>
-            <span class="hidden sm:inline text-lit-dark-accent">•</span>
-            <span>Certified & Positive Coaches</span>
-            <span class="hidden sm:inline text-lit-dark-accent">•</span>
-            <span>Organized Parent Communication</span>
-          </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="inline-block px-4 py-1 text-[10px] sm:text-xs font-bold uppercase tracking-widest text-white bg-black/50 border border-white/20 rounded-full mb-6 backdrop-blur-sm">Youth Basketball · Ages 5–18 · District 7</span>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-none tracking-tight hero-text uppercase">Help your child play smarter.</h1>
+        <p class="text-sm sm:text-base md:text-lg text-white mb-8 max-w-2xl mx-auto leading-relaxed hero-text font-medium">Basketball training for ages 5–18 that builds game sense, confidence, and coach-focused attention.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+          <a href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'd%20like%20to%20book%20a%20trial%20session%20for%20my%20child." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-lit-dark-accent text-lit-dark-bg font-bold uppercase tracking-wide text-sm hover:bg-white transition">Book a Trial</a>
+          <a href="https://wa.me/84938454724?text=Hi%20Coach%2C%20I'd%20like%20to%20learn%20more%20about%20training%20at%20LIT." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-white/50 bg-white/10 text-white font-bold uppercase tracking-wide text-sm hover:bg-white/20 transition backdrop-blur-sm">Message the Coach</a>
+        </div>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-y-3 sm:gap-x-10 text-white font-bold text-[11px] sm:text-sm uppercase tracking-[0.15em] hero-text">
+          <span>Comprehensive Player Development</span>
+          <span class="hidden sm:inline text-lit-dark-accent">•</span>
+          <span>Certified & Positive Coaches</span>
+          <span class="hidden sm:inline text-lit-dark-accent">•</span>
+          <span>Organized Parent Communication</span>
         </div>
       </div>
     </section>
@@ -302,11 +319,13 @@
     <section id="the-gap" class="bg-lit-pink-bg text-white py-16 sm:py-20 md:py-24">
       <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 reveal">
         <p class="text-xs sm:text-sm font-bold uppercase tracking-widest text-white/80 mb-4">The real gap</p>
-        <h2 class="text-3xl sm:text-4xl md:text-5xl text-white mb-8 tracking-tight leading-tight w-full max-w-5xl uppercase">Skills alone don't win games.</h2>
-        <div class="space-y-4 text-white/90 text-sm sm:text-base md:text-lg leading-relaxed max-w-5xl">
-          <p>In a real game, your child freezes — passes it off or waits, while others take over. Not for lack of skill or effort: no one taught them to decide fast under pressure.</p>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl text-white mb-10 tracking-tight leading-tight w-full max-w-5xl uppercase">Skills alone don't win games.</h2>
+        
+        <div class="space-y-6 text-white/90 text-sm sm:text-base md:text-lg leading-relaxed max-w-5xl">
+          <p>In a real game, your child freezes — passes it off or waits, while others take over. Not for lack of skill or effort: no one taught them to decide fast under pressure. That's the gap LIT closes.</p>
         </div>
-        <p class="mt-8 text-xl sm:text-2xl md:text-3xl font-bold text-lit-dark-bg leading-tight w-full max-w-4xl">That's exactly the gap LIT is built to close.</p>
+        
+        <p class="mt-10 text-xl sm:text-2xl md:text-3xl font-bold text-lit-dark-bg leading-tight w-full max-w-4xl">That's exactly the gap LIT is built to close.</p>
       </div>
     </section>
 
@@ -388,17 +407,17 @@
       </div>
     </section>
 
-    <!-- ════════════════════════ HOW LIT COACHES (LIGHT) ════════════════════════ -->
+    <!-- ════════════════════════ WHAT YOUR CHILD GETS (LIGHT) ════════════════════════ -->
     <section id="how-we-coach" class="bg-lit-light-bg py-16 sm:py-20 md:py-24 border-t border-lit-light-line">
       <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12">
         <div class="mb-10 sm:mb-12 reveal">
-          <p class="text-xs sm:text-sm font-bold uppercase tracking-widest text-lit-pink-bg mb-3">How LIT coaches</p>
-          <h2 class="text-3xl sm:text-4xl md:text-5xl text-lit-light-text tracking-tight w-full uppercase">A method that makes sense.</h2>
+          <p class="text-xs sm:text-sm font-bold uppercase tracking-widest text-lit-pink-bg mb-3">What your child gets</p>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl text-lit-light-text tracking-tight w-full uppercase">Your child improves in a way you can see.</h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-lit-light-line border border-lit-light-line rounded-xl overflow-hidden reveal">
           <div class="bg-lit-light-card p-6 sm:p-8"><div class="flex items-center gap-4 mb-4"><svg class="w-6 h-6 sm:w-7 sm:h-7 text-lit-pink-bg"><use href="#i-check"/></svg><h3 class="font-bold text-lg sm:text-xl text-lit-light-text uppercase tracking-wide">Nothing is random</h3></div><p class="text-lit-light-sec text-sm sm:text-base leading-relaxed">Every drill has a reason your child can explain back — not just a move to copy.</p></div>
-          <div class="bg-lit-light-card p-6 sm:p-8"><div class="flex items-center gap-4 mb-4"><svg class="w-6 h-6 sm:w-7 sm:h-7 text-lit-pink-bg"><use href="#i-check"/></svg><h3 class="font-bold text-lg sm:text-xl text-lit-light-text uppercase tracking-wide">We coach the decision</h3></div><p class="text-lit-light-sec text-sm sm:text-base leading-relaxed">Your child is put into real game situations, then guided on the why behind the play.</p></div>
-          <div class="bg-lit-light-card p-6 sm:p-8"><div class="flex items-center gap-4 mb-4"><svg class="w-6 h-6 sm:w-7 sm:h-7 text-lit-pink-bg"><use href="#i-check"/></svg><h3 class="font-bold text-lg sm:text-xl text-lit-light-text uppercase tracking-wide">Your child is seen</h3></div><p class="text-lit-light-sec text-sm sm:text-base leading-relaxed">Small groups mean real attention every session — beginner or competitor.</p></div>
+          <div class="bg-lit-light-card p-6 sm:p-8"><div class="flex items-center gap-4 mb-4"><svg class="w-6 h-6 sm:w-7 sm:h-7 text-lit-pink-bg"><use href="#i-check"/></svg><h3 class="font-bold text-lg sm:text-xl text-lit-light-text uppercase tracking-wide">Your child learns to decide under pressure</h3></div><p class="text-lit-light-sec text-sm sm:text-base leading-relaxed">Your child is put into real game situations, then guided on the why behind the play.</p></div>
+          <div class="bg-lit-light-card p-6 sm:p-8"><div class="flex items-center gap-4 mb-4"><svg class="w-6 h-6 sm:w-7 sm:h-7 text-lit-pink-bg"><use href="#i-check"/></svg><h3 class="font-bold text-lg sm:text-xl text-lit-light-text uppercase tracking-wide">Your child is seen</h3></div><p class="text-lit-light-sec text-sm sm:text-base leading-relaxed">Real coaching attention every session — never lost in a crowd.</p></div>
         </div>
       </div>
     </section>
@@ -494,7 +513,7 @@
           <div>
             <p class="text-xs sm:text-sm font-bold uppercase tracking-widest text-lit-dark-accent mb-4">The coach behind LIT</p>
             <h2 class="text-3xl sm:text-4xl md:text-5xl text-lit-dark-text mb-6 tracking-tight leading-none uppercase">An educator first.<br>A basketball coach always.</h2>
-            <p class="text-lit-dark-sec text-base sm:text-lg leading-relaxed mb-8 max-w-3xl">Coach Zinger has spent 15+ years developing young athletes in international-school environments across Vietnam and Korea — so your child is coached by an educator, not just a trainer.</p>
+            <p class="text-lit-dark-sec text-base sm:text-lg leading-relaxed mb-8 max-w-3xl">Coach Zinger has spent 15+ years developing young athletes in international-school environments across Vietnam and Korea — so your child is coached by a teacher, not just a trainer.</p>
             <ul class="space-y-4 mb-8">
               <li class="flex items-start gap-4 text-lit-dark-text"><svg class="w-5 h-5 text-lit-dark-accent mt-1 flex-shrink-0"><use href="#i-check"/></svg><span class="text-sm sm:text-base">15+ years · international schools</span></li>
               <li class="flex items-start gap-4 text-lit-dark-text"><svg class="w-5 h-5 text-lit-dark-accent mt-1 flex-shrink-0"><use href="#i-check"/></svg><span class="text-sm sm:text-base">Athletics Director · K–12</span></li>
